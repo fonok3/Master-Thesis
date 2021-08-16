@@ -1,0 +1,85 @@
+\subsection{Eigenschaften}
+
+Hier aufgeführt, wenn die Eigenschaft explizit untersucht wurde und nicht nur implizit in der Erklärung verwendet wurde.
+
+\subsubsection*{Bedarf}
+
+\begin{longtable}{|p{.2\textwidth}|p{.5\textwidth}|p{.2\textwidth}|}
+    \hline
+    \textbf{Eigenschaft}    & \textbf{Ausprägung}   & \textbf{Quellen} \\ \hline
+    Initiative              &  User / Manual        & \cite{chazette_end-users_nodate} \cite{tintarev_designing_nodate} \cite{wiegand_id_2020} \\
+                            &  System / Automatic   & \cite{chazette_end-users_nodate} \cite{eiband_impact_2019} \cite{wiegand_id_2020} \cite{schaffer_i_2019} \cite{yamada_evaluating_2016} \\
+    \hline
+    Occasion                &  Before               & \cite{rosenfeld_explainability_2019} \cite{wiegand_id_2020} \cite{kunkel_let_2019} \cite{koo_why_2015} \cite{haspiel_explanations_2018} \\
+                            &  While                & \cite{rosenfeld_explainability_2019} \cite{wiegand_id_2020} \cite{kunkel_let_2019} \\
+                            &  After                & \cite{rosenfeld_explainability_2019} \cite{wiegand_id_2020} \cite{kunkel_let_2019} \cite{koo_why_2015} \cite{haspiel_explanations_2018} \cite{wiegand2019drive} \\
+    \hline
+\caption{Bedarf einer Erklärung}
+\label{tab:explanation_demands}
+\end{longtable}
+
+\subsubsection*{Inhalt}
+
+Granularität
+
+Information type description: Constrastic / differences (Why not), belief-bases (quelle) vs. ...-based
+
+User specified requirements (Personalisation) \cite{tintarev_designing_nodate, sokol_explainability_2020}
+
+Goal-Based: Desired outcome (Why?) \cite{kaptein_personalised_2017, abdulrahman_belief-based_2019}
+
+Belief-Based: Based on which information (How?) \cite{kaptein_personalised_2017, abdulrahman_belief-based_2019}
+
+the different types of content answer the gulfs of execution and evaluation of \cite{norman1988psychology} as described by \cite{ribera2019can}
+
+(Why, Why not -> Why, situation specific / local explanation) (How, what if -> global explanation) (what else -> context) \cite{lim_2009_assessing}
+
+\begin{longtable}{|p{.2\textwidth}|p{.5\textwidth}|p{.2\textwidth}|}
+    \hline
+    \textbf{Aspekt}     & \textbf{Synonym} & \textbf{Quellen} \\ \hline
+    Information Type    & Why Mit welchem Ziel & \cite{chazette2020explainability} \cite{abdulrahman_belief-based_2019} \cite{yamada_evaluating_2016} \cite{sato_action-triggering_2019} \cite{zahedi_towards_2019} \cite{zahedi_towards_2019} \cite{zolotas_towards_2019} \cite{cassens_ambient_2019} \cite{thomson_knowledge--information_2020} \cite{chari_explanation_2020} \cite{neerincx_using_2018} \cite{nunes_systematic_2017} (Rationale) \cite{zhu_effects_2020} \cite{ribera2019can} \cite{lim_2009_assessing} \\
+                        & What (context) & \cite{chazette2020explainability} \cite{zahedi_towards_2019} \cite{cassens_ambient_2019} \cite{zahedi_towards_2019} \cite{zolotas_towards_2019} \cite{chari_explanation_2020} \cite{nunes_systematic_2017} (Data) \cite{ribera2019can} (data) \\
+                        & How welcher Glaube wurde abgeleitet & \cite{chazette2020explainability} \cite{sato_action-triggering_2019} \cite{thomson_knowledge--information_2020} \cite{chari_explanation_2020} \cite{neerincx_using_2018} \cite{lim_2009_assessing} \\
+                        & Verhalten & \cite{zhu_effects_2020} \cite{ribera2019can}\\
+                        & Kontext &  \\
+    \hline
+    Information Density & Quantity & \cite{ribera2019can} \cite{kouki_user_2017} \\
+                        & Level of justification & \cite{hernandez-bocanegra_effects_2020} \\
+                        & Aggregation & \cite{hernandez-bocanegra_effects_2020} \cite{martin_developing_2019} \\
+                        & Abstraction Level & \cite{thomson_knowledge--information_2020} \\
+    \hline
+    Adaptivity          & User specified requirements & \cite{tintarev_designing_nodate} \\
+                        & Interactiv  & \cite{abdulrahman_belief-based_2019} \cite{cheng2019explaining} \\
+                        & Static & \cite{abdulrahman_belief-based_2019} \\
+                        & Personalized & \cite{kaptein_personalised_2017} \cite{cassens_ambient_2019}  \cite{sokol_one_2020} \\
+                        & Contextualised & \cite{kaptein_personalised_2017} \cite{cassens_ambient_2019} \\
+    \hline
+\caption{Inhalt einer Erklärung}
+\label{tab:content_of_explanations}
+\end{longtable}
+
+Die Anzahl der Paper bestätigt das Ergebnis von \cite{chazette_end-users_nodate}, dass die Reihenfolge der Häufigkeiten mit der die Inhalte untersucht wurden so ist.
+
+Was -> System Verthalten
+
+\subsubsection*{Darstellung}
+
+\begin{longtable}{|p{.2\textwidth}|p{.5\textwidth}|p{.2\textwidth}|}
+    \hline
+    \textbf{Aspekt}     & \textbf{Synonym} & \textbf{Quellen} \\ \hline
+    Presentation Type / Explanatory medium
+                        & Textual  & \cite{sokol_explainability_2020} \cite{balog_measuring_2020} \cite{tintarev_designing_nodate} \cite{sato_action-triggering_2019} \cite{eiband_impact_2019} \cite{eiband_impact_2019} \cite{abdulrahman_belief-based_2019} \cite{cassens_ambient_2019} \cite{nunes_systematic_2017} \\
+                        & Visualisation (auch Formal und statistic summary) & \cite{sokol_explainability_2020} \cite{sato_action-triggering_2019} \cite{sokol_explainability_2020}  \cite{mucha_interfaces_2021} \cite{abdulrahman_belief-based_2019} \cite{nunes_systematic_2017} \cite{schrills_color_2020} \\
+                       
+                        & Audio & \cite{wiegand2019drive} \cite{nunes_systematic_2017} \cite{wang_is_2018} \\
+    \hline
+    Explainer           & Factual / Impersonal & \cite{eiband_impact_2019} \cite{abdulrahman_belief-based_2019} \cite{kunkel_let_2019} \cite{neerincx_using_2018} \\
+                        & Personal & \cite{abdulrahman_belief-based_2019} \cite{kunkel_let_2019} \cite{weitz_you_2019} \cite{zahedi_towards_2019} \cite{neerincx_using_2018} \\
+    \hline
+    Grouping            & Single & \cite{nunes_systematic_2017} \cite{balog_measuring_2020} \cite{sato_action-triggering_2019} \cite{eiband_impact_2019} \cite{abdulrahman_belief-based_2019} \\
+                        & Grouped & \cite{nunes_systematic_2017} \cite{balog_measuring_2020} \cite{tintarev_designing_nodate} \\
+                        & Multi-Modal / Hybrid & \cite{sato_action-triggering_2019} \cite{abdulrahman_belief-based_2019} \cite{cassens_ambient_2019} \\
+    \hline
+\caption{Darstellung einer Erklärung}
+\label{tab:presentation_of_explanations}
+\end{longtable}
