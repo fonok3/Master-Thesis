@@ -1,0 +1,40 @@
+name: Build and deploy LaTeX document
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    tags:
+     - v*
+
+jobs:
+  build_and_upload_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+      - name: pdflatex main
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: thesis.tex
+          compiler: pdflatex
+          args: -interaction=nonstopmode -shell-escape
+      - name: bibtex thesis
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: thesis.aux
+          compiler: bibtex
+          args:
+      - name: pdflatex thesis
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: thesis.tex
+          compiler: pdflatex
+          args: -interaction=nonstopmode -shell-escape
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: false
+          title: "Review Version"
+          files: |
+            thesis.pdf
