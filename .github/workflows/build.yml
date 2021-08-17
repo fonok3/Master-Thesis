@@ -1,10 +1,8 @@
-name: Build and deploy LaTeX document
+name: Build LaTeX document
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
-  push:
-    tags:
-     - v*
+  pull_request:
+    branches: [ develop ]
 
 jobs:
   build_and_upload_latex:
@@ -30,11 +28,3 @@ jobs:
           root_file: thesis.tex
           compiler: pdflatex
           args: -interaction=nonstopmode -shell-escape
-      - uses: "marvinpinto/action-automatic-releases@latest"
-        with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "latest"
-          prerelease: false
-          title: "Review Version"
-          files: |
-            thesis.pdf
