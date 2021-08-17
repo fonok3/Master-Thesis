@@ -1,0 +1,113 @@
+\subsection{Evaluation}
+
+Die Literaturrecherche hat wie bereits \cite{nunes_systematic_2017} nur empirische Studien zur Evaluation von Erklärungen gefunden.
+
+Entsprechend \cite{wohlin2012experimentation} habe ich die verschiedenen Evaluationsmethoden in \textit{Qualitaative Research} und \textit{Quantitative Research} gegliedert.
+
+\begin{longtable}{|p{.2\textwidth}|p{.5\textwidth}|p{.2\textwidth}|}
+    \hline
+    \textbf{Evaluationstyp} & \textbf{Empirische Strategie} & \textbf{Quellen} \\ \hline
+    Qualitativ              & Subjective Perception Questionaire &  \cite{balog_measuring_2020} \cite{sato_context_nodate} \cite{waa_evaluating_2021} \cite{eiband_impact_2019}  \cite{kouki_user_2017} \cite{tsai_evaluating_2019} \cite{hernandez-bocanegra_effects_2020} \cite{zahedi_towards_2019} \cite{tsai_effects_2020} \cite{ribera2019can} \\
+                            & Acceptance & \cite{tintarev_designing_nodate} \cite{hernandez-bocanegra_effects_2020} \cite{kunkel_let_2019} \\
+                            & Think aloud & \cite{wiegand_id_2020} \cite{yamada_evaluating_2016} \\
+                            & Preference & \cite{kouki_user_2017} \cite{mucha_interfaces_2021} \cite{abdulrahman_belief-based_2019} \cite{waa_evaluating_2021} \cite{wiegand_id_2020} \cite{stange_effects_2021} \cite{kaptein_personalised_2017} \\
+                            & Mental Model Accuracy & \cite{gunning2019darpa} \\
+    \hline
+    Quantitativ             & Accuracy & \cite{tintarev_designing_nodate} \cite{waa_evaluating_2021} \cite{mucha_interfaces_2021}  \cite{kunkel_let_2019} \cite{zolotas_towards_2019} \\
+                            & Learning Rate & \cite{tintarev_designing_nodate} \cite{gunning2019darpa} \\
+                            & Task Performance & \cite{waa_evaluating_2021}  \cite{mucha_interfaces_2021}  \cite{abdulrahman_belief-based_2019} \cite{zolotas_towards_2019} \cite{martin_developing_2019} \cite{martin_evaluating_2021} \cite{gunning2019darpa} \\
+    \hline
+\caption{Evaluation}
+\label{tab:evaluation_of_explanations}
+\end{longtable}
+
+Laut \cite{balog_measuring_2020} sind die 7 verschiedenen Ziele korreliert und müssen nicht einzeln gemessen werden. Hoch korreliert \cite{kouki_user_2017}
+
+Cognitive Workload \cite{wiegand2019drive, wiegand_id_2020}
+
+Einen vollständigen Überblick über die Qualität einer Erklärung bekommt man, wenn man Satisfaction, Scrutability und Translarency misst \cite{balog_measuring_2020}.
+
+\glqq Importantly however, such measures often only measure one aspect of behavior. Ideally, a combination of both measurement types should be used to assess effects on both the user’s perception and behavior. In this way, a complete perspective on a construct can be obtained.\grqq{} (Qualitative / Quantitavie) \cite{waa_evaluating_2021}
+
+Number of detailed looks
+
+\subsubsection{Example Questions for questionaires}
+
+NASA-TLX \cite{tsai_evaluating_2019}
+
+Effectiveness helps me to determine how well I will like this movie does not help me make a decision about this item Efficiency helps me to decide faster if I will like this movie does not save me time Persuasiveness makes me want to watch this movie fails to make this item appeal to me Satisfaction would improve how easy it is to pick a recommendation does not satisfy me Scrutability would allow me to give feedback on how well my preferences have been understood would make it difficult for me to correct the reasoning behind the recommendation Transparency helps me to understand what the recommendation is based on fails to reveal the reasoning behind this recommendation Trust helps me to trust the recommendation does not seem credible \cite{balog_measuring_2020}
+
+\cite{knijnenburg2012explaining, hernandez-bocanegra_effects_2020} have something for exact evaluation of overall explanation quality
+
+\cite{weitz_you_2019} trusted automation questionaire
+
+Directly based on the explatnation \cite{sato_action-triggering_2019} or other metrics 
+
+DARPA (used by \cite{martin_evaluating_2021}) \cite{gunning2019darpa}
+
+Domain specifc metrics. For example for explainable AI (Predictive systems) TYN (Trust-Your-Neighbours) or Meet in the Mittle (MITM) \cite{martin_evaluating_2021}
+
+Questions for quality factors:
+
+\begin{itemize}
+    \item Persuasivenes: The explanation is convincing \cite{sato_action-triggering_2019, sato_context_nodate}
+    \item Persuasivenes: The explanation trigers interest \cite{sato_action-triggering_2019, sato_context_nodate}
+    \item Usefulness: The explanation is usefull for choice \cite{sato_action-triggering_2019, sato_context_nodate}
+    \item Usefulness: The explanation is easy to understand \cite{sato_action-triggering_2019, sato_context_nodate}
+    \item Satisfaction: How satisfying did you find the explanation in terms of understanding why the system made its decision? \cite{riveiro_thats_2021}
+    \item Satisfaction: The explanations provided of how the AI-system classifies text are satisfying. \cite{riveiro_thats_2021}
+    \item Completeness: The explanations provided regarding how the AI-system classifies the text seem complete
+ \cite{riveiro_thats_2021}
+    \item Completeness: Would you have liked for the explanations to contain additional information? If so, what type of information and when, i.e., in which situations?
+ \cite{riveiro_thats_2021}
+    \item Sufficient detail: The explanations provided of how the AI-system works have sufficient detail.
+ \cite{riveiro_thats_2021}
+    \item Understanding: From the explanations provided, I understand how the AI-system works.
+ \cite{riveiro_thats_2021}
+ \item Transparency: I understand the robot’s decision-making process \cite{wang_is_2018}
+ \item Transparency: I understand the robot’s decision-making process \cite{wang_is_2018}
+ \item Understandability: The explanation helps me understand how the [software, algorithm, tool] works. \cite{hoffman_metrics_nodate}
+ \item Satisfaction: The explanation of how the [software, algorithm, tool] works is satisfying. \cite{hoffman_metrics_nodate}
+ \item Completeness: The explanation of how the [software, algorithm, tool] works is sufficiently complete. \cite{hoffman_metrics_nodate}
+ \item Helpfull: The explanation is actionable, that is, it helps me know how to use the [software, algorithm, tool] \cite{hoffman_metrics_nodate}
+ \item Correctness: The explanation lets me know how accurate or reliable the [software, algorithm] is.\cite{hoffman_metrics_nodate}
+ \item Trust: The explanation lets me know how trustworthy the [software, algorithm, tool] is. \cite{hoffman_metrics_nodate}
+\end{itemize}
+
+Trustworthiness: \cite{schrills_color_2020}
+
+(FOST Scale: Facets of System Trustworthiness)
+Please indicate to what extent you agree with the following statements 01 The system’s classification is reliable 02 The system’s classification is precise 03 The system’s classification is traceable 04 I can trust the system’s classification 05r I cannot depend on the system’s classification 06 With the help of the visualization I am able to identify wrong mechanisms of the AI 07 I agree with the classification 08 The visualization provides a good explanation for the classification
+
+
+\cite{tsai_effects_2020}:
+
+Construct E: Perceived System Effectiveness • E1: Using the system is a pleasant experience. • E2: I made better choices with the recommender. • E3: I found better items using the recommender. • E4: I felt bored when using the recommender. • Construct T: Perceived Trust • T1: I am convinced by the scholar recommended to me. • T2: I am confident I will like the items recommended to me. • T3: The recommender made me more confident about my selection/decision. • T4: The recommender can be trusted. • Construct P: Perceived Transparency • P1: The provided information was sufficient for me to make a good decision. • P2: The recommender explained why the scholars were recommended to me. • P3: I understood why the scholars were recommended to me. • Construct S: Satisfaction • S1: I will use this recommender again. • S2: I will tell my friends about this recommender. S3: Overall, I am satisfied with the recommender. • S4: The recommender helped me find the ideal contacts at the conference.
+
+Special measures like ICM for ML-Models which is tied to the input and output of the model \cite{waa_evaluating_2021, neerincx_using_2018}
+
+Trust questions: originally by \cite{mayer1999effect} used by \cite{wang_is_2018}
+
+Specific trust items e.g. for human-robot interaction used by \cite{zhu_effects_2020} originally developed by \cite{schaefer2013perception}
+
+Just different Begriffe mit Likert SCale (Satisfaction / Trust / Transparency) \cite{koo_understanding_2016, koo_why_2015} Behavioral is again domain specific
+
+3 Types of Evaluation according to \cite{ribera2019can, doshi2017towards}: (1) applicationgrounded evaluation with real humans and real tasks; (2) human-grounded evaluation with real humans but simplified tasks; and (3) functionally-grounded evaluation without humans and proxy tasks; all of them always inspired by real tasks and real humans’ observations.
+
+ \cite{tintarev2007survey}:
+ 
+ Transparency: Qualitytive: Does the User understand the system Quantitative: correctness, completion time
+ 
+ Scrutability: Hard to measure due to many confoundings
+ 
+ Trust: Questionaires, Loyalty: Number of Logins, usesages (S. M. McNee, S. K. Lam, J. A. Konstan, and J. Riedl. Interfaces for eliciting new user preferences in recommender systems. User Modeling, pages pp. 178–187, 2003.)
+ 
+ Persuasiveness: Questionaires + Domain-Specific Performance metrics
+ 
+ Effectiveness: accuracy measures (Domain-Specific) 
+ 
+ Efficiency: Task completion time, Number of times an explanation is called
+ 
+ Satisfaction: User preference (Differentiate explanation and system), number of usability problems
+ 
+ 

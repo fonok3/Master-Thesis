@@ -1,0 +1,61 @@
+\subsection{Zielsetzung}
+\label{subsec:model_objective}
+
+\cite{chazette_knowledge_nodate} haben einen Katalog zusammengestellt, der die Einflüsse von Erklärbarkeit darstellt
+
+\cite{tintarev_designing_nodate} haben Messliste gebaut.
+
+Nur Erwähnung, wenn das Paper den Aspekt explizit untersucht / erwähnt.
+
+\begin{longtable}{|p{.25\textwidth}|p{.5\textwidth}|p{.15\textwidth}|}
+    \hline
+    \textbf{Qualitätsaspekt}     & \textbf{Beschreibung} & \textbf{Quellen} \\ \hline
+    Transparency      & Erkärung, wie das System funktioniert. & \cite{nunes_systematic_2017} \cite{chazette_knowledge_nodate} \cite{tintarev_designing_nodate} \cite{chazette_end-users_nodate} \cite{balog_measuring_2020} \cite{chazette2020explainability} \cite{tintarev2015explaining} \cite{hernandez-bocanegra_effects_2020} \cite{tsai_effects_2020} \cite{rjoob_towards_2021}  \cite{sokol_one_2020} \cite{wang_is_2018} \cite{koo_understanding_2016} \cite{tintarev2007survey}\\ \hline
+    Understandability / Accountability & ggf. löschen, da Transparency SIG / Mental Model & \cite{chazette_knowledge_nodate} \cite{chazette_end-users_nodate} \cite{martin_evaluating_2021}  \cite{ehsan_human-centered_2020} \cite{rjoob_towards_2021}  \cite{sokol_one_2020} \cite{cheng2019explaining} \\ \hline
+    Trust      & Das Vertrauen des Nutzers in das System erhöhen. & \cite{nunes_systematic_2017} \cite{chazette_knowledge_nodate} \cite{tintarev_designing_nodate} \cite{balog_measuring_2020} \cite{eiband_impact_2019} \cite{tintarev2015explaining} \cite{hernandez-bocanegra_effects_2020} \cite{stange_effects_2021} \cite{weitz_you_2019} \cite{yamada_evaluating_2016} \cite{haspiel_explanations_2018} \cite{martin_developing_2019} \cite{martin_evaluating_2021} \cite{tsai_effects_2020}  \cite{sokol_one_2020}  \cite{wang_is_2018} \cite{koo_understanding_2016} \cite{wiegand2019drive} \cite{gunning2019darpa} \cite{lim_2009_assessing} \cite{tintarev2007survey} \\ \hline
+    Satisfaction      & Benutzerfreundlichkeit und generelle Zufriedenheit mit dem System erhöhen. (Clarity and utility \cite{martin_evaluating_2021}) & \cite{nunes_systematic_2017} \cite{chazette_knowledge_nodate} \cite{tintarev_designing_nodate} \cite{balog_measuring_2020} \cite{tsai_evaluating_2019} \cite{tintarev2015explaining} \cite{riveiro_thats_2021} \cite{martin_developing_2019} \cite{martin_evaluating_2021} \cite{tsai_effects_2020} \cite{ehsan_human-centered_2020} \cite{sovrano_modelling_2020} \cite{koo_understanding_2016} \cite{ribera2019can} \cite{gunning2019darpa} \cite{lim_2009_assessing}  \cite{tintarev2007survey}\\ \hline
+    Scrutability      & Dem Nutzer die Möglichkeit geben, dem System einen Fehler mitzuteilen (auch correctability) \cite{martin_evaluating_2021}  & \cite{nunes_systematic_2017} \cite{chazette_knowledge_nodate} \cite{tintarev_designing_nodate} \cite{balog_measuring_2020} \cite{tintarev2015explaining} \cite{martin_developing_2019} \cite{gunning2019darpa}  \cite{tintarev2007survey}\\ \hline
+    Efficiency      & Das Verhältnis von Qualität und Zeit für das Lösen einer Aufgabe verbessern. & \cite{nunes_systematic_2017} \cite{chazette_knowledge_nodate} \cite{tintarev_designing_nodate} \cite{balog_measuring_2020} \cite{tsai_evaluating_2019} \cite{tintarev2015explaining} \cite{hernandez-bocanegra_effects_2020} \cite{tintarev2007survey}\\ \hline
+    Effectiveness      & Die Qualität der Aufgabe des Nutzers erhöhen (Task performance) \cite{martin_evaluating_2021} & \cite{nunes_systematic_2017} \cite{chazette_knowledge_nodate} \cite{tintarev_designing_nodate} \cite{balog_measuring_2020} \cite{tintarev2015explaining} \cite{zolotas_towards_2019} \cite{hernandez-bocanegra_effects_2020} \cite{martin_evaluating_2021} \cite{rjoob_towards_2021} \cite{tintarev2007survey} \\ \hline
+    Persuasiveness      & Convince Users to try or by. \cite{balog_measuring_2020} & \cite{nunes_systematic_2017} \cite{tintarev_designing_nodate} \cite{balog_measuring_2020} \cite{sato_context_nodate} \cite{sato_context_nodate} \cite{abdulrahman_belief-based_2019} \cite{tintarev2015explaining} \cite{sato_action-triggering_2019} \cite{tintarev2007survey} \\ \hline
+    Usefullness / Perceived Value & ggf. Teil von Satisfaction & \cite{sato_context_nodate} \cite{chazette_knowledge_nodate} \cite{sato_action-triggering_2019} \\ \hline
+   explanation quality  & general & \cite{hernandez-bocanegra_effects_2020} \cite{kunkel_let_2019} \\ \hline
+\caption{Qualitätsaspekte einer Erklärung}
+\label{tab:quality_aspects_of_explanation}
+\end{longtable}
+
+1. To justify its decisions so the human participant can decide to accept them (provide control) 2. To explain the agent’s choices to guarantee safety concerns are met 3. To build trust in the agent’s choices, especially if a mistake is suspected or the human operator does not have experience with the system 4. To explain the agent’s choices to ensure fair, ethical, and/or legal decisions are made 5. Knowledge/scientific discovery 6. To explain the agent’s choices to better evaluate or debug the system in previously unconsidered situations \cite{rosenfeld_explainability_2019}
+
+Usability beschreibt die Qualität einer Erklärung im Bezug auf die Interaktion und die Darstellung Darstellung der Inhalte \cite{chazette_end-users_nodate}. Informativeness ist dierekt bezogen auf den Inhalt der Erklärung \cite{chazette_end-users_nodate}. Direkt messbar an der Erklärung selbst.
+
+\cite{schneider2012abenteuer} beschreibt den Prozess von abstrakten allgemein definierten und bekannten Qualitätszielen hin zu konkreten Metriken. Als Zwischenstufe werden konkrete Qualitätsziele, die für den aktuellen Anwendungsfall gültig sind aufgestellt. \cite{nunes_systematic_2017} und \cite{waa_evaluating_2021} unterteilen diese verschiedenen Abstraktionsebenen der Ziele für Erklärungen in drei Ebenen. Die ursprünglichen Begrifflichkeiten der beiden erwähnten Arbeiten sowie weitere Synonyme aus anderen Arbeiten sind in \autoref{tab:impact_of_objective_on_explanation} zusammengefasst.
+
+7 Established goals von \cite{tintarev2015explaining, tintarev_designing_nodate}
+
+Einteilung in Oberkategorien...
+
+\begin{longtable}{|p{.2\textwidth}|p{.5\textwidth}|p{.2\textwidth}|}
+    \hline
+    \textbf{Aspekt}     & \textbf{Synonym} & \textbf{Quellen} \\ \hline
+    Business Goals      & Motivation & \cite{nunes_systematic_2017} \\
+                        & Stakeholder Goals & \cite{nunes_systematic_2017} \\
+                        & (Intended) Purpose & \cite{waa_evaluating_2021} \\
+                        & Higher-level Goals & \cite{nunes_systematic_2017} \\
+                        & Application Level & \cite{sokol_explainability_2020} \\
+    \hline
+    Users' Perception   & User Perceived Quality Factors & \cite{nunes_systematic_2017} \\
+                        & (Consumer) Needs & \cite{ehsan_human-centered_2020} \cite{chazette_end-users_nodate} \\
+                        & User Goals & \cite{ehsan_human-centered_2020} \\
+                        & Intermediate Requirements & \cite{waa_evaluating_2021} \\
+                        & Human level & \cite{sokol_explainability_2020} \\
+                        
+    \hline
+    Explanation Purpose & Purpose & \cite{nunes_systematic_2017} \\
+                        & Explanatory Goal & \cite{tintarev_designing_nodate} \cite{balog_measuring_2020} \\
+                        & Function Level & \cite{sokol_explainability_2020} \\
+    \hline
+\caption{Zielsetzung einer Erklärung}
+\label{tab:impact_of_objective_on_explanation}
+\end{longtable}
+
+Determine what what information should be conveyed to the user \cite{nunes_systematic_2017}
