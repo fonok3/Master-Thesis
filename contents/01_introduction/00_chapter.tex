@@ -1,97 +1,19 @@
 \chapter{Einleitung}
 
-Die Integration von Softwaresystemen in den Alltag der meisten Menschen wird heutzutage immer tiefer und umfassender \cite{carvalho2020developers}.  Gleichzeitig steigt die Größe und Komplexität dieser Systeme. Als Lösung für viele Aufgaben reicht die Nutzung von Software dabei von der Routenberechnung in Navigationssystemen, über das Vorschlagen von Produkten bis zu klinischen Unterstützungssystemen \cite{chazette2020explainability, tintarev2015explaining, cypko2017guide}. Immer häufiger werden dabei vor allem für den Endnutzer schwer nachvollziehbare Algorithmen beispielsweise aus dem Bereich des Maschinellen Lernens (ML) verwendet. Neben bekannten Anforderungen an die Softwarequalität \cite{international2011iso} entsteht folglich zunehmend der Bedarf für Erklärungen innerhalb von Softwaresystemen \cite{chazette_end-users_nodate}.
+Die Integration von Softwaresystemen in den Alltag der meisten Menschen wird heutzutage immer tiefer und umfassender \cite{carvalho2020developers}.  Gleichzeitig steigt die Größe und Komplexität dieser Systeme. Als Lösung für viele Aufgaben reicht die Nutzung von Software dabei von der Routenberechnung in Navigationssystemen, über das Vorschlagen von Produkten bis zu klinischen Unterstützungssystemen \cite{chazette2020explainability, tintarev2015explaining, cypko2017guide}. Dadurch basieren auch immer mehr getroffene Entscheidungen auf Algorithmen oder den zugrunde liegenden Daten. Immer häufiger werden dabei vor allem für den Endnutzer schwer nachvollziehbare Algorithmen beispielsweise aus dem Bereich des maschinellen Lernens (ML) verwendet. Nutzer stoßen so öfter auf das Problem, dass das eigene mentale Modell nicht mehr mit dem Systemmodell übereinstimmt oder unvollständig ist.
 
-Bei der Betrachtung dieses Bedarfs für Erklärungen wird \textit{Erklärbarkeit} als neue Nicht-Funktionale Anforderung (NFR) interpretiert, um Abhängigkeiten mit anderen Qualitätsanforderungen zu untersuchen \cite{chazette2020explainability, kohl_explainability_2019}.
+Folglich wächst der Bedarf an Software, die transparent, nachvollziehbar und vertrauenswürdig ist, um nicht nur das Verständnis der Nutzer für die Funktionsweise des Systems zu erhöhen, sondern auch Diskriminierung durch Software vorzubeugen. Neben bekannten Anforderungen an die Softwarequalität \cite{international2011iso} entsteht also zunehmend der Bedarf für Erklärungen innerhalb von Softwaresystemen \cite{chazette_end-users_nodate}.
 
-Frühe Ansätze für erklärbare, intelligente Systeme (XAI) stammen bereits von \citeauthor{byrne1991construction, cawsey1991generating}, welche die Erklärungsinhalte \cite{byrne1991construction} und die Interaktion mit Erklärungen untersuchen \cite{cawsey1991generating}. Aktuelle Studien auf dem Gebiet befassen sich entweder mit dem technischen Verständnis von vorwiegend ML-Algorithmen (Interpretability) \cite{gilpin_explaining_2018, fong_interpretable_2017, samek_towards_2019} oder 
+Bereits heute existieren Bereiche, in denen für die Nutzer ein \glqq Recht auf Erklärung\grqq{} gesetzlich verankert ist. Auf europäischer Ebene regelt die \citetitle{eu_verordnung_2016} (DSGVO) \cite{eu_verordnung_2016} im Rahmen der Transparenzverpflichtung ein Recht auf die Aufklärung über die Art der Verarbeitung von personenbezogenen Daten und die Auswirkungen einer automatisierten, daraus resultierenden Entscheidung. So soll beispielsweise sichergestellt werden, dass Unterstützungssysteme, wie sie beispielsweise bei der Bewertung der Kreditwürdigkeit von Personen oder in der Versicherungsbranche angewendet werden, objektiv und diskriminierungsfreie Empfehlungen geben. Unter die Verarbeitung von personenbezogenen Daten fallen aber auch die Sortierungs- und Empfehlungsalgorithmen sozialer Netzwerke. Erste Umsetzungen solcher Erklärungen zeigen Instagram für die Priorisierung von Beiträgen und Tiktok für die Empfehlung von Videos \cite{mosseri_shedding_2021,tiktok_technology_limited_how_2021}. Eine vergleichbare Verordnung für das Finanzwesen findet sich im amerikanischen Recht \cite{cfpb_regulation_2018}.
 
+Aus diesem wachsenden Bedarf und Einsatz von Erklärungen entsteht auch die Notwendigkeit der Formalisierung der Betrachtung dieser. Frühe Ansätze für erklärbare, intelligente Systeme (XAI) stammen bereits von \citeauthor{byrne1991construction} und \citeauthor{cawsey1991generating}, welche die Erklärungsinhalte \cite{byrne1991construction} und die Interaktion mit Erklärungen untersuchen \cite{cawsey1991generating}. Aktuelle Studien auf dem Gebiet befassen sich i.d.R. entweder mit dem technischen Verständnis von vorwiegend ML-Algorithmen (\textit{Interpretability}) \cite{gilpin_explaining_2018, fong_interpretable_2017, samek_towards_2019} oder dem Einfluss von Erklärungen auf die vom Nutzer wahrgenommene Qualität (externe Qualität \cite{international2011iso}) \cite{nunes_systematic_2017,kouki_user_2017,chazette_end-users_nodate}. Letztere wird in dieser Arbeit näher untersucht.
 
+Bei der Betrachtung von Erklärungen wird \textit{Erklärbarkeit} als neue Nicht-Funktionale Anforderung (NFR) interpretiert, um Abhängigkeiten mit anderen Qualitätsanforderungen zu untersuchen \cite{kohl_explainability_2019, chazette2020explainability}. Erste Ergebnisse auf diesem Gebiet zeigen, dass Erklärbarkeit eine starke Auswirkung auf die Gesamtqualität von Softwaresystemen hat. Bis dato existieren allerdings vor allem Studien, die die Auswirkung einzelner Eigenschaften von Erklärungen auf bestimmte Qualitätsaspekte untersuchen oder einen Überblick über die verschiedenen Einsätze von Erklärungen innerhalb eines bestimmten Kontextes (z.B. Empfehlungssysteme \cite{nunes_systematic_2017}) geben.
 
-Dadurch basieren auch immer mehr getroffene Entscheidungen auf Algorithmen oder den zu Grunde liegenden Daten.
+Da es sich bei \textit{Erklärbarkeit} um eine neue NFR handelt, fehlt es zum aktuellen Zeitpunkt an Artefakten, die bei der Anforderungserhebung (Requirements Engineering) für Erklärungen und dessen Operationalisierung unterstützen. Um folglich die Umsetzung im Requirements-Engineering-Prozess zu erleichtern, werden Richtlinien und Modelle benötigt, welche einen Überblick über Vorgehensweisen und Aspekte von Erklärungen geben. 
 
+Auf der Basis der Definitionen für \textit{Erklärbarkeit} von \citeauthor[]{chazette_knowledge_nodate} und \citeauthor[]{kohl_explainability_2019} wird in dieser Arbeit ein Modell vorgestellt, welches einen Überblick über die Aspekte von Erklärungen gibt. Innerhalb einer Literaturrecherche wurden dabei (i) die äußeren Einflüsse auf Erklärungen, (ii) die Eigenschaften und der Bedarf von Erklärungen, sowie (iii) die Evaluation derer untersucht. Auf Basis dieser Übersicht fasst diese Arbeit außerdem die in vorangegangenen Arbeiten gezeigten Zusammenhänge zwischen den einzelnen Aspekten sowie dessen Auswirkungen auf die Softwarequalität zusammen. Darüber hinaus werden schließlich Design-Empfehlungen für Erklärungen abgeleitet.
 
+Dieses Modell, bestehend aus dem Überblick über die Aspekte, den Zusammenhängen und Design-Empfehlungen, wird im zweiten Teil der Arbeit auf dessen Anwendbarkeit in der Wirtschaft untersucht. Dabei werden anhand des Modells Erklärungen in ein bestehendes Navigationssystem integriert und evaluiert. Zunächst wurden dafür auf Grundlage der Ergebnisse einer Nutzer-Feedback-Analyse in einem Workshop Probleme identifiziert, welche durch die Integration von Erklärungen gelöst werden sollen. Darauf aufbauend wurden Ziele und Evaluationsmöglichkeiten der Erklärungen sowie Ideen zur Umsetzung zusammengetragen. Final wurden die integrierten Erklärungen in einer Feld-Studie analysiert. Die Ergebnisse aus dieser Anwendung des Modells wurden abschließend in die in dieser Arbeit vorgestellten Version des Modells überführt.
 
-
-
-Damit steigt auch der Anspruch an die Softwarequalität dieser \cite{schneider2012abenteuer}. 
-
-
-\citeauthor{ehsan_human-centered_2020} betonen, dass bei der Betrachtung der Qualität sowohl die technische als auch die Nutzer-Sichtweise betrachtet werden muss \cite{ehsan_human-centered_2020}. 
-
-Einhergehend mit der tiefen Integration und Allgegenwertigkeit nimmt folglich auch der Anspruch an die Softwarequalität von System zu \cite{schneider2012abenteuer}. Anforderungen an diese Qualität, \glqq Nicht-Funktionale Anforderungen genannt\grqq{} (NFR),
-
-und die Bedeutung der Qualität dieser nimmt folglich deutlich zu. 
-
-\begin{itemize}
-    \item Software ist allgegenwertig und die Systeme werden immer größer, komplexer und sind tiefer in den Alltag der meisten Menschen integriert \cite{carvalho2020developers} Die Grenze verschwimmt \cite{ehsan_human-centered_2020} they highlights the importance of adding the coexistence of technical and human centered perspective.
-    \item Mit der fülle der Software und der tiefen Integration in das Leben wird die Qualität immer wichtiger und ist ein fester Bestandteil von Systemen \cite{schneider2012abenteuer}
-    \item Es gibt bereits zahlreiche einzelne Aspekte, anhand derer man die Qualität von Software bestimmen und daraus konkrete Anforderungen ableiten kann. Die verbreitetsten Qualitätsaspekte sind in der ISO 25000 definiert. \cite{international2011iso}
-    Hier wird zwischen internen und externen Aspekten (check wording aspekt) unteschieden, wobei sich die internen auf xxx beziehen und die externen Qualitätsaspekte unmittelbaren Einfluss auf den Nutzer haben, welche diese direkt wahrnimmt. Vor allem letztere sind für diese Arbeit relevant.
-    \item Änderung und Funktionswerweiterung von Software
-    \begin{itemize}
-        \item Immer mehr Entscheidungen basieren auf Algorithmen bzw. den zu Grunde liegenden Daten
-        \item Viele Beispiele: Versicherungen (Teurer oder Ablehnung auf Datenbasis, Nicht mal Makler kennt Grund der Ablehnung)
-        \item Vorschlagsalgorithmen, wie Amazon oder auch die Sortierung von Feeds auf Instagram
-        \item Medizinische Unterstützungssysteme \cite{doshi2017towards} (siehe Medizinische IT-Anwendungen)
-        \item Unterstützungssysteme Autonomes Fahren
-        \item Auch erhält Künstliche Intelligenz immer weiter Einzug in Software
-        \item Verständnis Probleme bei Nutzern
-        \item Durch Erklrärungen lösbar
-        \item Neuer Qualitätsaspekt, der sich mit Erklärungen beschäftigt heißt Erklärbarkeit (\textit{Explainability}).
-        \item EU “Right of Explanation“
-        \item Erklärbarkeit bereits seit vielen Jahren geforscht (Definition aus der Psychology raussuchen (Paper Chazette. Source))
-    \end{itemize}
-    \item Warum ist Erklärbarkeit interessant?
-    \item Explanation is key \cite{jaimes2007guest}
-    \item Unterstützt: Fairness / Transparency, Ethics
-    \item Sehr aktuelles Thema (Hot Topic, eigene Konferenz zum Thema, viele)
-    \item Instagram hat erklärt (Quelle suchen)
-    \item Auch tiktok erklärt
-    \item Definition existiert
-    \item Wobei explainable viele synonyme hat → Es fehlt an einheitlichen Konzepten, um sich zu verständigen. Es gibt Ansätze in einzelnen Bereichen (z.B. XAI → brennen)
-    \item Es wurde klargestellt, mit welchen NFRs es zusammenhänge gibt
-    \item Es gibt zahlreiche Studien, die eine bestimmte Art von Erklärungen in verschiedenen Kontexten analysiert
-    \item Die Integration von Erklärungen wurde dabei auf verschiedene Arten, die vor allem durch die Domänen verschieden waren evaluiert
-    \item Es fehlt ein Ansatz, wie die Qualität von Erklärungen einheitlich erfasst werden kann.
-    \item Um die Qualität bewerten zu können  wird zunächst eine Übersicht über die Eigenschaften von Erklärungen benötigt, sowie anhand welcher Ziele und in welchen Kontexten diese auftauchen können
-    \item One key question surrounding these systems is the type and quality of the information that must be shared between the agents and the human-users during their interactions. \cite{rosenfeld_explainability_2019}
-    \item \cite{kohl_explainability_2019, chung2009non} sagen ,dass Kataloge aufgebaut werden müssen, die Kataloge und Zusammenfassungen über die existierende Literatur enthält.
-    \item \cite{cassens_ambient_2019}) A framework for evaluation measures wird gebraucht (Kosten und Nutzen müssen abgewogen werden \cite{chazette_end-users_nodate})
-    \item In dieser Arbeit wird im Kontext einer Literaturrecherche ein konkretes Qualitäts-Modell entwickelt, welches zunächst einen Überblick über die beschriebene Struktur     \item von Erklärungen schafft.
-    \item Dieses Modell soll bei der Integration von Erklärungen in erklärbare Systeme unterstützen.
-    \item Anhand der definierten Struktur werden dann im Anschluss bereits erforschte Abhängigkeiten zwischen Eigenschaften und Qualitätsaspekten vorgestellt.
-    \item Außerdem wird das Modell durch eine Anwendung auf seine Tauglichkeit hin evaluiert (Es wird geprüft, ob mit diesem Modell integrierte Erklärungen wirklich ihren     \item Zweck erfüllen)
-    \item Abgrenzung: Explainability: Top-Down, Interpretability: Bottom-up understanding \cite{thomson_knowledge--information_2020}
-\end{itemize}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\glqq Through clear definitions and motivation, the contribution of the evaluation becomes more apparent. \grqq{} \cite{waa_evaluating_2021}
-
-Our long-term vision is to establish a standardized certification process in tandem with appropriate development techniques to achieve explainability by design. This paper is a starting point towards an overarching and systematic approach to explainability requirements.
-
-“Evaluating the quality of explanations is traditionally difficult due to their inherent subjectivity. The needs of different user groups can be very different, which is reflected in their expectations of what an explanation should offer.” \cite{martin_developing_2019, martin_evaluating_2021}
-
-However, explanations are typically crafted to respond to specific user needs and specific applications [1,2,11]. This practice is both time-consuming and inefficient. We believe that there are overlaps between the requirements of an explanation for different applications. \cite{martin_developing_2019}
-
-These systems, often called human–agent systems or human–agent Cooperatives, have moved from theory to reality in the many forms, including digital personal assistants, recommendation systems, training and tutoring systems, service robots, chat bots, planning systems and self-driving cars [6,9,13, 16,40,64,72,80,103,104,106,107,113,120,124,132,134,141].
-
-A theory of the dialogic process rather than a monologic product (is missing \cite{cassens_ambient_2019}) A framework for evaluation measures that is: – intrinsic (deciding on a strategy for explanation generation) – dialogic (measuring the reaction to an explanation and providing further explanation if needed)
-
-\cite{hleg2019policy} eu policy for ai
+Zusammenfassend bietet diese Arbeit ein Modell, welches die Integration von Erklärungen in bestehende Software erleichtert und als Einstiegspunkt für die Entwicklung detaillierter Modelle für verschiedene Kontexte gesehen werden kann. Darüber hinaus kann es als Basis für die Entwicklung eines Prozesses für die Beachtung von \textit{Erklärbarkeit} im Requirements-Engineering- und Entwicklungs-Prozess dienen.
