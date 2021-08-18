@@ -5,7 +5,7 @@ on:
     branches: [ develop ]
 
 jobs:
-  build_and_upload_latex:
+  build_latex:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
