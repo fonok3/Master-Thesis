@@ -12,3 +12,4 @@
 *.toc
 *.pdf
 *-blx.bib
+/output/**
