@@ -1,23 +1,57 @@
 \subsection{Ergebnisse}
 
-\subsubsection*{Übersicht}
+\subsubsection{Übersicht}
 
 \begin{longtable}{|l|l|c|}
     \hline
                         &           & \textbf{Anzahl} \\ \hline
-    Teilnehmer          & insgesamt & 9745 \\
-                        & gefiltert & 4015 \\ \hline
-    Gefahrene Routen    & insgesamt & 41540 \\
-                        & gefiltert & 16531 \\ \hline
+    Teilnehmer          & insgesamt & 9 745 \\
+                        & gefiltert & 4 012 \\ \hline
+    Gefahrene Routen    & insgesamt & 41 540 \\
+                        & gefiltert & 16 531 \\ \hline
 \caption{}
 \label{tab:study_user_overview}
 \end{longtable}
 
-Um bei der Analyse der Daten, Nutzer auszuschließen, die eine Navigation nur gestartet haben, um sich diese anzusehen, aber NUNAV nicht aktiv während einer Autofahrt genutzt haben werden Routen, die kürzer als 4 Kilometer sind herausgefiltert. Dies verhindert außerdem, dass das gelangen zur ersten Route, sowie das Suchen von Parkplätzen einen zu großen Einfluss auf die Daten hat.
+Um bei der Analyse der Daten, Nutzer auszuschließen, die eine Navigation nur gestartet haben, um sich diese anzusehen, aber NUNAV nicht aktiv während einer Autofahrt genutzt haben werden Routen, die kürzer als 5 Kilometer sind herausgefiltert. Dies verhindert außerdem, dass das gelangen zur ersten Route, sowie das Suchen von Parkplätzen einen zu großen Einfluss auf die Daten hat.
 
-\subsubsection{Einfluss der Erklärungen}
+Für Nutzer der Gruppen 3 und 4 kann es passieren, dass sie keine Erklärung während der Navigation erhalten, wenn die aktuelle Route keiner Erklärung bedarf. Dies ist der Fall, wenn das Verkehrsaufkommen \glqq normal\grqq{} ist und der Nutzer während der gesamten Fahrt guten GPS-Empfang hat (Definitionen siehe \autoref{06_model_evaluation:gps_accuracy_definition}). Bei der Betrachtung von einzelnen Routen werden die Teilnehmer folglich in die Gruppen 1 oder 2 umsortiert, falls sie während der Navigation keine Erklärung gesehen haben. Wird eine Metrik analysiert, die sich pro Nutzer über mehrere Routen erstreckt, werden die Teilnehmer den Gruppen zugeordnet, wenn NUNAV ihnen mindestens einmal eine Erklärung aus der Studiengruppe angezeigt hat. Über Übersicht findet sich in \autoref{tab:study_user_group_overview}
 
-\textbf{Nutzerabweichungen von der vorgeschlagenen Route}
+\begin{table}[htb!]
+    \begin{center}
+        \begin{tabular}{|l|c|c|c|}
+            \hline
+            \multirow{2}{*}{\textbf{Gruppe}} & \multirow{2}{*}{\textbf{Anzahl der Nutzer}} & \multicolumn{2}{|c|}{\textbf{Anzahl der Routen}} \\ \cline{3-4}
+            & & Insgesamt & Mit Nutzerbewertung \\ \hline \hline
+            Gruppe 1            & 1 778  & 4 807  & 133 \\ \hline
+            Gruppe 2            & 1 397  & 3 413  & 135 \\ \hline
+            Gruppe 3            & 468   & 4 571  & 184 \\ \hline
+            Gruppe 4            & 369   & 3 740  & 173 \\ \hline \hline
+            \textbf{Insgesamt}  & 4 012  & 16 531 & 625 \\ \hline
+        \end{tabular}
+    \end{center}
+    \caption{Übersicht über die Daten der Studiengruppen}
+    \label{tab:study_user_group_overview}
+\end{table}
+
+\subsubsection{Einflüsse außerhalb von Erklärungen}
+
+Um auszuschließen, dass die untersuchten Variablen von weiteren Faktoren abhängen habe wurde zu Beginn geprüft, ob eine schlecht vorausgesagte Ankunftszeit oder mehrfach auftretendes schlechtes GPS einen Effekt auf die Anzahl der Abweichungen von der Route oder die Zufriedenheit mit der Route haben. Dies geschieht, da es Vermutungen eines negativen Zusammenhangs gab, der die Ergebnisse der Untersuchung der integrierten Erklärungen beeinflussen könnte. Dazu wurde die Kontrollgruppe (Gruppe 1: Ohne Erklärungen) untersucht.
+
+Die 4 Hypothesen lauten wie folgt:
+
+\begin{enumerate}
+    \item[1.1] WENN die ATA mehr als 10 \% und mindestens 2 Minuten von der ETA abweicht, DANN hat dies einen signifikant messbaren negativen Einfluss auf die Nutzerzufriedenheit.
+    \item[1.2] \item WENN die ATA mehr als 10 \% und mindestens 2 Minuten von der ETA abweicht, DANN ist die Anzahl der Routenabweichungen signifikant messbar höher.
+    \item[2.1] WENN NUNAV auf der betrachteten Route pro 5 km durchschnittlich mindestens eine Positionsungenauigkeit aufwies, DANN hat dies einen signifikant messbaren negativen Einfluss auf die Nutzerzufriedenheit.
+    \item[2.2] \item WENN NUNAV auf der betrachteten Route pro 5 km durchschnittlich mindestens eine Positionsungenauigkeit aufwies, DANN ist die Anzahl der Routenabweichungen signifikant messbar höher.
+\end{enumerate}
+
+Bei der statistischen Prüfung der Auswirkung von schlecht vorausgesagte Ankunftszeit auf die Anzahl der Routenabweichungen mittels eines Kruskal-Wallis-Tests lässt sich kein Haupteffekt feststellen ($ P = 0.197648 > 0.05 $). Gleiches gilt für die Überprüfung eines Effektes auf die Nutzerzufriedenheit ($ P = 0.564911 > 0.05 $). Folglich können die Hypothesen 1.1 und 1.2 abgelehnt werden.
+
+Für die Überprüfung, ob eine schlechte Positionierung einen Effekt auf die Nutzerzufriedenheithat, hat ein Kruskal-Wallis-Test ergeben, dass kein signifikanter Effekt vorliegt ($ P = 0.269231 > 0.05 $).
+
+\subsubsection{Nutzerabweichungen von der vorgeschlagenen Route}
 
 \textbf{Hypothesen}
 
@@ -47,82 +81,37 @@ Um bei der Analyse der Daten, Nutzer auszuschließen, die eine Navigation nur ge
 
 \smallskip
 
-Bei der Betrachtung der \textit{Offroutes} werden zuerst Ausreißer herausgefiltert. (Ausreißer: mehr als 3 Standardabweichungen vom Durchschnitt entfernt). Folglich sind 16366 Routen im Datensatz für die Prüfung der Hypothese verblieben.
+Bei der Betrachtung der \textit{Offroutes} werden zuerst Ausreißer herausgefiltert. (Ausreißer: mehr als 3 Standardabweichungen vom Durchschnitt entfernt). Folglich sind 16 366 Routen im Datensatz für die Prüfung der Hypothese verblieben.
 
 \begin{figure}[bth]!
-    \includegraphics{contents/06_model_evaluation/res/OffRoute_Result_Overview.png}
+    \includegraphics[width=0.8\textwidth]{contents/06_model_evaluation/res/OffRoute_Result_Overview.png}
     \caption{Anzahl der Offroutes pro Kilometer für jede Studiengruppe}
 \end{figure}
 
-\begin{longtable}{|c|c|c|c|}
-    \hline
-    \textbf{Studiengruppe}  & \textbf{Mittelwert} & \textbf{Median} & \textbf{Standardabweichung} \\ \hline
-    Gruppe 1                & 7.85 & 3.27 & 13.75 \\ \hline
-    Gruppe 2                & 8.20 & 3.30 & 14.30 \\ \hline
-    Gruppe 3                & 7.90 & 3.57 & 12.81 \\ \hline
-    Gruppe 4                & 7.48 & 2.90 & 13.74 \\ \hline
-\caption{Übersicht der Ergebnisse der Routen-Abweichungen pro Kilometer}
-\label{tab:study_offroute_results}
-\end{longtable}
+\begin{table}
+    \begin{center}
+        \begin{tabular}{|l|c|c|}
+            \hline
+            \textbf{Studiengruppe}  & \textbf{Mittelwert} [N/km] & \textbf{Standardabweichung} [N/km]\\ \hline
+            Gruppe 1                & 0.0785 & 0.1375 \\ \hline
+            Gruppe 2                & 0.0790 & 0.1281 \\ \hline
+            Gruppe 3                & 0.0820 & 0.1431 \\ \hline
+            Gruppe 4                & 0.0748 & 0.1374 \\ \hline
+        \end{tabular}
+    \end{center}
+    \caption{Übersicht der Ergebnisse der Routen-Abweichungen pro Kilometer}
+    \label{tab:study_offroute_results}
+\end{table}
 
-Um zu prüfen, ob die Unterschiede der Mittelwerte signifikant ist, muss dies mittels eines statistischen Tests überprüft werden. Da es sich um ein Experiment von mehren nicht zusammenhängenden Studiengruppen mit mehr als zwei verschiedenen Bedingungen handelt, kommen entweder ein ANOVA- oder Kruskal-Wallis-Test in Frage. Für ersteren gilt, dass die Daten gleich verteilt sein müssen. Dies wurde mittels Shapiro-Wilk-Test test geprüft. Da das Ergebnis für alle Test-Gruppen $ p = 0.000000 < 0.05 $ ist, sind die Daten nicht normal verteilt. Folglich wird zur Signifikanzprüfung der Kruskal-Wallis-Test verwendet. Aufgrund der Ergebnis von $ p = 0.000008 < 0.05 $, kann abgeleitet werden, dass ein Haupteffekt vorliegt.
+Um zu prüfen, ob die Unterschiede der Mittelwerte signifikant ist, muss dies mittels eines statistischen Tests überprüft werden. Da es sich um ein Experiment von meheeren nicht zusammenhängenden Studiengruppen mit mehr als zwei verschiedenen Bedingungen handelt, kommen entweder ein ANOVA- oder Kruskal-Wallis-Test infrage. Für ersteren gilt, dass die Daten gleich verteilt sein müssen. Dies wurde mittels Shapiro-Wilk-Test geprüft. Da das Ergebnis für alle Test-Gruppen $ p = 0.0 < 0.05 $ ist, sind die Daten nicht normal verteilt. Folglich wird zur Signifikanzprüfung der Kruskal-Wallis-Test verwendet. Aufgrund des Ergebnisses von $ p = 0.000008 < 0.05 $, wird abgeleitet, dass ein Haupteffekt vorliegt.
 
-Für die Prüfung zwischen welchen Studiengruppen ein signifikanter Unterschied vorliegt, wird der Dunn-Test \cite{dunn1964multiple} verwendet.
+Für die Prüfung zwischen welchen Studiengruppen ein signifikanter Unterschied vorliegt, wird der Dunn-Test \cite{dunn1964multiple} verwendet. (P wird mit der \glqq bonferoni\grqq{}-Methode korrigiert.)
 
-Dieser liefert folgende Ergebnisse:
+Auch hier wird wieder von einem Signifikanzniveau $ p < 0.05 $ ausgegangen (Siehe \autoref{sec:appendix_study_results}). Folglich weichen die Nutzer der Gruppe 4 signifikant weniger von der vorgeschlagenen Route ab im Vergleich zu allen anderen Gruppen ($ p_{11} = 0.008222 $, $ p_{12} = 0.000005 $, $ p_{13} = 0.000912 $). Weitere signifikante Unterschiede gibt es nicht.
 
-\begin{longtable}{|c|c|c|c|c|}
-    \hline
-    & \textbf{Gruppe 1} & \textbf{Gruppe 2} & \textbf{Gruppe 3} & \textbf{Gruppe 4} \\ \hline
-    \textbf{Gruppe 1}   & 1.000000 & 1.000000 & 0.219884 & 0.008222 \\ \hline
-    \textbf{Gruppe 2}   & 1.000000 & 1.000000 & 0.860586 & 0.000912 \\ \hline
-    \textbf{Gruppe 3}   & 0.219884 & 0.860586 & 1.000000 & 0.000005 \\ \hline
-    \textbf{Gruppe 4}   & 0.008222 & 0.000912 & 0.000005 & 1.000000 \\ \hline
+Hypothese 1 trifft zwar für das Geben aller Erklärungstypen (Gruppe 4) zu, nicht aber für die Gruppen 2 und 3. Folglich wird Hypothese 1 abgelehnt. Hypothese 2 kann angenommen werden, da die Nutzer der Gruppe 4 sowohl signifikant weniger von der vorgeschlagenen Route abgewichen als die Nutzer der Gruppe 2 sind also auch die Nutzer der Gruppe 3.
 
-    \caption{Signifikanzniveau $ p $ im paarweisen Vergleich der Anzahl der Routenabweichungen pro Kilometer zwischen den Studiengruppen }
-    \label{tab:study_offroute_significance_results}
-\end{longtable}
-
-Auch hier wird wieder von einem Signifikanzniveau $ p < 0.05 $ ausgegangen. Folglich weichen die Nutzer der Gruppe 4 signifikant weniger von der vorgeschlagenen Route ab im Vergleich zu allen anderen Gruppen. Weitere signifikante Unterschiede lassen sich nicht erkennen.
-
-Hypothese 1 trifft zwar für das Geben aller Erklärungstypen (Gruppe 4) zu, nicht aber für die Gruppen 2 und 3. Folglich wird Hypothese 1 abgelehnt.  Hypothese 2 hat sich vollumfänglich als richtig erwiesen, da die Nutzer der Gruppe 4 sowohl signifikant weniger von der vorgeschlagenen Route abgewichen sind also auch signifikant weniger als die Nutzer der Gruppe 2.
-
-\textbf{Häufigkeit der Nutzung}
-
-\textbf{Hypothesen}
-
-\begin{enumerate}
-    \item Wenn der Nutzer Erklärungen erhält, dann verwendet er NUNAV signifikant häufiger, als wenn er keine erhält.
-    \item Wenn der Nutzer einen der beiden Erklärungstypen (Algorithmus und Navigation) erhält, dann nutzt er NUNAV signifikant seltener als wenn er beide erhält.
-\end{enumerate}
-
-Als Messwert wird die Anzahl der gefahrenen Routen genommen.
-
-Bei der Betrachtung der Anzahl der gefahrenen Routen werden zuerst Ausreißer herausgefiltert. (Ausreißer: mehr als 3 Standardabweichungen vom Durchschnitt entfernt). Folglich sind 3954 Nutzer im Datensatz für die Prüfung der Hypothesen verblieben.
-
-\begin{figure}[bth]!
-    \includegraphics{contents/06_model_evaluation/res/Usage_Result_Overview.png}
-    \caption{Anzahl der gefahrenen Routen für jede Studiengruppe}
-\end{figure}
-
-\begin{longtable}{|c|c|c|c|}
-    \hline
-    \textbf{Studiengruppe}  & \textbf{Mittelwert} & \textbf{Median} & \textbf{Standardabweichung} \\ \hline
-    Gruppe 1                & 3.43 & 2.0 & 3.49 \\ \hline
-    Gruppe 2                & 3.69 & 2.0 & 3.86 \\ \hline
-    Gruppe 3                & 3.42 & 2.0 & 3.47 \\ \hline
-    Gruppe 4                & 3.57 & 2.0 & 3.44 \\ \hline
-\caption{Übersicht der Ergebnisse der gefahrenen Routen der Nutzer}
-\label{tab:study_offroute_results}
-\end{longtable}
-
-Um zu prüfen, ob die Unterschiede der Mittelwerte signifikant ist, muss dies mittels eines statistischen Tests überprüft werden. Da es sich um ein Experiment von mehren nicht zusammenhängenden Studiengruppen mit mehr als zwei verschiedenen Bedingungen handelt, kommen entweder ein ANOVA- oder Kruskal-Wallis-Test in Frage. Für ersteren gilt, dass die Daten gleich verteilt sein müssen. Dies wurde mittels Shapiro-Wilk-Test test geprüft. Da das Ergebnis für alle Test-Gruppen $ p = 0.000000 < 0.05 $ ist, sind die Daten nicht normal verteilt. Folglich wird zur Signifikanzprüfung der Kruskal-Wallis-Test verwendet. Aufgrund des Ergebnisses von $ p = 0.197473 > 0.05 $, kann abgeleitet werden, dass kein Haupteffekt vorliegt.
-
-Da es keine signifikanten Ergebnisse gibt müssen beide Hypothesen abgelehnt werden.
-
-Bemerkung: Ich habe hier die durchschnittliche Anzahl der Routen pro Nutzer untersucht. Was aber, wenn ein Nutzer aufhört NUNAV zu benutzen während dem Test? Ich werde also noch die Gesamtzahl der gefahrenen Routen pro Nutzergruppe vergleichen. Das schicke ich dir dann Anfang der Woche.
-
-\textbf{Nutzerzufriedenheit mit der aktuellen Route}
+\subsubsection{Nutzerzufriedenheit mit der aktuellen Route}
 
 \textbf{Hypothesen}
 
@@ -135,13 +124,44 @@ Als Messwert wird eine Likert-Skala, auf der der Nutzer in Form von fünf Sterne
 
 \begin{figure}[bth]!
     \includegraphics[width=\linewidth]{contents/06_model_evaluation/res/Rating_Result_Overview.pdf}
-    \caption{Durchschnittliche Bewertung der Navigation pro Nutzer  für jede Studiengruppe}
+    \caption{Durchschnittliche Bewertung der Navigation pro Nutzer für jede Studiengruppe}
+    \label{fig:Rating_Result_Overview}
 \end{figure}
 
-Für die Prüfung zwischen welchen Studiengruppen ein signifikanter Unterschied vorliegt, wird wieder der Dunn-Test \cite{dunn1964multiple} verwendet. (P wird mit der \glqq bonferoni\grqq{}-Methode korrigiert.)
+Für die Prüfung zwischen welchen Studiengruppen ein signifikanter Unterschied vorliegt, wird wieder der Dunn-Test \cite{dunn1964multiple} verwendet, nachdem ein Kruskal-Wallis-Test einen Haupteffekt zeigt ($ p = 0.00335 $). Daraus resultiert, dass es zwischen den Gruppen 1 und 3 ($ p = 0.005723$) sowie 3 und 4 ($ p = 0.024375 $) einen signifikanten Unterschied bei der Zufriedenheit mit der aktuellen Route gibt. Mithilfe von \autoref{fig:Rating_Result_Overview}, dass es insbesondere mehr 5-Stern-Bewertungen in Gruppe 3 gegenüber den Gruppen 1 und 4 gibt. Insbesondere die Anteile der ein und zwei Stern Bewertungen unterscheiden sich kaum. Folglich kann man sagen, dass die Teilnehmer signifikant zufriedener mit der Navigation waren, wenn sie Erklärungen wie in Gruppe 3 bekommen im Vergleich zu keinen Erklärungen (Gruppe 1) oder allen vorgestellten Erklärungstypen (Gruppe 4).
 
-Dabei kommt heraus, dass es zwischen den Gruppen 1 und 2 ($ p = 0.003027$) sowie 1 und 4 ($ p = 0.0.034375 $) einen signifikanten Unterschied gibt. Außerdem gibt es einen signifikanten Unterschied zwischen Gruppe 2 und 3 ($ p = 0.021798 $). Zusammen mit den Ergebnissen der Likert Skala, kann man also sagen, dass die Zufriedenheit der Nutzer im Vergliech zu keinen Erklärungen besser ist, wenn die Erklärungen wie in Gruppe 4 gegeben werden. Und Es kann gesagt werden, dass die Zufriedenheit bei Gruppe 2 gegenüber Gruppe 3 höher ist sowie bei Gruppe 1 gegenüber Gruppe 4. In letzterem Fall hat sich die Zufriedenheit beim Geben von Erklärungen folglich sogar verschlechtert.
+Da beim Geben von Erklärungen dies die Nutzerzufriedenheit nicht in jedem Fall erhöht, muss Hypothese 1 abgelehnt werden. Hypothese 2 muss ebenfalls abgelehnt werden, da es sogar einen negativen Unterschied zwischen den Gruppen 3 und 4 gibt.
 
-Da beim Geben von Erklärungen dies die Nutzerzufriedenheit nicht in jedem Fall erhöht, muss Hypothese 1 abgelehnt werden. Hypothese 2 muss ebenfalls abgelehnt werden, da es keine signifikanten Zusammenhänge zwischen den Gruppen 2 und 4 bzw. 3 und 4 gibt.
+\subsubsection{Häufigkeit der Nutzung}
+\label{sec:06_model_evaluation:usage_analysis}
 
-Bemerkung: Hier muss ich noch mit der Anzahl der Nutzer normalisieren. Dann könnte ein Effekt auftreten.
+\textbf{Hypothesen}
+
+\begin{enumerate}
+    \item Wenn der Nutzer Erklärungen erhält, dann verwendet er NUNAV signifikant häufiger, als wenn er keine erhält.
+    \item Wenn der Nutzer einen der beiden Erklärungstypen (Algorithmus und Navigation) erhält, dann nutzt er NUNAV signifikant seltener als wenn er beide erhält.
+\end{enumerate}
+
+Als Messwert wird die Anzahl der gefahrenen Routen genommen.
+
+Bei der Betrachtung der Anzahl der gefahrenen Routen werden zuerst Ausreißer herausgefiltert. (Ausreißer: mehr als 3 Standardabweichungen vom Durchschnitt entfernt). Folglich sind 3 951 Nutzer im Datensatz für die Prüfung der Hypothesen verblieben.
+
+\begin{figure}[bth]!
+    \includegraphics{contents/06_model_evaluation/res/Usage_Result_Overview.png}
+    \caption{Anzahl der gefahrenen Routen für jede Studiengruppe}
+\end{figure}
+
+\begin{longtable}{|c|c|c|c|}
+    \hline
+    \textbf{Studiengruppe}  & \textbf{Mittelwert} [N] & \textbf{Standardabweichung} [N] \\ \hline
+    Gruppe 1                & 3.27 & 3.30 \\ \hline
+    Gruppe 2                & 3.23 & 3.20 \\ \hline
+    Gruppe 3                & 4.66 & 3.70 \\ \hline
+    Gruppe 4                & 4.54 & 4.15 \\ \hline
+\caption{Übersicht der Ergebnisse der gefahrenen Routen der Nutzer}
+\label{tab:study_offroute_results_2}
+\end{longtable}
+
+Um zu prüfen, ob die Unterschiede der Mittelwerte signifikant ist, muss dies mittels eines statistischen Tests überprüft werden. Da es sich um ein Experiment von mehren nicht zusammenhängenden Studiengruppen mit mehr als zwei verschiedenen Bedingungen handelt, kommen entweder ein ANOVA- oder Kruskal-Wallis-Test in Frage. Für ersteren gilt, dass die Daten gleich verteilt sein müssen. Dies wurde mittels Shapiro-Wilk-Test test geprüft. Da das Ergebnis für alle Test-Gruppen $ p = 0.000000 < 0.05 $ ist, sind die Daten nicht normal verteilt. Folglich wird zur Signifikanzprüfung der Kruskal-Wallis-Test verwendet. Aufgrund des Ergebnisses von $ p = 1.146748e-16 < 0.05 $, kann abgeleitet werden, dass ein Haupteffekt vorliegt.
+
+Für die Prüfung zwischen welchen Studiengruppen ein signifikanter Unterschied vorliegt, wird der Dunn-Test \cite{dunn1964multiple} verwendet. (P wird mit der \glqq bonferoni\grqq{}-Methode korrigiert.) Die Prüfung ergbibt, dass jeweils ein signifikanter Effekt zwischen den Gruppen 3 und 4 gegenüber den Gruppen 1 und 2 vorliegt. Folglich kann abgeleitet werden, dass die Nutzer NUNAV häufiger verwenden, wenn sie die Erklärungen während der Navigation erhalten unabhängig davon, ob diese kombiniert mit den Erklärungen vor der Navigation erfolgen.
