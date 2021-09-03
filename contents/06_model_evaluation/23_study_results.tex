@@ -174,3 +174,46 @@ Zur Prüfung der Signifikanz wird wieder der Kruskal-Wallis-Test eingesetzt, da 
 Für die Prüfung zwischen welchen Studiengruppen ein signifikanter Unterschied vorliegt, wird auch hier der Dunn-Test verwendnet. Die Prüfung ergibt, dass jeweils ein signifikanter Effekt zwischen den Gruppen 3 und 4 gegenüber den Gruppen 1 und 2 vorliegt. Folglich kann abgeleitet werden, dass die Nutzer NUNAV häufiger verwenden, wenn sie die Erklärungen während der Navigation erhalten unabhängig davon, ob diese kombiniert mit den Erklärungen vor der Navigation erfolgen.
 
 Die Hypothesen 4.1 und 4.2 müssen abgelehnt werden, da weder alle Erklärungstypen zu einer signifikant häufigeren Nutzung von NUNAV führen, noch das Geben von beiden vorgestellten Typen von Erklärungen zu einer erhöhten Nutzung pro Studienteilnehmer führt im Vergleich zur Präsentation von nur einem der integrierten Erklärungstypen.
+
+\subsubsection{Bedarf für die gegebenen Erklärungen}
+
+Die statischen Erklärungen (siehe \autoref{sec:06_model_evaluation_user_count_definition} und \autoref{sec:06_model_evaluation_route_explanation_definition}), welche die Einflüsse auf den Routing-Algorithmus von NUNAV sowie das kollaborative Routing erklären, sind interaktiv. Somit kann evaluiert werden, wie viele Studienteilnehmer wie häufig diese angefordert haben. Außerdem kann gemessen werden, wie lange sie die Erklärungen betrachtet haben.
+
+Die drei verschiedenen Erklärungen, die die Nutzer aufrufen können, sind in \autoref{sec:06_model_evaluation_user_count_definition} und \autoref{sec:06_model_evaluation_route_explanation_definition} beschrieben. Die Studiengruppen (Gruppe 2 und 4), denen diese angezeigt wurden enthalten insgesamt 1 766 Teilnehmer.
+
+Im Folgenden wird die Erklärung zum Routing-Algorithmus \textit{Erklärung 1}, die kurze Erklärung zum kollaborativen Routing als \textit{Erklärung 2} und die dazugehörige weitere Erklärung als \textit{Erklärung 3} genannt.
+
+Als gelesen bzw. zumindest entschieden, ob die Erklärung benötigt wird gilt diese, wenn ein Nutzer länger als 1,5 Sekunden in dem Dialog verbracht hat \cite{BAHR2011776}. \autoref{fig:explanation_results_clicked} zeigt wie häufig die Nutzer eine Erklärung angefordert haben und diese auch zumindest zum Teil gelesen haben. \autoref{tab:explanation_results_clicked} zeigt die Bewertung als \glqq Hilfreich\grqq{} oder \glqq Nicht hilfreich\grqq{} durch die Nutzer. Allerdings sind die Hilfe-Artikel auch über andere Wege erreichbar, wodurch Bewertungen nicht nur von Nutzern kommen, die über die NUNAV-App dort hingeleitet wurden.
+
+\begin{figure}[bth]!
+    \includegraphics[width=\linewidth]{contents/06_model_evaluation/res/explanation_results_clicked.pdf}
+    \caption{Anzahl der Klicks bzw. gelesenen Erklärungen}
+    \label{fig:explanation_results_clicked}
+\end{figure}
+
+\begin{figure}[bth]!
+    \includegraphics[width=\linewidth]{contents/06_model_evaluation/res/explanation_results_clicked_support.png}
+    \caption{Bewertung der langen Erklärungen (Support-Artikel)}
+    \label{tab:explanation_results_clicked}
+\end{figure}
+
+
+
+% \begin{figure}[bth]
+%     \text{Evaluation des Erklärungsbedarfs} \\
+%     \subfloat[Anzahl der Teilnehmer, die Erklärung 1 angefordert haben]
+%     {\includegraphics[width=.3\linewidth]{contents/06_model_evaluation/res/evaluation_explanation_1_clicks.pdf}}
+%     \hspace{5mm}
+%     \subfloat[Anzahl der Teilnehmer, die Erklärung 2 angefordert haben]
+%     {\includegraphics[width=.3\linewidth]{contents/06_model_evaluation/res/evaluation_explanation_1_clicks.pdf}}
+%     \hspace{5mm}
+%     \subfloat[Anzahl der Teilnehmer, die Erklärung 2 angefordert haben]
+%     {\includegraphics[width=.3\linewidth]{contents/06_model_evaluation/res/evaluation_explanation_1_clicks.pdf}} \\
+%     \subfloat[Berechnete und reale Koordinaten]
+%     {\includegraphics[width=.47\linewidth]{gfx/MagnetEvaluation/alg1-n48/grafic3.pdf}}
+%     \hspace{5mm}
+%     \subfloat[Relativer Rechenfehler]
+%     {\includegraphics[width=.47\linewidth]{gfx/MagnetEvaluation/alg1-n48/grafic4.pdf}}
+%     \caption[Evaluation der Positionsbestimmung mithilfe des Coulombschen Gesetzes]{Evaluation der Positionsbestimmung mithilfe des Coulombschen Gesetzes bei Verwendung eines Magneten mit Magnetisierungsgrad N48, 8 mm Durchmesser und 20 mm Länge}
+%     \label{fig:evaluation_explanations_clicks}
+% \end{figure}
