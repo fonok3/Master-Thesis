@@ -10,6 +10,5 @@
 *.synctex.gz
 .DS_Store
 *.toc
-*.pdf
 *-blx.bib
 /output/**
