@@ -18,7 +18,7 @@ Um bei der Analyse der Daten, Nutzer auszuschließen, die eine Navigation nur ge
 
 Für Nutzer der Gruppen 3 und 4 kann es passieren, dass sie keine Erklärung während der Navigation erhalten, wenn die aktuelle Route keiner Erklärung bedarf. Dies ist der Fall, wenn das Verkehrsaufkommen \glqq normal\grqq{} ist und der Nutzer während der gesamten Fahrt guten GPS-Empfang hat (Definitionen siehe \autoref{06_model_evaluation:gps_accuracy_definition}). Bei der Betrachtung von einzelnen Routen werden die Teilnehmer folglich in die Gruppen 1 oder 2 umsortiert, falls sie während der Navigation keine Erklärung gesehen haben. Wird eine Metrik analysiert, die sich pro Nutzer über mehrere Routen erstreckt, werden die Teilnehmer den Gruppen zugeordnet, wenn NUNAV ihnen mindestens einmal eine Erklärung aus der Studiengruppe angezeigt hat. Über Übersicht findet sich in \autoref{tab:study_user_group_overview}
 
-\begin{table}[htb!]
+\begin{table}
     \begin{center}
         \begin{tabular}{|l|c|c|c|}
             \hline
@@ -84,7 +84,7 @@ Für die Überprüfung, ob eine schlechte Positionierung einen Effekt auf die Nu
 
 Bei der Betrachtung von Abweichungen von der Route werden wie oben beschrieben Navigationen, bei denen es häufig zu einer ungenauen Positionierung kommt aus den Daten gefiltert. Außerdem wurde sie normalisiert, sodass schlussendlich 16 314 einzelne Navigationen zur Analyse der Routen-Abweichungen im Datensatz verblieben sind.
 
-\begin{figure}[bth!]
+\begin{figure}
     \includegraphics[width=0.8\textwidth]{contents/06_model_evaluation/res/OffRoute_Result_Overview.png}
     \caption{Anzahl der Offroutes pro Kilometer für jede Studiengruppe}
 \end{figure}
@@ -116,7 +116,7 @@ Hypothese 2.1 trifft zwar für das Geben aller Erklärungstypen (Gruppe 4) zu, n
 
 Um die Zufriedenheit der Nutzer mit der abgeschlossenen Navigation zu evaluieren, setzt NUNAV auf eine Bewertung mithilfe von 5 Sternen bei Erreichen des Zieles. Dies ist verknüpft mit der Frage \glqq Wie hat dir die Fahrt gefallen\grqq (Siehe \autoref{fig:screenshot_destination_reached}). Außerdem sind die Fahrtdauer und zurückgelegte Kilometer angegeben.
 
-\begin{figure}[bth]
+\begin{figure}
     \includegraphics[width=0.25\linewidth]{contents/res/missing_image.pdf}
     \caption{Bildschirmfoto der Bewertungsdialogs}
     \label{fig:screenshot_destination_reached}
@@ -129,7 +129,7 @@ Um die Zufriedenheit der Nutzer mit der abgeschlossenen Navigation zu evaluieren
     \item[3.2] WENN Teilnehmer nur einen der beiden vorgestellten Erklärungstypen erhalten, DANN geben sie im Vergleich eine signifikant niedrigere Bewertung für die Navigation ab, als wenn sie beide Erklärungstypen erhalten.
 \end{enumerate}
 
-\begin{figure}[bth]!
+\begin{figure}
     \includegraphics[width=\linewidth]{contents/06_model_evaluation/res/Rating_Result_Overview.pdf}
     \caption{Verteilung der Teilnehmer-Bewertung der Navigation für jede Studiengruppe bezogen auf die insgesamt abgegebenen Bewertungen}
     \label{fig:Rating_Result_Overview}
@@ -153,7 +153,7 @@ Bei der Analyse der Nutzungshäufigkeit von NUNAV wird über den zweiwöchigen S
 
 Bei der Betrachtung der Anzahl der gefahrenen Routen werden die Daten zunächst normalisiert. Folglich sind 3 951 Nutzer im Datensatz für die Prüfung der Hypothesen verblieben.
 
-\begin{figure}[bth]!
+\begin{figure}
     \includegraphics{contents/06_model_evaluation/res/Usage_Result_Overview.png}
     \caption{Anzahl der gefahrenen Routen für jede Studiengruppe}
 \end{figure}
@@ -185,13 +185,13 @@ Im Folgenden wird die Erklärung zum Routing-Algorithmus \textit{Erklärung 1}, 
 
 Als gelesen bzw. zumindest entschieden, ob die Erklärung benötigt wird gilt diese, wenn ein Nutzer länger als 1,5 Sekunden in dem Dialog verbracht hat \cite{BAHR2011776}. \autoref{fig:explanation_results_clicked} zeigt wie häufig die Nutzer eine Erklärung angefordert haben und diese auch zumindest zum Teil gelesen haben. \autoref{tab:explanation_results_clicked} zeigt die Bewertung als \glqq Hilfreich\grqq{} oder \glqq Nicht hilfreich\grqq{} durch die Nutzer. Allerdings sind die Hilfe-Artikel auch über andere Wege erreichbar, wodurch Bewertungen nicht nur von Nutzern kommen, die über die NUNAV-App dort hingeleitet wurden.
 
-\begin{figure}[bth]!
+\begin{figure}
     \includegraphics[width=\linewidth]{contents/06_model_evaluation/res/explanation_results_clicked.pdf}
     \caption{Anzahl der Klicks bzw. gelesenen Erklärungen}
     \label{fig:explanation_results_clicked}
 \end{figure}
 
-\begin{figure}[bth]!
+\begin{figure}
     \includegraphics[width=\linewidth]{contents/06_model_evaluation/res/explanation_results_clicked_support.png}
     \caption{Bewertung der langen Erklärungen (Support-Artikel)}
     \label{tab:explanation_results_clicked}
@@ -199,7 +199,7 @@ Als gelesen bzw. zumindest entschieden, ob die Erklärung benötigt wird gilt di
 
 
 
-% \begin{figure}[bth]
+% \begin{figure}
 %     \text{Evaluation des Erklärungsbedarfs} \\
 %     \subfloat[Anzahl der Teilnehmer, die Erklärung 1 angefordert haben]
 %     {\includegraphics[width=.3\linewidth]{contents/06_model_evaluation/res/evaluation_explanation_1_clicks.pdf}}
