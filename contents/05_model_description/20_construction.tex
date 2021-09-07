@@ -1,14 +1,84 @@
 \section{Aspekte von Erklärungen}
 \label{sec:model_explanation_aspects}
 
-Literatur, die einen Überblick über Erklärbarkeit im Allgemeinen oder in einem bestimmten Anwendungsfeld gibt, betrachtet in der Regel fünf Aspekte von Erklärbarkeit \cite{rosenfeld_explainability_2019, nunes_systematic_2017,chazette_knowledge_nodate}. Dies sind der Kontext der Erklärung, die Zielsetzung dieser, welche Erklärung angezeigt werden soll und wann diese angezeigt werden soll. Als letzter Aspekt wird in der Regel die Evaluation betrachtet. Außerdem wird in der Regel auch die Evaluation von Erklärungen betrachtet. Die genannten Punkte wurden 
+Literatur, die einen Überblick über Erklärbarkeit im Allgemeinen oder in einem bestimmten Anwendungsfeld gibt, betrachtet in der Regel fünf Aspekte von Erklärbarkeit \cite{rosenfeld_explainability_2019, nunes_systematic_2017,chazette_knowledge_nodate}. Dies sind der Kontext der Erklärung, die Zielsetzung dieser, welche Erklärung angezeigt werden soll und wann diese angezeigt werden soll. In einigen Arbeiten wird bei der angezeigten Erklärung außerdem zwischen dem Inhalt und der Präsentation unterschieden bzw. diese Eigenschaften einzeln untersucht \cite{nunes_systematic_2017,abdulrahman_belief-based_2019}. Außerdem wird in der Regel auch die Evaluation von Erklärungen betrachtet.
 
-Bei der Betrachtung von Erklärb werden in Arbeiten, die eine Überblick  vor allem fünf Aspekte 
+Vor allem bei der Betrachtung des Kontextes werden in der Literatur unterschiedliche Aspekte konkret benannt (z.B. \glqq Stakeholder\grqq{} \cite{rosenfeld_explainability_2019} oder \glqq Use Case\grqq{} \cite{waa_evaluating_2021}). Dies trifft allerdings auch auf die anderen Kategorien zu. \autoref{tab:model_explaination_aspects} fasst die verwendeten Synonyme unter der final gewählten Benennung des Aspekts zusammen, wenn diese explizit erwähnt wurde. Neben den dort aufgezeigten Begriffen haben mehrere Autoren (z.B. \cite{rosenfeld_explainability_2019, chazette2020explainability}) die verschiedenen Aspekte von Erklärbarkeit mit Fragewörtern verknüpft. Die vollständigen Fragen dahinter verweisen allerdings auf verschiedene Unterpunkte, weswegen das vorgestellte Modell auf Fragewörter verzichtet, um Verwechselungen vorzubeugen. (Beispiel: \glqq \textbf{Wie} kann die Erklärung evaluiert werden?\grqq \cite{rosenfeld_explainability_2019} vs. \glqq \textbf{Wie} wird die Erklärung dargestellt?\grqq \cite{})
 
+\begin{table}
+    \begin{center}
+        \begin{tabular}{|p{.2\textwidth}|p{.5\textwidth}|p{.2\textwidth}|}
+            \hline
+            \textbf{Aspekt}          & \textbf{Synonyme} & \textbf{Quellen} \\ \hline
+            Context         & (Experimental) Context & \cite{chazette_knowledge_nodate} \cite{chazette_end-users_nodate} \cite{sato_context_nodate} \cite{waa_evaluating_2021} \cite{kohl_explainability_2019} \cite{neerincx_using_2018} \cite{sovrano_modelling_2020} \cite{doshi2017towards} \\
+                            & (Explanation) Scope & \cite{wohlin2012experimentation} \cite{eiband_impact_2019} \cite{doshi2017towards} \\
+                            & Use Case & \cite{waa_evaluating_2021} \\
+                            & Stakeholder & \cite{rosenfeld_explainability_2019} \\
+            \hline
+            Objective       & Objective & \cite{nunes_systematic_2017} \\
+                            & Construct & \cite{waa_evaluating_2021} \\
+                            & Purpose & \cite{nunes_systematic_2017} \cite{wohlin2012experimentation} \\
+                            & (Stakeholder) Goals & \cite{cirqueira_scenario-based_2020} \cite{sovrano_modelling_2020} \cite{ribera2019can} \\
+                            & Main Drive & \cite{anjomshoae2019explainable} \\
+                            & Intended Effect & \cite{balog_measuring_2020} \\
+            \hline
+            Demand          & Demand            & \cite{chazette_knowledge_nodate} \\
+            \hline
+            Content         & User Interface Component(s) & \cite{nunes_systematic_2017} \cite{rosenfeld_explainability_2019} \\
+                            & Content           & \cite{ribera2019can} \\
+            \hline
+            Presentation    & Presentation      & \cite{rosenfeld_explainability_2019} \\
+                            & Type              & \cite{ribera2019can} \cite{rosenfeld_explainability_2019} \\
+            \hline
+            Evaluation      & Evaluation    & \cite{kohl_explainability_2019} \cite{doshi2017towards} \\
+                            & Measurements  & \cite{waa_evaluating_2021} \cite{balog_measuring_2020} \\
+                            & Metrics       & \cite{nunes_systematic_2017} \cite{anjomshoae2019explainable} \cite{chari_explanation_2020} \cite{waa_evaluating_2021}\\
+            \hline
+        \end{tabular}
+    \end{center}
+    \caption{Allgemeine Aspekte von Erklärungen in der Literatur}
+    \label{tab:model_explaination_aspects}
+\end{table}
+
+Da einige Aspekte in der Literatur zum Teil unter einem Punkt zusammen dargestellt wurden, sind diese auch im Modell hierarchisch angeordnet (Siehe \autoref{fig:model_overview}).
+
+\begin{figure}
+    \includegraphics[width=0.2\linewidth]{contents/res/missing_image.pdf}
+    \caption{Übersicht über die Aspekte von Erklärungen}
+    \label{fig:model_overview}
+\end{figure}
+
+\smallbreak
+
+Im Folgenden werden die 
+
+\textbf{External Dependencies}
+
+Unter \textit{External Dependencies} sind die Aspekte Zusammengefasst, die eine Auswirkung auf Erklärungen in einem System haben. Außerdem können von den hier aufgeführten Punkten Anforderungen abgeleitet und zusammen mit Metriken Hypothesen aufgestellt werden.
+
+Der \textit{Context} einer Erklärung wird durch die Situation gegeben, welche durch die Interaktion eines Nutzers, seiner Aufgabe, dem System und der Umgebung entsteht. (vgl. \cite{chazette_knowledge_nodate, kohl_explainability_2019}).
+
+Unter \textit{Objectives} werden die Ziele verstanden, welche eine Erklärung spezifisch erreichen soll und aufgrund derer Erklärungen in ein System integriert werden.
+
+\textbf{Characteristics}
+
+\textit{Demand}
+
+\textit{Content}
+
+\textit{Presentation}
+
+\textbf{Evaluation}
+
+\textit{Evaluation}
+
+\smallbreak
+
+In den folgenden Abschnitten werden die genannten Kategorien näher beschrieben sowie Beispiele für die Ausprägung der Merkmale gegeben.
 
 Das in den folgenden Abschnitten beschriebene Modell orientiert sich in seiner Gliederung an den zuvor vorgestellten Anforderungen MR1 - MR3. Die im Modell verwendeten Begriffe sind im Gegensatz zur restlichen Arbeit auf Englisch gehalten, da auch die verwendetet Literatur überwiegend in Englisch ist. So wird das Wiederverwenden des Modells erleichtert durch die direkte Verwendung der Fachbegriffe. Allgemein ist das Modell zweigeteilt.
 
-Zunächst werden in einer Übersicht die Aspekte, welche in der Literatur für Erklärbarkeit als relevant befunden wurden, dargestellt (Siehe \autoref{fig:model_overview_all}). Dies enthält auch mögliche Ausprägungen der jeweiligen Aspekte.
+Zunächst werden in einer Übersicht die Aspekte, welche in der Literatur für Erklärbarkeit als relevant befunden wurden, dargestellt (Siehe \autoref{fig:model_overview}). Dies enthält auch mögliche Ausprägungen der jeweiligen Aspekte.
 
 Aus den Anforderungen MR1 und MR3 kann ein abstraktes Qualitätsmodell für Erklärbarkeit abgeleitet werden, wie es von \citeauthor{schneider2012abenteuer} beschrieben wird (Siehe \autoref{sec:basics_quality_models}) \cite{schneider2012abenteuer}. Konkret enthält das Modell Vorschläge, um die Schritte der GQM-Methode zu unterstützen \cite{briand1995goal, schneider2012abenteuer}. Folglich werden 
 
@@ -24,8 +94,6 @@ Aus den ersten beiden Anforderungen, die an das Modell gestellt werden ergibt si
 
 Um RQ1 und 2 definieren zu können
 
-Welche Äußeren Einflüsse Auswirkungen auf eine Erklärung haben.
-
 Erstes Level der Abstraktion für Erklärungen:
 
 \begin{itemize}
@@ -34,51 +102,9 @@ Erstes Level der Abstraktion für Erklärungen:
     \item Was sollte wann und wie angezeigt werden (Was sind die Charakteristiken der Erkärung)? \cite{kohl_explainability_2019, rosenfeld_explainability_2019}
 \end{itemize}
 
-Alle expliziten Erwähnungen von diesen Oberbegriffen in \autoref{tab:model_explaination_aspects}. Um die Schritte beim integrieren vom erklären klar zu machen, habe ich die Oberkategorien, die von 
 
-\cite{rosenfeld_explainability_2019} stellt die Fragen:.... Ebenfalls unterstützt in \cite{chazette2020explainability}
-
-\cite{rosenfeld_explainability_2019} sagen, dass zu erst die die Ziele einer Erklärung betrachtet werden sollen (\glqq \textit{Warum} benötigt das System eine Erklärung? \grqq{}) vgl. Seite 699 \cite{rosenfeld_explainability_2019}. \cite{cirqueira_scenario-based_2020} sagen, dass über haupt erst einmal der Kontext (\glqq Stakeholder Setting\grqq{}) klar werden muss.
-
-\begin{longtable}{|p{.2\textwidth}|p{.5\textwidth}|p{.2\textwidth}|}
-    \hline
-    \textbf{Aspekt}          & \textbf{Synonyme} & \textbf{Quellen} \\ \hline
-    Context         & (Experimental) Context & \cite{chazette_knowledge_nodate} \cite{chazette_end-users_nodate} \cite{sato_context_nodate} \cite{waa_evaluating_2021} \cite{kohl_explainability_2019} \cite{neerincx_using_2018} \cite{sovrano_modelling_2020} \cite{doshi2017towards} \\
-                    & (Explanation) Scope & \cite{wohlin2012experimentation} \cite{eiband_impact_2019} \cite{doshi2017towards} \\
-                    & Use Case & \cite{waa_evaluating_2021} \\
-                    & Who & \cite{rosenfeld_explainability_2019} \\
-    \hline
-    Objective       & Objective & \cite{nunes_systematic_2017} \\
-                    & Construct & \cite{waa_evaluating_2021} \\
-                    & Purpose & \cite{nunes_systematic_2017} \cite{wohlin2012experimentation} \\
-                    & (Stakeholder) Goals & \cite{cirqueira_scenario-based_2020} \cite{sovrano_modelling_2020} \cite{ribera2019can} \\
-                    & Main Drive & \cite{anjomshoae2019explainable} \\
-                    & Intended Effect & \cite{balog_measuring_2020} \\
-    \hline
-    Characteristics & Aspects       & \cite{rosenfeld_explainability_2019} \\
-                    & User Interface Component(s) & \cite{nunes_systematic_2017} \cite{rosenfeld_explainability_2019} \\
-                    & What? How? When? & \cite{rosenfeld_explainability_2019} \\
-                    & Content and Type & \cite{ribera2019can} \\
-    \hline
-    Evaluation      & Evaluation    & \cite{kohl_explainability_2019} \cite{doshi2017towards} \\
-                    & Measurements  & \cite{waa_evaluating_2021} \cite{balog_measuring_2020} \\
-                    & Metrics       & \cite{nunes_systematic_2017} \cite{anjomshoae2019explainable} \cite{chari_explanation_2020} \cite{waa_evaluating_2021}\\
-    \hline
-\caption{Allgemeine Aspekte von Erklärungen in der Literatur}
-\label{tab:model_explaination_aspects}
-\end{longtable}
 
 Außerdem muss, nach dem Kontext und die Ziele klar sind die Frage beantwortet werden welcher Explanda X überhaupt erklärt werden sollen \cite{kohl_explainability_2019}
-
-\newpage
-
-\begin{figure}
-    \includegraphics[width=0.2\linewidth]{contents/res/missing_image.pdf}
-    \caption{Übersicht über die Aspekte von Erklärungen}
-    \label{fig:model_overview_all}
-\end{figure}
-
-
 
 \input{contents/05_model_description/22_external_dependencies}
 
