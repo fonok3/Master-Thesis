@@ -1,35 +1,23 @@
-\subsection{Übersicht}
+\subsection{Struktur}
 
-In diesem Abschnitt werden die zuvor vorgestellten Aspekte erläutert.
+Da einige Aspekte in der Literatur zum Teil zusammen dargestellt wurden, sind diese auch im Modell hierarchisch angeordnet. Außerdem orientiert sich die Struktur der Übersicht über die Aspekte von Erklärbarkeit an dem Prinzip von Qualitätsmodellen wie es \citeauthor{schneider2012abenteuer} beschreibt \cite{schneider2012abenteuer} (Mehr siehe \autoref{sec:basics_quality_models}). Dabei werden abstrakte Ziele immer konkreter gefasst bis sie schlussendlich mit konkreten Metriken messbar sind. Das zugrunde liegende Modell (\glqq Goal-Driven and Property-Based Definition Approach for Product Metrics\grqq{} \cite{briand1995goal}) von \citeauthor{briand1995goal} definiert außerdem unter anderem die nötigen Abhängigkeiten von äußeren Faktoren, die hier dem bereits erwähnten \textit{Context} entsprechen. Da die Metriken der Evaluation zum Teil von den entwickelten Erklärungen abhängen, müssen die Eigenschaften im Gegensatz zu dem erwähnten Modell von \citeauthor{schneider2012abenteuer} allerdings zuerst definiert werden. Anderenfalls wäre es nicht möglich, Metriken zu entwickeln, welche direkt die Eigenschaften der Erklärungen messen. Metriken, welche der Messung von Auswirkungen von integrierten Erklärungen in einem System dienen, können allerdings bereits zuvor aufgestellt werden. Für die Formalierung des Messkonzeptes werden laut \citeauthor{briand1995goal} außerdem vorhande Abstraktionen benötigt. Als Artefakt sollen hier die Ausprägungen der Kategorie \textit{Evaluation} in \autoref{sec:model_evaluation} dienen.
 
-\subsubsection{External Dependencies}
+\smallbreak
 
-Unter \textit{External Dependencies} sind die Aspekte zusammengefasst, die eine Auswirkung auf Erklärungen in einem System haben. Außerdem können von den hier aufgeführten Punkten Anforderungen abgeleitet und zusammen mit Metriken Hypothesen aufgestellt werden. Daraus kann dann auch abgeleitet werden, welche Funktionen des Systems einer Erklärung bedürfen \cite{kohl_explainability_2019}.
+Aus vorherigem folgend werden die Punkte \textit{Context} und \textit{Objective} aus \autoref{tab:model_explaination_aspects} werden daher unter \textit{External Dependencies} zusammengefasst. Dies verdeutlicht, dass die \textit{Objectives} für das Integrieren von Erklärungen stark mit anderen äußeren Einflüssen (\textit{Context}) zusammenhängen (\autoref{sec:model_external_dependencies}).
 
-\paragraph{Context} Der \textit{Context} einer Erklärung wird durch die Situation gegeben, welche durch die Interaktion eines Nutzers, seiner Aufgabe, dem System und der Umgebung entsteht. (vgl. \cite{chazette_knowledge_nodate, kohl_explainability_2019}).
+Auch werden \textit{Demand}, \textit{Content} und \textit{Presentation} vereint, da sich diese drei Kategorien direkt auf die Eigenschaften von Erklärungen beziehen: \textit{Characteristics}. Damit wird der starke Zusammenhang zwischen den verschiedenen Merkmalen einer Erklärung deutlich.
 
-\paragraph{Objectives} Unter \textit{Objectives} werden die Ziele verstanden, welche eine Erklärung spezifisch erreichen soll und aufgrund derer Erklärungen in ein System integriert werden.
+\smallbreak
 
-\subsubsection{Evaluation}
+Folglich ist die Übersicht in die drei Kategorien \textit{External Dependencies}, \textit{Characteristics} und \textit{Evaluation} gegliedert, welche aufgrund der vorherigen Argumentation in dieser Reihenfolge in der Übersicht dargestellt sind. Ein Überblick ist in \autoref{fig:model_overview} zu sehen.
 
-Unter \textit{Evaluation} werden einige Möglichkeiten zusammengetragen, wie gemessen werden kann, ob die in ein System integrierten Erklärungen das ursprüngliche Ziel erreichen. Die Metriken und die Vorgehensweise, die für die \textit{Evaluation} ausgewählt wird, hängt folglich sehr eng mit den zuvor festgelegten \textit{Objectives} zusammen.
+In den folgenden Abschnitten werden die Ausprägungen der einzelnen Kategorien sowie deren Anwendung in der Literatur beschrieben.
 
-\paragraph{Target} Zunächst muss bei der Evaluation geklärt werden, was der Prüfgegenstand ist. Dabei gibt es vor allem zwei große Möglichkeiten im Kontext der Erklärbarkeit. Entweder werden die integrierten Erklärungen an sich evaluiert und die Studienteilnehmer darauf explizit angesprochen oder es werden die Auswirkungen auf verschiedene System-Metriken ausgewertet. Auch eine Kombination ist möglich.
-
-\paragraph{Strategy} Beim Festlegen der \textit{Strategy} der Evaluation gibt es verschiedene Möglichkeiten, die unter anderem vom \textit{Context} abhängen. Je nachdem, welche Ergebnisse die Stakeholder, die Erklärungen in ein System integrieren möchten, benötigen, muss die Evaluation kontrollierter oder weniger kontrolliert sein \cite[vgl.][]{wohlin2012experimentation}.
-
-\paragraph{Metrics} \textit{Metrics} sind klar definierte Messungen, die durchgeführt werden, um die zuvor festglegten \textit{Objectives} zu überprüfen.
-
-\subsubsection{Characteristics}
-
-Die \textit{Characteristics} von Erklärungen fassen die unmittelbaren Eigenschaften dieser zusammen. Dies sind die Möglichkeiten, die dem Ersteller von Erklärungen zur Verfügung stehen, um die zuvor aufgestellten Anforderungen zu erfüllen. Diese lassen sich in die folgenden drei Entscheidungsmöglichkeiten gliedern.
-
-\paragraph{Demand} Beim Punkt \textit{Demand} muss in der Entwicklung entschieden werden, wann die Nutzer des Systems überhaupt eine Erklärung benötigen. Dies bezieht sich nicht nur auf den Zeitpunkt beziehungsweise den Systemteil, welcher erklärt werden soll, sondern auch ob die Initiative vom Nutzer ausgeht oder das System selbständig eine Erklärung anzeigt.
-
-\paragraph{Content} Wenn der Bedarf einer Erklärung geklärt ist, muss festgelegt werden, welche und viele Informationen dem Nutzer eines erklärbaren Systems angezeigt werden sollen.
-
-\paragraph{Presentation} Der Inhalt einer Erklärung kann Nutzern auf verschiedenen Wegen zugänglich gemacht werden. Welche Möglichkeiten bereits in der Literatur verwendet wurden ist unter \textit{Presentation} zusammengefasst.
-
-\bigskip
-
-In den folgenden Abschnitten werden die genannten Kategorien näher beschrieben sowie Beispiele für die Ausprägung der Merkmale gegeben, die in der Literatur bereits untersucht wurden.
+\begin{figure}[htb!]
+    \begin{center}
+        \includegraphics[width=0.9\linewidth]{contents/05_model_description/res/model-overview.pdf}
+    \end{center}
+    \caption{Oberkategorien der Aspekte von Erklärungen}
+    \label{fig:model_overview}
+\end{figure}
