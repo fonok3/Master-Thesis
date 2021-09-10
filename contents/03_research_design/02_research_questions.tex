@@ -1,49 +1,85 @@
 \section{Forschungsfragen}
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-\begin{figure}
+\begin{figure}[htb!]
     \includegraphics{contents/03_research_design/res/research_questions_overview.pdf}
+    \caption{Zusammenhänge der Forschungsfragen}
     \label{fig:research_questions_overview}
-    \caption{Abhängigkeiten der Forschungsfragen}
 \end{figure}
 
+Aus dem Forschungsziel wurden insgesamt fünf Forschungsfragen abgeleitet, welche die Richtung der Arbeit fein granularer definieren. Jede Forschungsfrage behandelt entweder einen konkreten Betrachtungsgegenstand von Erklärbarkeit oder den Zusammenhang dieser einzelnen Aspekte. Wie die einzelnen Forschungsfragen voneinander abhängen, ist in \autoref{fig:research_questions_overview} dargestellt.
+
+\smallskip
+
 \noindent\fbox{
-    \parbox{\textwidth}{
+    \parbox{0.965\textwidth}{
         \smallskip
-        \textbf{RQ1} Welche Randbedingungen haben einen Einfluss auf die Anforderungen für Erklärungen?
+        \textbf{RQ1} Welche Rahmenbedingungen haben einen Einfluss auf die Anforderungen für Erklärungen?
         \smallskip
     }
 }
 
+\smallskip
+
+Erklärbare Systeme können sehr verschiedene Ausprägungen haben (z.B. Empfehlungssystem \cite{nunes_systematic_2017} oder Autonome Fahrzeuge \cite{wiegand2019drive}). Auch werden je nach Anwendungsgebiet verschiedene Anforderungen an die Systeme gestellt oder es gibt zusätzlich geltende, äußere Bedingungen \cite{chazette_knowledge_nodate}.
+
+Welche dieser Aspekte einen Einfluss auf die benötigten Erklärungen bzw. Erklärbarkeit im Allgemeinen haben, deckt diese Frage ab. Vor allem konzentriert sich die Frage darauf über welche Rahmenbedingungen sich Stakeholder, die Erklärungen in ein Software-System integrieren möchten, Gedanken machen sollten, um Anforderungen an diese zu formulieren. Dies beinhaltet auch die Ziele, die der Stakeholder für die Software hat.
+
+\smallskip
+
 \noindent\fbox{
-    \parbox{\textwidth}{
+    \parbox{0.965\textwidth}{
         \smallskip
         \textbf{RQ2} Welche Eigenschaften von Erklärungen haben einen Einfluss auf die externe Qualität eines erklärbaren Systems?
         \smallskip
     }
 }
 
+\smallskip
+
+Es existieren bereits verschiedene Frameworks, welche in bestimmten Kontexten einen Überblick darüber geben, welche Möglichkeiten es gibt, Erklärungen zu gestalten \cite{nunes_systematic_2017}. Vor allem im Bereich der Künstlichen Intelligenz gibt es zahlreiche Arbeiten, welche verschiedene Möglichkeiten vorstellen, um automatisch Erklärungen für komplexe Algorithmen zu generieren \cite{sokol_explainability_2020, mahoney2019framework}.
+
+Um der Forderung nach einem stärkeren Fokus auf den Menschen bei der Betrachtung von Erklärbarkeit nachzukommen \cite{ehsan_operationalizing_2021}, stellt diese Forschungsfrage die externen Qualitätsaspekte \cite{international2011iso} in den Mittelpunkt. Außerdem betrachtet diese Frage die genauen Gestaltungsmöglichkeiten, die Entwicklern oder Designern bei der Konzeption von Erklärungen geboten werden. Folglich ist die Antwort auf diese Frage eine zentrale Grundlage für den Leitfaden, dessen Entwicklung ein Ziel dieser Arbeit ist.
+
+\smallskip
+
 \noindent\fbox{
-    \parbox{\textwidth}{
+    \parbox{0.965\textwidth}{
         \smallskip
-        \textbf{RQ3} Anhand welcher Metriken kann gemessen werden, ob die in ein erklärbares System integrierten Erklärungen das Ziel der Integration erfüllt haben?
+        \textbf{RQ3} Anhand welcher Metriken kann gemessen werden, ob die in ein erklärbares System integrierten Erklärungen das Ziel der Integration bezogen auf externe Qualitätsaspekte erfüllt haben?
         \smallskip
     }
 }
 
+\smallskip
+
+Erklärbarkeit ist eine NFR, welche von vielen verschiedenen Faktoren abhängt und diese auch beeinflusst \cite{chazette_knowledge_nodate}. Die Integration von Erklärungen hat in der Regel Effekte auf mehrere andere Qualitätsaspekte. Diese können sowohl positiv als auch negativ ausfallen. Ein Problem, welches durch die Integration von Erklärungen leicht entstehen kann, ist, dass sich die \textit{Usability} des Systems verschlechtert, wenn sie nicht explizit mitgedacht wird \cite{sokol_explainability_2020}. Folglich stellt das Messen der Qualität von Erklärungen aufgrund der vielfältigen Effekte eine Herausforderung dar. Unterstützt wird dies dadurch, dass viele der durch Erklärbarkeit beeinflussten NFRs vor allem subjektiv von Software-Nutzern wahrgenommen und somit nur wenige objektive Metriken einsetzbar sind \cite{sokol_explainability_2020}.
+
+Zwar wurden in der Literatur bereits Erklärungen anhand verschiedener Metriken analysiert \cite{wiegand2019drive,briand1995goal}. Es fehlt allerdings ein Überblick, welche Metriken zum Messen und zur Bewertung der Qualität von Erklärungen geeignet und erprobt sind. Folglich ist das Ziel bei der Beantwortung dieser offenen Frage, die Metriken, welche bereits zur Evaluation von Erklärungen genutzt wurden, zusammenzutragen.
+
+\smallskip
+
 \noindent\fbox{
-    \parbox{\textwidth}{
+    \parbox{0.965\textwidth}{
         \smallskip
         \textbf{RQ4.1} Welchen Einfluss haben der Kontext und die Zielsetzung eines erklärbaren Systems auf den Bedarf für Erklärungen in Bezug auf die externe Qualität des Systems, wenn Erklärungsbedarf besteht?
+
+        \smallskip
+
+        \textbf{RQ4.2} Welchen Einfluss haben der Kontext und die Zielsetzung eines erklärbaren Systems auf die Granularität von Erklärungen in Bezug auf die externe Qualität des Systems, wenn Erklärungsbedarf besteht?
         \smallskip
     }
 }
 
-\noindent\fbox{
-    \parbox{\textwidth}{
-        \smallskip
-        \textbf{RQ4.2} Welchen Einfluss haben der Kontext und die Zielsetzung eines erklärbaren Systems auf die Granulariät von Erklärungen in Bezug auf die externe Qualität des Systems, wenn Erklärungsbedarf besteht?
-        \smallskip
-    }
-}
+\smallskip
+
+In den ersten drei Forschungsfragen wurden verschiedene Aspekte von Erklärbarkeit behandelt, die wichtig sind, um darauf basierend Erklärungen in ein System zu integrieren. Es fehlt allerdings die Möglichkeit, anhand der Antworten auf diese Fragen eine Auswahl bei der Gestaltung von Erklärungen zu treffen. Eine Antwort auf diese letzten beiden Fragen soll diesen Prozess unterstützen.
+
+Die Einflüsse, nach denen RQ4.1 fragt, sollen bei der Einschätzung helfen, ob und wenn ja, an welchen Stellen ein System Erklärungen benötigt. Dies soll Entwicklern und Designern dabei helfen, die Frage nach dem Bedarf für Erklärungen Anwendungsfall-übergreifend zu beantworten. Für Navigationsanwendungen haben dies beispielsweise \citeauthor{chazette_end-users_nodate} und \citeauthor{wang_integration_2020} bereits getan \cite{chazette_end-users_nodate,wang_integration_2020}.
+
+Wenn eben dieser Bedarf besteht, muss anschließend die Ausgestaltung dieser Erklärung betrachtet werden. Welche bereits untersuchten Einflüsse in Bezug auf diese Granularität von Erklärungen bereits bestehen soll die Antwort auf die Frage RQ4.2 beantworten.
+
+Folglich stellen die Forschungsfragen RQ4.1 und RQ4.2 die Schnittstelle zwischen den ersten drei Forschungsfragen dar.
+
+\bigskip
+
+Die Vorgehensweise dieser Arbeit zum Erreichen des vorgestellten Ziels und bei der Beantwortung der aus dem Ziel abgeleiteten Forschungsfragen wird im folgenden Abschnitt vorgestellt.
