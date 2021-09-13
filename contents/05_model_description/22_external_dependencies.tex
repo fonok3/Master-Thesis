@@ -1,23 +1,15 @@
 \subsection{Externe Abhängigkeiten}
 \label{sec:model_external_dependencies}
 
-Unter \textit{External Dependencies} sind die Aspekte zusammengefasst, die eine Auswirkung auf Erklärungen in einem System haben. Außerdem können von den hier aufgeführten Punkten Anforderungen abgeleitet und später zusammen mit Metriken Hypothesen aufgestellt werden. Daraus kann dann auch abgeleitet werden, welche Funktionen des Systems einer Erklärung bedürfen \cite{kohl_explainability_2019}.
+Unter \textit{External Dependencies} sind die Aspekte zusammengefasst, die eine Auswirkung auf die Erklärungen in einem System haben. Außerdem können von den hier aufgeführten Punkten Anforderungen abgeleitet und später zusammen mit Metriken Hypothesen aufgestellt werden. Daraus kann dann auch abgeleitet werden, welche Funktionen des Systems einer Erklärung bedürfen \cite{kohl_explainability_2019}.
 
-Wie bereits beschrieben, sind die \textit{External Dependencies} in den \textit{Context} und die \textit{Objectives} unterteilt. Über die Reihenfolge, in der ein Stakeholder, der Erklärungen in ein System integrieren möchte, die beiden Aspekte betrachten sollte, gibt es in der Literatur unterschiedliche Meinungen. \citeauthor{rosenfeld_explainability_2019} schreiben, dass die erste Frage, welche geklärt werden sollte, die Frage \glqq Warum benötigt das System eine Erklärung?\grqq{} ist \cite[vgl. S. 699][]{rosenfeld_explainability_2019}. Im Gegensatz dazu schrieben \citeauthor{cirqueira_scenario-based_2020}, dass zuerst äußere Umstände, wie der Endnutzer des Systems geklärt sein sollte (\glqq Stakeholder Setting\grqq{} \cite{cirqueira_scenario-based_2020}), um darauf aufbauend die Ziele festzulegen. Laut \citeauthor{briand1995goal} hat zumindest auf die Ziele einer Evaluation der Kontext des Systems einen Einfluss und sollte somit zuvor geklärt werden \cite{briand1995goal}. Aus den verschiedenen Ansichten wird gefolgert, dass der \textit{Context} des Systems und die \textit{Objectives} eng zusammen hängen und nur gemeinsam betrachtet werdeb können.
+Wie bereits beschrieben, sind die \textit{External Dependencies} in den \textit{Context} und die \textit{Objectives} unterteilt. Über die Reihenfolge, in der ein Stakeholder, der Erklärungen in ein System integrieren möchte, die beiden Aspekte betrachten sollte, gibt es in der Literatur unterschiedliche Meinungen. \citeauthor{rosenfeld_explainability_2019} schreiben, dass die erste Frage, welche geklärt werden sollte, die Frage \glqq Warum benötigt das System eine Erklärung?\grqq{} ist \cite[vgl. S. 699][]{rosenfeld_explainability_2019}. Im Gegensatz dazu schreiben \citeauthor{cirqueira_scenario-based_2020}, dass zuerst äußere Umstände, wie der Endnutzer des Systems geklärt sein sollte (\glqq Stakeholder Setting\grqq{} \cite{cirqueira_scenario-based_2020}), um darauf aufbauend die Ziele festzulegen. Laut \citeauthor{briand1995goal} hat zumindest auf die Ziele einer Evaluation der Kontext des Systems einen Einfluss und sollte somit zuvor geklärt werden \cite{briand1995goal}. Aus den verschiedenen Ansichten wird hier gefolgert, dass der \textit{Context} des Systems und die \textit{Objectives} eng zusammen hängen und die Reihenfolge vom Anwendungsfall abhängt.
 
 \subsubsection{Context}
 
 Der \textit{Context} einer Erklärung beschreibt die äußeren Einflüsse, die unmittelbar auf das erklärbare System wirken und somit Anforderungen an die Eigenschaften von Erklärungen stellen.
 
-Dies beinhaltet die Aktivität, die der Endbenutzer in einer bestimmten Umgebung durchführt. Aus den Eigenschaften der drei genannten Aspekte leiten sich dabei direkte Einflüsse auf den Bedarf, den Inhalt und die Darstellung einer Erklärung ab.
-
-In der
-
-Der Begriff Stakeholder wurde hier verschieden eingesetzt. Beispielsweise nutzen \citeauthor{cirqueira_scenario-based_2020}den Begriff für den Nutzer einer Software \cite{cirqueira_scenario-based_2020} und \cite{nunes_systematic_2017} als Oberbegriff für Personengruppen, die ein Interesse an einem System haben, den Nutzer allerdings ausschließen \cite{nunes_systematic_2017}. Diese Arbeit geht von der Definition nach (Quelle suchen) aus, welch alle interessieren Gruppen beschreibt. 
-
-Das Modell von \cite{nunes_systematic_2017} enthält allerdings weder den Kontext noch den Evaluationspart, welcher für einen Überblick über Erklärbarkeit wichtig ist. Der Fokus ist eher auch auf Recommender Systems gelegt
-
-Nur die Kontexte, die explizit erwähnt wurden in \autoref{tab:impact_of_context_on_explanation}
+Dies beinhaltet die Aktivität, die der Endbenutzer in einer bestimmten Umgebung durchführt. Aus den Eigenschaften der drei Aspekte (Aktivität, Endbenutzer und Umgebung) leiten sich dabei direkte Einflüsse auf den Bedarf, den Inhalt und die Darstellung einer Erklärung ab. \autoref{tab:impact_of_context_on_explanation} bildet auf gleiche Weise wie bereits zuvor verwendet die verwendeten Synonyme für die verschiedenen Facetten des \textit{Context} eines Systems ab. Insbesondere der Begriff Stakeholder wurde verschieden eingesetzt. \citeauthor{cirqueira_scenario-based_2020} nutzen den Begriff für den Nutzer einer Software \cite{cirqueira_scenario-based_2020} während \citeauthor{nunes_systematic_2017} diesen als Oberbegriff für Personengruppen, die ein Interesse an einem System haben, verwenden, den Nutzer allerdings ausschließen \cite{nunes_systematic_2017}. Diese Arbeit verwendet den Begriff, um alle Personengruppen mit Interesse am System inklusive aller Nutzer zu beschreiben (vgl. \cite{schneider2012abenteuer}). Folgend werden nun die drei Aspekte sowie typische Ausprägungen oder Charakteristiken näher erläutert.
 
 \begin{table}
     \begin{tabular}{|p{.2\textwidth}|p{.5\textwidth}|p{.2\textwidth}|}
@@ -27,26 +19,30 @@ Nur die Kontexte, die explizit erwähnt wurden in \autoref{tab:impact_of_context
                         & Stakeholder & \cite{chazette_knowledge_nodate} \\
                         & Consumer & \cite{ehsan_human-centered_2020} \\
                         & Explainee & \cite{chazette_knowledge_nodate} \cite{kohl_explainability_2019} \\
+                        & Explanation Audience & \cite{sokol_explainability_2020} \\
+        \hline
+        Task            & Task & \cite{chazette_knowledge_nodate} \cite{sokol_explainability_2020} \cite{gunning2019darpa} \\
+                        & Activity & \cite{wohlin2012experimentation} \\
         \hline
         Environment     & Environment & \cite{chazette_knowledge_nodate} \cite{wiegand_id_2020} \cite{wiegand2019drive} \\
                         & Application Area & \cite{sokol_explainability_2020} \cite{wiegand2019drive} \cite{wiegand_id_2020} \\
         \hline
-        Task            & Task & \cite{chazette_knowledge_nodate} \cite{sokol_explainability_2020} \cite{gunning2019darpa} \\
-                        & Activity & \cite{wohlin2012experimentation} \\
-                        
-        \hline
     \end{tabular}
-    \caption{Kontext einer Erklärung}
+    \caption{Relevante Aspekte des Kontextes eines erklärbaren Systems zu Integration von Erklärungen.}
     \label{tab:impact_of_context_on_explanation}
 \end{table}
 
-\paragraph{Endnutzer}
+\paragraph{End User} Der \textit{End User} ist die jenige Person, die mit dem System interagiert und auf welchen somit die Erklärungen zugeschnitten sein müssen. Dieser entspricht in den Definitionen von Erklärbarkeit von \citeauthor{chazette_knowledge_nodate,kohl_explainability_2019} dem \textit{Explainee} \cite{chazette_knowledge_nodate,kohl_explainability_2019}.
 
-Different synonyms for it like....
+Generell kann ein System verschiedene Nutzer(-typen) haben, die sich auch in ihrem Bedarf für Erklärungen unterscheiden. Im Folgenden werden die drei am häufigsten erwähnten Eigenschaften vorgestellt (unter anderem in \cite{chazette_knowledge_nodate,tintarev_designing_nodate,yamada_evaluating_2016}).
 
-\paragraph{Äußere Bedingungen}
+Sowohl beim generellen technischen Verständnis (\textit{Technical Background}) als auch beim Domänen-Wissen \cite{yamada_evaluating_2016} \textit{Expert-Level} können die \textit{End User} verschieden eingestuft sein und sich daraus verschiedene Anforderungen ergeben.
 
-\paragraph{Aufgabe}
+Der \textit{Cultural Background} fasst darüber hinaus die kulturellen Hintergründe des Nutzers zusammen, die sich zum Beispiel auf die Verwendung von Metaphern in Software bzw. Erklärungen auswirken können \cite{salgado_cultural_2015}.
+
+\paragraph{Task} Dies beschreibt die Aufgabe(n), welche durch den \textit{End User} mithilfe des System erledigt werden sollen. Bei spielen verschiedene Eigenschaften eine Rolle. Genannt werden in der Literatur beispielsweise die Zeitabhängigkeit (\textit{Time Dependency}), die Komplexität (\textit{Complexity}) und die Dauer der Aufgabe (\textit{Length}). Die drei genannten Ausprägungen werden als explizit wichtig für die Anforderungserhebung für Erklärungen beschrieben .
+
+\paragraph{Environment} Sehr eng mit der zu erledigenden Aufgabe hängt auch dessen Umgebung zusammen. Das \textit{Environment} ist durch die äußeren Umstände des Systems definiert. Dies beinhaltet den generellen Anwendungsbereich des Systems (\textit{Area of Application}), welcher zum Beispiel die Kritikalität des Systems definiert. Aber auch die Nutzerinteraktion fällt in diesen Bereich (\textit{Interaction Type}) und hat eini Auswirkung auf die zu entwickelnde Erklärung \cite{wiegand_id_2020}.
 
 \subsubsection{Zielsetzung}
 \label{subsec:model_objective}
