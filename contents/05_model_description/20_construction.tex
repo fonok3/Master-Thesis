@@ -1,9 +1,13 @@
 \section{Aspekte von Erklärungen}
 \label{sec:model_explanation_aspects}
 
-Literatur, die einen Überblick über Erklärbarkeit im Allgemeinen oder in einem bestimmten Anwendungsfeld gibt, betrachtet in der Regel fünf Aspekte von Erklärbarkeit \cite{rosenfeld_explainability_2019, nunes_systematic_2017,chazette_knowledge_nodate}. Dies sind der Kontext der Erklärung, die Zielsetzung dieser, welche Erklärung angezeigt werden soll und wann diese angezeigt werden soll. In einigen Arbeiten wird bei der angezeigten Erklärung außerdem zwischen dem Inhalt und der Darstellung unterschieden bzw. diese Eigenschaften einzeln untersucht \cite{nunes_systematic_2017,abdulrahman_belief-based_2019}. Außerdem wird in allen hier betrachteten Arbeiten auch die Evaluation von Erklärungen thematisiert (Siehe \autoref{sec:literature_review}).
+Literatur, die einen Überblick über Erklärbarkeit im Allgemeinen oder in einem bestimmten Anwendungsfeld gibt, betrachtet in der Regel fünf Aspekte von Erklärbarkeit \cite{rosenfeld_explainability_2019, nunes_systematic_2017,chazette_knowledge_nodate}. Dies sind der Kontext der Erklärung, die Zielsetzung dieser, welche Erklärung angezeigt werden soll und wann diese angezeigt werden soll. In einigen Arbeiten wird bei der angezeigten Erklärung außerdem zwischen dem Inhalt und der Darstellung unterschieden bzw. diese Eigenschaften einzeln untersucht \cite{nunes_systematic_2017,abdulrahman_belief-based_2019}. Darüber hinaus wird in allen hier betrachteten Arbeiten auch die Evaluation von Erklärungen thematisiert (Siehe \autoref{sec:literature_review}).
 
-Für die zuvor genannten Aspekte werden in der Literatur verschiedene Unterkategorien konkret benannt oder Synonyme verwendet. \autoref{tab:model_explaination_aspects} fasst die verwendeten Synonyme aus den Veröffentlichungen, welche diese explizit erwähnt haben, unter der final gewählten Benennung des Aspekts zusammen. Neben den dort aufgezeigten Begriffen haben mehrere Autoren (z.~B. \cite{rosenfeld_explainability_2019, chazette2020explainability}) die verschiedenen Aspekte von Erklärbarkeit zusätzlich mit Fragewörtern verknüpft. Die vollständigen Fragen dahinter verweisen allerdings auf verschiedene Unterpunkte, weswegen das vorgestellte Modell auf Fragewörter verzichtet, um Verwechselungen vorzubeugen. (Beispiel: \glqq \textbf{Wie} kann die Erklärung evaluiert werden?\grqq (\textit{Evaluation})\cite[vgl.][]{rosenfeld_explainability_2019} und \glqq \textbf{Wie} viele Informationen sollte jede Erklärung enthalten?\grqq (\textit{Content}) \cite[vgl.][]{kouki_user_2017}). Folgend werden die Aspekte näher erläutert bzw. definiert.
+Für die zuvor genannten Aspekte werden in der Literatur verschiedene Unterkategorien konkret benannt oder Synonyme verwendet. \autoref{tab:model_explaination_aspects} fasst die verwendeten Synonyme aus den Veröffentlichungen, welche den Aspekt explizit erwähnt haben, unter der final gewählten Benennung zusammen. Neben den dort aufgezeigten Begriffen haben mehrere Autoren (z.~B. \cite{rosenfeld_explainability_2019, chazette2020explainability}) die verschiedenen Aspekte von Erklärbarkeit zusätzlich mit Fragewörtern verknüpft. Die vollständigen Fragen dahinter verweisen allerdings auf verschiedene Unterpunkte, weswegen das vorgestellte Modell auf Fragewörter verzichtet, um Verwechselungen vorzubeugen. (Beispiel: \glqq \textbf{Wie} kann die Erklärung evaluiert werden?\grqq{} (\textit{Evaluation}) \cite[vgl.][]{rosenfeld_explainability_2019} und \glqq \textbf{Wie} viele Informationen sollte jede Erklärung enthalten?\grqq{} (\textit{Content}) \cite[vgl.][]{kouki_user_2017}).
+
+\bigskip
+
+Im Folgenden werden die genannten Oberkategorien erläutert bzw. definiert.
 
 \begin{table}
     \begin{tabular}{|p{.2\textwidth}|p{.4\textwidth}|p{.3\textwidth}|}
@@ -44,15 +48,15 @@ Für die zuvor genannten Aspekte werden in der Literatur verschiedene Unterkateg
 
 \paragraph{Context} Der \textit{Context} einer Erklärung wird durch die Situation gegeben, welche durch die Interaktion eines Nutzers, seiner Aufgabe, dem System und der Umgebung entsteht. (vgl. \cite{chazette_knowledge_nodate, kohl_explainability_2019}).
 
-\paragraph{Objectives} Unter \textit{Objectives} werden die Ziele verstanden, welche eine Erklärung spezifisch erreichen soll und solche, aufgrund derer Erklärungen in ein System integriert werden sollen.
+\paragraph{Objectives} \textit{Objectives} sind die Qualitätsziele, welche für eine Erklärung gelten oder aufgrund derer Erklärungen in ein System integriert werden sollen.
 
-\paragraph{Demand} Unter dem Punkt \textit{Demand} muss in der Entwicklung entschieden werden, wann die Nutzer des Systems überhaupt eine Erklärung benötigen. Dies bezieht sich nicht nur auf den Zeitpunkt und den Systemteil, welcher erklärt werden soll, sondern auch ob die Initiative vom Nutzer ausgeht oder das System selbstständig eine Erklärung anzeigt.
+\paragraph{Demand} Der \textit{Demand} für eine Erklärung ist der Bedarf für Erklärungen durch den Nutzer eines Systems. Das heißt der \textit{Demand} beschreibt die Notwendigkeit, zu einemen bestimmten Zeitpunkt für einen Systemteil Erklärungen bereitzustellen. Das beinhaltet auch, ob die Initiative vom Nutzer ausgeht oder das System selbstständig eine Erklärung anzeigt.
 
-\paragraph{Content} Wenn der Bedarf einer Erklärung besteht, muss festgelegt werden, welche und viele Informationen dem Nutzer eines erklärbaren Systems angezeigt werden sollen.
+\paragraph{Content} Der \textit{Content} einer bei bestehendem Bedarf dem Nutzer bereitgestellten Erklärung ist durch die Informationen und die Informationsdichte definiert.
 
-\paragraph{Presentation} Der Inhalt einer Erklärung kann Nutzern auf verschiedenen Wegen zugänglich gemacht werden. Welche Möglichkeiten bereits in der Literatur verwendet wurden, ist unter \textit{Presentation} zusammengefasst.
+\paragraph{Presentation} Der Inhalt einer Erklärung kann Nutzern auf verschiedenen Wegen zugänglich gemacht werden. Die \textit{Presentation} einer Erklärung ist die Art und Weise, auf die dem Nutzer die Informationen durch die Erklörung bereitgestellt werden.
 
-\paragraph{Evaluation} Unter \textit{Evaluation} werden Möglichkeiten zusammengetragen, wie gemessen werden kann, ob die in ein System integrierten Erklärungen das ursprüngliche Ziel erreichen. Die \textit{Evaluation} dient vor allem der Bewertung der Qualität von Erklärungen.
+\paragraph{Evaluation} Die \textit{Evaluation} ist die Bewertung der Qualität von Erklärungen. Dies enthält die grundsätzlichen verschiedenen Evaluationsmöglihckeiten und- Metriken mit denen die Qualität gemessen werden kann.
 
 \input{contents/05_model_description/21_overview}
 
