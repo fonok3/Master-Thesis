@@ -1,15 +1,13 @@
 \subsection{Externe Abhängigkeiten}
 \label{sec:model_external_dependencies}
 
-Unter \textit{External Dependencies} sind die Aspekte zusammengefasst, die eine Auswirkung auf die Erklärungen in einem System haben. Außerdem können von den hier aufgeführten Punkten Anforderungen abgeleitet und später zusammen mit Metriken Hypothesen aufgestellt werden. Daraus kann dann auch abgeleitet werden, welche Funktionen des Systems einer Erklärung bedürfen \cite{kohl_explainability_2019}.
-
-Wie bereits beschrieben, sind die \textit{External Dependencies} in den \textit{Context} und die \textit{Objectives} unterteilt. Über die Reihenfolge, in der ein Stakeholder, der Erklärungen in ein System integrieren möchte, die beiden Aspekte betrachten sollte, gibt es in der Literatur unterschiedliche Meinungen. \citeauthor{rosenfeld_explainability_2019} schreiben, dass die erste Frage, welche geklärt werden sollte, die Frage \glqq Warum benötigt das System eine Erklärung?\grqq{} ist \cite[vgl. S. 699][]{rosenfeld_explainability_2019}\cite{nunes_systematic_2017}. Im Gegensatz dazu schreiben \citeauthor{cirqueira_scenario-based_2020}, dass zuerst äußere Umstände, wie der Endnutzer des Systems geklärt sein sollte (\glqq Stakeholder Setting\grqq{} \cite{cirqueira_scenario-based_2020}), um darauf aufbauend die Ziele festzulegen. Laut \citeauthor{briand1995goal} hat zumindest auf die Ziele einer Evaluation der Kontext des Systems einen Einfluss und sollte somit zuvor geklärt werden \cite{briand1995goal}. Aus den verschiedenen Ansichten wird hier gefolgert, dass der \textit{Context} des Systems und die \textit{Objectives} eng zusammen hängen und die Reihenfolge vom Anwendungsfall abhängt. Beide werden im Folgenden näher erläutert.
+Unter \textit{External Dependencies} sind die Aspekte zusammengefasst, die eine Auswirkung auf die Erklärungen in einem System haben. Außerdem können von den hier aufgeführten Punkten Anforderungen abgeleitet und später zusammen mit Metriken Hypothesen aufgestellt werden. Daraus kann dann auch abgeleitet werden, welche Funktionen des Systems einer Erklärung bedürfen \cite{kohl_explainability_2019}. Im folgenden werden die beiden zusammenhängenden Unteraspekte \textit{Context} des Systems und \textit{Objectives} erläutert.
 
 \subsubsection{Context}
 
 Der \textit{Context} einer Erklärung beschreibt die äußeren Einflüsse, die unmittelbar auf das erklärbare System wirken und somit Anforderungen an die Eigenschaften von Erklärungen stellen.
 
-Dies beinhaltet die Aktivität, die der Endbenutzer in einer bestimmten Umgebung durchführt. Aus den Eigenschaften der drei Aspekte (Aktivität, Endbenutzer und Umgebung) leiten sich dabei direkte Einflüsse auf den Bedarf, den Inhalt und die Darstellung einer Erklärung ab. \autoref{tab:impact_of_context_on_explanation} bildet auf gleiche Weise wie bereits zuvor verwendet die verwendeten Synonyme für die verschiedenen Facetten des \textit{Context} eines Systems ab. Insbesondere der Begriff Stakeholder wurde verschieden eingesetzt. \citeauthor{cirqueira_scenario-based_2020} nutzen den Begriff für den Nutzer einer Software \cite{cirqueira_scenario-based_2020} während \citeauthor{nunes_systematic_2017} diesen als Oberbegriff für Personengruppen, die ein Interesse an einem System haben, verwenden, den Nutzer allerdings ausschließen \cite{nunes_systematic_2017}. Diese Arbeit verwendet den Begriff, um alle Personengruppen mit Interesse am System inklusive aller Nutzer zu beschreiben (vgl. \cite{schneider2012abenteuer,chazette_knowledge_nodate}). Folgend werden nun die drei Aspekte sowie typische Ausprägungen oder Charakteristiken näher erläutert.
+Dies beinhaltet die Aktivität, die der Endbenutzer in einer bestimmten Umgebung durchführt. Aus den Eigenschaften der drei Aspekte (Aktivität, Endbenutzer und Umgebung) leiten sich dabei direkte Einflüsse auf den Bedarf, den Inhalt und die Darstellung einer Erklärung ab. \autoref{tab:impact_of_context_on_explanation} stellt wie bereits zuvor die verwendeten Synonyme für die verschiedenen Facetten des \textit{Context} eines Systems dar. Insbesondere der Begriff Stakeholder wurde in der Literatur verschieden eingesetzt. \citeauthor{cirqueira_scenario-based_2020} nutzen den Begriff für den Nutzer einer Software \cite{cirqueira_scenario-based_2020} während \citeauthor{nunes_systematic_2017} diesen als Oberbegriff für Personengruppen, die ein Interesse an einem System haben, verwenden, den Nutzer allerdings ausschließen \cite{nunes_systematic_2017}. Diese Arbeit verwendet den Begriff, um alle Personengruppen mit Interesse am System inklusive aller Nutzer zu beschreiben (vgl. \cite{schneider2012abenteuer,chazette_knowledge_nodate}). Folgend werden nun die drei Aspekte sowie typische Ausprägungen oder Charakteristiken näher erläutert.
 
 \begin{table}[bht!]
     \begin{tabular}{|p{.2\textwidth}|p{.5\textwidth}|p{.2\textwidth}|}
@@ -32,53 +30,53 @@ Dies beinhaltet die Aktivität, die der Endbenutzer in einer bestimmten Umgebung
     \label{tab:impact_of_context_on_explanation}
 \end{table}
 
-\paragraph{End User} Der \textit{End User} ist die jenige Person, die mit dem System interagiert und auf welchen somit die Erklärungen zugeschnitten sein müssen. Dieser entspricht in den Definitionen von Erklärbarkeit von \citeauthor{chazette_knowledge_nodate,kohl_explainability_2019} dem \textit{Explainee} \cite{chazette_knowledge_nodate,kohl_explainability_2019}.
+\paragraph{End User} Der \textit{End User} ist diejenige Person, die mit dem System interagiert und auf welchen somit die Erklärungen zugeschnitten sein müssen. Dieser entspricht in den Definitionen von Erklärbarkeit von \citeauthor{chazette_knowledge_nodate,kohl_explainability_2019} dem \textit{Explainee} \cite{chazette_knowledge_nodate,kohl_explainability_2019}.
 
 Generell kann ein System verschiedene Nutzer(-typen) haben, die sich auch in ihrem Bedarf für Erklärungen unterscheiden. Im Folgenden werden die drei am häufigsten erwähnten Eigenschaften vorgestellt (unter anderem in \cite{chazette_knowledge_nodate,tintarev_designing_nodate,yamada_evaluating_2016}).
 
-Sowohl beim generellen technischen Verständnis (\textit{Technical Background}) als auch beim Domänen-Wissen \textit{Domain Expertise} \cite{yamada_evaluating_2016} können \textit{End User} verschieden viel Hintergrundwissen vorweisen und sich daraus verschiedene Anforderungen ergeben an Erklärungen ergeben.
+Sowohl beim generellen technischen Verständnis (\textit{Technical Background}) als auch beim Domänen-Wissen (\textit{Domain Expertise}) \cite{yamada_evaluating_2016} können \textit{End User} verschieden viel Hintergrundwissen vorweisen. Somit können sich in einem System mit unterschiedlichen Eigenschaftzen der  Nutzer auch verschiedene Anforderungen an Erklärungen ergeben.
 
 Der \textit{Cultural Background} fasst darüber hinaus die kulturellen Hintergründe des Nutzers zusammen, die sich zum Beispiel auf die Verwendung von Metaphern in Software bzw. Erklärungen auswirken können \cite{salgado_cultural_2015}.
 
-\paragraph{Task} Dies beschreibt die Aufgabe(n), welche durch den \textit{End User} mithilfe des Systems durchgeführt werden sollen. Dabei spielen verschiedene Eigenschaften eine Rolle. Genannt werden in der Literatur beispielsweise die Zeitabhängigkeit (\textit{Time Dependency}), die Komplexität (\textit{Complexity}) und die Dauer der Aufgabe (\textit{Length}). Die drei genannten Ausprägungen werden als explizit wichtig für die Eigenschaften für Erklärungen beschrieben. Folglich sind auch diese Aspekte für die Anforderungserhebung im Kontext der Erklärbarkeit relevant \cite{sokol_explainability_2020}.
+\paragraph{Task} Der \textit{Task} definiert die Aufgabe(n), welche durch den \textit{End User} mithilfe des Systems durchgeführt werden sollen. Auch hier spielen verschiedene Eigenschaften eine Rolle. Genannt werden in der Literatur beispielsweise die Zeitabhängigkeit (\textit{Time Dependency}), die Komplexität (\textit{Complexity}) und die Dauer der Aufgabe (\textit{Length}). Die drei genannten Ausprägungen werden als wichtige Betrachtungsgegenstände für die Eigenschaften von Erklärungen beschrieben. Folglich sind auch diese Aspekte für die Anforderungserhebung im Kontext der Erklärbarkeit relevant \cite{sokol_explainability_2020}.
 
-\paragraph{Environment} Sehr eng mit der zu erledigenden Aufgabe hängt auch dessen Umgebung zusammen. Das \textit{Environment} ist durch die äußeren Umstände des Systems definiert. Dies beinhaltet den generellen Anwendungsbereich des Systems (\textit{Area of Application}), welcher zum Beispiel die Kritikalität des Systems definiert. Aber auch die Art Nutzerinteraktion fällt in diesen Bereich (\textit{Interaction Type}) und hat eine Auswirkung auf die Anforderungen an Erklärungen \cite{wiegand_id_2020}. 
+\paragraph{Environment} Sehr eng mit der zu erledigenden Aufgabe hängt auch dessen Umgebung zusammen. Das \textit{Environment} ist durch die äußeren Umstände des Systems definiert. Dies beinhaltet den generellen Anwendungsbereich des Systems (\textit{Area of Application}), welcher unter anderem die Kritikalität des Systems definiert. Aber auch die Art Nutzerinteraktion fällt in diesen Bereich (\textit{Interaction Type}) und hat eine Auswirkung auf die Anforderungen an Erklärungen \cite{wiegand_id_2020}. 
 
 \bigskip
 
-Zusammenfassend kann als Zwischenergebnis für RQ1: \glqq \grqq{} festgehalten werden, dass der Kontext eines Systems zusammen mit den zuvor erläuterten Eigenschaften und derer Ausprägungen einen Einfluss auf die Anforderungen an Erklörungen hat.
+Zusammenfassend kann als Zwischenergebnis für \textbf{RQ1} festgehalten werden, dass der \textit{Context} eines Systems einer der zu betrachtenden Rahmenbedingungen mit einem Einfluss auf die Anforderungen an Erklärungen ist.
 
 \subsubsection{Zielsetzung}
 \label{subsec:model_objective}
 
 Als zweiter Aspekt neben dem \textit{Context} werden in der Literatur die \textit{Objectives} hinter der Integration von Erklärungen mit einem Einfluss auf die Anforderungen an Erklärungen genannt \cite{rosenfeld_explainability_2019, nunes_systematic_2017}.
 
-\citeauthor{chazette_knowledge_nodate} haben in ihrem Modell für Erklärbarkeit die Qualitätsaspekte zusammengefasst, die mit Erklärbarkeit in einem Zusammenhang stehen und somit auch als \textit{Objectives} für die Integration von Erklärungen gesehen werden können. Zusammen mit weiteren Ergebnissen der Literaturrecherche haben sich vor allem acht Qualitätsaspekte herausgestellt, auf welche die Auswirkungen von Erklärungen untersucht wurden \cite{nunes_systematic_2017, tintarev2007survey}. Dabei wurden die Qualitätsaspekte in den meisten Fällen genutzt, um über das Messen dieser Aspekte die Qualität der integrierten Erklärungen indirekt zu bestimmten. Eine nach Häufigkeit der Untersuchung sortierte Liste zusammen mit den Definitionen der Qualitätsaspekte ist in \autoref{tab:quality_aspects_of_explanation} zu sehen. Diese enthält alle Arbeiten, welche den jeweiligen Aspekt explizit untersuchen oder Ergebnisse von Untersuchen dazu zusammenfassen.
+\citeauthor{chazette_knowledge_nodate} haben in ihrem Modell für Erklärbarkeit die Qualitätsaspekte zusammengefasst, die mit Erklärbarkeit in einem Zusammenhang stehen und somit auch als \textit{Objectives} für die Integration von Erklärungen gesehen werden können. Zusammen mit weiteren Ergebnissen der Literaturrecherche haben sich vor allem acht Qualitätsaspekte herausgestellt, welche auf die Auswirkungen durch Erklärungen untersucht wurden \cite{nunes_systematic_2017, tintarev2007survey}. Die Qualitätsaspekte sind in den meisten Fällen dafür genutzt worden, über das Messen dieser Aspekte die Qualität der integrierten Erklärungen indirekt zu bestimmten. \autoref{tab:quality_aspects_of_explanation} enthält eine nach der in der Literatur vorkommenden Häufigkeit sortierte Liste zusammen mit den Definitionen der Qualitätsaspekte. Diese enthält alle Arbeiten, welche den jeweiligen Aspekt explizit untersuchen oder Ergebnisse von Untersuchen dazu zusammenfassen.
 
 \begin{table}[htb!]
     \begin{center}
         \begin{tabular}{|p{.24\textwidth}|p{.5\textwidth}|p{.2\textwidth}|}
             \hline
-            \textbf{Qualitätsaspekt}    & \textbf{Beschreibung} & \textbf{Quellen} \\ \hline
+            \textbf{Qualitätsziel}    & \textbf{Beschreibung} & \textbf{Quellen} \\ \hline
             Trust                       & Das Vertrauen des Nutzers in das System erhöhen.
                                         & \cite{nunes_systematic_2017} \cite{chazette_knowledge_nodate} \cite{tintarev_designing_nodate} \cite{balog_measuring_2020} \cite{eiband_impact_2019} \cite{tintarev2015explaining} \cite{hernandez-bocanegra_effects_2020} \cite{stange_effects_2021} \cite{weitz_you_2019} \cite{yamada_evaluating_2016} \cite{haspiel_explanations_2018} \cite{martin_developing_2019} \cite{martin_evaluating_2021} \cite{tsai_effects_2020}  \cite{sokol_one_2020}  \cite{wang_is_2018} \cite{koo_understanding_2016} \cite{wiegand2019drive} \cite{gunning2019darpa} \cite{lim_2009_assessing} \cite{tintarev2007survey} \cite{kunkel_let_2019} \\ \hline
-            Satisfaction                & Benutzerfreundlichkeit und generelle Zufriedenheit mit dem System erhöhen.
+            Satisfaction                & Die Benutzerfreundlichkeit und generelle Zufriedenheit von Nutzern mit dem System erhöhen.
                                         & \cite{nunes_systematic_2017} \cite{chazette_knowledge_nodate} \cite{tintarev_designing_nodate} \cite{balog_measuring_2020} \cite{tsai_evaluating_2019} \cite{tintarev2015explaining} \cite{riveiro_thats_2021} \cite{martin_developing_2019} \cite{martin_evaluating_2021} \cite{tsai_effects_2020} \cite{ehsan_human-centered_2020} \cite{sovrano_modelling_2020} \cite{koo_understanding_2016} \cite{ribera2019can} \cite{gunning2019darpa} \cite{lim_2009_assessing}  \cite{tintarev2007survey} \cite{sato_context_nodate} \\ \hline
-            Transparency                & Erklärung, wie das System funktioniert.
+            Transparency                & Erklären, wie das System funktioniert.
                                         & \cite{nunes_systematic_2017} \cite{chazette_knowledge_nodate} \cite{tintarev_designing_nodate} \cite{chazette_end-users_nodate} \cite{balog_measuring_2020} \cite{chazette2020explainability} \cite{tintarev2015explaining} \cite{hernandez-bocanegra_effects_2020} \cite{tsai_effects_2020} \cite{rjoob_towards_2021}  \cite{sokol_one_2020} \cite{wang_is_2018} \cite{koo_understanding_2016} \cite{tintarev2007survey}\\ \hline
-            Understandability           & 
+            Understandability           & Das Verständnis von Nutzern über das System erhöhen.
                                         & \cite{chazette_knowledge_nodate} \cite{chazette_end-users_nodate} \cite{martin_evaluating_2021}  \cite{ehsan_human-centered_2020} \cite{rjoob_towards_2021}  \cite{sokol_one_2020} \cite{cheng2019explaining} \\ \hline
-            Scrutability                & Dem Nutzer die Möglichkeit geben, dem System einen Fehler mitzuteilen 
+            Scrutability                & Nutzern die Möglichkeit geben, dem System einen Fehler mitzuteilen. 
                                         & \cite{nunes_systematic_2017} \cite{chazette_knowledge_nodate} \cite{tintarev_designing_nodate} \cite{balog_measuring_2020} \cite{tintarev2015explaining} \cite{martin_developing_2019} \cite{gunning2019darpa}  \cite{tintarev2007survey} \cite{martin_evaluating_2021} \\ \hline
             Efficiency                  & Das Verhältnis von Qualität und Zeit für das Lösen einer Aufgabe verbessern.
                                         & \cite{nunes_systematic_2017} \cite{chazette_knowledge_nodate} \cite{tintarev_designing_nodate} \cite{balog_measuring_2020} \cite{tsai_evaluating_2019} \cite{tintarev2015explaining} \cite{hernandez-bocanegra_effects_2020} \cite{tintarev2007survey}\\ \hline
-            Effectiveness               & Die Qualität der Aufgabe des Nutzers erhöhen
+            Effectiveness               & Die Qualität der Aufgabe des Nutzers erhöhen.
                                         & \cite{nunes_systematic_2017} \cite{chazette_knowledge_nodate} \cite{tintarev_designing_nodate} \cite{balog_measuring_2020} \cite{tintarev2015explaining} \cite{zolotas_towards_2019} \cite{hernandez-bocanegra_effects_2020} \cite{martin_evaluating_2021} \cite{rjoob_towards_2021} \cite{tintarev2007survey} \\ \hline
-            Persuasiveness              & Convince Users to try or by. \cite{balog_measuring_2020}
+            Persuasiveness              & Nutzer davon überzeugen den Empfehlungen des Systems zu folgen
                                         & \cite{nunes_systematic_2017} \cite{tintarev_designing_nodate} \cite{balog_measuring_2020} \cite{sato_context_nodate} \cite{sato_context_nodate} \cite{abdulrahman_belief-based_2019} \cite{tintarev2015explaining} \cite{sato_action-triggering_2019} \cite{tintarev2007survey} \\ \hline
         \end{tabular}
     \end{center}
-    \caption{Qualitätsaspekte mit hohem Einfluss durch Erklärungen - sortiert nach der Anzahl der Veröffentlichungen in der Literaturrecherche, die den Aspekt untersucht haben.}
+    \caption{Qualitätsziele für Erklärungen – sortiert nach der Anzahl der Veröffentlichungen in der Literaturrecherche, die den zugehörigen Qualitätsaspekt untersucht haben.}
     \label{tab:quality_aspects_of_explanation}
 \end{table}
 
@@ -108,22 +106,34 @@ Als zweiter Aspekt neben dem \textit{Context} werden in der Literatur die \texti
     \label{tab:impact_of_objective_on_explanation}
 \end{table}
 
-In ihrer Definition von Erklärbarkeit sehen \citeauthor{chazette_knowledge_nodate} vor allem \textit{Transparency} und \textit{Understandability} als zentrale Ziele von Erklärbarkeit. Sie schreiben, dass diese unmittelbar durch die Integration von Erklärungen erreicht werden können. Wie in \autoref{tab:quality_aspects_of_explanation} zu sehen ist, werden Untersuchungen aber häufiger zu anderen Aspekten durchgeführt. Dies ist ein erster Indiz dafür, dass diese Aspekte nicht in einer flachen Hierarchie zueinander stehen. Dies unterstützen auch weitere Autoren \cite{nunes_systematic_2017,tintarev2007survey}. Folglich werden die \textit{Objectives} in drei Abstraktionsebenen gegliedert: \textit{Business Goals}, \textit{Users' Perception} und \textit{Explanation Purpose}. Diese expliziten Ebenen, die von \citeauthor{nunes_systematic_2017, tintarev2007survey} erwähnt werden, sind in diesem Modell als konkrete Abstraktionslevel für Qualitätsmodelle (vgl. \cite{schneider2012abenteuer}) zu interpretieren. Die Zuordnung der Qualitätsaspekte zu den Kategorien ist in der Modellübersicht zu finden (\autoref{fig:model_overview_complete}). Die Erwähnungen der Aspekte mit den jeweiligen Synonymen in der Literatur sind in \autoref{tab:impact_of_objective_on_explanation} zusammengefasst.
+In ihrer Definition von Erklärbarkeit sehen \citeauthor{chazette_knowledge_nodate} vor allem \textit{Transparency} und \textit{Understandability} als zentrale Ziele von Erklärbarkeit \cite{chazette_end-users_nodate}. Sie schreiben, dass diese unmittelbar durch die Integration von Erklärungen erreicht werden können. Wie in \autoref{tab:quality_aspects_of_explanation} zu sehen ist, werden Untersuchungen aber häufiger zu anderen Aspekten durchgeführt. Dies ist ein Indiz dafür, dass diese Aspekte nicht in einer flachen Hierarchie zueinander stehen. Eine hierarchische Anordnung der Qualitätsziele findest sich bei auch bei weiteren Autoren \cite{nunes_systematic_2017,tintarev2007survey}. Folglich werden die \textit{Objectives} in drei Abstraktionsebenen gegliedert: \textit{Business Goals}, \textit{Users' Perception} und \textit{Explanation Purpose}. Diese Ebenen, die von \citeauthor{nunes_systematic_2017} sowie \citeauthor{tintarev2007survey} vorgeschlagen werden, sind in diesem Modell als konkrete Abstraktionslevel für Qualitätsmodelle (vgl. \cite{schneider2012abenteuer}) zu interpretieren. Die Zuordnung der Qualitätsaspekte zu den Kategorien ist in der Gesamtübersicht des Modells abgebildet (\autoref{fig:model_overview_complete}). \autoref{tab:impact_of_objective_on_explanation} fasst die Erwähnungen der drei Zielebenen in der Literatur mit den jeweiligen Synonymen zusammen.
 
-\paragraph{Business Goals} Unter den \textit{Business Goals} werden die Ziele verstanden, die das System im Ganzen betreffen. \citeauthor{schneider2012abenteuer} nennt diese \glqq Allgemeine Qualitätsziele\grqq \cite{schneider2012abenteuer}.
+\paragraph{Business Goals} \textit{Business Goals} sind die Ziele, für das System im Ganzen gelten. \citeauthor{schneider2012abenteuer} nennt sie im Kontext von Qualitätsmodellen \glqq Allgemeine Qualitätsziele\grqq \cite{schneider2012abenteuer}.
 
-\paragraph{Users' Perception} Dieser Aspekt definiert, wie der Nutzer das System wahrnehmen soll, um so die Ziele auf der höheren Ebene zu erreichen. Diese Ziele sind als Zwischenziele hin zu einem konkreten Ziel für zu integrierende Erklärungen zu verstehen.
+\paragraph{User Perception Goals} \textit{User Perception Goals} sind jene Ziele, die direkt durch den \textit{End User} des Sytems wahrgenommen werden sollen. Die trägt der Erreichung der allgemeinen Ziele auf der höheren Ebene bei. Diese Ziele sind als Zwischenziele hin zu einem konkreten Ziel für zu integrierende Erklärungen zu verstehen.
 
-\paragraph{Explanation Goals} Als letzter Schritt müssen Ziele festgelegt werden, welche als \glqq Konkrete Qualitätsziele für Erklärbarkeit\grqq{} gesehen werden (vgl. \cite{schneider2012abenteuer}). Diese sind allerdings noch nicht konkrete Ziele für die Situation, in der die Erklärungen eingesetzt werden sollen. Hierfür müssen diese weiter verfeinert werden bis zu ihrer Messbarkeit, welche in \autoref{sec:model_evaluation} erläutert ist.
+\paragraph{Explanation Goals} Die \textit{Explanation Goals} sind die \glqq konkreten Qualitätsziele\grqq{} im Rahmen von Erklärbarkeit (vgl. \cite{schneider2012abenteuer}). Diese sind allerdings noch nicht konkrete Ziele für eine bestimmte Situation, in der die Erklärungen eingesetzt werden sollen. Hierfür müssen diese weiter verfeinert werden bis zu ihrer Messbarkeit, um daraus Anforderungen zu entwickeln (Siehe \autoref{sec:model_evaluation}).
 
-\smallskip
+\bigskip
 
-Die hier vorgestellten Ziele bei der Integration von Erklärungen stellen keine abgeschlossene oder vollständige Liste dar, sondern dienen im Rahmen des Leitfadens als Überblick über bereits häufig betrachtete Ziele, für deren Erreichung Erklärungen bereits erfolgreich eingesetzt wurden.
-
-\smallskip
-
-Mit dem \textit{Context} des Systems und den \textit{Objectives} für die Integration von Erklärungen wurden im Rahmen des Modells die Rahmenbedingungen, welche einen direkten Einfluss auf Anforderungen an Erklärungen haben vorgestellt worden. Als Hilfsmittel kann dieser erste Teil des Modells vor allem bei der Anforderungserhebung (\textit{Requirements Elicitation}) und -Analyse (Requirements Analysis) helfen \cite{schneider2012abenteuer}. Wenn für die Kategorien der \textit{External Dependencies} die Ausprägungen für das betrachtete System festgelegt sind, können darauf aufbauend die konkreten Anforderungen an die Erklärungen ausgearbeitet werden.
+Die hier vorgestellten Ziele bei der Integration von Erklärungen stellen keine abgeschlossene oder vollständige Liste dar, sondern dienen im Rahmen des Leitfadens als Überblick über in der Literatur häufig betrachtete Ziele, für deren Erreichung Erklärungen erfolgreich eingesetzt wurden.
 
 \smallskip
 
-Im weiteren Verlauf der Arbeit werden die Eigenschaften von Erklärungen vorgestellt, welche in der Literatur bereits verwendet wurden, um die Anforderungen umzusetzen.
+\noindent\fbox{
+    \parbox{0.964\textwidth}{
+        \smallskip
+        \textbf{RQ1} Welche Rahmenbedingungen haben einen Einfluss auf die Anforderungen für Erklärungen?
+        \smallskip
+    }
+}
+
+\smallskip
+
+Mit dem \textit{Context} des Systems und den \textit{Objectives} für die Integration von Erklärungen wurden im Rahmen des ersten Modellteils die Rahmenbedingungen, welche einen direkten Einfluss auf Anforderungen an Erklärungen haben, vorgestellt. Die unter \textit{External dependencies} zusammengefassten Aspekte und Ausprägungen sind folglich die Antwort auf die erste Forschungsfrage.
+
+Als Hilfsmittel kann dieser erste Teil des Modells vor allem bei der Anforderungserhebung (\textit{Requirements Elicitation}) und -Analyse (Requirements Analysis) helfen \cite{schneider2012abenteuer}. Auf dieser Basis können Anforderungen formuliert und die Grundlagen für Hypothesen gelegt werden. Folglich wird durch diesen ersten Modellteil auch die erste Modellanforderung erfüllt ([MR1]).
+
+\smallskip
+
+Im folgenden Abschnitt werden die Eigenschaften von Erklärungen vorgestellt, welche in der Literatur bereits verwendet wurden, um die Anforderungen umzusetzen.
