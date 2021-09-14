@@ -1,28 +1,78 @@
 \subsection{Eigenschaften}
 
-Hier aufgeführt, wenn die Eigenschaft explizit untersucht wurde und nicht nur implizit in der Erklärung verwendet wurde.
+Die \textit{Chracteristics} von Erklärungen umfassen die Eigenschaften von Erklärungen, die einen Einfluss auf die Qualität eben dieser haben. Unter der Kategorie sind die Möglichkeiten zusammengefasst, die bei der Ausgestaltung von Erklärungen bestehen. Gegliedert sind die Eigenschaften in den Bedarf der Erklärung (\textit{Demand}), die ausgelieferten Informationen (\textit{Content}) und die Bereitstellung (\textit{Presentation}). Diese drei Unterkategorien werden in den folgenden Abschnitten vorgestellt. Um die Möglichkeit zu geben, die konkreten Beispiele von Erklärungen mit bestimmten Eigenschaften nachzuschlagen, werden für diesen Teil des Modells die Arbeiten für die einzelnen Ausprägungen mitaufgeführt.  Wichtig zu beachten ist, dass sich die vorgestellten Möglichkeiten nicht unbedingt ausschließen. Das heißt vor allem, dass nicht jede Erklärung genau eine Ausprägung eines Aspektes erfüllen muss, sondern auch neue oder zwischen zwei Möglichkeiten liegende Eigenschaften aufweisen kann. Darüber hinaus muss auch nicht zwangsweise für jede Eigenschaftskategorie eine Eigenschaft ausgewählt werden, da nicht alle Kategorien auf jeden Kontext zutreffen.
 
-\subsubsection*{Bedarf}
+\subsubsection{Bedarf}
 
-\begin{longtable}{|p{.2\textwidth}|p{.5\textwidth}|p{.2\textwidth}|}
-    \hline
-    \textbf{Eigenschaft}    & \textbf{Ausprägung}   & \textbf{Quellen} \\ \hline
-    Initiative              &  User / Manual        & \cite{chazette_end-users_nodate} \cite{tintarev_designing_nodate} \cite{wiegand_id_2020} \\
-                            &  System / Automatic   & \cite{chazette_end-users_nodate} \cite{eiband_impact_2019} \cite{wiegand_id_2020} \cite{schaffer_i_2019} \cite{yamada_evaluating_2016} \\
-    \hline
-    Occasion                &  Before               & \cite{rosenfeld_explainability_2019} \cite{wiegand_id_2020} \cite{kunkel_let_2019} \cite{koo_why_2015} \cite{haspiel_explanations_2018} \\
-                            &  While                & \cite{rosenfeld_explainability_2019} \cite{wiegand_id_2020} \cite{kunkel_let_2019} \\
-                            &  After                & \cite{rosenfeld_explainability_2019} \cite{wiegand_id_2020} \cite{kunkel_let_2019} \cite{koo_why_2015} \cite{haspiel_explanations_2018} \cite{wiegand2019drive} \\
-    \hline
-\caption{Bedarf einer Erklärung}
-\label{tab:explanation_demands}
-\end{longtable}
+Der \textit{Demand}  für Erklärungen kann aus verschiedenen Perspektiven betrachtet werden. Bei welcher Aufgabe und bei welchen Ereigenissen Erklärungen überhaupt benötigt werden, ist in den Anforderungen für Erklärungen festgehalten. Diese entstehen auf Basis der \textit{External Dependencies}. Unter der Kategorie \textit{Demand} in diesem Modell ist zusätzlich festgehalten, mit welcher Initiative (\textit{Initiative}) und wann genau im Bezug auf ein Ereignis im System dem \textit{End User} Erklärungen vom System zur Verfügung gestellt werden sollen. Einen Überblick über die Verwedung verschiedener Ausprägungen der Aspekte ist in \autoref{tab:explanation_demands} dargestellt.
 
-\subsubsection*{Inhalt}
+\begin{table}[hbt!]
+    \begin{center}
+        \begin{tabular}{|p{.3\textwidth}|p{.3\textwidth}|p{.3\textwidth}|}
+            \hline
+            \textbf{Aspekt}    & \textbf{Ausprägung}   & \textbf{Quellen} \\ \hline
+            Initiative              &  Manual        & \cite{chazette_end-users_nodate} \cite{tintarev_designing_nodate} \cite{wiegand_id_2020} \\
+                                    &  Automatic   & \cite{chazette_end-users_nodate} \cite{eiband_impact_2019} \cite{wiegand_id_2020} \cite{schaffer_i_2019} \cite{yamada_evaluating_2016} \\
+            \hline
+            Time                &  Before               & \cite{rosenfeld_explainability_2019} \cite{wiegand_id_2020} \cite{kunkel_let_2019} \cite{koo_why_2015} \cite{haspiel_explanations_2018} \\
+                                    &  While                & \cite{rosenfeld_explainability_2019} \cite{wiegand_id_2020} \cite{kunkel_let_2019} \\
+                                    &  After                & \cite{rosenfeld_explainability_2019} \cite{wiegand_id_2020} \cite{kunkel_let_2019} \cite{koo_why_2015} \cite{haspiel_explanations_2018} \cite{wiegand2019drive} \\
+            \hline
+        \end{tabular}
+    \end{center}
+    \caption{Bedarf einer Erklärung}
+    \label{tab:explanation_demands}
+\end{table}
 
-Die hier vorgestellten Ziele sollen dabei keine abgeschlossene und vollständige Liste darstellen, sondern dienen im Rahmen des Leitfadens für Erklärbarkeit als Überblick über bereits häufig betrachtete Ziele, für deren Erreichung Erklärungen bereits erfolgreich eingesetzt wurden.
+\paragraph{Initiative} Die \textit{Initiative} einer Erklärung ist der Auslöser für das Geben einer Erklärung. Die erste Möglichkeit ist eine automatische Auslieferung der Erklärung an den \textit{End User}. Das System trifft dann allein die Entscheidung, wann und ob der \textit{End User} die Erklärung bekommt (\textit{Automatic}). Alternativ können Erklärungen vom \textit{End User} manuell angefordert werden \textit{Manual}. Auch eine Mischform, bei der beispielsweise festgelegt wird, welche Art von Erklärungen ein \textit{End User} erhalten möchte.
 
-Determine what what information should be conveyed to the user \cite{nunes_systematic_2017}
+\paragraph{Time} Die \textit{Time} ist der Zeitpunkt im Verhältnis zu einem Ereignis, zu dem das System eine Erklärung bereitstellt. \citeauthor{rosenfeld_explainability_2019} und \citeauthor{wiegand_id_2020} haben explizit Untersucht, wann Erklärungen angezeigt werden sollten, wenn ein Ereignis im System auftritt oder das System eine Aktion durchführt. Dies umfasst die Möglichkeiten vor dem Ereignis (\textit{Before}), während (\textit{While}) oder nach dem Ereignis (\textit{After}) eine Erklärung zu diesem zu liefern.
+
+\bigskip
+
+Im Rahmen von \textbf{RQ2} kann an dieser Stelle folglich erwähnt werden, dass der \textit{Demand} mit den verschiedenen Möglichkeiten für \textit{End User} ein Erklärung zu verschiedenen Zeitpunkten zu erhalten eine Eigenschaft mit einem Einfluss auf die Erklärungsqualität ist.
+
+\subsubsection{Inhalt}
+
+Unter dem Unterpunkt \textit{Content} wird definiert, mit welchen Inhalten die \textit{End User} durch Erklärungen versorgt werden \cite{nunes_systematic_2017}. Dies beinhaltet nicht nur den Informationstyp (\textit{Information Type}) den das System vermittelt, sondern auch wie viel Inhalt (\textit{Information Density}). Ein weiterer Aspekt ist Anpassungsfähigkeit der Inhalte (\textit{Adaptivity}). \autoref{tab:content_of_explanations} enhält die verschiedenen Ausprägungen zusammen mit deren Anwedungen in der Literatur.
+
+\begin{table}[bht!]
+    \begin{center}
+        \begin{tabular}{|p{.3\textwidth}|p{.3\textwidth}|p{.3\textwidth}|}
+            \hline
+            \textbf{Aspekt}    & \textbf{Ausprägung}   & \textbf{Quellen} \\ \hline
+            Information Type    & Causality & \cite{chazette2020explainability} \cite{abdulrahman_belief-based_2019} \cite{yamada_evaluating_2016} \cite{sato_action-triggering_2019} \cite{zahedi_towards_2019} \cite{zahedi_towards_2019} \cite{zolotas_towards_2019} \cite{cassens_ambient_2019} \cite{thomson_knowledge--information_2020} \cite{chari_explanation_2020} \cite{neerincx_using_2018} \cite{nunes_systematic_2017}\cite{zhu_effects_2020} \cite{ribera2019can} \cite{lim_2009_assessing} \\
+                                & Context & \cite{chazette2020explainability} \cite{zahedi_towards_2019} \cite{cassens_ambient_2019} \cite{zahedi_towards_2019} \cite{zolotas_towards_2019} \cite{chari_explanation_2020} \cite{nunes_systematic_2017} \cite{ribera2019can} \\
+                                & Algorithm & \cite{chazette2020explainability} \cite{sato_action-triggering_2019} \cite{thomson_knowledge--information_2020} \cite{chari_explanation_2020} \cite{neerincx_using_2018} \cite{ribera2019can} \\
+            \hline
+            Information Density & Quantity & \cite{ribera2019can} \cite{kouki_user_2017} \\
+                                & Level of justification & \cite{hernandez-bocanegra_effects_2020} \\
+                                & Aggregation & \cite{hernandez-bocanegra_effects_2020} \cite{martin_developing_2019} \\
+                                & Abstraction Level & \cite{thomson_knowledge--information_2020} \\
+            \hline
+            Adaptivity          & User specified requirements & \cite{tintarev_designing_nodate} \\
+                                & Interactiv  & \cite{abdulrahman_belief-based_2019} \cite{cheng2019explaining} \\
+                                & Static & \cite{abdulrahman_belief-based_2019} \\
+                                & Personalized & \cite{kaptein_personalised_2017} \cite{cassens_ambient_2019}  \cite{sokol_one_2020} \\
+                                & Contextualised & \cite{kaptein_personalised_2017} \cite{cassens_ambient_2019} \\
+            \hline
+        \end{tabular}
+    \end{center}
+    \caption{Inhalt einer Erklärung}
+    \label{tab:content_of_explanations}
+\end{table}
+
+\paragraph{Information Type} Der \textit{Information Type} beschreibt die Inhalte, die den \textit{End Usern} mithilfe der Erklärung übermittelt werden. Unter diesem Aspekt sind in der Literatur sehr verschiedene Ansätze zu finden, die unterschiedlichen Typen zu definieren. Beispielsweise stellen \cite{chazette_end-users_nodate} mithilfe von Fragewörtern verschiedene Informationstypen dar [\cite{chazette_end-users_nodate}], während \citeauthor{rosenfeld_explainability_2019} selbige Fragewörter nutzt, um andere Inhalte zu beschreiben und diese ergänzt. Zusammen mit weiteren Defnitionen \cite{kaptein_personalised_2017, abdulrahman_belief-based_2019} sind in diesem Modell resultierend drei verschiedene Informationstypen enthalten. Diese wurden als Erklärungen zwischen verschiedenen Typen
+
+\textit{Context}
+
+\textit{Algorithm}
+
+\textit{Causality} includes \textit{Output}, why and why not
+
+\paragraph{Information Density}
+
+\paragraph{Adaptivity}
 
 Granularität
 
@@ -40,35 +90,9 @@ the different types of content answer the gulfs of execution and evaluation of \
 
 . It encompasses data transparency, which answers what information is needed and who are the stakeholders; process transparency answers how something is performed; and policy transparency answers why an action is performed in the context of transparency. \cite{chazette2020explainability}
 
-\begin{longtable}{|p{.2\textwidth}|p{.5\textwidth}|p{.2\textwidth}|}
-    \hline
-    \textbf{Aspekt}     & \textbf{Synonym} & \textbf{Quellen} \\ \hline
-    Information Type    & Why Mit welchem Ziel & \cite{chazette2020explainability} \cite{abdulrahman_belief-based_2019} \cite{yamada_evaluating_2016} \cite{sato_action-triggering_2019} \cite{zahedi_towards_2019} \cite{zahedi_towards_2019} \cite{zolotas_towards_2019} \cite{cassens_ambient_2019} \cite{thomson_knowledge--information_2020} \cite{chari_explanation_2020} \cite{neerincx_using_2018} \cite{nunes_systematic_2017} (Rationale) \cite{zhu_effects_2020} \cite{ribera2019can} \cite{lim_2009_assessing} \\
-                        & What (context) & \cite{chazette2020explainability} \cite{zahedi_towards_2019} \cite{cassens_ambient_2019} \cite{zahedi_towards_2019} \cite{zolotas_towards_2019} \cite{chari_explanation_2020} \cite{nunes_systematic_2017} (Data) \cite{ribera2019can} (data) \\
-                        & How welcher Glaube wurde abgeleitet & \cite{chazette2020explainability} \cite{sato_action-triggering_2019} \cite{thomson_knowledge--information_2020} \cite{chari_explanation_2020} \cite{neerincx_using_2018} \cite{lim_2009_assessing} \\
-                        & Verhalten & \cite{zhu_effects_2020} \cite{ribera2019can}\\
-                        & Kontext &  \\
-    \hline
-    Information Density & Quantity & \cite{ribera2019can} \cite{kouki_user_2017} \\
-                        & Level of justification & \cite{hernandez-bocanegra_effects_2020} \\
-                        & Aggregation & \cite{hernandez-bocanegra_effects_2020} \cite{martin_developing_2019} \\
-                        & Abstraction Level & \cite{thomson_knowledge--information_2020} \\
-    \hline
-    Adaptivity          & User specified requirements & \cite{tintarev_designing_nodate} \\
-                        & Interactiv  & \cite{abdulrahman_belief-based_2019} \cite{cheng2019explaining} \\
-                        & Static & \cite{abdulrahman_belief-based_2019} \\
-                        & Personalized & \cite{kaptein_personalised_2017} \cite{cassens_ambient_2019}  \cite{sokol_one_2020} \\
-                        & Contextualised & \cite{kaptein_personalised_2017} \cite{cassens_ambient_2019} \\
-    \hline
-\caption{Inhalt einer Erklärung}
-\label{tab:content_of_explanations}
-\end{longtable}
-
 Die Anzahl der Paper bestätigt das Ergebnis von \cite{chazette_end-users_nodate}, dass die Reihenfolge der Häufigkeiten mit der die Inhalte untersucht wurden so ist.
 
-Was -> System Verthalten
-
-\subsubsection*{Darstellung}
+\subsubsection{Darstellung}
 
 \begin{longtable}{|p{.2\textwidth}|p{.5\textwidth}|p{.2\textwidth}|}
     \hline
@@ -89,3 +113,16 @@ Was -> System Verthalten
 \caption{Darstellung einer Erklärung}
 \label{tab:presentation_of_explanations}
 \end{longtable}
+
+
+\smallskip
+
+\noindent\fbox{
+    \parbox{0.964\textwidth}{
+        \smallskip
+        \textbf{RQ2} Welche Eigenschaften von Erklärungen haben einen Einfluss auf die externe Qualität eines erklärbaren Systems?
+        \smallskip
+    }
+}
+
+\smallskip
