@@ -28,33 +28,49 @@ Der \textit{Demand}  für Erklärungen kann aus verschiedenen Perspektiven betra
 
 \paragraph{Time} Die \textit{Time} ist der Zeitpunkt im Verhältnis zu einem Ereignis, zu dem das System eine Erklärung bereitstellt. \citeauthor{rosenfeld_explainability_2019} und \citeauthor{wiegand_id_2020} haben explizit Untersucht, wann Erklärungen angezeigt werden sollten, wenn ein Ereignis im System auftritt oder das System eine Aktion durchführt. Dies umfasst die Möglichkeiten vor dem Ereignis (\textit{Before}), während (\textit{While}) oder nach dem Ereignis (\textit{After}) eine Erklärung zu diesem zu liefern.
 
-\bigskip
+\smallskip
 
 Im Rahmen von \textbf{RQ2} kann an dieser Stelle folglich erwähnt werden, dass der \textit{Demand} mit den verschiedenen Möglichkeiten für \textit{End User} ein Erklärung zu verschiedenen Zeitpunkten zu erhalten eine Eigenschaft mit einem Einfluss auf die Erklärungsqualität ist.
 
 \subsubsection{Inhalt}
 
-Unter dem Unterpunkt \textit{Content} wird definiert, mit welchen Inhalten die \textit{End User} durch Erklärungen versorgt werden \cite{nunes_systematic_2017}. Dies beinhaltet nicht nur den Informationstyp (\textit{Information Type}) den das System vermittelt, sondern auch wie viel Inhalt (\textit{Information Density}). Ein weiterer Aspekt ist Anpassungsfähigkeit der Inhalte (\textit{Adaptivity}). \autoref{tab:content_of_explanations} enhält die verschiedenen Ausprägungen zusammen mit deren Anwedungen in der Literatur.
+Unter dem Punkt \textit{Content} wird definiert, mit welchen Inhalten die \textit{End User} durch Erklärungen versorgt werden \cite{nunes_systematic_2017}. Dieser ist einer von zwei Teilen des Modells, welcher sich auf die Granularität von Erklärungen bezieht. Der \textit{Content} beinhaltet nicht nur den Informationstyp (\textit{Information Type}) den das System vermittelt, sondern auch wie viel Inhalt (\textit{Information Density}). Ein weiterer Aspekt ist Anpassungsfähigkeit der Inhalte (\textit{Adaptivity}). \autoref{tab:content_of_explanations} enhält die verschiedenen Ausprägungen zusammen mit deren Anwedungen in der Literatur, welche einen Einfluss auf die externe Qualität von Erklärungen haben.
 
 \begin{table}[bht!]
     \begin{center}
         \begin{tabular}{|p{.3\textwidth}|p{.3\textwidth}|p{.3\textwidth}|}
             \hline
             \textbf{Aspekt}    & \textbf{Ausprägung}   & \textbf{Quellen} \\ \hline
-            Information Type    & Causality & \cite{chazette2020explainability} \cite{abdulrahman_belief-based_2019} \cite{yamada_evaluating_2016} \cite{sato_action-triggering_2019} \cite{zahedi_towards_2019} \cite{zahedi_towards_2019} \cite{zolotas_towards_2019} \cite{cassens_ambient_2019} \cite{thomson_knowledge--information_2020} \cite{chari_explanation_2020} \cite{neerincx_using_2018} \cite{nunes_systematic_2017}\cite{zhu_effects_2020} \cite{ribera2019can} \cite{lim_2009_assessing} \\
-                                & Context & \cite{chazette2020explainability} \cite{zahedi_towards_2019} \cite{cassens_ambient_2019} \cite{zahedi_towards_2019} \cite{zolotas_towards_2019} \cite{chari_explanation_2020} \cite{nunes_systematic_2017} \cite{ribera2019can} \\
-                                & Algorithm & \cite{chazette2020explainability} \cite{sato_action-triggering_2019} \cite{thomson_knowledge--information_2020} \cite{chari_explanation_2020} \cite{neerincx_using_2018} \cite{ribera2019can} \\
+            Information Type    
+                                & Context Information &     \cite{chazette2020explainability} \cite{zahedi_towards_2019}
+                                                \cite{cassens_ambient_2019} \cite{zahedi_towards_2019}
+                                                \cite{zolotas_towards_2019} \cite{chari_explanation_2020}
+                                                \cite{nunes_systematic_2017} \cite{ribera2019can} \\
+                                & Inner Logic & \cite{chazette2020explainability} \cite{sato_action-triggering_2019} 
+                                                \cite{thomson_knowledge--information_2020}
+                                                \cite{chari_explanation_2020} \cite{neerincx_using_2018}
+                                                \cite{ribera2019can} \cite{cassens_ambient_2019} \\
+                                & Causality &   \cite{chazette2020explainability} \cite{abdulrahman_belief-based_2019}
+                                                \cite{yamada_evaluating_2016} \cite{sato_action-triggering_2019}
+                                                \cite{zahedi_towards_2019} \cite{zahedi_towards_2019}
+                                                \cite{zolotas_towards_2019} \cite{cassens_ambient_2019}
+                                                \cite{thomson_knowledge--information_2020}
+                                                \cite{chari_explanation_2020} \cite{neerincx_using_2018}
+                                                \cite{nunes_systematic_2017}\cite{zhu_effects_2020}
+                                                \cite{ribera2019can} \cite{lim_2009_assessing} 
+                                                \cite{kaptein_personalised_2017} \\
             \hline
-            Information Density & Quantity & \cite{ribera2019can} \cite{kouki_user_2017} \\
-                                & Level of justification & \cite{hernandez-bocanegra_effects_2020} \\
-                                & Aggregation & \cite{hernandez-bocanegra_effects_2020} \cite{martin_developing_2019} \\
-                                & Abstraction Level & \cite{thomson_knowledge--information_2020} \\
+            Information Density & Amount &      \cite{ribera2019can} \cite{kouki_user_2017}
+                                                \cite{hernandez-bocanegra_effects_2020} \cite{martin_developing_2019} \\
+                                & Abstraction Level & \cite{thomson_knowledge--information_2020}
+                                                \cite{hernandez-bocanegra_effects_2020} \\
             \hline
-            Adaptivity          & User specified requirements & \cite{tintarev_designing_nodate} \\
-                                & Interactiv  & \cite{abdulrahman_belief-based_2019} \cite{cheng2019explaining} \\
-                                & Static & \cite{abdulrahman_belief-based_2019} \\
-                                & Personalized & \cite{kaptein_personalised_2017} \cite{cassens_ambient_2019}  \cite{sokol_one_2020} \\
-                                & Contextualised & \cite{kaptein_personalised_2017} \cite{cassens_ambient_2019} \\
+            Adaptivity          & Context-Sensitivity & \cite{kaptein_personalised_2017} \cite{cassens_ambient_2019} \\
+                                & Controllability & \cite{abdulrahman_belief-based_2019} \cite{cheng2019explaining} \\
+                                & Personalization & \cite{kaptein_personalised_2017} \cite{cassens_ambient_2019}
+                                                    \cite{sokol_one_2020} \cite{tintarev_designing_nodate}
+                                                    \cite{sokol_explainability_2020} \\
+                                
             \hline
         \end{tabular}
     \end{center}
@@ -62,58 +78,58 @@ Unter dem Unterpunkt \textit{Content} wird definiert, mit welchen Inhalten die \
     \label{tab:content_of_explanations}
 \end{table}
 
-\paragraph{Information Type} Der \textit{Information Type} beschreibt die Inhalte, die den \textit{End Usern} mithilfe der Erklärung übermittelt werden. Unter diesem Aspekt sind in der Literatur sehr verschiedene Ansätze zu finden, die unterschiedlichen Typen zu definieren. Beispielsweise stellen \cite{chazette_end-users_nodate} mithilfe von Fragewörtern verschiedene Informationstypen dar [\cite{chazette_end-users_nodate}], während \citeauthor{rosenfeld_explainability_2019} selbige Fragewörter nutzt, um andere Inhalte zu beschreiben und diese ergänzt. Zusammen mit weiteren Defnitionen \cite{kaptein_personalised_2017, abdulrahman_belief-based_2019} sind in diesem Modell resultierend drei verschiedene Informationstypen enthalten. Diese wurden als Erklärungen zwischen verschiedenen Typen
+\paragraph{Information Type} Der \textit{Information Type} beschreibt die Inhalte, die den \textit{End Usern} mithilfe der Erklärung übermittelt werden. Unter diesem Aspekt sind in der Literatur sehr verschiedene Ansätze zu finden, die unterschiedlichen Typen zu definieren. Beispielsweise stellen \cite{chazette_end-users_nodate} mithilfe von Fragewörtern verschiedene Informationstypen dar [\cite{chazette_end-users_nodate}], während \citeauthor{rosenfeld_explainability_2019} selbige Fragewörter nutzt, um andere Inhalte zu beschreiben und diese ergänzt. Grundsätzlich kann zwischen globalen Erklären, die immer gültig sind und situationsabhängigken (lokalen) Erklärungen unterschieden werden \cite{lim_2009_assessing}. Zusammen mit weiteren Defnitionen \cite{kaptein_personalised_2017, abdulrahman_belief-based_2019} wurden diese in drei verschiedene Informationstypen gebündelt.
 
-\textit{Context}
+Kontextinformationen in einer Erklärung geben Auskunft über die zugrundeliegenden Daten (\textit{Context Information}). Dabei werden die eingehenden Informationen auf Basis derer das System Entscheidungen trifft, dem \textit{End User} dargelegt.
 
-\textit{Algorithm}
+Eine weitere Möglichkeit ist das Erklären der Algorithmen eines Systems (\textit{Inner Logic}). Dies enthält die Informationen, wie genau ein System die ihm zu Verfügung stehenden Informationen verarbeitet und interpretiert.
 
-\textit{Causality} includes \textit{Output}, why and why not
+Ein dritter Weg ist die Erklärung von Zusamenhängen zwischen den Eingaben und Ausgaben des Systems (\textit{Causality}). In einer solchen Erklärung wird den \textit{End Usern} der Grund für ein bestimmtes Systemverhalten oder eine Entscheidung erläutert. Dieser Punkt lässt sich noch in die zwei Möglichkeiten gliedern, Gründe zu erläutern. Eine Erklärung dier Art kann die Information enthalten, warum ein bestimmtes Systemverhalten in einer Situation erfolgt ist. Außerdem kann eine Erklärung klarstellen, warum System ein alternatives Verhalten oder eine alternative Ausgabe nicht erfolgt ist \cite{martin_evaluating_2021}.
 
-\paragraph{Information Density}
+% the different types of content answer the gulfs of execution and evaluation of \cite{norman1988psychology} as described by \cite{ribera2019can}
 
-\paragraph{Adaptivity}
+\paragraph{Information Density} Die \textit{Information Density} beschreibt die Menge und die Kompaktheit an Informationen die eine Erklärung enthält. Dabei ist einerseits wichtig, ob alle möglichen Erklärungsmöglichkeiten genutzt werden (\textit{Amount}). Andererseits spielt es eine Rolle auf welcher Detailebene die Informationen dargetsellt werden (\textit{Abstraction Level}).
 
-Granularität
+\paragraph{Adaptivity} \textit{Adaptivity} definiert, wie statisch die Erklärungen in einem System sind. Eine Ausprägung ist dabei der Grad zu dem eine Erklärung auf den aktuellen \textit{Context} angepasst ist (\textit{Context-Sensitivity}). Die beinhaltet auch die \textit{Personalisation}, welche darstellt inwiefern Erklärungen auf den aktuellen \textit{End User} anpassbar sind. \textit{Controllability} beschreibt dabei, welchen Einfluss der \textit{End User} hat, mit der Erklärung zu interagieren.
 
-Information type description: Constrastic / differences (Why not), belief-bases (quelle) vs. ...-based
+\bigskip
 
-User specified requirements (Personalisation) \cite{tintarev_designing_nodate, sokol_explainability_2020}
-
-Goal-Based: Desired outcome (Why?) \cite{kaptein_personalised_2017, abdulrahman_belief-based_2019}
-
-Belief-Based: Based on which information (How?) \cite{kaptein_personalised_2017, abdulrahman_belief-based_2019}
-
-the different types of content answer the gulfs of execution and evaluation of \cite{norman1988psychology} as described by \cite{ribera2019can}
-
-(Why, Why not -> Why, situation specific / local explanation) (How, what if -> global explanation) (what else -> context) \cite{lim_2009_assessing}
-
-. It encompasses data transparency, which answers what information is needed and who are the stakeholders; process transparency answers how something is performed; and policy transparency answers why an action is performed in the context of transparency. \cite{chazette2020explainability}
-
-Die Anzahl der Paper bestätigt das Ergebnis von \cite{chazette_end-users_nodate}, dass die Reihenfolge der Häufigkeiten mit der die Inhalte untersucht wurden so ist.
+Als weiteres Ergebnis für \textbf{RQ2} kann hier hinzugefügt werden, dass auch der \textit{Content} einer Erklärung einen großen Einfluss auf die externe Qualität von Erklärungen hat. Dies lässt sich aus Anzahl an Autoren festmachen, die verschiedene Facetten des \textit{Content} auf die Einflüsse auf die Qualität untersuchen.
 
 \subsubsection{Darstellung}
 
-\begin{longtable}{|p{.2\textwidth}|p{.5\textwidth}|p{.2\textwidth}|}
-    \hline
-    \textbf{Aspekt}     & \textbf{Synonym} & \textbf{Quellen} \\ \hline
-    Presentation Type / Explanatory medium
-                        & Textual  & \cite{sokol_explainability_2020} \cite{balog_measuring_2020} \cite{tintarev_designing_nodate} \cite{sato_action-triggering_2019} \cite{eiband_impact_2019} \cite{eiband_impact_2019} \cite{abdulrahman_belief-based_2019} \cite{cassens_ambient_2019} \cite{nunes_systematic_2017} \\
-                        & Visualisation (auch Formal und statistic summary) & \cite{sokol_explainability_2020} \cite{sato_action-triggering_2019} \cite{sokol_explainability_2020}  \cite{mucha_interfaces_2021} \cite{abdulrahman_belief-based_2019} \cite{nunes_systematic_2017} \cite{schrills_color_2020} \\
-                       
-                        & Audio & \cite{wiegand2019drive} \cite{nunes_systematic_2017} \cite{wang_is_2018} \\
-    \hline
-    Explainer           & Factual / Impersonal & \cite{eiband_impact_2019} \cite{abdulrahman_belief-based_2019} \cite{kunkel_let_2019} \cite{neerincx_using_2018} \\
-                        & Personal & \cite{abdulrahman_belief-based_2019} \cite{kunkel_let_2019} \cite{weitz_you_2019} \cite{zahedi_towards_2019} \cite{neerincx_using_2018} \\
-    \hline
-    Grouping            & Single & \cite{nunes_systematic_2017} \cite{balog_measuring_2020} \cite{sato_action-triggering_2019} \cite{eiband_impact_2019} \cite{abdulrahman_belief-based_2019} \\
-                        & Grouped & \cite{nunes_systematic_2017} \cite{balog_measuring_2020} \cite{tintarev_designing_nodate}  \\
-                        & Multi-Modal / Hybrid & \cite{sato_action-triggering_2019} \cite{abdulrahman_belief-based_2019} \cite{cassens_ambient_2019} \\
-    \hline
-\caption{Darstellung einer Erklärung}
-\label{tab:presentation_of_explanations}
-\end{longtable}
-
+\begin{table}
+    \begin{center}
+        \begin{tabular}{|p{.2\textwidth}|p{.5\textwidth}|p{.2\textwidth}|}
+            \hline
+            \textbf{Aspekt}     & \textbf{Ausprägung} & \textbf{Quellen} \\ \hline
+            Medium              & Textual  &    \cite{sokol_explainability_2020} \cite{balog_measuring_2020}
+                                                \cite{tintarev_designing_nodate} \cite{sato_action-triggering_2019}
+                                                \cite{eiband_impact_2019} \cite{eiband_impact_2019}
+                                                \cite{abdulrahman_belief-based_2019} \cite{cassens_ambient_2019}
+                                                \cite{nunes_systematic_2017} \\
+                                & Visual    &   \cite{sokol_explainability_2020} \cite{sato_action-triggering_2019}
+                                                \cite{sokol_explainability_2020}  \cite{mucha_interfaces_2021}
+                                                \cite{abdulrahman_belief-based_2019} \cite{nunes_systematic_2017}
+                                                \cite{schrills_color_2020} \\
+                                & Audio     &   \cite{wiegand2019drive} \cite{nunes_systematic_2017} \cite{wang_is_2018} \\
+            \hline
+            Explainer           & Factual   &   \cite{eiband_impact_2019} \cite{abdulrahman_belief-based_2019}
+                                                \cite{kunkel_let_2019} \cite{neerincx_using_2018} \\
+                                & Personal  &   \cite{abdulrahman_belief-based_2019} \cite{kunkel_let_2019}
+                                                \cite{weitz_you_2019} \cite{zahedi_towards_2019} \cite{neerincx_using_2018} \\
+            \hline
+            Grouping            & Single    &   \cite{nunes_systematic_2017} \cite{balog_measuring_2020}
+                                                \cite{sato_action-triggering_2019} \cite{eiband_impact_2019}
+                                                \cite{abdulrahman_belief-based_2019} \\
+                                & Grouped   &   \cite{nunes_systematic_2017} \cite{balog_measuring_2020}
+                                                \cite{tintarev_designing_nodate}  \\
+            \hline
+        \end{tabular}
+    \end{center}
+    \caption{Darstellung einer Erklärung}
+    \label{tab:presentation_of_explanations}
+\end{table}
 
 \smallskip
 
