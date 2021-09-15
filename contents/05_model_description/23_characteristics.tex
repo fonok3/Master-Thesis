@@ -14,13 +14,13 @@ Der \textit{Demand}  für Erklärungen kann aus verschiedenen Perspektiven betra
             Initiative              &  Manual        & \cite{chazette_end-users_nodate} \cite{tintarev_designing_nodate} \cite{wiegand_id_2020} \\
                                     &  Automatic   & \cite{chazette_end-users_nodate} \cite{eiband_impact_2019} \cite{wiegand_id_2020} \cite{schaffer_i_2019} \cite{yamada_evaluating_2016} \\
             \hline
-            Time                &  Before               & \cite{rosenfeld_explainability_2019} \cite{wiegand_id_2020} \cite{kunkel_let_2019} \cite{koo_why_2015} \cite{haspiel_explanations_2018} \\
+            Time                    &  Before               & \cite{rosenfeld_explainability_2019} \cite{wiegand_id_2020} \cite{kunkel_let_2019} \cite{koo_why_2015} \cite{haspiel_explanations_2018} \\
                                     &  While                & \cite{rosenfeld_explainability_2019} \cite{wiegand_id_2020} \cite{kunkel_let_2019} \\
                                     &  After                & \cite{rosenfeld_explainability_2019} \cite{wiegand_id_2020} \cite{kunkel_let_2019} \cite{koo_why_2015} \cite{haspiel_explanations_2018} \cite{wiegand2019drive} \\
             \hline
         \end{tabular}
     \end{center}
-    \caption{Bedarf einer Erklärung}
+    \caption{Der Bedarf einer Erklärung zusammen mit in der Literatur untersuchten Einflüssen auf die Qualität von Erklärungen}
     \label{tab:explanation_demands}
 \end{table}
 
@@ -30,7 +30,7 @@ Der \textit{Demand}  für Erklärungen kann aus verschiedenen Perspektiven betra
 
 \smallskip
 
-Im Rahmen von \textbf{RQ2} kann an dieser Stelle folglich erwähnt werden, dass der \textit{Demand} mit den verschiedenen Möglichkeiten für \textit{End User} ein Erklärung zu verschiedenen Zeitpunkten zu erhalten eine Eigenschaft mit einem Einfluss auf die Erklärungsqualität ist.
+Im Rahmen von \textbf{RQ2} kann an dieser Stelle folglich abgeleitet werden, dass der \textit{Demand} mit den verschiedenen Möglichkeiten für \textit{End User} ein Erklärung zu bestimmten Zeitpunkten zu erhalten eine Eigenschaft mit einem Einfluss auf die externe Erklärungsqualität ist.
 
 \subsubsection{Inhalt}
 
@@ -74,7 +74,7 @@ Unter dem Punkt \textit{Content} wird definiert, mit welchen Inhalten die \texti
             \hline
         \end{tabular}
     \end{center}
-    \caption{Inhalt einer Erklärung}
+    \caption{Eigenschaften einer Erklärung bezogen auf den Inhalt einer Erklärung mit in der Literatur gezeigtem Einfluss auf die externe Qualität von Erklärungen}
     \label{tab:content_of_explanations}
 \end{table}
 
@@ -96,7 +96,9 @@ Ein dritter Weg ist die Erklärung von Zusamenhängen zwischen den Eingaben und 
 
 Als weiteres Ergebnis für \textbf{RQ2} kann hier hinzugefügt werden, dass auch der \textit{Content} einer Erklärung einen großen Einfluss auf die externe Qualität von Erklärungen hat. Dies lässt sich aus Anzahl an Autoren festmachen, die verschiedene Facetten des \textit{Content} auf die Einflüsse auf die Qualität untersuchen.
 
-\subsubsection{Darstellung}
+\subsubsection{Presentation}
+
+Nachdem nun sowohl der \textit{Demand} als auch der an den \textit{End User} übermittelte Inhalt als zentrale \textit{Characteristics} von Erklärungen vorgestellt wurde, fehlt im Modell die Art der Presentation der Erklärung an den \textit{End User}. Diese ist mit ihren zugehörigen Ausprägungen unter \textit{Presentation} zusammengefasst. Sie stellt den zweiten Teil der Granularität von Erklärungen dar (Siehe \autoref{sec:goal_definition}). Zu dem Aspekt gehören in diesem Modell für Erklärungen das Medium (\textit{Medium}), über das die Erklärung dem \textit{End User} bereitgestellt wird, der verwendete Ton (\textit{Tone}) des \textit{Explainers} \cite[vgl.][]{chazette_knowledge_nodate} und die Groupierung von Erklärungen bzw. Erklärungstypen (\textit{Grouping}). \autoref{tab:presentation_of_explanations} stellt die Ausprägungen zusammen mit der Literatur, die den entsprechenden Aspekt im Bezug auf die Qualität von Erklärungen untersucht, dar.
 
 \begin{table}
     \begin{center}
@@ -108,16 +110,17 @@ Als weiteres Ergebnis für \textbf{RQ2} kann hier hinzugefügt werden, dass auch
                                                 \cite{eiband_impact_2019} \cite{eiband_impact_2019}
                                                 \cite{abdulrahman_belief-based_2019} \cite{cassens_ambient_2019}
                                                 \cite{nunes_systematic_2017} \\
-                                & Visual    &   \cite{sokol_explainability_2020} \cite{sato_action-triggering_2019}
-                                                \cite{sokol_explainability_2020}  \cite{mucha_interfaces_2021}
-                                                \cite{abdulrahman_belief-based_2019} \cite{nunes_systematic_2017}
-                                                \cite{schrills_color_2020} \\
-                                & Audio     &   \cite{wiegand2019drive} \cite{nunes_systematic_2017} \cite{wang_is_2018} \\
+                                & Visual    &   \cite{sokol_explainability_2020} \cite{sato_action-triggering_2019} 
+                                                \cite{mucha_interfaces_2021} \cite{abdulrahman_belief-based_2019}
+                                                \cite{nunes_systematic_2017} \cite{schrills_color_2020} \\
+                                & Auditory     &   \cite{wiegand2019drive} \cite{nunes_systematic_2017}
+                                                \cite{wang_is_2018} \\
             \hline
-            Explainer           & Factual   &   \cite{eiband_impact_2019} \cite{abdulrahman_belief-based_2019}
+            Tone                & Factual   &   \cite{eiband_impact_2019} \cite{abdulrahman_belief-based_2019}
                                                 \cite{kunkel_let_2019} \cite{neerincx_using_2018} \\
-                                & Personal  &   \cite{abdulrahman_belief-based_2019} \cite{kunkel_let_2019}
-                                                \cite{weitz_you_2019} \cite{zahedi_towards_2019} \cite{neerincx_using_2018} \\
+                                & Human     &   \cite{abdulrahman_belief-based_2019} \cite{kunkel_let_2019}
+                                                \cite{weitz_you_2019} \cite{zahedi_towards_2019}
+                                                \cite{neerincx_using_2018} \\
             \hline
             Grouping            & Single    &   \cite{nunes_systematic_2017} \cite{balog_measuring_2020}
                                                 \cite{sato_action-triggering_2019} \cite{eiband_impact_2019}
@@ -127,9 +130,19 @@ Als weiteres Ergebnis für \textbf{RQ2} kann hier hinzugefügt werden, dass auch
             \hline
         \end{tabular}
     \end{center}
-    \caption{Darstellung einer Erklärung}
+    \caption{Verschiedene Übermittlungsmöglichkeiten für Erklärungen an den \textit{End User}, die in der Literatur einen Effekt auf die Qualität von Erklärungen gezeigt haben.}
     \label{tab:presentation_of_explanations}
 \end{table}
+
+\paragraph{Medium} Das \textit{Medium} einer Erklärung ist die Transportbasis für die Presentation der Inahlte. Dabei können verschiedene Möglichkeiten aus dem Multimedia-Bereich verwendet werden. In der Literaur untersucht wurden Texterklärungen (\textit{Textual}), visualle Darstellungen wie z.B. Diagramme (\textit{Visual}) sowie auditive Erklärungen (\textit{Auditory}). Insbesondere dieser Aspekt bietet Möglichkeiten für Mischformen \cite{kouki_user_2017}.
+
+\paragraph{Tone} Der \textit{Tone} einer Erklärung bestimmt die Art, wie \textit{End Usern} der Inhalt einer Erklärung näher gebracht wird. Das Spektrum der Möglichkeiten erstreckt sich dabei vor allem zwischen sehr faktisch gehaltenen Erklärungen (\textit{Factual}) und persönlichen bzw. menschlichen Erklärungen (\textit{Human}).
+
+\paragraph{Grouping} Mit dem \textit{Grouping} von Erklärungen wird bestimmt, wie viele Erklärungen dem \textit{End User} gleichzeit bezeihungsweise kombiniert präsentiert werden. Grundsätzlich gibt es dabei die Möglichkeiten immer nur eine Erklärung anzuzeigen (\textit{Single}) oder mehrere Erklärungen zu groupieren (\textit{Grouped}). Bei letzterem können entweder Erklärungen mit verschiedener \textit{Presentation} aber dem gleichen \textit{Content} kombiniert werden \cite{kouki_user_2017} oder mehrere einzelne Erklärungen zusammen dargestellt werden \cite{balog_measuring_2020}.
+
+\bigskip
+
+Als letzter Teil der Antwort auf \textbf{RQ2} kann resultierend die \textit{Presentation} mit den dazugehörigen Aspekten als Eigenschaft von Erklärungen mit einem Einfluss auf die externe Qualität von Erklärungen ergänzt werden.
 
 \smallskip
 
@@ -142,3 +155,5 @@ Als weiteres Ergebnis für \textbf{RQ2} kann hier hinzugefügt werden, dass auch
 }
 
 \smallskip
+
+Der in diesem Abschnitt vorgestellte Teil des Modells für Erklärungen (\textit{Characteristics}) beinhaltet die Antwort auf die zweite Forschungsfrage. Dabei sind explizit die Eigenschaften \textit{Demand}, \textit{Content} und \textit{Presentation} mit einem Einfluss auf die externe Qualität von Erklärungen zu bennen. Die geneuen Ausprägungen dieser Eigenschaften wurden als Unterpunkte der jeweiligen Aspekte vorgestell. Die Ergebnisse, die in dem Modell zusammengefasst sind, entspringen dabei der Evaluation von Erklärungen mit verschiedenen Eigenschaften in der Literatur. Der Einfluss auf die externe Qualität ist dabei insofern gewährleistet, dass die in dem Modell erwähnten Eigenschaften nur dann Einzug erhalten haben, wenn in mindestens einer wissenschaftlichen Arbeit ein solcher Einfluss festgestellt wurde.
