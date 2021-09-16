@@ -1,7 +1,17 @@
 \subsection{Evaluation}
 \label{sec:model_evaluation_description}
 
+Qualität von Erklärungen zu bestimmen ist nicht einfach.
+
+Behavioral vs. subjective???? / \glqq Importantly however, such measures often only measure one aspect of behavior. Ideally, a combination of both measurement types should be used to assess effects on both the user’s perception and behavior. In this way, a complete perspective on a construct can be obtained.\grqq{} (Qualitative / Quantitavie) \cite{waa_evaluating_2021}
+
+Die Literaturrecherche hat wie bereits \cite{nunes_systematic_2017} nur empirische Studien zur Evaluation von Erklärungen gefunden.
+
+Entsprechend \cite{wohlin2012experimentation} habe ich die verschiedenen Evaluationsmethoden in \textit{Qualitaative Research} und \textit{Quantitative Research} gegliedert.
+
 Die Metriken und die Vorgehensweise, die für die \textit{Evaluation} ausgewählt wird, hängt folglich sehr eng mit den zuvor festgelegten \textit{Objectives} zusammen.
+
+within und between subject erklären
 
 \paragraph{Target} Zunächst muss bei der Evaluation geklärt werden, was der Prüfgegenstand ist. Dabei gibt es vor allem zwei große Möglichkeiten im Kontext der Erklärbarkeit. Entweder werden die integrierten Erklärungen an sich evaluiert und die Studienteilnehmer darauf explizit angesprochen oder es werden die Auswirkungen auf verschiedene System-Metriken ausgewertet. Auch eine Kombination ist möglich.
 
@@ -9,37 +19,151 @@ Die Metriken und die Vorgehensweise, die für die \textit{Evaluation} ausgewähl
 
 \paragraph{Metrics} \textit{Metrics} sind klar definierte Messungen, die durchgeführt werden, um die zuvor festglegten \textit{Objectives} zu überprüfen.
 
-Die Literaturrecherche hat wie bereits \cite{nunes_systematic_2017} nur empirische Studien zur Evaluation von Erklärungen gefunden.
+3 Types of Evaluation according to \cite{ribera2019can, doshi2017towards}: (1) applicationgrounded evaluation with real humans and real tasks; (2) human-grounded evaluation with real humans but simplified tasks; and (3) functionally-grounded evaluation without humans and proxy tasks; all of them always inspired by real tasks and real humans’ observations.
 
-Entsprechend \cite{wohlin2012experimentation} habe ich die verschiedenen Evaluationsmethoden in \textit{Qualitaative Research} und \textit{Quantitative Research} gegliedert.
+\subsubsection{Example Questions for questionaires}
+
+\cite{knijnenburg2012explaining, hernandez-bocanegra_effects_2020} have something for exact evaluation of overall explanation quality
+
+\subsubsection{Qualitative direkte Evaluation von Erklärungen}
+
+Bei der direkten Messung der Qualität von Erklärungen werden in der Literatur ledig verschiedene Möglichkeiten zur subjektiven Evaluation vorgestellt.
+
+Neben den in \autoref{sec:model_external_dependencies} vorgestellten Qualitätsaspekten, die als Qualitätsziele für die Integration von Erklärungen definiert definiert wurden, gibt es weitere Aspekte, die in der Literatur zur Messung der Qualität von Erklärungen vorgestellt wurden \cite[sato_action-triggering_2019], die im folgenden erläutert werden.
+
+\paragraph{Usefulness} \textit{Usefulness} oder auch \textit{Helpfulnesss} ist der Grad zu dem \textit{End User}, die Erklärungen erhalten, das subjektive Empfinden haben, dass eine Erklärung sie bei der Nutzung oder dem Verständnis über ein System unterstützt haben. 
+
+\paragraph{Completeness} \textit{Completeness} ist das subjektive Empfinden von \textit{End Usern}, die gegebene Erklärungen vollständigen Aufschluss über den erklärten Systembestandteil geben und keine Informationen weglassen.
+
+\smallskip
+
+Bei der Messung der direkten Messung der Erklärugnsqualität setzt die Literatur vor allem Likert-Skalen ein. Dabei handelt es sich um einen Ordinalskala mit in der Regel fünf oder sieben einzelnen Bewertungsschritten, auf denen einen Aussage bewertet wird. Die genaue Benennung der Bewertungsschritte erfolgt in der Literatur verschieden. Allerdings werden meist solche mit einer inhaltlichen Übereinstimmung zu \glqq Volle Zustimmung\grqq{}, \glqq Teilweise Zustimmung\grqq{}, \glqq Neutral\grqq{},\glqq Teilweise Ablehnung\grqq{} und \glqq Volle Ablehnung\grqq{} verwendet \cite{sato_action-triggering_2019, sato_context_nodate, wang_is_2018, hoffman_metrics_nodate, koo_understanding_2016, koo_why_2015}. Aussagen, welche nicht dem Muster entsprechen, werden im im folgenden angepasst. \autoref{tab:evaluation_direct_measures_evaluation} stellt eine Übersicht von verwendeten Aussagen für die Messung der Qualitätsaspekte dar, über die die Erklärungsqualität messbar ist. Aufgelistet sind nur verallgemeinerbare Aussagen und nicht einen spezifischen \textit{Context} betreffende Aussagen. In spitzen Klammer sind Platzhalter dargestellt, um die aufgelisteten Aussagen besser auf den eigenen \textit{Context} anpassbar zu machen.
+
+\begin{table}
+    \begin{center}
+        \begin{tabular}{|p{0.2\textwidth} p{0.5\textwidth} p{0.2\textwidth}|}
+            \hline
+            \textbf{Qualitätsaspekt} & \textbf{Metrik} & \textbf{Quellen} \\
+            \hline
+            \hline
+            Effectivity     & Ich war mit dem System besser.
+                                & \cite[vgl.][]{balog_measuring_2020} \\
+            \hline
+            Effectivity     & Ich konnte mit dem System die Aufgabe schneller erledigen.
+                                & \cite[vgl.][]{balog_measuring_2020} \\
+            \hline
+            Trust           & Mithilfe der gegebenen Erklärungen, <Erkläuterung>, lässt mich wissen, wie             
+                                vertrauenswürdig das <System> ist.
+                                & \cite[vgl.][]{hoffman_metrics_nodate, balog_measuring_2020, weitz_you_2019} \\
+                            & Ich bin von den Entscheidungen des <Systems> überzeugt.
+                                & \cite[vgl.][]{tsai_effects_2020} \\
+            \hline
+            Satisfaction    & Die Erklärung dazu, <Erkläuterung>, stellt mich mit meinem
+                                Verständnis über das <System> zufrieden.
+                                & \cite[vgl.][]{riveiro_thats_2021} \\
+                            & Ich werde das <Sytem> wieder benutzen
+                                & \cite{balog_measuring_2020} \\
+                            & Die Erklärung, <Erkläuterung>, ist zufriedenstellend.
+                                & \cite[vgl.][]{riveiro_thats_2021, hoffman_metrics_nodate, balog_measuring_2020} \\
+            \hline
+            Transparency    & Ich kann den Entscheidungsprozess des <Systems> verstehen.
+                                & \cite{wang_is_2018, balog_measuring_2020} \\
+                            & Die Informationen der Erklärung waren ausreichend, um meine <Aufgabe> gut zu erfüllen. 
+                                & \cite{wang_is_2018, balog_measuring_2020} \\
+            \hline
+            Persuasiveness  & Die Erklärung, <Erkläuterung>, ist überzeugend.
+                                & \cite[vgl.][]{sato_action-triggering_2019, sato_context_nodate} \\
+                            & Die Erklärung, <Erkläuterung>, weckt Interesse. 
+                                & \cite[vgl.][]{sato_action-triggering_2019, sato_context_nodate} \\
+            \hline
+            Understandability& Mithilfe der gegebenen Erklärungen, <Erkläuterung>, verstehe ich, wie das <System> 
+                                funktioniert.
+                                & \cite[vgl.][]{riveiro_thats_2021, hoffman_metrics_nodate} \\
+            \hline
+            Scrutability    & Mithilfe der gegebenen Erklärungen, <Erkläuterung>, lässt mich wissen, wie genau oder 
+                                zuverlässig das <System> ist.
+                                & \cite[vgl.][]{hoffman_metrics_nodate, balog_measuring_2020} \\
+            \hline
+            Usefulness      & Die Erklärung, <Erkläuterung>, ist einfach zu verstehen. 
+                                & \cite[vgl.][]{sato_action-triggering_2019, sato_context_nodate} \\
+            Helpfulness     & Die Erklärung, <Erkläuterung>, ist nützlich bei der Erfüllung von <Aufgabe>.
+                                & \cite[vgl.][]{sato_action-triggering_2019, sato_context_nodate, hoffman_metrics_nodate, balog_measuring_2020} \\
+            \hline
+            Completeness    & Die Erklärung, <Erkläuterung>, ist hinreichend   
+                                vollständig.
+                                & \cite{hoffman_metrics_nodate, riveiro_thats_2021} \\
+                            & Die Erklärung, <Erkläuterung>, ist hinreichend detailliert.
+                                & \cite{riveiro_thats_2021} \\
+            \hline
+        \end{tabular}
+    \end{center}
+    \caption{}
+    \label{tab:evaluation_direct_measures_evaluation}
+\end{table}
+
+Die Aussagen aus \autoref{tab:evaluation_direct_measures_evaluation} können zum Teil auch als Entscheidungsfragen formuliert werden. Wenn dies der Fall war, wurde mitunter für eine der beiden Antwortmöglichkeiten zusätzlich ein Freitextfeld für eine Begründung bereitgestellt, z.~B. \glqq Hätten Sie sich gewünscht, dass die Erklärungen zusätzliche Informationen enthalten? Wenn ja, welche Art von Informationen und wann, d. h. in welchen Situationen?\grqq \cite[übersetzt vgl.][]{riveiro_thats_2021}.
+
+Für Evaluationen, die als \textit{Wthin-Subject} Studiendesign angelegt sind, gibt es außerdem die Möglichkeit, die Aussagen so umzuformulieren, dass die jeweils abdecken, ob ein Aspekt besser unter einer Studienbedingung als unter der anderen ist.
+
+\subsubsection{Quantitative direkte Evaluation von Erklärungen}
+
+Cognitive Workload \cite{wiegand2019drive}
+
+Anzahl der Anforderungen
+
+Dauer des Fokus auf eine Erklärung
+
+\subsubsection{Qualitative Evaluation der Auswirkungen von Erklärungen}
 
 \begin{table}[htb!]
     \begin{center}
-        \begin{tabular}{|p{.3\textwidth}|p{.3\textwidth}|p{.3\textwidth}|}
+        \begin{tabular}{|p{.45\textwidth}|p{.45\textwidth}|}
             \hline
-            \textbf{Evaluationstyp} & \textbf{Empirische Strategie} & \textbf{Quellen} \\ \hline
-            Qualitativ  & Subjective Perception Questionaire &  \cite{balog_measuring_2020} \cite{sato_context_nodate}
+            \textbf{Empirische Strategie} & \textbf{Quellen} \\ \hline
+            Subjective Perception Questionaire &  \cite{balog_measuring_2020} \cite{sato_context_nodate}
                                                                 \cite{waa_evaluating_2021} \cite{eiband_impact_2019}  \cite{kouki_user_2017} \cite{tsai_evaluating_2019}
                                                                 \cite{hernandez-bocanegra_effects_2020}
                                                                 \cite{zahedi_towards_2019} \cite{tsai_effects_2020} 
                                                                 \cite{ribera2019can} \\
-                        & Acceptance                        & \cite{tintarev_designing_nodate}
+            Acceptance                        & \cite{tintarev_designing_nodate}
                                                             \cite{hernandez-bocanegra_effects_2020}
                                                             \cite{kunkel_let_2019} \\
-                        & Think aloud                       & \cite{wiegand_id_2020} \cite{yamada_evaluating_2016} \\
-                        & Preference                        & \cite{kouki_user_2017} \cite{mucha_interfaces_2021} 
+            Think aloud                       & \cite{wiegand_id_2020} \cite{yamada_evaluating_2016} \\
+            Preference                        & \cite{kouki_user_2017} \cite{mucha_interfaces_2021} 
                                                             \cite{abdulrahman_belief-based_2019} 
                                                             \cite{waa_evaluating_2021} \cite{wiegand_id_2020} ,
                                                             \cite{stange_effects_2021} \cite{kaptein_personalised_2017} \\
-                        & Mental Model Understanding        & \cite{gunning2019darpa} \\
-                        & Cognitive Workload                & \cite{wiegand2019drive, wiegand_id_2020} \\
+            Mental Model Understanding        & \cite{gunning2019darpa} \\
+            Cognitive Workload                & \cite{wiegand2019drive, wiegand_id_2020} \\
             \hline
-            Quantitative& Explanation exposure delta & \\
-                        & Accuracy                          & \cite{tintarev_designing_nodate}
+        \end{tabular}
+    \end{center}
+    \caption{Evaluation}
+    \label{tab:evaluation_of_explanations}
+\end{table}
+
+\subsubsection{Quantitative Evaluation der Auswirkungen von Erklärungen}
+
+\cite{tintarev2007survey}:
+
+\begin{itemize}
+    \item Trust: Questionaires, Loyalty: Number of Logins
+    \item Persuasiveness: Questionaires + Domain-Specific Performance metrics
+    \item  Effectiveness: accuracy measures (Domain-Specific) 
+    \item Efficiency: Task completion time, Number of times an explanation is called
+\end{itemize}
+
+\begin{table}[htb!]
+    \begin{center}
+        \begin{tabular}{|p{.45\textwidth}|p{.45\textwidth}|}
+            \hline
+            \textbf{Metrik} & \textbf{Quellen} \\ \hline
+            Explanation exposure delta & \\
+            Accuracy                          & \cite{tintarev_designing_nodate}
                                                             \cite{waa_evaluating_2021} \cite{mucha_interfaces_2021}
                                                             \cite{kunkel_let_2019} \cite{zolotas_towards_2019} \\
-                        & Learning Rate                     & \cite{tintarev_designing_nodate} \cite{gunning2019darpa} \\
-                        & Task Performance                  & \cite{waa_evaluating_2021}  \cite{mucha_interfaces_2021}  
+            Learning Rate                     & \cite{tintarev_designing_nodate} \cite{gunning2019darpa} \\
+            Task Performance                  & \cite{waa_evaluating_2021}  \cite{mucha_interfaces_2021}  
                                                             \cite{abdulrahman_belief-based_2019} 
                                                             \cite{zolotas_towards_2019} \cite{martin_developing_2019} 
                                                             \cite{martin_evaluating_2021} \cite{gunning2019darpa} \\
@@ -50,147 +174,16 @@ Entsprechend \cite{wohlin2012experimentation} habe ich die verschiedenen Evaluat
     \label{tab:evaluation_of_explanations}
 \end{table}
 
+\cite{tintarev_designing_nodate} haben Messliste gebaut.
 
-Laut \cite{balog_measuring_2020} sind die 8 verschiedenen Ziele korreliert und müssen nicht einzeln gemessen werden. Hoch korreliert \cite{kouki_user_2017}
-
-Cognitive Workload 
-
-Einen vollständigen Überblick über die Qualität einer Erklärung bekommt man, wenn man Satisfaction, Scrutability und Translarency misst \cite{balog_measuring_2020}.
-
-\glqq Importantly however, such measures often only measure one aspect of behavior. Ideally, a combination of both measurement types should be used to assess effects on both the user’s perception and behavior. In this way, a complete perspective on a construct can be obtained.\grqq{} (Qualitative / Quantitavie) \cite{waa_evaluating_2021}
-
-Number of detailed looks
-
-\subsubsection{Example Questions for questionaires}
-
-NASA-TLX \cite{tsai_evaluating_2019}
-
-Effectiveness helps me to determine how well I will like this movie does not help me make a decision about this item Efficiency helps me to decide faster if I will like this movie does not save me time Persuasiveness makes me want to watch this movie fails to make this item appeal to me Satisfaction would improve how easy it is to pick a recommendation does not satisfy me Scrutability would allow me to give feedback on how well my preferences have been understood would make it difficult for me to correct the reasoning behind the recommendation Transparency helps me to understand what the recommendation is based on fails to reveal the reasoning behind this recommendation Trust helps me to trust the recommendation does not seem credible \cite{balog_measuring_2020}
-
-\cite{knijnenburg2012explaining, hernandez-bocanegra_effects_2020} have something for exact evaluation of overall explanation quality
-
-\cite{weitz_you_2019} trusted automation questionaire
-
-Directly based on the explatnation \cite{sato_action-triggering_2019} or other metrics 
-
-DARPA (used by \cite{martin_evaluating_2021}) \cite{gunning2019darpa}
-
-Domain specifc metrics. For example for explainable AI (Predictive systems) TYN (Trust-Your-Neighbours) or Meet in the Mittle (MITM) \cite{martin_evaluating_2021}
-
-Questions for quality factors:
-
-\subsubsection{Direkte Metriken}
-
-Bei der direkten Messung der Qualität von Erklärungen werden in der Literatur ledig verschiedene Möglichkeiten zur subjektiven Evaluation vorgestellt.
-
-Neben den in \autoref{sec:model_external_dependencies} vorgestellten Qualitätsaspekten, die als Qualitätsziele für die Integration von Erklärungen definiert definiert wurden, gibt es weitere Aspekte, die in der Literatur zur Messung der Qualität von Erklärungen vorgestellt wurden \cite[sato_action-triggering_2019, ], die im folgenden erläutert werden.
-
-\paragraph{Usefulness}
-
-\paragraph{Completeness}
-
-\paragraph{Correctness}
-
-Bei der Messung der direkten Messung der Erklärugnsqualität setzt die Literatur vor allem Likert-Skalen ein. Dabei handelt es sich um einen Ordinalskala mit in der Regel fünf oder sieben einzelnen Bewertungsschritten, auf denen einen Aussage bewertet wird. Die genaue Benennung der Bewertungsschritte erfolgt in der Literatur verschieden. Allerdings werden durchweg solche mit einer inhaltlichen Übereinstimmtung zu \glqq Volle Zustimmung\grqq{}, \glqq Teilweise Zustimmung\grqq{}, \glqq Neutral\grqq{},\glqq Teilweise Ablehnung\grqq{} und \glqq Volle Ablehnung\grqq{} verwendet \cite{sato_action-triggering_2019, sato_context_nodate, wang_is_2018, hoffman_metrics_nodate}. \autoref{tab:evaluation_direct_measures_evaluation} stellt eine Übersicht von verwendeten Aussagen für die Messung der verschiedenen Aspekte dar. Aufgelistet sind nur verallgemeinerbare Aussagen und nicht einen spezifischen \textit{Context} betreffende Aussagen. In spitzen Klammer sind Platzhalter dargestellt, um die aufgelisteten Aussagen auf den eigenen \textit{Context} anzupassen.
-
-\begin{table}
-    \begin{center}
-        \begin{tabular}{|p{0.25\textwidth} p{0.5\textwidth} p{0.15\textwidth}|}
-            \hline
-            \textbf{Qualitätsaspekt} & \textbf{Aussage} & \textbf{Quellen} \\
-            \hline
-            \hline
-            Transparency    & & \\
-            \hline
-            Satisfaction    & Ich bin zufrieden mit der Erklärung, um zu verstehen, warum das System seine Entscheidung 
-                                getroffen hat.
-                                & \cite[vgl.][]{riveiro_thats_2021} \\
-            \hline
-            Transparency    & & \\
-            \hline
-            Persuasiveness  & Die Erklärung ist überzeugend.
-                                & \cite[vgl.][]{sato_action-triggering_2019, sato_context_nodate} \\
-                            & Die Erklärung weckt Interesse. 
-                                & \cite[vgl.][]{sato_action-triggering_2019, sato_context_nodate} \\
-            \hline
-            Usefulness      & Die Erklärung ist einfach zu verstehen. 
-                                & \cite[vgl.][]{sato_action-triggering_2019, sato_context_nodate} \\
-                            & Die Erklärung ist nützlich bei der Erfüllung von <Aufgabe>.
-                                & \cite[vgl.][]{sato_action-triggering_2019, sato_context_nodate} \\
-            \hline
-            Completeness    & & \\
-            \hline
-            Completeness    & & \\
-            \hline
-        \end{tabular}
-    \end{center}
-    \caption{}
-    \label{tab:evaluation_direct_measures_evaluation}
-\end{table}
-
-\subsubsection{Indirekte Metriken}
+Domain-Specific:
 
 \begin{itemize}
-    \item Satisfaction: The explanations provided of how the AI-system classifies text are satisfying. \cite{riveiro_thats_2021}
-    \item Completeness: The explanations provided regarding how the AI-system classifies the text seem complete
- \cite{riveiro_thats_2021}
-    \item Completeness: Would you have liked for the explanations to contain additional information? If so, what type of information and when, i.e., in which situations?
- \cite{riveiro_thats_2021}
-    \item Sufficient detail: The explanations provided of how the AI-system works have sufficient detail.
- \cite{riveiro_thats_2021}
-    \item Understanding: From the explanations provided, I understand how the AI-system works.
- \cite{riveiro_thats_2021}
- \item Transparency: I understand the robot’s decision-making process \cite{wang_is_2018}
- \item Understandability: The explanation helps me understand how the [software, algorithm, tool] works. \cite{hoffman_metrics_nodate}
- \item Satisfaction: The explanation of how the [software, algorithm, tool] works is satisfying. \cite{hoffman_metrics_nodate}
- \item Completeness: The explanation of how the [software, algorithm, tool] works is sufficiently complete. \cite{hoffman_metrics_nodate}
- \item Helpfull: The explanation is actionable, that is, it helps me know how to use the [software, algorithm, tool] \cite{hoffman_metrics_nodate}
- \item Correctness: The explanation lets me know how accurate or reliable the [software, algorithm] is.\cite{hoffman_metrics_nodate}
- \item Trust: The explanation lets me know how trustworthy the [software, algorithm, tool] is. \cite{hoffman_metrics_nodate}
+    \item Special measures like ICM for ML-Models which is tied to the input and output of the model \cite{waa_evaluating_2021, neerincx_using_2018}
+    \item Specific trust items e.g. for human-robot interaction used by \cite{zhu_effects_2020} originally developed by \cite{schaefer2013perception}
+    \item 
+    Domain specifc metrics. For example for explainable AI (Predictive systems) TYN (Trust-Your-Neighbours) or Meet in the Mittle (MITM) \cite{martin_evaluating_2021}
 \end{itemize}
 
 
-Tabelle der Metriken nach \cite{carvalho2017quality} (Ubiqutous Systems)
-
-Trustworthiness: \cite{schrills_color_2020}
-
-(FOST Scale: Facets of System Trustworthiness)
-Please indicate to what extent you agree with the following statements 01 The system’s classification is reliable 02 The system’s classification is precise 03 The system’s classification is traceable 04 I can trust the system’s classification 05r I cannot depend on the system’s classification 06 With the help of the visualization I am able to identify wrong mechanisms of the AI 07 I agree with the classification 08 The visualization provides a good explanation for the classification
-
-\cite{tintarev_designing_nodate} haben Messliste gebaut.
-
-(Task performance) \cite{martin_evaluating_2021}
-
-Qualität von Erklärungen zu bestimmen ist nicht einfach.
-
-\cite{tsai_effects_2020}:
-
-Construct E: Perceived System Effectiveness • E1: Using the system is a pleasant experience. • E2: I made better choices with the recommender. • E3: I found better items using the recommender. • E4: I felt bored when using the recommender. • Construct T: Perceived Trust • T1: I am convinced by the scholar recommended to me. • T2: I am confident I will like the items recommended to me. • T3: The recommender made me more confident about my selection/decision. • T4: The recommender can be trusted. • Construct P: Perceived Transparency • P1: The provided information was sufficient for me to make a good decision. • P2: The recommender explained why the scholars were recommended to me. • P3: I understood why the scholars were recommended to me. • Construct S: Satisfaction • S1: I will use this recommender again. • S2: I will tell my friends about this recommender. S3: Overall, I am satisfied with the recommender. • S4: The recommender helped me find the ideal contacts at the conference.
-
-Special measures like ICM for ML-Models which is tied to the input and output of the model \cite{waa_evaluating_2021, neerincx_using_2018}
-
-Trust questions: originally by \cite{mayer1999effect} used by \cite{wang_is_2018}
-
-Specific trust items e.g. for human-robot interaction used by \cite{zhu_effects_2020} originally developed by \cite{schaefer2013perception}
-
-Just different Begriffe mit Likert SCale (Satisfaction / Trust / Transparency) \cite{koo_understanding_2016, koo_why_2015} Behavioral is again domain specific
-
-3 Types of Evaluation according to \cite{ribera2019can, doshi2017towards}: (1) applicationgrounded evaluation with real humans and real tasks; (2) human-grounded evaluation with real humans but simplified tasks; and (3) functionally-grounded evaluation without humans and proxy tasks; all of them always inspired by real tasks and real humans’ observations.
-
- \cite{tintarev2007survey}:
- 
- Transparency: Qualitytive: Does the User understand the system Quantitative: correctness, completion time
- 
- Scrutability: Hard to measure due to many confoundings
- 
- Trust: Questionaires, Loyalty: Number of Logins, usesages (S. M. McNee, S. K. Lam, J. A. Konstan, and J. Riedl. Interfaces for eliciting new user preferences in recommender systems. User Modeling, pages pp. 178–187, 2003.)
- 
- Persuasiveness: Questionaires + Domain-Specific Performance metrics
- 
- Effectiveness: accuracy measures (Domain-Specific) 
- 
- Efficiency: Task completion time, Number of times an explanation is called
- 
- Satisfaction: User preference (Differentiate explanation and system), number of usability problems
- 
- Wichtig ist auch das Messen von anderen Qualitätsaspekten, die nicht 
+Finale Empfehlung: Einen vollständigen Überblick über die Qualität einer Erklärung bekommt man, wenn man Satisfaction, Scrutability und Translarency misst \cite{balog_measuring_2020}. Darauf sollte der Fokus liegen
