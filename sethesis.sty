@@ -29,6 +29,8 @@
 \newcommand{\ort}[1]{\def\@ort{#1}}
 \newcommand{\datum}[1]{\def\@datum{#1}}
 
+\newcommand{\englishtitle}[1]{\def\@englishtitle{#1}}
+
 \renewcommand{\maketitle}{
 \begin{titlepage}
 %
@@ -57,7 +59,7 @@
 \vspace*{0.25cm}
 %
 \begin{center}
-\large { \textbf{Conception and evaluation of a model to support the design of explanations in explainable systems} }
+\large { \textbf{\expandafter{\@englishtitle}} }
 \end{center}
 %
 \vspace*{0.05\textheight}
