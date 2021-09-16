@@ -1,8 +1,6 @@
 \subsection{Evaluation}
 \label{sec:model_evaluation_description}
 
-Tabelle der Metriken nach \cite{carvalho2017quality} (Ubiqutous Systems)
-
 Die Metriken und die Vorgehensweise, die für die \textit{Evaluation} ausgewählt wird, hängt folglich sehr eng mit den zuvor festgelegten \textit{Objectives} zusammen.
 
 \paragraph{Target} Zunächst muss bei der Evaluation geklärt werden, was der Prüfgegenstand ist. Dabei gibt es vor allem zwei große Möglichkeiten im Kontext der Erklärbarkeit. Entweder werden die integrierten Erklärungen an sich evaluiert und die Studienteilnehmer darauf explizit angesprochen oder es werden die Auswirkungen auf verschiedene System-Metriken ausgewertet. Auch eine Kombination ist möglich.
@@ -10,12 +8,6 @@ Die Metriken und die Vorgehensweise, die für die \textit{Evaluation} ausgewähl
 \paragraph{Strategy} Beim Festlegen der \textit{Strategy} der Evaluation gibt es verschiedene Möglichkeiten, die unter anderem vom \textit{Context} abhängen. Je nachdem, welche Ergebnisse die Stakeholder, die Erklärungen in ein System integrieren möchten, benötigen, muss die Evaluation kontrollierter oder weniger kontrolliert sein \cite[vgl.][]{wohlin2012experimentation}.
 
 \paragraph{Metrics} \textit{Metrics} sind klar definierte Messungen, die durchgeführt werden, um die zuvor festglegten \textit{Objectives} zu überprüfen.
-
-\cite{tintarev_designing_nodate} haben Messliste gebaut.
-
-(Task performance) \cite{martin_evaluating_2021}
-
-Qualität von Erklärungen zu bestimmen ist nicht einfach.
 
 Die Literaturrecherche hat wie bereits \cite{nunes_systematic_2017} nur empirische Studien zur Evaluation von Erklärungen gefunden.
 
@@ -39,9 +31,11 @@ Entsprechend \cite{wohlin2012experimentation} habe ich die verschiedenen Evaluat
                                                             \cite{abdulrahman_belief-based_2019} 
                                                             \cite{waa_evaluating_2021} \cite{wiegand_id_2020} ,
                                                             \cite{stange_effects_2021} \cite{kaptein_personalised_2017} \\
-                        & Mental Model Accuracy             & \cite{gunning2019darpa} \\
+                        & Mental Model Understanding        & \cite{gunning2019darpa} \\
+                        & Cognitive Workload                & \cite{wiegand2019drive, wiegand_id_2020} \\
             \hline
-            Quantitative& Accuracy                          & \cite{tintarev_designing_nodate}
+            Quantitative& Explanation exposure delta & \\
+                        & Accuracy                          & \cite{tintarev_designing_nodate}
                                                             \cite{waa_evaluating_2021} \cite{mucha_interfaces_2021}
                                                             \cite{kunkel_let_2019} \cite{zolotas_towards_2019} \\
                         & Learning Rate                     & \cite{tintarev_designing_nodate} \cite{gunning2019darpa} \\
@@ -57,10 +51,9 @@ Entsprechend \cite{wohlin2012experimentation} habe ich die verschiedenen Evaluat
 \end{table}
 
 
+Laut \cite{balog_measuring_2020} sind die 8 verschiedenen Ziele korreliert und müssen nicht einzeln gemessen werden. Hoch korreliert \cite{kouki_user_2017}
 
-Laut \cite{balog_measuring_2020} sind die 7 verschiedenen Ziele korreliert und müssen nicht einzeln gemessen werden. Hoch korreliert \cite{kouki_user_2017}
-
-Cognitive Workload \cite{wiegand2019drive, wiegand_id_2020}
+Cognitive Workload 
 
 Einen vollständigen Überblick über die Qualität einer Erklärung bekommt man, wenn man Satisfaction, Scrutability und Translarency misst \cite{balog_measuring_2020}.
 
@@ -86,12 +79,58 @@ Domain specifc metrics. For example for explainable AI (Predictive systems) TYN 
 
 Questions for quality factors:
 
+\subsubsection{Direkte Metriken}
+
+Bei der direkten Messung der Qualität von Erklärungen werden in der Literatur ledig verschiedene Möglichkeiten zur subjektiven Evaluation vorgestellt.
+
+Neben den in \autoref{sec:model_external_dependencies} vorgestellten Qualitätsaspekten, die als Qualitätsziele für die Integration von Erklärungen definiert definiert wurden, gibt es weitere Aspekte, die in der Literatur zur Messung der Qualität von Erklärungen vorgestellt wurden \cite[sato_action-triggering_2019, ], die im folgenden erläutert werden.
+
+\paragraph{Usefulness}
+
+\paragraph{Completeness}
+
+\paragraph{Correctness}
+
+Bei der Messung der direkten Messung der Erklärugnsqualität setzt die Literatur vor allem Likert-Skalen ein. Dabei handelt es sich um einen Ordinalskala mit in der Regel fünf oder sieben einzelnen Bewertungsschritten, auf denen einen Aussage bewertet wird. Die genaue Benennung der Bewertungsschritte erfolgt in der Literatur verschieden. Allerdings werden durchweg solche mit einer inhaltlichen Übereinstimmtung zu \glqq Volle Zustimmung\grqq{}, \glqq Teilweise Zustimmung\grqq{}, \glqq Neutral\grqq{},\glqq Teilweise Ablehnung\grqq{} und \glqq Volle Ablehnung\grqq{} verwendet \cite{sato_action-triggering_2019, sato_context_nodate, wang_is_2018, hoffman_metrics_nodate}. \autoref{tab:evaluation_direct_measures_evaluation} stellt eine Übersicht von verwendeten Aussagen für die Messung der verschiedenen Aspekte dar. Aufgelistet sind nur verallgemeinerbare Aussagen und nicht einen spezifischen \textit{Context} betreffende Aussagen. In spitzen Klammer sind Platzhalter dargestellt, um die aufgelisteten Aussagen auf den eigenen \textit{Context} anzupassen.
+
+\begin{table}
+    \begin{center}
+        \begin{tabular}{|p{0.25\textwidth} p{0.5\textwidth} p{0.15\textwidth}|}
+            \hline
+            \textbf{Qualitätsaspekt} & \textbf{Aussage} & \textbf{Quellen} \\
+            \hline
+            \hline
+            Transparency    & & \\
+            \hline
+            Satisfaction    & Ich bin zufrieden mit der Erklärung, um zu verstehen, warum das System seine Entscheidung 
+                                getroffen hat.
+                                & \cite[vgl.][]{riveiro_thats_2021} \\
+            \hline
+            Transparency    & & \\
+            \hline
+            Persuasiveness  & Die Erklärung ist überzeugend.
+                                & \cite[vgl.][]{sato_action-triggering_2019, sato_context_nodate} \\
+                            & Die Erklärung weckt Interesse. 
+                                & \cite[vgl.][]{sato_action-triggering_2019, sato_context_nodate} \\
+            \hline
+            Usefulness      & Die Erklärung ist einfach zu verstehen. 
+                                & \cite[vgl.][]{sato_action-triggering_2019, sato_context_nodate} \\
+                            & Die Erklärung ist nützlich bei der Erfüllung von <Aufgabe>.
+                                & \cite[vgl.][]{sato_action-triggering_2019, sato_context_nodate} \\
+            \hline
+            Completeness    & & \\
+            \hline
+            Completeness    & & \\
+            \hline
+        \end{tabular}
+    \end{center}
+    \caption{}
+    \label{tab:evaluation_direct_measures_evaluation}
+\end{table}
+
+\subsubsection{Indirekte Metriken}
+
 \begin{itemize}
-    \item Persuasivenes: The explanation is convincing \cite{sato_action-triggering_2019, sato_context_nodate}
-    \item Persuasivenes: The explanation trigers interest \cite{sato_action-triggering_2019, sato_context_nodate}
-    \item Usefulness: The explanation is usefull for choice \cite{sato_action-triggering_2019, sato_context_nodate}
-    \item Usefulness: The explanation is easy to understand \cite{sato_action-triggering_2019, sato_context_nodate}
-    \item Satisfaction: How satisfying did you find the explanation in terms of understanding why the system made its decision? \cite{riveiro_thats_2021}
     \item Satisfaction: The explanations provided of how the AI-system classifies text are satisfying. \cite{riveiro_thats_2021}
     \item Completeness: The explanations provided regarding how the AI-system classifies the text seem complete
  \cite{riveiro_thats_2021}
@@ -102,7 +141,6 @@ Questions for quality factors:
     \item Understanding: From the explanations provided, I understand how the AI-system works.
  \cite{riveiro_thats_2021}
  \item Transparency: I understand the robot’s decision-making process \cite{wang_is_2018}
- \item Transparency: I understand the robot’s decision-making process \cite{wang_is_2018}
  \item Understandability: The explanation helps me understand how the [software, algorithm, tool] works. \cite{hoffman_metrics_nodate}
  \item Satisfaction: The explanation of how the [software, algorithm, tool] works is satisfying. \cite{hoffman_metrics_nodate}
  \item Completeness: The explanation of how the [software, algorithm, tool] works is sufficiently complete. \cite{hoffman_metrics_nodate}
@@ -111,11 +149,19 @@ Questions for quality factors:
  \item Trust: The explanation lets me know how trustworthy the [software, algorithm, tool] is. \cite{hoffman_metrics_nodate}
 \end{itemize}
 
+
+Tabelle der Metriken nach \cite{carvalho2017quality} (Ubiqutous Systems)
+
 Trustworthiness: \cite{schrills_color_2020}
 
 (FOST Scale: Facets of System Trustworthiness)
 Please indicate to what extent you agree with the following statements 01 The system’s classification is reliable 02 The system’s classification is precise 03 The system’s classification is traceable 04 I can trust the system’s classification 05r I cannot depend on the system’s classification 06 With the help of the visualization I am able to identify wrong mechanisms of the AI 07 I agree with the classification 08 The visualization provides a good explanation for the classification
 
+\cite{tintarev_designing_nodate} haben Messliste gebaut.
+
+(Task performance) \cite{martin_evaluating_2021}
+
+Qualität von Erklärungen zu bestimmen ist nicht einfach.
 
 \cite{tsai_effects_2020}:
 
