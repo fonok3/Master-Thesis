@@ -19,13 +19,9 @@ within und between subject erklären
 
 \paragraph{Metrics} \textit{Metrics} sind klar definierte Messungen, die durchgeführt werden, um die zuvor festglegten \textit{Objectives} zu überprüfen.
 
-3 Types of Evaluation according to \cite{ribera2019can, doshi2017towards}: (1) applicationgrounded evaluation with real humans and real tasks; (2) human-grounded evaluation with real humans but simplified tasks; and (3) functionally-grounded evaluation without humans and proxy tasks; all of them always inspired by real tasks and real humans’ observations.
+3 Types of Evaluation according to \cite{ribera2019can, doshi2017towards}: (1) applicationgrounded evaluation with real humans and real tasks; (2) human-grounded evaluation with real humans but simplified tasks; and (3) functionally-grounded evaluation without humans and proxy tasks; all of them always inspired by real tasks and real humans’ observations. \cite{wohlin2012experimentation}
 
-\subsubsection{Example Questions for questionaires}
-
-\cite{knijnenburg2012explaining, hernandez-bocanegra_effects_2020} have something for exact evaluation of overall explanation quality
-
-\subsubsection{Qualitative direkte Evaluation von Erklärungen}
+\subsubsection{Qualitative Evaluation}
 
 Bei der direkten Messung der Qualität von Erklärungen werden in der Literatur ledig verschiedene Möglichkeiten zur subjektiven Evaluation vorgestellt.
 
@@ -39,75 +35,109 @@ Neben den in \autoref{sec:model_external_dependencies} vorgestellten Qualitätsa
 
 Bei der Messung der direkten Messung der Erklärugnsqualität setzt die Literatur vor allem Likert-Skalen ein. Dabei handelt es sich um einen Ordinalskala mit in der Regel fünf oder sieben einzelnen Bewertungsschritten, auf denen einen Aussage bewertet wird. Die genaue Benennung der Bewertungsschritte erfolgt in der Literatur verschieden. Allerdings werden meist solche mit einer inhaltlichen Übereinstimmung zu \glqq Volle Zustimmung\grqq{}, \glqq Teilweise Zustimmung\grqq{}, \glqq Neutral\grqq{},\glqq Teilweise Ablehnung\grqq{} und \glqq Volle Ablehnung\grqq{} verwendet \cite{sato_action-triggering_2019, sato_context_nodate, wang_is_2018, hoffman_metrics_nodate, koo_understanding_2016, koo_why_2015}. Aussagen, welche nicht dem Muster entsprechen, werden im im folgenden angepasst. \autoref{tab:evaluation_direct_measures_evaluation} stellt eine Übersicht von verwendeten Aussagen für die Messung der Qualitätsaspekte dar, über die die Erklärungsqualität messbar ist. Aufgelistet sind nur verallgemeinerbare Aussagen und nicht einen spezifischen \textit{Context} betreffende Aussagen. In spitzen Klammer sind Platzhalter dargestellt, um die aufgelisteten Aussagen besser auf den eigenen \textit{Context} anpassbar zu machen.
 
-\begin{table}
+
+\begin{table}[htb!]
     \begin{center}
-        \begin{tabular}{|p{0.2\textwidth} p{0.5\textwidth} p{0.2\textwidth}|}
+        \begin{tabular}{|p{0.25\textwidth} p{0.65\textwidth}|}
             \hline
-            \textbf{Qualitätsaspekt} & \textbf{Metrik} & \textbf{Quellen} \\
+            \textbf{Qualitätsaspekt} & \textbf{Aussage} \\
             \hline
             \hline
-            Effectivity     & Ich war mit dem System besser.
-                                & \cite[vgl.][]{balog_measuring_2020} \\
+            Satisfaction    & Ich bin mit der Nutzung von <System> zufrieden .
+                                \cite[vgl.][]{balog_measuring_2020} \\
+                            & Ich werde <Sytem> wieder benutzen.
+                                \cite[vgl.][]{balog_measuring_2020} \\
             \hline
-            Effectivity     & Ich konnte mit dem System die Aufgabe schneller erledigen.
-                                & \cite[vgl.][]{balog_measuring_2020} \\
-            \hline
-            Trust           & Mithilfe der gegebenen Erklärungen, <Erkläuterung>, lässt mich wissen, wie             
-                                vertrauenswürdig das <System> ist.
-                                & \cite[vgl.][]{hoffman_metrics_nodate, balog_measuring_2020, weitz_you_2019} \\
-                            & Ich bin von den Entscheidungen des <Systems> überzeugt.
-                                & \cite[vgl.][]{tsai_effects_2020} \\
-            \hline
-            Satisfaction    & Die Erklärung dazu, <Erkläuterung>, stellt mich mit meinem
-                                Verständnis über das <System> zufrieden.
-                                & \cite[vgl.][]{riveiro_thats_2021} \\
-                            & Ich werde das <Sytem> wieder benutzen
-                                & \cite{balog_measuring_2020} \\
-                            & Die Erklärung, <Erkläuterung>, ist zufriedenstellend.
-                                & \cite[vgl.][]{riveiro_thats_2021, hoffman_metrics_nodate, balog_measuring_2020} \\
-            \hline
-            Transparency    & Ich kann den Entscheidungsprozess des <Systems> verstehen.
-                                & \cite{wang_is_2018, balog_measuring_2020} \\
-                            & Die Informationen der Erklärung waren ausreichend, um meine <Aufgabe> gut zu erfüllen. 
-                                & \cite{wang_is_2018, balog_measuring_2020} \\
-            \hline
-            Persuasiveness  & Die Erklärung, <Erkläuterung>, ist überzeugend.
-                                & \cite[vgl.][]{sato_action-triggering_2019, sato_context_nodate} \\
-                            & Die Erklärung, <Erkläuterung>, weckt Interesse. 
-                                & \cite[vgl.][]{sato_action-triggering_2019, sato_context_nodate} \\
-            \hline
-            Understandability& Mithilfe der gegebenen Erklärungen, <Erkläuterung>, verstehe ich, wie das <System> 
-                                funktioniert.
-                                & \cite[vgl.][]{riveiro_thats_2021, hoffman_metrics_nodate} \\
-            \hline
-            Scrutability    & Mithilfe der gegebenen Erklärungen, <Erkläuterung>, lässt mich wissen, wie genau oder 
-                                zuverlässig das <System> ist.
-                                & \cite[vgl.][]{hoffman_metrics_nodate, balog_measuring_2020} \\
-            \hline
-            Usefulness      & Die Erklärung, <Erkläuterung>, ist einfach zu verstehen. 
-                                & \cite[vgl.][]{sato_action-triggering_2019, sato_context_nodate} \\
-            Helpfulness     & Die Erklärung, <Erkläuterung>, ist nützlich bei der Erfüllung von <Aufgabe>.
-                                & \cite[vgl.][]{sato_action-triggering_2019, sato_context_nodate, hoffman_metrics_nodate, balog_measuring_2020} \\
-            \hline
-            Completeness    & Die Erklärung, <Erkläuterung>, ist hinreichend   
-                                vollständig.
-                                & \cite{hoffman_metrics_nodate, riveiro_thats_2021} \\
-                            & Die Erklärung, <Erkläuterung>, ist hinreichend detailliert.
-                                & \cite{riveiro_thats_2021} \\
+            Persuasiveness  & Ich bin von den Entscheidungen von <System> überzeugt.
+                                \cite[vgl.][]{tsai_effects_2020} \\
             \hline
         \end{tabular}
     \end{center}
-    \caption{}
-    \label{tab:evaluation_direct_measures_evaluation}
+    \caption{Aussagen zur qualitativen Evaluation ausgewählter Qualitätsaspekte im Bezug auf ein System bzw. Systemteile.}
+    \label{tab:evaluation_qualitative_system_measures}
 \end{table}
 
-Die Aussagen aus \autoref{tab:evaluation_direct_measures_evaluation} können zum Teil auch als Entscheidungsfragen formuliert werden. Wenn dies der Fall war, wurde mitunter für eine der beiden Antwortmöglichkeiten zusätzlich ein Freitextfeld für eine Begründung bereitgestellt, z.~B. \glqq Hätten Sie sich gewünscht, dass die Erklärungen zusätzliche Informationen enthalten? Wenn ja, welche Art von Informationen und wann, d. h. in welchen Situationen?\grqq \cite[übersetzt vgl.][]{riveiro_thats_2021}.
+\begin{table}[htb!]
+    \begin{center}
+        \begin{tabular}{|p{0.25\textwidth} p{0.65\textwidth}|}
+            \hline
+            \textbf{Qualitätsaspekt} & \textbf{Aussage} \\
+            \hline
+            \hline
+            Transparency    & Die Informationen der Erklärung waren ausreichend, um <Aufgabe> gut zu erfüllen. 
+                                \cite[vgl.][]{wang_is_2018, balog_measuring_2020} \\
+            \hline
+            Satisfaction    & <Erklärung>, stellt mich mit meinem Verständnis über <System> zufrieden.
+                                \cite[vgl.][]{riveiro_thats_2021} \\
+                            & <Erklärung>, ist zufriedenstellend.
+                                \cite[vgl.][]{riveiro_thats_2021, hoffman_metrics_nodate, balog_measuring_2020} \\
+            \hline
+            Persuasiveness  & <Erklärung>, ist überzeugend.
+                                \cite[vgl.][]{sato_action-triggering_2019, sato_context_nodate} \\
+                            & <Erklärung>, weckt Interesse. 
+                                \cite[vgl.][]{sato_action-triggering_2019, sato_context_nodate} \\
+            \hline
+            Usefulness      & <Erklärung>, ist einfach zu verstehen. 
+                                \cite[vgl.][]{sato_action-triggering_2019, sato_context_nodate} \\
+            Helpfulness     & <Erklärung>, ist nützlich bei der Erfüllung von <Aufgabe>.
+                                \cite[vgl.][]{sato_action-triggering_2019, sato_context_nodate, hoffman_metrics_nodate, balog_measuring_2020} \\
+            \hline
+            Completeness    & <Erklärung>, ist hinreichend vollständig.
+                                \cite[vgl.][]{hoffman_metrics_nodate, riveiro_thats_2021} \\
+                            & <Erklärung>, ist hinreichend detailliert.
+                                \cite[vgl.][]{riveiro_thats_2021} \\
+            \hline
+        \end{tabular}
+    \end{center}
+    \caption{Aussagen zur qualitativen Evaluation ausgewählter Qualitätsaspekte im Bezug auf Erklärungen in einem System.}
+    \label{tab:evaluation_qualitative_explanation_measures}
+\end{table}
+
+\begin{table}[htb!]
+    \begin{center}
+        \begin{tabular}{|p{0.25\textwidth} p{0.65\textwidth}|}
+            \hline
+            \textbf{Qualitätsaspekt} & \textbf{Aussage} \\
+            \hline
+            \hline
+            Effectivity     & Ich konnte <Aufgabe> [mithilfe von <Erklärung>] erfolgreich[er] erledigen.
+                                \cite[vgl.][]{balog_measuring_2020, hernandez-bocanegra_effects_2020} \\
+            \hline
+            Efficiency      & Ich konnte <Aufgabe> [mithilfe von <Erklärung>] schnell[er] erledigen.
+                                \cite[vgl.][]{balog_measuring_2020, hernandez-bocanegra_effects_2020} \\
+            \hline
+            Trust           & Ich kann [mithilfe von <Erklärung>] [besser] sagen, wie vertrauenswürdig das System ist.
+                                \cite[vgl.][]{hoffman_metrics_nodate, balog_measuring_2020, weitz_you_2019, hernandez-bocanegra_effects_2020} \\
+            \hline
+            Transparency    & Ich kann den Entscheidungsprozess von <System> [mithilfe von <Erklärung>] [besser]
+                                verstehen.
+                                \cite[vgl.][]{wang_is_2018, balog_measuring_2020} \\
+                            & Ich kann [mithilfe von <Erklärung>] [besser] verstehen, wie <System> funktioniert.
+                                \cite[vgl.][]{riveiro_thats_2021, hoffman_metrics_nodate, hernandez-bocanegra_effects_2020} \\
+            \hline
+            Scrutability    &  Ich kann [mithilfe von <Erklärung>] [besser] sagen, wie zuverlässig <System> ist.
+                                \cite[vgl.][]{hoffman_metrics_nodate, balog_measuring_2020} \\
+            \hline
+        \end{tabular}
+    \end{center}
+    \caption{Aussagen zur qualitativen Evaluation ausgewählter Qualitätsaspekte im Bezug auf ein System bzw. Systemteile, Erklärungen in einem System oder dem Vergleich verschiedener Studienbedingungen.}
+    \label{tab:evaluation_qualitative_explanation_system_measures}
+\end{table}
+
+Die Aussagen aus \autoref{tab:evaluation_qualitative_explanation_system_measures} können zum Teil auch als Entscheidungsfragen formuliert werden. Wenn dies der Fall war, wurde mitunter für eine der beiden Antwortmöglichkeiten zusätzlich ein Freitextfeld für eine Begründung bereitgestellt, z.~B. \glqq Hätten Sie sich gewünscht, dass die Erklärungen zusätzliche Informationen enthalten? Wenn ja, welche Art von Informationen und wann, d. h. in welchen Situationen?\grqq \cite[übersetzt vgl.][]{riveiro_thats_2021}.
 
 Für Evaluationen, die als \textit{Wthin-Subject} Studiendesign angelegt sind, gibt es außerdem die Möglichkeit, die Aussagen so umzuformulieren, dass die jeweils abdecken, ob ein Aspekt besser unter einer Studienbedingung als unter der anderen ist.
 
-\subsubsection{Quantitative direkte Evaluation von Erklärungen}
+Auch rankings zwischen den sachen. (Preference) \cite{kouki_user_2017} \cite{mucha_interfaces_2021} 
+\cite{abdulrahman_belief-based_2019} 
+\cite{waa_evaluating_2021} \cite{wiegand_id_2020} ,
+\cite{stange_effects_2021} \cite{kaptein_personalised_2017} 
 
-Cognitive Workload \cite{wiegand2019drive}
+Neben diesen Einflüssen von Erklärungen die gemessen werden sollten auch andere  Mental Workload     (NASA TLX)  \cite{wiegand2019drive, wiegand_id_2020,du2019look} +  Nach Usability suchen (zumindest den Verweis, dass es gemacht werden sollte)
+
+Think aloud \cite{wiegand_id_2020} \cite{yamada_evaluating_2016} \\
+
+\subsubsection{Quantitative direkte Evaluation von Erklärungen}
 
 Anzahl der Anforderungen
 
@@ -128,13 +158,13 @@ Dauer des Fokus auf eine Erklärung
             Acceptance                        & \cite{tintarev_designing_nodate}
                                                             \cite{hernandez-bocanegra_effects_2020}
                                                             \cite{kunkel_let_2019} \\
-            Think aloud                       & \cite{wiegand_id_2020} \cite{yamada_evaluating_2016} \\
+            
             Preference                        & \cite{kouki_user_2017} \cite{mucha_interfaces_2021} 
                                                             \cite{abdulrahman_belief-based_2019} 
                                                             \cite{waa_evaluating_2021} \cite{wiegand_id_2020} ,
                                                             \cite{stange_effects_2021} \cite{kaptein_personalised_2017} \\
             Mental Model Understanding        & \cite{gunning2019darpa} \\
-            Cognitive Workload                & \cite{wiegand2019drive, wiegand_id_2020} \\
+             \\
             \hline
         \end{tabular}
     \end{center}
