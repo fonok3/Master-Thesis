@@ -1,40 +1,31 @@
 \subsection{Evaluation}
 \label{sec:model_evaluation_description}
 
-Qualität von Erklärungen zu bestimmen ist nicht einfach.
+In diesem Abschnitt des Modells wird die Evaluation der Qualität von Erklärungen erläutert. Dabei werden sowohl die Eigenschaften von integrierten Erklärungen an sich beschrieben als auch Effekte, die durch den Einfluss von Erklärbarkeit auf weitere Qualitätsaspekte messbar sind. Dabei werden die schon in \autoref{sec:model_external_dependencies} vorgestellten Qualitätsziele betrachtet.
 
-Behavioral vs. subjective???? / \glqq Importantly however, such measures often only measure one aspect of behavior. Ideally, a combination of both measurement types should be used to assess effects on both the user’s perception and behavior. In this way, a complete perspective on a construct can be obtained.\grqq{} (Qualitative / Quantitavie) \cite{waa_evaluating_2021}
+Es wird von mehreren Autoren festgestellt, dass das Messen der Qualität von Erklärungen eine Herausforderung darstellt aufgrund der stark unterschiedlichen subjektiven Wahrnehmung von \textit{End Usern} \cite{nunes_systematic_2017, eiband_impact_2019, kouki_user_2017}. Aufgrund dessen werden in vorhandener Literatur zur Evaluation von Erklärungen vor allem subjektive Fragebögen verwendet. Diese orientieren sich in der Regel an den zuvor ausgewählten Zielen für zu integrierende Erklärungen (Siehe \autoref{sec:model_external_dependencies}).
 
-Die Literaturrecherche hat wie bereits \cite{nunes_systematic_2017} nur empirische Studien zur Evaluation von Erklärungen gefunden.
+Grundsätzlich wird bei der Evaluation zwischen subjektiven Metriken (\textit{qualitative} \citeauthor{wohlin2012experimentation}) und Vehaltensmetriken (\textit{quantitative} \citeauthor{wohlin2012experimentation}) unterschieden. \citeauthor{waa_evaluating_2021} betonen, dass beide Methoden zur beurteilung der Qualität von Erklärungen eingesetzt werden sollten. Sie schreiben, dass es so möglich ist, die \glqq komplette Perspektive\grqq{} auf eine Erklärung zu erhalten \cite[übersetzt vgl.][]{waa_evaluating_2021}. Auch werden in der Literatur sowohl Studien durchgeführt, bei denen die Teilnehmer jeweils mehrere Bedingungen, wie z.B. verschiedene Erklärungstypen evaluieren (\textit{with-in subject}) als auch solche, bei denen pro Teilnehmer nur eine Bedingung evaluier und diese dann verglichen werden (\textit{between subject}).
 
-Entsprechend \cite{wohlin2012experimentation} habe ich die verschiedenen Evaluationsmethoden in \textit{Qualitaative Research} und \textit{Quantitative Research} gegliedert.
-
-Die Metriken und die Vorgehensweise, die für die \textit{Evaluation} ausgewählt wird, hängt folglich sehr eng mit den zuvor festgelegten \textit{Objectives} zusammen.
-
-within und between subject erklären
-
-\paragraph{Target} Zunächst muss bei der Evaluation geklärt werden, was der Prüfgegenstand ist. Dabei gibt es vor allem zwei große Möglichkeiten im Kontext der Erklärbarkeit. Entweder werden die integrierten Erklärungen an sich evaluiert und die Studienteilnehmer darauf explizit angesprochen oder es werden die Auswirkungen auf verschiedene System-Metriken ausgewertet. Auch eine Kombination ist möglich.
-
-\paragraph{Strategy} Beim Festlegen der \textit{Strategy} der Evaluation gibt es verschiedene Möglichkeiten, die unter anderem vom \textit{Context} abhängen. Je nachdem, welche Ergebnisse die Stakeholder, die Erklärungen in ein System integrieren möchten, benötigen, muss die Evaluation kontrollierter oder weniger kontrolliert sein \cite[vgl.][]{wohlin2012experimentation}.
-
-\paragraph{Metrics} \textit{Metrics} sind klar definierte Messungen, die durchgeführt werden, um die zuvor festglegten \textit{Objectives} zu überprüfen.
-
-3 Types of Evaluation according to \cite{ribera2019can, doshi2017towards}: (1) applicationgrounded evaluation with real humans and real tasks; (2) human-grounded evaluation with real humans but simplified tasks; and (3) functionally-grounded evaluation without humans and proxy tasks; all of them always inspired by real tasks and real humans’ observations. \cite{wohlin2012experimentation}
+Entsprechend sind die verschiedenen Evaluationsmethoden im Modell in \textit{Qualitative Research} und \textit{Quantitative Research} gegliedert. Außerdem stehen grundsätzlich die von \citeauthor{wohlin2012experimentation} definierten Evaluationsstrategien, die bereits in den Ergebnissen der Literaturrecherche (\autoref{sec:literature_review}) vorgestellt wurden, zum Messen der Qualität von Erklärungen zur Verfügung: \textit{Survey}, \textit{Case Study}, \textit{Experiment}. Diese werden unter anderem von \citeauthor{ribera2019can} und \citeauthor{doshi2017towards} auf Erklärbarkeit übertragen. Die verwendete Strategie hängt dabei vom \textit{Context} und den \textit{Objectives} ab. Je nachdem, welche Ergebnisse die Stakeholder, die Erklärungen in ein System integrieren möchten, benötigen, muss die Evaluation kontrollierter oder weniger kontrolliert sein. Die Vor- und Nachteile sind bei \citeauthor{wohlin2012experimentation} nachzulesen \cite{wohlin2012experimentation}.
 
 \subsubsection{Qualitative Evaluation}
 
-Bei der direkten Messung der Qualität von Erklärungen werden in der Literatur ledig verschiedene Möglichkeiten zur subjektiven Evaluation vorgestellt.
+Bei der Qualitativen Evaluation von Erklärungen gibt es verschiedene Möglichkeiten. Entweder wird die Qualität der Erklärungen direkt gemessen. Alternativ wurden in der Literatur aber auch die bereits vorgestellten Qualitätsaspekte (Siehe \autoref{sec:model_external_dependencies}) verwendet, um über den Einfluss von Erklärungen auf deren Qualität zu schließen.
 
-Neben den in \autoref{sec:model_external_dependencies} vorgestellten Qualitätsaspekten, die als Qualitätsziele für die Integration von Erklärungen definiert definiert wurden, gibt es weitere Aspekte, die in der Literatur zur Messung der Qualität von Erklärungen vorgestellt wurden \cite[sato_action-triggering_2019], die im folgenden erläutert werden.
+Neben den in \autoref{sec:model_external_dependencies} vorgestellten Qualitätsaspekten, die als Qualitätsziele für die Integration von Erklärungen definiert definiert wurden, gibt es weitere Aspekte, die in der Literatur zur Messung der direkten Qualität von Erklärungen vorgestellt wurden \cite{sato_action-triggering_2019}. Diese werden im Folgenden erläutert.
 
 \paragraph{Usefulness} \textit{Usefulness} oder auch \textit{Helpfulnesss} ist der Grad zu dem \textit{End User}, die Erklärungen erhalten, das subjektive Empfinden haben, dass eine Erklärung sie bei der Nutzung oder dem Verständnis über ein System unterstützt haben. 
 
 \paragraph{Completeness} \textit{Completeness} ist das subjektive Empfinden von \textit{End Usern}, die gegebene Erklärungen vollständigen Aufschluss über den erklärten Systembestandteil geben und keine Informationen weglassen.
 
-\smallskip
+\bigskip
 
-Bei der Messung der direkten Messung der Erklärugnsqualität setzt die Literatur vor allem Likert-Skalen ein. Dabei handelt es sich um einen Ordinalskala mit in der Regel fünf oder sieben einzelnen Bewertungsschritten, auf denen einen Aussage bewertet wird. Die genaue Benennung der Bewertungsschritte erfolgt in der Literatur verschieden. Allerdings werden meist solche mit einer inhaltlichen Übereinstimmung zu \glqq Volle Zustimmung\grqq{}, \glqq Teilweise Zustimmung\grqq{}, \glqq Neutral\grqq{},\glqq Teilweise Ablehnung\grqq{} und \glqq Volle Ablehnung\grqq{} verwendet \cite{sato_action-triggering_2019, sato_context_nodate, wang_is_2018, hoffman_metrics_nodate, koo_understanding_2016, koo_why_2015}. Aussagen, welche nicht dem Muster entsprechen, werden im im folgenden angepasst. \autoref{tab:evaluation_direct_measures_evaluation} stellt eine Übersicht von verwendeten Aussagen für die Messung der Qualitätsaspekte dar, über die die Erklärungsqualität messbar ist. Aufgelistet sind nur verallgemeinerbare Aussagen und nicht einen spezifischen \textit{Context} betreffende Aussagen. In spitzen Klammer sind Platzhalter dargestellt, um die aufgelisteten Aussagen besser auf den eigenen \textit{Context} anpassbar zu machen.
+Bei der qualitativen Messung setzt die Literatur vor allem Likert-Skalen ein. Dabei handelt es sich um eine Ordinalskala mit in der Regel fünf oder sieben einzelnen Bewertungsschritten, auf denen eine Aussage bewertet werden kann. Die genaue Benennung der Bewertungsschritte erfolgt in der Literatur verschieden. Allerdings werden meist solche mit einer inhaltlichen Übereinstimmung zu \glqq Volle Zustimmung\grqq{}, \glqq Teilweise Zustimmung\grqq{}, \glqq Neutral\grqq{},\glqq Teilweise Ablehnung\grqq{} und \glqq Volle Ablehnung\grqq{} verwendet \cite{sato_action-triggering_2019, sato_context_nodate, wang_is_2018, hoffman_metrics_nodate, koo_understanding_2016, koo_why_2015}. Aussagen, welche nicht dem Muster entsprechen, wurden für diese Zusammenfassung in das Format überführt. \autoref{tab:evaluation_qualitative_system_measures}, \autoref{tab:evaluation_qualitative_explanation_measures} und \autoref{tab:evaluation_qualitative_explanation_system_measures} stellen eine Übersicht von verwendeten Aussagen für die Messung der Qualitätsaspekte dar, über welche die Erklärungsqualität messbar ist. Aufgelistet sind nur verallgemeinerbare Aussagen und nicht nur einen spezifischen \textit{Context} betreffende Aussagen.
 
+In spitzen Klammer sind Platzhalter dargestellt, um die aufgelisteten Aussagen besser auf einen \textit{Context} anpassen zu können. \glqq <System>\grqq{} steht entweder für das aktuelle System, Teilsysteme, Tools oder Algorithmen, welche evaluiert werden sollen. \glqq <Erklärung>\grqq{} steht für eine spezifische Erklärung, die evaluiert wird. Die Aufgabe(n), die ein \textit{End User} während einer Evaluation erledigt werden, können im Platzhalter \glqq Aufgabe\grqq{} eingesetzt werden. Darüber werden in eckigen Klammern optionale Teile von Aussagen angegeben, die nur für manche Evaluationskontexte sinnvoll sind.
+
+\autoref{tab:evaluation_qualitative_system_measures} enthält jene Aussagen, welche grundsätzlich Auswirkungen auf bestimmte Qualitätsaspekte im Sytem messen. Diese können sowohl bei \textit{with-in subject} als auch \textit{between subject} Studien in allen Studiengruppen verwendet werden.
 
 \begin{table}[htb!]
     \begin{center}
@@ -43,9 +34,9 @@ Bei der Messung der direkten Messung der Erklärugnsqualität setzt die Literatu
             \textbf{Qualitätsaspekt} & \textbf{Aussage} \\
             \hline
             \hline
-            Satisfaction    & Ich bin mit der Nutzung von <System> zufrieden .
+            Satisfaction    & Ich bin mit der Nutzung von <System> zufrieden.
                                 \cite[vgl.][]{balog_measuring_2020} \\
-                            & Ich werde <Sytem> wieder benutzen.
+                            & Ich werde <System> wieder benutzen.
                                 \cite[vgl.][]{balog_measuring_2020} \\
             \hline
             Persuasiveness  & Ich bin von den Entscheidungen von <System> überzeugt.
@@ -53,9 +44,11 @@ Bei der Messung der direkten Messung der Erklärugnsqualität setzt die Literatu
             \hline
         \end{tabular}
     \end{center}
-    \caption{Aussagen zur qualitativen Evaluation ausgewählter Qualitätsaspekte im Bezug auf ein System bzw. Systemteile.}
+    \caption{Aussagen zur qualitativen Evaluation ausgewählter Qualitätsaspekte in Bezug auf ein System oder Systemteile.}
     \label{tab:evaluation_qualitative_system_measures}
 \end{table}
+
+In \autoref{tab:evaluation_qualitative_explanation_measures} werden die Aussagen zur Evaluation zusammengefasst, die nur für Nutzer infrage kommen, die eine Erklärung direkt evaluieren sollen. Alle Aussagen beziehen sich dabei direkt auf die Eigenschaften der Erklärung.
 
 \begin{table}[htb!]
     \begin{center}
@@ -64,7 +57,7 @@ Bei der Messung der direkten Messung der Erklärugnsqualität setzt die Literatu
             \textbf{Qualitätsaspekt} & \textbf{Aussage} \\
             \hline
             \hline
-            Transparency    & Die Informationen der Erklärung waren ausreichend, um <Aufgabe> gut zu erfüllen. 
+            Perceived Transparency    & Die Informationen der Erklärung waren ausreichend, um <Aufgabe> gut zu erfüllen. 
                                 \cite[vgl.][]{wang_is_2018, balog_measuring_2020} \\
             \hline
             Satisfaction    & <Erklärung>, stellt mich mit meinem Verständnis über <System> zufrieden.
@@ -79,7 +72,7 @@ Bei der Messung der direkten Messung der Erklärugnsqualität setzt die Literatu
             \hline
             Usefulness      & <Erklärung>, ist einfach zu verstehen. 
                                 \cite[vgl.][]{sato_action-triggering_2019, sato_context_nodate} \\
-            Helpfulness     & <Erklärung>, ist nützlich bei der Erfüllung von <Aufgabe>.
+                            & <Erklärung>, ist nützlich bei der Erfüllung von <Aufgabe>.
                                 \cite[vgl.][]{sato_action-triggering_2019, sato_context_nodate, hoffman_metrics_nodate, balog_measuring_2020} \\
             \hline
             Completeness    & <Erklärung>, ist hinreichend vollständig.
@@ -89,9 +82,11 @@ Bei der Messung der direkten Messung der Erklärugnsqualität setzt die Literatu
             \hline
         \end{tabular}
     \end{center}
-    \caption{Aussagen zur qualitativen Evaluation ausgewählter Qualitätsaspekte im Bezug auf Erklärungen in einem System.}
+    \caption{Aussagen zur qualitativen Evaluation ausgewählter Qualitätsaspekte in Bezug auf Erklärungen in einem System.}
     \label{tab:evaluation_qualitative_explanation_measures}
 \end{table}
+
+In der Übersicht, die in \autoref{tab:evaluation_qualitative_explanation_system_measures} zu sehen ist, werden Aussagen zusammengefasst, welche auf beide der zuvor erwähnten Situationen anpassbar sind. Je nachdem, ob die aktuelle Messung sich direkt auf eine Erklärung bezieht, müssen die optionalen Teile dabei weggelassen werden. Wenn alle optionalen Teile eingefügt werden, kann außerdem zwischen verschiedenen Bedingungen bei \textit{within-subject} Studien verglichen werden, da der Teilnehmer eine Präferenz angeben kann.
 
 \begin{table}[htb!]
     \begin{center}
@@ -120,100 +115,85 @@ Bei der Messung der direkten Messung der Erklärugnsqualität setzt die Literatu
             \hline
         \end{tabular}
     \end{center}
-    \caption{Aussagen zur qualitativen Evaluation ausgewählter Qualitätsaspekte im Bezug auf ein System bzw. Systemteile, Erklärungen in einem System oder dem Vergleich verschiedener Studienbedingungen.}
+    \caption{Aussagen zur qualitativen Evaluation ausgewählter Qualitätsaspekte in Bezug auf ein System oder Systemteile, Erklärungen in einem System oder dem Vergleich verschiedener Studienbedingungen.}
     \label{tab:evaluation_qualitative_explanation_system_measures}
 \end{table}
 
-Die Aussagen aus \autoref{tab:evaluation_qualitative_explanation_system_measures} können zum Teil auch als Entscheidungsfragen formuliert werden. Wenn dies der Fall war, wurde mitunter für eine der beiden Antwortmöglichkeiten zusätzlich ein Freitextfeld für eine Begründung bereitgestellt, z.~B. \glqq Hätten Sie sich gewünscht, dass die Erklärungen zusätzliche Informationen enthalten? Wenn ja, welche Art von Informationen und wann, d. h. in welchen Situationen?\grqq \cite[übersetzt vgl.][]{riveiro_thats_2021}.
+Die Aussagen aus \autoref{tab:evaluation_qualitative_explanation_system_measures} können darüberhinaus zum Teil auch als Entscheidungsfragen formuliert werden. Wenn dies der Fall war, wurde mitunter für eine der beiden Antwortmöglichkeiten zusätzlich ein Freitextfeld für eine Begründung bereitgestellt, z.~B. \glqq Hätten Sie sich gewünscht, dass die Erklärungen zusätzliche Informationen enthalten? Wenn ja, welche Art von Informationen und wann, d.~h. in welchen Situationen?\grqq \cite[übersetzt vgl.][]{riveiro_thats_2021}.
 
-Für Evaluationen, die als \textit{Wthin-Subject} Studiendesign angelegt sind, gibt es außerdem die Möglichkeit, die Aussagen so umzuformulieren, dass die jeweils abdecken, ob ein Aspekt besser unter einer Studienbedingung als unter der anderen ist.
+Als Alternative zu den vorgestellten Aussagen haben außerdem einige Autoren direkt die Präferenz zwischen verschiedenen Formen von Erklärungen abgefragt, statt diese indirekt über Aussagen zu ermitteln. \cite{kouki_user_2017, mucha_interfaces_2021, abdulrahman_belief-based_2019, balog_measuring_2020, wiegand_id_2020, stange_effects_2021, kaptein_personalised_2017} 
 
-Auch rankings zwischen den sachen. (Preference) \cite{kouki_user_2017} \cite{mucha_interfaces_2021} 
-\cite{abdulrahman_belief-based_2019} 
-\cite{waa_evaluating_2021} \cite{wiegand_id_2020} ,
-\cite{stange_effects_2021} \cite{kaptein_personalised_2017} 
+Des Weiteren gibt es mehrere Beispiele dafür, dass Autoren bei der Messung der Qualität auch den generellen \textit{Mental Workload} gemessen haben. Dabei wird überprüft, wie sehr die kognitiven Fähigkeiten der Probanden gefordert werden. Alle betrachteten Beispiele aus der Literatur verwenden dabei den standardisierten Fragebogen \glqq NASA TLX\grqq{} \cite{wiegand2019drive, wiegand_id_2020,du2019look}.
 
-Neben diesen Einflüssen von Erklärungen die gemessen werden sollten auch andere  Mental Workload     (NASA TLX)  \cite{wiegand2019drive, wiegand_id_2020,du2019look} +  Nach Usability suchen (zumindest den Verweis, dass es gemacht werden sollte)
+Über die bereits vorgestellten Möglichkeiten zur qualitativen Evaluation von Erklärungen untersuchen außerdem mehrere Autoren den Einfluss von Erklärungen auf \textit{Usability}. \textit{Usability} ist dabei definiert als der \glqq Grad, in dem ein Produkt oder System von bestimmten Nutzern verwendet werden kann, um bestimmte Ziele mit \textit{Efficiency}, \textit{Effectivity} und \textit{Satisfaction} in einem bestimmten \textit{Context} zu erreichen \grqq{} \cite[übersetzt vgl.][]{international2011iso}. Die Beispiele aus dem Bereich der Erklärbarkeit fokussieren sich dabei auf die Verwendung von \textit{Think Aloud} Studien, bei denen die Studienteilnehmer während der Nutzung eines Systems ihre Gedanken laut aussprechen und sich so \textit{Usability}-Probleme erfassen lassen \cite{wiegand_id_2020, yamada_evaluating_2016}. Hintergrund ist, dass \textit{Explainability} auch negative Effekte auf \textit{Usability} haben kann \cite{chazette_knowledge_nodate} und daher auch gemessen werden sollten.
 
-Think aloud \cite{wiegand_id_2020} \cite{yamada_evaluating_2016} \\
+\bigskip
 
-\subsubsection{Quantitative direkte Evaluation von Erklärungen}
+Die zuvor erläuterten qualitativen Metriken zur Messung der Qualität von Erklärungen sind der erste Teil der Antwort dieses Modells auf \textbf{RQ3}. Dabei kann an dieser Stelle zusammengefasst werden, dass der qualitative Teil der Evaluationen von Erklärungen den Großteil der in der Literatur bereits erfolgten Evaluationsmethoden ausmacht und dort auch aufgrund der stark subjektiven Wahrnehmung von Erklärungen als notwendiger Teil erachtet wird.
 
-Anzahl der Anforderungen
+\subsubsection{Quantitative Evaluation von Erklärungen}
 
-Dauer des Fokus auf eine Erklärung
+Die quantitative Messung der Qualität von Erklärungen kommt in der Literatur seltener vor, als die qualitative. Dies liegt unter anderem an dem starken Einfluss der subjektiven Meinungen von \textit{End Usern} in Bezug auf den Bedarf für Erklärungen und dessen Granularität \citeauthor{chazette_end-users_nodate, kouki_user_2017}. Nichtsdestotrotz wird in der Literatur empfohlen zusätzlich auch eine quantitative Evaluation durchzuführen \cite{balog_measuring_2020}. Beispielsweise kommen \citeauthor{wiegand2019drive} zu dem Ergebnis, dass \textit{End User} subjektiv andere Erklärungen präferieren können, als zu einer besseren Performanz der \textit{End User} führen.
 
-\subsubsection{Qualitative Evaluation der Auswirkungen von Erklärungen}
+Bei direkter Messung von quantitativen Aspekten von Erklärungen wurden in der Literatur neben domänen- oder erklärungsspezifischen Metriken, solche eingesetzt, die unmittelbar den Bedarf und die Granularität messen. In \autoref{tab:evaluation_quantitative_explanation_measures} sind die Metriken aufgeführt, welche Kontext- und erklärungsunabhängig verallgemeinerbar sind.
+
+\begin{table}[htb!]
+    \centering
+    \begin{tabular}{|p{0.25\textwidth}|p{0.5\textwidth}|p{0.15\textwidth}|}
+        \hline
+        \textbf{Aspekt} & \textbf{Metrik} & \textbf{Quellen} \\
+        \hline
+        \hline
+        Bedarf          & \textit{Number of explanation requests}
+            & \cite{wiegand_id_2020} \cite{ chazette_end-users_nodate} \cite{balog_measuring_2020} \\
+        \hline
+        Granularität    & \textit{User Focus Duration} & \cite{balog_measuring_2020} \\
+                        & \textit{Explanation Exposure Delta} & \cite{nunes_systematic_2017}\\
+        \hline
+    \end{tabular}
+    \caption{Quantitative Evaluationsmöglichkeiten zu direkten Messung der Qualität von Erklärungen.}
+    \label{tab:evaluation_quantitative_explanation_measures}
+\end{table}
+
+Wenn eine Erklärung optional angefordert werden kann, ist eine mögliche Metrik zu messen, wie häufig \textit{End User} die Erklärung anfordern (\textit{Number of explanation requests}). Daraus kann abgeleitet werden, wie groß der Bedarf für eine Erklärung in der spezifischen Situation wirklich ist \cite{wiegand_id_2020}. Dies lässt sich auch bereits als Gedankenexperiment zuvor bestimmen \cite[vgl.][]{chazette_end-users_nodate}.
+
+Auch kann nach der Anforderung einer Erklärung durch einen \textit{End User} gemessen werden, wie lange dieser sich auf diese fokussiert (\textit{User Focus Duration}) \cite{balog_measuring_2020}. Daraus kann abgeleitet werden, ob die Granularität der Erklärung für den \textit{End User} passend war. Eine weitere Möglichkeit, die Granularität zu messen ist außerdem das \textit{Explanation Exposure Delta} \cite{nunes_systematic_2017}. Hierfür wird eine Metrik zum Verständnis des Systems benötigt, welche auf eine Intervallskala abbildet. Diese Metrik wird im Anschluss einmal vor und einmal vor der Anzeige einer Erklärung gemessen. Die Differenz dieser Werte ist das \textit{Explanation Exposure Delta}.
+
+Neben der direkten Evaluation der Eigenschaften von Erklärungen haben deutlich mehr Autoren die Auswirkungen von Erklärungen auf bestimmte Qualitätsaspekte von Systemen untersucht. Im Folgenden werden dabei Metriken vorgestellt, welche in der Literatur verwendet wurden. Auch bei der quantitativen Messung der unter \autoref{sec:model_external_dependencies} vorgestellten externen Qualitätsaspekte, auf die der Einfluss von Erklärungen in der Literatur evaluiert wurde, gibt es über die hier erwähnten hinaus weitere Metriken, welche sich eigenen können. \citeauthor{carvalho2017quality} stellen in ihrer Veröffentlichung eine Übersicht über verschiedene Metriken vor, um u.~a. die in dieser Arbeit erwähnten Qualitätsaspekte zu messen \cite{carvalho2017quality}.
+
+\autoref{tab:evaluation_quantitative_explanation_measures_indirect} fasst die in der Literatur genutzten Metriken zusammen. Dabei ist für den Qualitätsaspekt \textit{Trust} die Anzahl der Nutzungen (\textit{Number of Usages}) aufgeführt. Diese kann sowohl absolut als auch relativ zu einem Zeitraum betrachtet werden. Die \textit{Task Performance} ist hier als abstrakte Metrik aufgeführt. Unter diesem Begriff haben mehrere Autoren jeweils die Qualität der Aufgabenausführung von \textit{End Usern} zusammengefasst. Konkrete Metriken werden hier allerdings nicht aufgeführt, da diese laut mehrerer Autoren sehr \textit{Context}-abhängig sind \citeauthor{tintarev2007survey, gunning2019darpa}. Die \textit{Task Performance} wird dabei sowohl für die Bewertung der \textit{Persuasiveness} des Systems als auch die \textit{Efficiency} herangezogen. Für letztere haben \citeauthor{tintarev_designing_nodate} sowie \citeauthor{gunning2019darpa} außerdem die \textit{Learning Rate} als Evaluationsfaktor herangezogen. Sie vergleichen dabei unter verschiedenen Bedingungen, wie schnell sich die \textit{Task Performance} von \textit{End Usern} erhöht.
 
 \begin{table}[htb!]
     \begin{center}
-        \begin{tabular}{|p{.45\textwidth}|p{.45\textwidth}|}
+        \begin{tabular}{|p{0.25\textwidth}|p{0.5\textwidth}|p{0.15\textwidth}|}
             \hline
-            \textbf{Empirische Strategie} & \textbf{Quellen} \\ \hline
-            Subjective Perception Questionaire &  \cite{balog_measuring_2020} \cite{sato_context_nodate}
-                                                                \cite{waa_evaluating_2021} \cite{eiband_impact_2019}  \cite{kouki_user_2017} \cite{tsai_evaluating_2019}
-                                                                \cite{hernandez-bocanegra_effects_2020}
-                                                                \cite{zahedi_towards_2019} \cite{tsai_effects_2020} 
-                                                                \cite{ribera2019can} \\
-            Acceptance                        & \cite{tintarev_designing_nodate}
-                                                            \cite{hernandez-bocanegra_effects_2020}
-                                                            \cite{kunkel_let_2019} \\
-            
-            Preference                        & \cite{kouki_user_2017} \cite{mucha_interfaces_2021} 
-                                                            \cite{abdulrahman_belief-based_2019} 
-                                                            \cite{waa_evaluating_2021} \cite{wiegand_id_2020} ,
-                                                            \cite{stange_effects_2021} \cite{kaptein_personalised_2017} \\
-            Mental Model Understanding        & \cite{gunning2019darpa} \\
-             \\
+            \textbf{Qualitätsaspekt} & \textbf{Metrik} & \textbf{Quellen} \\ \hline
+            Trust & \textit{Number of Usages}  & \cite[vgl. ][]{tintarev2007survey} \\ \hline
+            \textit{Persuasiveness} & \textit{Task Performance} & \cite[vgl.][]{tintarev2007survey} \\
             \hline
+            Effectiveness & \textit{Task Performance}            &
+                \cite{waa_evaluating_2021} \cite{mucha_interfaces_2021} \cite{tintarev_designing_nodate} \cite{abdulrahman_belief-based_2019} \cite{zolotas_towards_2019} \cite{martin_developing_2019} \cite{martin_evaluating_2021} \cite{gunning2019darpa} \cite{kunkel_let_2019} \cite{tintarev2007survey} \\
+                 & \textit{Learning Rate}               &
+                \cite{tintarev_designing_nodate} \cite{gunning2019darpa} \\
+            \hline
+            Efficiency & \textit{Task Completion Time} & \cite{tintarev2007survey} \\ \hline
         \end{tabular}
     \end{center}
     \caption{Evaluation}
-    \label{tab:evaluation_of_explanations}
+    \label{tab:evaluation_quantitative_explanation_measures_indirect}
 \end{table}
 
-\subsubsection{Quantitative Evaluation der Auswirkungen von Erklärungen}
+\smallskip
 
-\cite{tintarev2007survey}:
+\noindent\fbox{
+    \parbox{0.964\textwidth}{
+        \smallskip
+        \textbf{RQ3} Anhand welcher Metriken kann gemessen werden, ob die in ein erklärbares System integrierten Erklärungen das Ziel der Integration bezogen auf externe Qualitätsaspekte erfüllt haben?
+        \smallskip
+    }
+}
 
-\begin{itemize}
-    \item Trust: Questionaires, Loyalty: Number of Logins
-    \item Persuasiveness: Questionaires + Domain-Specific Performance metrics
-    \item  Effectiveness: accuracy measures (Domain-Specific) 
-    \item Efficiency: Task completion time, Number of times an explanation is called
-\end{itemize}
-
-\begin{table}[htb!]
-    \begin{center}
-        \begin{tabular}{|p{.45\textwidth}|p{.45\textwidth}|}
-            \hline
-            \textbf{Metrik} & \textbf{Quellen} \\ \hline
-            Explanation exposure delta & \\
-            Accuracy                          & \cite{tintarev_designing_nodate}
-                                                            \cite{waa_evaluating_2021} \cite{mucha_interfaces_2021}
-                                                            \cite{kunkel_let_2019} \cite{zolotas_towards_2019} \\
-            Learning Rate                     & \cite{tintarev_designing_nodate} \cite{gunning2019darpa} \\
-            Task Performance                  & \cite{waa_evaluating_2021}  \cite{mucha_interfaces_2021}  
-                                                            \cite{abdulrahman_belief-based_2019} 
-                                                            \cite{zolotas_towards_2019} \cite{martin_developing_2019} 
-                                                            \cite{martin_evaluating_2021} \cite{gunning2019darpa} \\
-            \hline
-        \end{tabular}
-    \end{center}
-    \caption{Evaluation}
-    \label{tab:evaluation_of_explanations}
-\end{table}
-
-\cite{tintarev_designing_nodate} haben Messliste gebaut.
-
-Domain-Specific:
-
-\begin{itemize}
-    \item Special measures like ICM for ML-Models which is tied to the input and output of the model \cite{waa_evaluating_2021, neerincx_using_2018}
-    \item Specific trust items e.g. for human-robot interaction used by \cite{zhu_effects_2020} originally developed by \cite{schaefer2013perception}
-    \item 
-    Domain specifc metrics. For example for explainable AI (Predictive systems) TYN (Trust-Your-Neighbours) or Meet in the Mittle (MITM) \cite{martin_evaluating_2021}
-\end{itemize}
+\smallskip
 
 
-Finale Empfehlung: Einen vollständigen Überblick über die Qualität einer Erklärung bekommt man, wenn man Satisfaction, Scrutability und Translarency misst \cite{balog_measuring_2020}. Darauf sollte der Fokus liegen
+Finale Empfehlung: Einen vollständigen Überblick über die Qualität einer Erklärung bekommt man, wenn man Satisfaction, Scrutability und Transparency misst \cite{balog_measuring_2020}. Darauf sollte der Fokus liegen 
