@@ -21,32 +21,9 @@ Neben den in \autoref{sec:model_external_dependencies} vorgestellten Qualitätsa
 
 \bigskip
 
-Bei der qualitativen Messung setzt die Literatur vor allem Likert-Skalen ein. Dabei handelt es sich um eine Ordinalskala mit in der Regel fünf oder sieben einzelnen Bewertungsschritten, auf denen eine Aussage bewertet werden kann. Die genaue Benennung der Bewertungsschritte erfolgt in der Literatur verschieden. Allerdings werden meist solche mit einer inhaltlichen Übereinstimmung zu \glqq Volle Zustimmung\grqq{}, \glqq Teilweise Zustimmung\grqq{}, \glqq Neutral\grqq{},\glqq Teilweise Ablehnung\grqq{} und \glqq Volle Ablehnung\grqq{} verwendet \cite{sato_action-triggering_2019, sato_context_nodate, wang_is_2018, hoffman_metrics_nodate, koo_understanding_2016, koo_why_2015}. Aussagen, welche nicht dem Muster entsprechen, wurden für diese Zusammenfassung in das Format überführt. \autoref{tab:evaluation_qualitative_system_measures}, \autoref{tab:evaluation_qualitative_explanation_measures} und \autoref{tab:evaluation_qualitative_explanation_system_measures} stellen eine Übersicht von verwendeten Aussagen für die Messung der Qualitätsaspekte dar, über welche die Erklärungsqualität messbar ist. Aufgelistet sind nur verallgemeinerbare Aussagen und nicht nur einen spezifischen \textit{Context} betreffende Aussagen.
+Bei der qualitativen Messung setzt die Literatur vor allem Likert-Skalen ein. Dabei handelt es sich um eine Ordinalskala mit in der Regel fünf oder sieben einzelnen Bewertungsschritten, auf denen eine Aussage bewertet werden kann. Die genaue Benennung der Bewertungsschritte erfolgt in der Literatur verschieden. Allerdings werden meist solche mit einer inhaltlichen Übereinstimmung zu \glqq Volle Zustimmung\grqq{}, \glqq Teilweise Zustimmung\grqq{}, \glqq Neutral\grqq{},\glqq Teilweise Ablehnung\grqq{} und \glqq Volle Ablehnung\grqq{} verwendet \cite{sato_action-triggering_2019, sato_context_nodate, wang_is_2018, hoffman_metrics_nodate, koo_understanding_2016, koo_why_2015, hernandez-bocanegra_effects_2020}. Aussagen, welche nicht dem Muster entsprechen, wurden für diese Zusammenfassung in das Format überführt. \autoref{tab:evaluation_qualitative_explanation_measures} und \autoref{tab:evaluation_qualitative_explanation_system_measures} stellen eine Übersicht von verwendeten Aussagen für die Messung der Qualitätsaspekte dar, über welche die Erklärungsqualität messbar ist. Aufgelistet sind nur verallgemeinerbare Aussagen und nicht nur einen spezifischen \textit{Context} betreffende Aussagen.
 
 In spitzen Klammer sind Platzhalter dargestellt, um die aufgelisteten Aussagen besser auf einen \textit{Context} anpassen zu können. \glqq <System>\grqq{} steht entweder für das aktuelle System, Teilsysteme, Tools oder Algorithmen, welche evaluiert werden sollen. \glqq <Erklärung>\grqq{} steht für eine spezifische Erklärung, die evaluiert wird. Die Aufgabe(n), die ein \textit{End User} während einer Evaluation erledigt werden, können im Platzhalter \glqq Aufgabe\grqq{} eingesetzt werden. Darüber werden in eckigen Klammern optionale Teile von Aussagen angegeben, die nur für manche Evaluationskontexte sinnvoll sind.
-
-\autoref{tab:evaluation_qualitative_system_measures} enthält jene Aussagen, welche grundsätzlich Auswirkungen auf bestimmte Qualitätsaspekte im Sytem messen. Diese können sowohl bei \textit{with-in subject} als auch \textit{between subject} Studien in allen Studiengruppen verwendet werden.
-
-\begin{table}[htb!]
-    \begin{center}
-        \begin{tabular}{|p{0.25\textwidth} p{0.65\textwidth}|}
-            \hline
-            \textbf{Qualitätsaspekt} & \textbf{Aussage} \\
-            \hline
-            \hline
-            Satisfaction    & Ich bin mit der Nutzung von <System> zufrieden.
-                                \cite[vgl.][]{balog_measuring_2020} \\
-                            & Ich werde <System> wieder benutzen.
-                                \cite[vgl.][]{balog_measuring_2020} \\
-            \hline
-            Persuasiveness  & Ich bin von den Entscheidungen von <System> überzeugt.
-                                \cite[vgl.][]{tsai_effects_2020} \\
-            \hline
-        \end{tabular}
-    \end{center}
-    \caption{Aussagen zur qualitativen Evaluation ausgewählter Qualitätsaspekte in Bezug auf ein System oder Systemteile.}
-    \label{tab:evaluation_qualitative_system_measures}
-\end{table}
 
 In \autoref{tab:evaluation_qualitative_explanation_measures} werden die Aussagen zur Evaluation zusammengefasst, die nur für Nutzer infrage kommen, die eine Erklärung direkt evaluieren sollen. Alle Aussagen beziehen sich dabei direkt auf die Eigenschaften der Erklärung.
 
@@ -94,12 +71,12 @@ In der Übersicht, die in \autoref{tab:evaluation_qualitative_explanation_system
             \hline
             \textbf{Qualitätsaspekt} & \textbf{Aussage} \\
             \hline
-            \hline
-            Effectivity     & Ich konnte <Aufgabe> [mithilfe von <Erklärung>] erfolgreich[er] erledigen.
-                                \cite[vgl.][]{balog_measuring_2020, hernandez-bocanegra_effects_2020} \\
-            \hline
-            Efficiency      & Ich konnte <Aufgabe> [mithilfe von <Erklärung>] schnell[er] erledigen.
-                                \cite[vgl.][]{balog_measuring_2020, hernandez-bocanegra_effects_2020} \\
+            % \hline
+            % Effectivity     & Ich konnte <Aufgabe> [mithilfe von <Erklärung>] erfolgreich[er] erledigen.
+            %                     \cite[vgl.][]{balog_measuring_2020, hernandez-bocanegra_effects_2020} \\
+            % \hline
+            % Efficiency      & Ich konnte <Aufgabe> [mithilfe von <Erklärung>] schnell[er] erledigen.
+            %                     \cite[vgl.][]{balog_measuring_2020, hernandez-bocanegra_effects_2020} \\
             \hline
             Trust           & Ich kann [mithilfe von <Erklärung>] [besser] sagen, wie vertrauenswürdig das System ist.
                                 \cite[vgl.][]{hoffman_metrics_nodate, balog_measuring_2020, weitz_you_2019, hernandez-bocanegra_effects_2020} \\
@@ -113,9 +90,17 @@ In der Übersicht, die in \autoref{tab:evaluation_qualitative_explanation_system
             Scrutability    &  Ich kann [mithilfe von <Erklärung>] [besser] sagen, wie zuverlässig <System> ist.
                                 \cite[vgl.][]{hoffman_metrics_nodate, balog_measuring_2020} \\
             \hline
+            Satisfaction    & Ich bin mit der Nutzung von <System> zufrieden[er, mithilfe von <Erklärung>].
+                                \cite[vgl.][]{balog_measuring_2020} \\
+                            & Ich werde <System> [wegen <Erklärung>] wieder benutzen.
+                                \cite[vgl.][]{balog_measuring_2020} \\
+            \hline
+            Persuasiveness  & Ich bin von den Entscheidungen von <System> [mithilfe von <Erklärung>] überzeugt.
+                                \cite[vgl.][]{tsai_effects_2020} \\
+            \hline
         \end{tabular}
     \end{center}
-    \caption{Aussagen zur qualitativen Evaluation ausgewählter Qualitätsaspekte in Bezug auf ein System oder Systemteile, Erklärungen in einem System oder dem Vergleich verschiedener Studienbedingungen.}
+    \caption{Aussagen zur qualitativen Evaluation ausgewählter Qualitätsaspekte in Bezug auf ein System oder Systemteile. Optional können sich die Aussagen auf \textit{End Usern} präsentierte Erklärungen beziehen oder verschiedene Studienbedingungen vergleichen.}
     \label{tab:evaluation_qualitative_explanation_system_measures}
 \end{table}
 
@@ -168,8 +153,8 @@ Neben der direkten Evaluation der Eigenschaften von Erklärungen haben deutlich 
         \begin{tabular}{|p{0.25\textwidth}|p{0.5\textwidth}|p{0.15\textwidth}|}
             \hline
             \textbf{Qualitätsaspekt} & \textbf{Metrik} & \textbf{Quellen} \\ \hline
-            Trust & \textit{Number of Usages}  & \cite[vgl. ][]{tintarev2007survey} \\ \hline
-            \textit{Persuasiveness} & \textit{Task Performance} & \cite[vgl.][]{tintarev2007survey} \\
+            Trust & \textit{Number of Usages}  & \cite{tintarev2007survey} \\ \hline
+            \textit{Persuasiveness} & \textit{Task Performance} & \cite{tintarev2007survey} \\
             \hline
             Effectiveness & \textit{Task Performance}            &
                 \cite{waa_evaluating_2021} \cite{mucha_interfaces_2021} \cite{tintarev_designing_nodate} \cite{abdulrahman_belief-based_2019} \cite{zolotas_towards_2019} \cite{martin_developing_2019} \cite{martin_evaluating_2021} \cite{gunning2019darpa} \cite{kunkel_let_2019} \cite{tintarev2007survey} \\
