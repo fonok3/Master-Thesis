@@ -6,18 +6,19 @@ Die \textit{Chracteristics} von Erklärungen umfassen die Eigenschaften von Erkl
 
 Der \textit{Demand}  für Erklärungen kann aus verschiedenen Perspektiven betrachtet werden. Bei welcher Aufgabe und bei welchen Ereigenissen Erklärungen überhaupt benötigt werden, ist in den Anforderungen für Erklärungen festgehalten. Diese entstehen auf Basis der \textit{External Dependencies}. Unter der Kategorie \textit{Demand} in diesem Modell ist zusätzlich festgehalten, mit welcher Initiative (\textit{Initiative}) und wann genau im Bezug auf ein Ereignis im System dem \textit{End User} Erklärungen vom System zur Verfügung gestellt werden sollen. Einen Überblick über die Verwedung verschiedener Ausprägungen der Aspekte ist in \autoref{tab:explanation_demands} dargestellt.
 
-\begin{table}[hbt!]
+\begin{table}[bht!]
     \begin{center}
-        \begin{tabular}{|p{.3\textwidth}|p{.3\textwidth}|p{.3\textwidth}|}
+        \begin{tabular}{p{.25\textwidth} p{.25\textwidth} p{.4\textwidth}}
             \hline
-            \textbf{Aspekt}    & \textbf{Ausprägung}   & \textbf{Quellen} \\ \hline
+            Aspekt    & Ausprägung   & Quellen \\
+            \toprule
             Initiative              &  Manual        & \cite{chazette_end-users_nodate} \cite{tintarev_designing_nodate} \cite{wiegand_id_2020} \\
                                     &  Automatic   & \cite{chazette_end-users_nodate} \cite{eiband_impact_2019} \cite{wiegand_id_2020} \cite{schaffer_i_2019} \cite{yamada_evaluating_2016} \\
-            \hline
+            && \\
             Time                    &  Before               & \cite{rosenfeld_explainability_2019} \cite{wiegand_id_2020} \cite{kunkel_let_2019} \cite{koo_why_2015} \cite{haspiel_explanations_2018} \\
                                     &  While                & \cite{rosenfeld_explainability_2019} \cite{wiegand_id_2020} \cite{kunkel_let_2019} \\
                                     &  After                & \cite{rosenfeld_explainability_2019} \cite{wiegand_id_2020} \cite{kunkel_let_2019} \cite{koo_why_2015} \cite{haspiel_explanations_2018} \cite{wiegand2019drive} \\
-            \hline
+            \toprule
         \end{tabular}
     \end{center}
     \caption{Der Bedarf einer Erklärung zusammen mit in der Literatur untersuchten Einflüssen auf die Qualität von Erklärungen}
@@ -38,11 +39,11 @@ Unter dem Punkt \textit{Content} wird definiert, mit welchen Inhalten die \texti
 
 \begin{table}[bht!]
     \begin{center}
-        \begin{tabular}{|p{.3\textwidth}|p{.3\textwidth}|p{.3\textwidth}|}
+        \begin{tabular}{p{.25\textwidth} p{.25\textwidth} p{.4\textwidth}}
             \hline
-            \textbf{Aspekt}    & \textbf{Ausprägung}   & \textbf{Quellen} \\ \hline
-            Information Type    
-                                & Context Information &     \cite{chazette2020explainability} \cite{zahedi_towards_2019}
+            Aspekt    & Ausprägung   & Quellen \\
+            \toprule
+            Information Type    & Context     & \cite{chazette2020explainability} \cite{zahedi_towards_2019}
                                                 \cite{cassens_ambient_2019} \cite{zahedi_towards_2019}
                                                 \cite{zolotas_towards_2019} \cite{chari_explanation_2020}
                                                 \cite{nunes_systematic_2017} \cite{ribera2019can} \\
@@ -59,19 +60,18 @@ Unter dem Punkt \textit{Content} wird definiert, mit welchen Inhalten die \texti
                                                 \cite{nunes_systematic_2017}\cite{zhu_effects_2020}
                                                 \cite{ribera2019can} \cite{lim_2009_assessing} 
                                                 \cite{kaptein_personalised_2017} \\
-            \hline
+            & & \\
             Information Density & Amount &      \cite{ribera2019can} \cite{kouki_user_2017}
                                                 \cite{hernandez-bocanegra_effects_2020} \cite{martin_developing_2019} \\
                                 & Abstraction Level & \cite{thomson_knowledge--information_2020}
                                                 \cite{hernandez-bocanegra_effects_2020} \\
-            \hline
+            & & \\
             Adaptivity          & Context-Sensitivity & \cite{kaptein_personalised_2017} \cite{cassens_ambient_2019} \\
                                 & Controllability & \cite{abdulrahman_belief-based_2019} \cite{cheng2019explaining} \\
                                 & Personalization & \cite{kaptein_personalised_2017} \cite{cassens_ambient_2019}
                                                     \cite{sokol_one_2020} \cite{tintarev_designing_nodate}
                                                     \cite{sokol_explainability_2020} \\
-                                
-            \hline
+            \toprule
         \end{tabular}
     \end{center}
     \caption{Eigenschaften einer Erklärung bezogen auf den Inhalt einer Erklärung mit in der Literatur gezeigtem Einfluss auf die externe Qualität von Erklärungen}
@@ -102,9 +102,10 @@ Nachdem nun sowohl der \textit{Demand} als auch der an den \textit{End User} üb
 
 \begin{table}
     \begin{center}
-        \begin{tabular}{|p{.3\textwidth}|p{.3\textwidth}|p{.3\textwidth}|}
+        \begin{tabular}{p{.25\textwidth} p{.25\textwidth} p{.4\textwidth}}
             \hline
-            \textbf{Aspekt}     & \textbf{Ausprägung} & \textbf{Quellen} \\ \hline
+            Aspekt     & Ausprägung & Quellen \\
+            \toprule
             Medium              & Textual  &    \cite{sokol_explainability_2020} \cite{balog_measuring_2020}
                                                 \cite{tintarev_designing_nodate} \cite{sato_action-triggering_2019}
                                                 \cite{eiband_impact_2019} \cite{eiband_impact_2019}
@@ -115,19 +116,19 @@ Nachdem nun sowohl der \textit{Demand} als auch der an den \textit{End User} üb
                                                 \cite{nunes_systematic_2017} \cite{schrills_color_2020} \\
                                 & Auditory     &   \cite{wiegand2019drive} \cite{nunes_systematic_2017}
                                                 \cite{wang_is_2018} \\
-            \hline
+            & & \\
             Tone                & Factual   &   \cite{eiband_impact_2019} \cite{abdulrahman_belief-based_2019}
                                                 \cite{kunkel_let_2019} \cite{neerincx_using_2018} \\
                                 & Human     &   \cite{abdulrahman_belief-based_2019} \cite{kunkel_let_2019}
                                                 \cite{weitz_you_2019} \cite{zahedi_towards_2019}
                                                 \cite{neerincx_using_2018} \\
-            \hline
+            & &\\
             Grouping            & Single    &   \cite{nunes_systematic_2017} \cite{balog_measuring_2020}
                                                 \cite{sato_action-triggering_2019} \cite{eiband_impact_2019}
                                                 \cite{abdulrahman_belief-based_2019} \\
                                 & Grouped   &   \cite{nunes_systematic_2017} \cite{balog_measuring_2020}
                                                 \cite{tintarev_designing_nodate}  \\
-            \hline
+            \toprule
         \end{tabular}
     \end{center}
     \caption{Verschiedene Übermittlungsmöglichkeiten für Erklärungen an den \textit{End User}, die in der Literatur einen Effekt auf die Qualität von Erklärungen gezeigt haben.}
