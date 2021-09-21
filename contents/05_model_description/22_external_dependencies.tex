@@ -10,21 +10,22 @@ Der \textit{Context} einer Erklärung beschreibt die äußeren Einflüsse, die u
 Dies beinhaltet die Aktivität, die der Endbenutzer in einer bestimmten Umgebung durchführt. Aus den Eigenschaften der drei Aspekte (Aktivität, Endbenutzer und Umgebung) leiten sich dabei direkte Einflüsse auf den Bedarf, den Inhalt und die Darstellung einer Erklärung ab. \autoref{tab:impact_of_context_on_explanation} stellt wie bereits zuvor die verwendeten Synonyme für die verschiedenen Facetten des \textit{Context} eines Systems dar. Insbesondere der Begriff Stakeholder wurde in der Literatur verschieden eingesetzt. \citeauthor{cirqueira_scenario-based_2020} nutzen den Begriff für den Nutzer einer Software \cite{cirqueira_scenario-based_2020} während \citeauthor{nunes_systematic_2017} diesen als Oberbegriff für Personengruppen, die ein Interesse an einem System haben, verwenden, den Nutzer allerdings ausschließen \cite{nunes_systematic_2017}. Diese Arbeit verwendet den Begriff, um alle Personengruppen mit Interesse am System inklusive aller Nutzer zu beschreiben (\cite[vgl.][]{schneider2012abenteuer,chazette_knowledge_nodate}). Folgend werden nun die drei Aspekte sowie typische Ausprägungen oder Charakteristiken näher erläutert.
 
 \begin{table}[bht!]
-    \begin{tabular}{|p{.2\textwidth}|p{.5\textwidth}|p{.2\textwidth}|}
+    \begin{tabular}{p{.2\textwidth}p{.4\textwidth}p{.31\textwidth}}
         \hline
-        \textbf{Aspekt} & \textbf{Synonyme} & \textbf{Quellen} \\ \hline
+        Aspekt & Synonyme & Quellen \\
+        \toprule
         End User        &  (Targt / End)  User & \cite{chazette2020explainability} \cite{kaptein_personalised_2017} \cite{sokol_one_2020} \cite{wiegand_id_2020} \\
                         & Stakeholder & \cite{chazette_knowledge_nodate} \\
                         & Consumer & \cite{ehsan_human-centered_2020} \\
                         & Explainee & \cite{chazette_knowledge_nodate} \cite{kohl_explainability_2019} \\
                         & Explanation Audience & \cite{sokol_explainability_2020} \\
-        \hline
+        \tablerowspacing
         Task            & Task & \cite{chazette_knowledge_nodate} \cite{sokol_explainability_2020} \cite{gunning2019darpa} \\
                         & Activity & \cite{wohlin2012experimentation} \\
-        \hline
+        \tablerowspacing
         Environment     & Environment & \cite{chazette_knowledge_nodate} \cite{wiegand_id_2020} \cite{wiegand2019drive} \\
                         & Application Area & \cite{sokol_explainability_2020} \cite{wiegand2019drive} \cite{wiegand_id_2020} \\
-        \hline
+        \toprule
     \end{tabular}
     \caption{Relevante Aspekte des Kontextes eines erklärbaren Systems zu Integration von Erklärungen.}
     \label{tab:impact_of_context_on_explanation}
@@ -55,25 +56,34 @@ Als zweiter Aspekt neben dem \textit{Context} werden in der Literatur die \texti
 
 \begin{table}[htb!]
     \begin{center}
-        \begin{tabular}{|p{.24\textwidth}|p{.5\textwidth}|p{.2\textwidth}|}
+        \begin{tabular}{p{.2\textwidth}p{.4\textwidth}p{.31\textwidth}}
             \hline
-            \textbf{Qualitätsziel}    & \textbf{Beschreibung} & \textbf{Quellen} \\ \hline
+            Qualitätsziel    & Beschreibung & Quellen \\
+            \toprule
             Trust                       & Das Vertrauen des Nutzers in das System erhöhen \cite[vgl.][]{balog_measuring_2020}
-                                        & \cite{nunes_systematic_2017} \cite{chazette_knowledge_nodate} \cite{tintarev_designing_nodate} \cite{balog_measuring_2020} \cite{eiband_impact_2019} \cite{tintarev2015explaining} \cite{hernandez-bocanegra_effects_2020} \cite{stange_effects_2021} \cite{weitz_you_2019} \cite{yamada_evaluating_2016} \cite{haspiel_explanations_2018} \cite{martin_developing_2019} \cite{martin_evaluating_2021} \cite{tsai_effects_2020}  \cite{sokol_one_2020}  \cite{wang_is_2018} \cite{koo_understanding_2016} \cite{wiegand2019drive} \cite{gunning2019darpa} \cite{lim_2009_assessing} \cite{tintarev2007survey} \cite{kunkel_let_2019} \\ \hline
-            Satisfaction                & Die Benutzerfreundlichkeit und generelle Zufriedenheit von Nutzern mit dem System erhöhen. \cite[vgl.][]{balog_measuring_2020}
-                                        & \cite{nunes_systematic_2017} \cite{chazette_knowledge_nodate} \cite{tintarev_designing_nodate} \cite{balog_measuring_2020} \cite{tsai_evaluating_2019} \cite{tintarev2015explaining} \cite{riveiro_thats_2021} \cite{martin_developing_2019} \cite{martin_evaluating_2021} \cite{tsai_effects_2020} \cite{ehsan_human-centered_2020} \cite{sovrano_modelling_2020} \cite{koo_understanding_2016} \cite{ribera2019can} \cite{gunning2019darpa} \cite{lim_2009_assessing}  \cite{tintarev2007survey} \cite{sato_context_nodate} \\ \hline
+                                        & \cite{nunes_systematic_2017} \cite{chazette_knowledge_nodate} \cite{tintarev_designing_nodate} \cite{balog_measuring_2020} \cite{eiband_impact_2019} \cite{tintarev2015explaining} \cite{hernandez-bocanegra_effects_2020} \cite{stange_effects_2021} \cite{weitz_you_2019} \cite{yamada_evaluating_2016} \cite{haspiel_explanations_2018} \cite{martin_developing_2019} \cite{martin_evaluating_2021} \cite{tsai_effects_2020}  \cite{sokol_one_2020}  \cite{wang_is_2018} \cite{koo_understanding_2016} \cite{wiegand2019drive} \cite{gunning2019darpa} \cite{lim_2009_assessing} \cite{tintarev2007survey} \cite{kunkel_let_2019} \\
+            \tablerowspacing
+            Satisfaction                & Die Benutzerfreundlichkeit und generelle Zufriedenheit von Nutzern mit dem
+                                            System erhöhen. \cite[vgl.][]{balog_measuring_2020}
+                                        & \cite{nunes_systematic_2017} \cite{chazette_knowledge_nodate} \cite{tintarev_designing_nodate} \cite{balog_measuring_2020} \cite{tsai_evaluating_2019} \cite{tintarev2015explaining} \cite{riveiro_thats_2021} \cite{martin_developing_2019} \cite{martin_evaluating_2021} \cite{tsai_effects_2020} \cite{ehsan_human-centered_2020} \cite{sovrano_modelling_2020} \cite{koo_understanding_2016} \cite{ribera2019can} \cite{gunning2019darpa} \cite{lim_2009_assessing}  \cite{tintarev2007survey} \cite{sato_context_nodate} \\
+            \tablerowspacing
             Transparency                & Erklären, wie das System funktioniert. \cite[vgl.][]{balog_measuring_2020}
                                         & \cite{nunes_systematic_2017} \cite{chazette_knowledge_nodate} \cite{tintarev_designing_nodate} \cite{chazette_end-users_nodate} \cite{balog_measuring_2020} \cite{chazette2020explainability} \cite{tintarev2015explaining} \cite{hernandez-bocanegra_effects_2020} \cite{tsai_effects_2020} \cite{rjoob_towards_2021}  \cite{sokol_one_2020} \cite{wang_is_2018} \cite{koo_understanding_2016} \cite{tintarev2007survey}
                                         \cite{martin_evaluating_2021} \cite{ehsan_human-centered_2020}
-                                        \cite{cheng2019explaining} \\ \hline
+                                        \cite{cheng2019explaining} \\
+            \tablerowspacing
             Scrutability                & Nutzern die Möglichkeit geben, dem System einen Fehler mitzuteilen \cite[vgl.][]{balog_measuring_2020}
-                                        & \cite{nunes_systematic_2017} \cite{chazette_knowledge_nodate} \cite{tintarev_designing_nodate} \cite{balog_measuring_2020} \cite{tintarev2015explaining} \cite{martin_developing_2019} \cite{gunning2019darpa}  \cite{tintarev2007survey} \cite{martin_evaluating_2021} \\ \hline
-            Efficiency                  & Nutzern helfen ihre Aufagaben schneller zu erledigen \cite[vgl.][]{balog_measuring_2020} 
-                                        & \cite{nunes_systematic_2017} \cite{chazette_knowledge_nodate} \cite{tintarev_designing_nodate} \cite{balog_measuring_2020} \cite{tsai_evaluating_2019} \cite{tintarev2015explaining} \cite{hernandez-bocanegra_effects_2020} \cite{tintarev2007survey}\\ \hline
+                                        & \cite{nunes_systematic_2017} \cite{chazette_knowledge_nodate} \cite{tintarev_designing_nodate} \cite{balog_measuring_2020} \cite{tintarev2015explaining} \cite{martin_developing_2019} \cite{gunning2019darpa}  \cite{tintarev2007survey} \cite{martin_evaluating_2021} \\
+            \tablerowspacing
             Effectiveness               & Die Qualität der Aufgaben von Nutzern erhöhen \cite[vgl.][]{balog_measuring_2020}
-                                        & \cite{nunes_systematic_2017} \cite{chazette_knowledge_nodate} \cite{tintarev_designing_nodate} \cite{balog_measuring_2020} \cite{tintarev2015explaining} \cite{zolotas_towards_2019} \cite{hernandez-bocanegra_effects_2020} \cite{martin_evaluating_2021} \cite{rjoob_towards_2021} \cite{tintarev2007survey} \\ \hline
-            Persuasiveness              & Die akzeptanz der Entscheidungen des Systems durch die Nutzer erhöhen \cite[vgl.][]{chazette_knowledge_nodate}
-                                        & \cite{nunes_systematic_2017} \cite{tintarev_designing_nodate} \cite{balog_measuring_2020} \cite{sato_context_nodate} \cite{sato_context_nodate} \cite{abdulrahman_belief-based_2019} \cite{tintarev2015explaining} \cite{sato_action-triggering_2019} \cite{tintarev2007survey} \\ \hline
+                                        & \cite{nunes_systematic_2017} \cite{chazette_knowledge_nodate} \cite{tintarev_designing_nodate} \cite{balog_measuring_2020} \cite{tintarev2015explaining} \cite{zolotas_towards_2019} \cite{hernandez-bocanegra_effects_2020} \cite{martin_evaluating_2021} \cite{rjoob_towards_2021} \cite{tintarev2007survey} \\
+            \tablerowspacing
+            Efficiency                  & Nutzern helfen ihre Aufagaben schneller zu erledigen \cite[vgl.][]{balog_measuring_2020} 
+                                        & \cite{nunes_systematic_2017} \cite{chazette_knowledge_nodate} \cite{tintarev_designing_nodate} \cite{balog_measuring_2020} \cite{tsai_evaluating_2019} \cite{tintarev2015explaining} \cite{hernandez-bocanegra_effects_2020} \cite{tintarev2007survey}\\
+            \tablerowspacing
+            Persuasiveness              & Die akzeptanz der Entscheidungen des Systems durch die Nutzer erhöhen \cite[vgl.][]{balog_measuring_2020}
+                                        & \cite{nunes_systematic_2017} \cite{tintarev_designing_nodate} \cite{balog_measuring_2020} \cite{sato_context_nodate} \cite{abdulrahman_belief-based_2019} \cite{tintarev2015explaining} \cite{sato_action-triggering_2019} \cite{tintarev2007survey} \\
+            \toprule
         \end{tabular}
     \end{center}
     \caption{Qualitätsziele für Erklärungen – sortiert nach der Anzahl der Veröffentlichungen in der Literaturrecherche, die den zugehörigen Qualitätsaspekt untersucht haben.}
@@ -86,24 +96,25 @@ Wie in \autoref{tab:quality_aspects_of_explanation} zu sehen ist, werden die Qua
 
 \begin{table}[htb!]
     \begin{center}
-        \begin{tabular}{|p{.2\textwidth}|p{.5\textwidth}|p{.2\textwidth}|}
+        \begin{tabular}{p{.3\textwidth}p{.41\textwidth}p{.2\textwidth}}
             \hline
-            \textbf{Aspekt}     & \textbf{Synonym} & \textbf{Quellen} \\ \hline
+            Aspekt    & Synonym & Quellen \\
+            \toprule
             Business Goals      & Stakeholder Goals & \cite{nunes_systematic_2017} \\
                                 & (Intended) Purpose & \cite{waa_evaluating_2021} \\
                                 & Higher-level Goals & \cite{nunes_systematic_2017} \\
                                 & Application Level & \cite{sokol_explainability_2020} \\
-            \hline
-            Users'              & User Perceived Quality Factors & \cite{nunes_systematic_2017} \\
-            Perception          & (Consumer) Needs & \cite{ehsan_human-centered_2020} \cite{chazette_end-users_nodate} \\
+            \tablerowspacing
+            Users' Perception             & User Perceived Quality Factors & \cite{nunes_systematic_2017} \\
+                      & (Consumer) Needs & \cite{ehsan_human-centered_2020} \cite{chazette_end-users_nodate} \\
                                 & User Goals & \cite{ehsan_human-centered_2020} \\
                                 & Intermediate Requirements & \cite{waa_evaluating_2021} \\
                                 & Human Level & \cite{sokol_explainability_2020} \\
-            \hline
+            \tablerowspacing
             Explanation         & (Explanation) Purpose & \cite{nunes_systematic_2017} \\
             Purpose             & Explanatory Goal & \cite{tintarev_designing_nodate} \cite{balog_measuring_2020} \\
                                 & Function Level & \cite{sokol_explainability_2020} \\
-            \hline
+            \toprule
         \end{tabular}
     \end{center}
     \caption{Abstraktionsebenen der Zielsetzung bei der Integration von Erklärungen in ein System.}
