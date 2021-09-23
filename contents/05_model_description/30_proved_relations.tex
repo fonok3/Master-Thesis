@@ -22,7 +22,6 @@ Im Folgenden sind die Einflüsse aufgeführt, die sich darauf beziehen, ob und w
 \begin{itemize}
     \item Erklärungen erhöhen im Allgemeinen die \textit{Perceived Transparency}, \textit{wenn End User geringes Vertrauen in Technologie haben} \cite{tsai_effects_2020}. 
     \item Erklärungen erhöhen im Allgemeinen die \textit{Perceived Transparency}, \textit{wenn End User Datenschutzbedenken haben} \cite{tsai_effects_2020}.
-    \item Das proaktive präsentieren von Erklärungen (\textit{System-Initiative}) wirkt sich positiv auf die \textit{Usability} eines Systems aus, \textit{wenn der Inhalt der Erklärung gering ist} \cite{???}.
     \item Das Anzeigen von Erklärungen in \textit{End Usern} unbekannten Situationen hat einen positiven Einfluss auf \textit{Trust} \cite{haspiel_explanations_2018}.
     \item Das Präsentieren einer Erklärung vor einer unbekannten Situation (\textit{before}) hat einen positiveren Einfluss auf \textit{Trust}, als Präsentation danach \cite{haspiel_explanations_2018}.
     \item Das proaktive präsentieren von Erklärungen (\textit{System-Initiative}) in unbekannten Situationen hat einen positiven Einfluss auf \textit{Trust} \cite{zhu_effects_2020}.
@@ -52,32 +51,26 @@ Wie der \textit{Content} und die \textit{Presentation} durch Rahmenbedingungen w
 
 \subsubsection*{Positiv}
 
-Eine Erklärung, die darstellt, warum eine Alternative nicht genommen wurde, wird besser verstanden als eine, welche die aktuelle Entscheidung erklärt. \cite{schrills_color_2020}
+\begin{itemize}
+    \item Erklärungen, welche mehrere Medien kombinieren, haben einen größeren positiven Einfluss auf die \textit{Persuasiveness} eines Systems, als das geben der einzelnen Erklärungen  \cite{sato_action-triggering_2019, kunkel_let_2019, sato_action-triggering_2019, schrills_color_2020, lim_2009_assessing}.
+    \item Das Präsentieren von Erklärungen, welche die zugrunde liegenden Daten für ein Systemverhalten darlegen (\textit{Context}), haben einen positiven Einfluss auf die \textit{Persuasiveness} eines Systems \cite{sato_action-triggering_2019, abdulrahman_belief-based_2019}. Gezeigt ist dies nur für \textit{Recommender Systems}.
+    \item Das Präsentieren von Erklärungen, welche die zugrunde liegenden Daten für ein Systemverhalten darlegen (\textit{Context}), haben einen positiven Einfluss auf die \textit{Usefulness} einer Erklärung \cite{sato_action-triggering_2019, abdulrahman_belief-based_2019}. Gezeigt ist dies nur für \textit{Recommender Systems}.
+    \item Kausale Erklärungen, die den Grund angeben, warum eine Alternative nicht genommen hat einen positiveren Einfluss auf die \textit{Perceived Transparency} als, solche, die den Grund angeben, warum eine Entscheidung getroffen wurde \cite{martin_evaluating_2021, schrills_color_2020, neerincx_using_2018}.
+    \item Das Präsentieren von Erklärungen durch Agenten (\textit{Human}) hat einen positiven Einfluss auf den \textit{Trust} in Systemen \cite{weitz_you_2019}. Gezeigt ist dies nur für \textit{XAI-Systems}.
+    \item Das Präsentieren von Erklärungen, welche die zugrunde liegenden Daten für ein Systemverhalten darlegen (\textit{Context}), hat einen positiveren Einfluss auf die \textit{Satisfaction} mit einem System, als das Präsentieren solcher, die die Gründe für eine Entscheidung erläutern, \textit{wenn die End User wenig Domänenwissen auf dem Einsatzgebiet des Systems haben} \cite{kaptein_personalised_2017, martin_evaluating_2021}
+    \item Einfache Erklärungen (\textit{Amount / Abstraction Level}) haben einen positiven Einfluss auf die \textit{System Acceptance} \cite{hleg2019policy, sovrano_modelling_2020}.
+    \item Einfache Erklärungen (\textit{Amount / Abstraction Level}) haben einen positiven Einfluss auf die \textit{Satisfaction} mit dem System \cite{hleg2019policy, sovrano_modelling_2020}.
+    \item Interaktive Erlärungen haben einen positiven Einfluss auf die \textit{Perceived Transparency} eines Systems \cite{cheng2019explaining}.
+\end{itemize}
 
-Eine Erklärung die den Kontext des Systemverhaltens wiederspiegelt wirkt sich positiv auf die Persuasiveness und die Usefullness einer Erklärung aus. Bewiesen ist dies nur für Recommender Systeme \cite{sato_action-triggering_2019, abdulrahman_belief-based_2019}
+% Das Geben von Kontextinformationen beeinflusst Usefullness und Persuasivness am positivsten im Vergleich zu keinen oder Inhaltsbasierten erklärungen \cite{sato_action-triggering_2019}
 
-Hybride Stile (Typ + Inhalt) haben den größten positiven Einfluss auf die Usability und Persuasiveness eines Recommender Systems im Gegensatz zu einzeln ausgewählten Stilen. \cite{sato_action-triggering_2019, kunkel_let_2019, sato_action-triggering_2019, schrills_color_2020, lim_2009_assessing}
-
-Das Präsentieren von Erklärungen durch Agenten hat einen positiven Einfluss auf Trust in intelligenten System \cite{weitz_you_2019}.
-
-Das Geben von Kontextinformationen beeinflusst Usefullness und Persuasivness am positivsten im Vergleich zu keinen oder Inhaltsbasierten erklärungen \cite{sato_action-triggering_2019}
-
-Non-experts prefer belief-based explanations and experts perefer goal-based \cite{kaptein_personalised_2017}, hypotthesis (The letter is proved by \cite{martin_evaluating_2021})
-
-Counterfactual (Why not) ist better bei Alternativen \cite{martin_evaluating_2021, schrills_color_2020}  \cite{neerincx_using_2018} \cite{schrills_color_2020} (Small significant effect), \cite{lim_2009_assessing} sagt, dass das nicht trivial ist.
-
-Personalisierte Erklärungen erhöhen die Transparenz \cite{sokol_one_2020, wiegand2019drive}
-
-Wenn der User mit dem Output des Systems übereinstimmt, dann erhöht dies den Trust in das System. \cite{schrills_color_2020}
-
-Einfache Erklärungen führen zu einer höheren Akzeptanz der Erklärungen und zu höherer Nutzerzufrienenheit \cite{hleg2019policy, sovrano_modelling_2020}
-
-Interactive Erklären erhöhen das Verständnis \cite{cheng2019explaining}
-
-Context und Causality sind die am meisten angefragten Informationen \cite{chazette_end-users_nodate} -> Satisfaction
+% Context und Causality sind die am meisten angefragten Informationen \cite{chazette_end-users_nodate} -> Satisfaction
 
 
 \subsubsection*{Negativ}
+
+Wenn der User mit dem Output des Systems nicht übereinstimmt, dann reduzert dies den Trust in das System. \cite{schrills_color_2020}
 
 (2) Rational explanations are only effective on users that report being very unfamiliar with a task – regardless of their actual competency level. \cite{schaffer_i_2019}
 
