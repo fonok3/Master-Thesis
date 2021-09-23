@@ -1,21 +1,30 @@
 \section{Abhängigkeiten}
 \label{sec:model_proved_relations}
 
-Kompromisse!!
+Zusätzlich zum Modell über die in der Literatur bereits betrachteten Aspekte von Erklärungen sind im Folgenden die Ergebnisse der Auswirkungen dieser Aspekte auf die externe Qualität von Erklärungen zusammengefasst. Enthalten sind dabei jene Resultate, die entweder bereits bewiesen sind oder die Autoren eine starke Vermutung für eine These haben, die allerdings noch einer Überprüfung bedarf. Diese sind dementsprechend gekennzeichnet. Auch sind nicht alle Ergebnisse vorangegangener Arbeiten Anwendungs-unabhängig gezeigt worden. Somit können einige Ergebnisse nur mit Vorsicht auf andere Kontexte übertragen werden. Daher sind einige Empfehlungen mit Einschränkungen verbunden. Außerdem werden ziehen die Ergebnisse in der Regel Vergleiche zu einem alternativen Erklärungstypen oder keiner Erklärung. Daher werden die hier aufgezeigten Einflüsse immer in der Regel als Vergleich zu einer Alternative dargestellt.
 
-\cite{international2011iso} definiert ein Konzept, um Zusammenhänge zwischen Charakteristiken eines Systems und Qualitätsaspekten zu definieren. Anwendung findet dies unter Anderem bei \cite{carvalho2020developers}. Das Konzept beschreibt, dass einzelne Eigenschaften von Softwaresystemen einen positiven (\textcolor{green}{helps}), negativen (\textcolor{red}{hurts}) oder neutralen Effekt auf Qualitätsaspekte haben kann. Diese können entweder generell gelten oder unter bestimmten Bedingungen (Kontexten) zutreffen.
+Generell ist einerseits das Ziel dieser Zusammenfassung von Abhängigkeiten, den Anwendern dieses Leitfadens eine Unterstützung bei der Ableitung von konkreten Anforderungen an Erklärungen aus den \textit{Explanation Purposes} zu geben. Darüber hinaus soll dieser Überblick über zuvor geleistete Ergebnisse aber auch bei der Umsetzung der Anforderungen im System dienen. Folglich dient dieser Teil des Leitfadens der Beantwortung der Forschungsfragen \textbf{RQ4.1} und \textbf{RQ4.2}, welche explizit die Zusammenhänge zwischen verschiedenen Aspekten des Modells abdecken und gibt damit zusätzliche Informationen zu den Einflüssen, die einzelne Eigenschaften von Erklärungen unter bestimmten Rahmenbedingungen auf externe Qualitätsaspekte haben. Je nach \textit{Context} können dabei auch Konflikte zwischen den externen Qualitätsaspekten entstehen, auf die Erklärbarkeit Auswirkungen hat. Die Erkennung dieser soll durch den Katalog der Zusammenhänge auch unterstützt werden.
+
+Wie auch schon das Modell der Aspekte von Erklärungen hat auch dieser Katalog mit Abhängigkeiten keinen Anspruch auf Vollständigkeit, sondern soll einen guten Überblick über bestehende Ergebnisse schaffen, die sich auf viele Anwendungsfälle übertragen lassen.
+
+Die Formulierung der Abhängigkeiten orientiert sich an einer in \citetitle*{international2011iso} definierten Formulierungsvorlage \cite{international2011iso}. Genutzt wird diese beispielsweise auch von \citeauthor{carvalho2020developers} bei der generellen Untersuchung verschiedener NFRs \cite{carvalho2020developers}. Das Konzept beschreibt, dass einzelne Eigenschaften von Softwaresystemen einen positiven (\textcolor{green}{helps}), negativen (\textcolor{red}{hurts}) oder neutralen Effekt auf Qualitätsaspekte haben können. Bedarf ein Zusammenhang einer Bedingung, so wird diese nachgestellt.
+
+Gegliedert ist der Katalog der Abhängigkeiten in zwei Abschnitte. Ersterer behandelt die Auswirkungen, die die Rahmenbedingungen auf den \textit{Demand} für Erklärungen haben. Im zweiten Teil werden die Einflüsse der Rahmenbedingungen eines Systems auf die Granularität von Erklärungen, also den \textit{Content} und die \textit{Presentation} vorgestellt. Außerdem sind die verschiedenen Einflüsse in positive, negative und neutrale Einflüsse gegliedert.
+
+\newpage
 
 \subsection*{Demand}
 
+Im Folgenden sind die Einflüsse aufgeführt, die sich darauf beziehen, ob und wann Erklärungen benötigt werden.
+
 \subsubsection*{Positiv}
 
-Eine Erklärung die den Kontext des Systemverhaltens wiederspiegelt wirkt sich positiv auf die Persuasiveness und die Usefullness einer Erklärung aus. Bewiesen ist dies nur für Recommender Systeme \cite{sato_action-triggering_2019, abdulrahman_belief-based_2019}
-
-Eine Erklärung, die darstellt, warum eine Alternative nicht genommen wurde, wird besser verstanden als eine, welche die aktuelle Entscheidung erklärt. \cite{schrills_color_2020}
-
-(2) Rational explanations are only effective on users that report being very unfamiliar with a task – regardless of their actual competency level. \cite{schaffer_i_2019}
-
-Das proaktive Präsentieren von Erklärungen, wenn diese einen geringen Inhalt haben wirkt sich positiv auf die Usability aus.
+\begin{itemize}
+    \item Erklärungen erhöhen im Allgemeinen die \textit{Perceived Transparency}, \textit{wenn End User geringes Vertrauen in Technologie haben} \cite{tsai_effects_2020}. 
+    \item Erklärungen erhöhen im Allgemeinen die \textit{Perceived Transparency}, \textit{wenn End User Datenschutzbedenken haben} \cite{tsai_effects_2020}.
+    \item Das proaktive präsentieren von Erklärungen (\textit{System-Initiative}) wirkt sich positiv auf die \textit{Usability} eines Systems aus, \textit{wenn der Inhalt der Erklärung gering ist} \cite{???}.
+    \item Das Anzeigen einer Erklärung vor einer Situation (\textit{before}) hat einen positiveren Einfluss auf \textit{Trust}, als das Anzeigen danach \cite{haspiel_explanations_2018}.
+\end{itemize}
 
 Das Anzeigen von Erklärungen vor einem Event hat einen positiveren Einfluss auf Trust als das Anzeigen danach. \cite{haspiel_explanations_2018}
 
@@ -37,9 +46,17 @@ Wenn der Nutzer generell ein hohes Vertrauen in ein System hat, dann benötigt d
 
 Die User Satisfaction kann leiden, wenn die Nutzer das System bereits gut kennen, wenn eine Erklärung angezeigt wird.
 
+\newpage
+
 \subsection*{Granularität}
 
+Wie der \textit{Content} und die \textit{Presentation} durch Rahmenbedingungen wie dem \textit{Context} und die \textit{Objectives} für Erklärungen beeinflusst werden, ist im Folgenden dargestellt.
+
 \subsubsection*{Positiv}
+
+Eine Erklärung, die darstellt, warum eine Alternative nicht genommen wurde, wird besser verstanden als eine, welche die aktuelle Entscheidung erklärt. \cite{schrills_color_2020}
+
+Eine Erklärung die den Kontext des Systemverhaltens wiederspiegelt wirkt sich positiv auf die Persuasiveness und die Usefullness einer Erklärung aus. Bewiesen ist dies nur für Recommender Systeme \cite{sato_action-triggering_2019, abdulrahman_belief-based_2019}
 
 Hybride Stile (Typ + Inhalt) haben den größten positiven Einfluss auf die Usability und Persuasiveness eines Recommender Systems im Gegensatz zu einzeln ausgewählten Stilen. \cite{sato_action-triggering_2019, kunkel_let_2019, sato_action-triggering_2019, schrills_color_2020, lim_2009_assessing}
 
@@ -51,8 +68,6 @@ Non-experts prefer belief-based explanations and experts perefer goal-based \cit
 
 Counterfactual (Why not) ist better bei Alternativen \cite{martin_evaluating_2021, schrills_color_2020}  \cite{neerincx_using_2018} \cite{schrills_color_2020} (Small significant effect), \cite{lim_2009_assessing} sagt, dass das nicht trivial ist.
 
-Bessere Transparenz durch erklärungen, wenn der Nutzer generell ein geringes Vertrauen in Technologie oder höhere Privacy concerns im Allgemeinen hat. \cite{tsai_effects_2020}
-
 Personalisierte Erklärungen erhöhen die Transparenz \cite{sokol_one_2020, wiegand2019drive}
 
 Wenn der User mit dem Output des Systems übereinstimmt, dann erhöht dies den Trust in das System. \cite{schrills_color_2020}
@@ -61,11 +76,12 @@ Einfache Erklärungen führen zu einer höheren Akzeptanz der Erklärungen und z
 
 Interactive Erklären erhöhen das Verständnis \cite{cheng2019explaining}
 
-Context und Causality sind die am meisten angefragten Informationen \cite{chazette_end-users_nodate}
+Context und Causality sind die am meisten angefragten Informationen \cite{chazette_end-users_nodate} -> Satisfaction
 
-Die Anzahl der Paper bestätigt das Ergebnis von \cite{chazette_end-users_nodate}, dass die Reihenfolge der Häufigkeiten mit der die Inhalte untersucht wurden so ist. (How ist unnötig.)
 
 \subsubsection*{Negativ}
+
+(2) Rational explanations are only effective on users that report being very unfamiliar with a task – regardless of their actual competency level. \cite{schaffer_i_2019}
 
 Wenn User nicht mit der Ausgabe des Systems übereinstimmen, dann 
 
@@ -82,6 +98,8 @@ Wenn der Nutzer durch eine Erklärung zu sehr davon Überzeugt ist, das System v
 why information is good for transparency \cite{chazette2020explainability}
 
 \subsubsection*{Neutral}
+
+Die Anzahl der Paper bestätigt das Ergebnis von \cite{chazette_end-users_nodate}, dass die Reihenfolge der Häufigkeiten mit der die Inhalte untersucht wurden so ist. (How ist unnötig.)
 
 Die Richtigkeit einer Erklärung hat keinen Einfluss auf das Vertrauen des Endnutzers in das System, wenn das Verhalten des Systems mit dem Mentalen Modells des Nutzers übereinstimmt. \cite{eiband_impact_2019, riveiro_thats_2021}
 
