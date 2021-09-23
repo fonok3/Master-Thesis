@@ -7,7 +7,7 @@ Generell ist einerseits das Ziel dieser Zusammenfassung von Abhängigkeiten, den
 
 Wie auch schon das Modell der Aspekte von Erklärungen hat auch dieser Katalog mit Abhängigkeiten keinen Anspruch auf Vollständigkeit, sondern soll einen guten Überblick über bestehende Ergebnisse schaffen, die sich auf viele Anwendungsfälle übertragen lassen.
 
-Die Formulierung der Abhängigkeiten orientiert sich an einer in \citetitle*{international2011iso} definierten Formulierungsvorlage \cite{international2011iso}. Genutzt wird diese beispielsweise auch von \citeauthor{carvalho2020developers} bei der generellen Untersuchung verschiedener NFRs \cite{carvalho2020developers}. Das Konzept beschreibt, dass einzelne Eigenschaften von Softwaresystemen einen positiven (\textcolor{green}{helps}), negativen (\textcolor{red}{hurts}) oder neutralen Effekt auf Qualitätsaspekte haben können. Bedarf ein Zusammenhang einer Bedingung, so wird diese nachgestellt.
+Die Formulierung der Abhängigkeiten orientiert sich an einer in \citetitle*{international2011iso} definierten Formulierungsvorlage \cite{international2011iso}. Genutzt wird diese beispielsweise auch von \citeauthor{carvalho2020developers} bei der generellen Untersuchung verschiedener NFRs \cite{carvalho2020developers}. Das Konzept beschreibt, dass einzelne Eigenschaften von Softwaresystemen einen positiven, negativen oder neutralen Effekt auf Qualitätsaspekte haben können. Bedarf ein Zusammenhang einer Bedingung, so wird diese nachgestellt.
 
 Gegliedert ist der Katalog der Abhängigkeiten in zwei Abschnitte. Ersterer behandelt die Auswirkungen, die die Rahmenbedingungen auf den \textit{Demand} für Erklärungen haben. Im zweiten Teil werden die Einflüsse der Rahmenbedingungen eines Systems auf die Granularität von Erklärungen, also den \textit{Content} und die \textit{Presentation} vorgestellt. Außerdem sind die verschiedenen Einflüsse in positive, negative und neutrale Einflüsse gegliedert.
 
@@ -28,26 +28,27 @@ Im Folgenden sind die Einflüsse aufgeführt, die sich darauf beziehen, ob und w
     \item Das proaktive präsentieren von Erklärungen (\textit{System-Initiative}) in unbekannten Situationen hat einen positiven Einfluss auf \textit{Trust} \cite{zhu_effects_2020}.
     \item Das Präsentieren von Erklärungen für sicherheitsrelevante Systemfunktionen hat einen positiven Einfluss auf \textit{Trust}  \cite{wiegand2019drive}.
     \item Das Präsentieren von Erklärungen für sicherheitsrelevante Systemfunktionen hat einen positiven Einfluss auf \textit{Satisfaction}  \cite{wiegand2019drive}.
-    \item Die Möglichkeit des Zugriff auf eine Erklärung im Allgemeinen \textit{User-initiative} hat einen positiven Einfluss auf \textit{Satisfaction} \cite{chazette_end-users_nodate}.
+    \item Die Möglichkeit der Anforderung von Erklärungen im Allgemeinen \textit{User-initiative} hat einen positiven Einfluss auf \textit{Satisfaction} \cite{chazette_end-users_nodate}.
 \end{itemize}
 
 \subsubsection*{Negativ}
 
-(3) There is a danger in showing explanations to self-confident users in that situation awareness might be negatively impacted – this can be mitigated by requiring interaction with an agent. \cite{schaffer_i_2019}
+\begin{itemize}
+    \item Das Präsentieren von Erklärungen kann einen negativen Einfluss auf die \textit{Effectivity} von \textit{End Usern} haben, \textit{wenn diese sehr selbstbewusst sind} \cite{schaffer_i_2019}.
+    \item Das Präsentieren von Erklärungen kann einen negativen Einfluss auf die \textit{Satisfaction} haben, \textit{wenn End User hohen Trust in das System haben} \cite{rosenfeld_explainability_2019, doshi2017towards}.
+\end{itemize}
 
-\subsubsection*{Beides}
+\subsubsection*{Weitere Zusammenhänge}
 
-Der Zusammenhang zwischen dem Grad der Systembeeinflussung durch den Nutzer und dem Erklärungsbedarf ist antiproportional. Umso mehr mehr Kontrolle der Nutzer über ein System erhält, umso weniger Erklärungsbedarf hat dieser \cite{rosenfeld_explainability_2019}.
-
-Wenn der Nutzer generell ein hohes Vertrauen in ein System hat, dann benötigt dieser keine Erklärungen, um dieses herzustellen. \cite{rosenfeld_explainability_2019, doshi2017towards}
-
-Die User Satisfaction kann leiden, wenn die Nutzer das System bereits gut kennen, wenn eine Erklärung angezeigt wird.
+\begin{itemize}
+    \item Der Zusammenhang zwischen dem Grad der Systembeeinflussung durch \textit{End User} und dem Erklärungsbedarf ist antiproportional. Umso mehr Beeinflussungsmöglichkeiten \textit{End User} in einem System haben, umso weniger Erklärungsbedarf haben diese \cite{rosenfeld_explainability_2019}.
+\end{itemize}
 
 \newpage
 
 \subsection*{Granularität}
 
-Wie der \textit{Content} und die \textit{Presentation} durch Rahmenbedingungen wie dem \textit{Context} und die \textit{Objectives} für Erklärungen beeinflusst werden, ist im Folgenden dargestellt.
+Wie der \textit{Content} und die \textit{Presentation} durch Rahmenbedingungen wie dem \textit{Context} und den \textit{Objectives} für Erklärungen beeinflusst werden, ist im Folgenden dargestellt.
 
 \subsubsection*{Positiv}
 
