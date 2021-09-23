@@ -17,7 +17,7 @@ Gegliedert ist der Katalog der Abhängigkeiten in zwei Abschnitte. Ersterer beha
 
 Im Folgenden sind die Einflüsse aufgeführt, die sich darauf beziehen, ob und wann Erklärungen benötigt werden.
 
-\subsubsection*{Positive Zusammenh}
+\subsubsection*{Positive Zusammenhänge}
 
 \begin{itemize}
     \item Erklärungen erhöhen im Allgemeinen die \textit{Perceived Transparency}, \textit{wenn End User geringes Vertrauen in Technologie haben} \cite{tsai_effects_2020}. 
@@ -60,45 +60,36 @@ Wie der \textit{Content} und die \textit{Presentation} durch Rahmenbedingungen w
     \item Das Präsentieren von Erklärungen, welche die zugrunde liegenden Daten für ein Systemverhalten darlegen (\textit{Context}), hat einen positiveren Einfluss auf die \textit{Satisfaction} mit einem System, als das Präsentieren solcher, die die Gründe für eine Entscheidung erläutern, \textit{wenn die End User wenig Domänenwissen auf dem Einsatzgebiet des Systems haben} \cite{kaptein_personalised_2017, martin_evaluating_2021}
     \item Einfache Erklärungen (\textit{Amount / Abstraction Level}) haben einen positiven Einfluss auf die \textit{System Acceptance} \cite{hleg2019policy, sovrano_modelling_2020}.
     \item Einfache Erklärungen (\textit{Amount / Abstraction Level}) haben einen positiven Einfluss auf die \textit{Satisfaction} mit dem System \cite{hleg2019policy, sovrano_modelling_2020}.
-    \item Interaktive Erlärungen haben einen positiven Einfluss auf die \textit{Perceived Transparency} eines Systems \cite{cheng2019explaining}.
+    \item Interaktive Erklärungen haben einen positiven Einfluss auf die \textit{Perceived Transparency} eines Systems \cite{cheng2019explaining}.
+    \item Kausale Erklärungen haben einen positiven Einfluss auf die \textit{Perceived Transparency} eines Systems \cite{chazette2020explainability}.
 \end{itemize}
 
 % Das Geben von Kontextinformationen beeinflusst Usefullness und Persuasivness am positivsten im Vergleich zu keinen oder Inhaltsbasierten erklärungen \cite{sato_action-triggering_2019}
 
 % Context und Causality sind die am meisten angefragten Informationen \cite{chazette_end-users_nodate} -> Satisfaction
 
-
 \subsubsection*{Negativ}
 
-Wenn der User mit dem Output des Systems nicht übereinstimmt, dann reduzert dies den Trust in das System. \cite{schrills_color_2020}
-
-(2) Rational explanations are only effective on users that report being very unfamiliar with a task – regardless of their actual competency level. \cite{schaffer_i_2019}
-
-Wenn User nicht mit der Ausgabe des Systems übereinstimmen, dann 
-
-lack of completeness \cite{chazette_end-users_nodate} -> Kann durch interactivity umgangen werden
-
-Wenn ein Assistent, der für Erklärungen genutzt wird zu lächerlich gestaltet ist, kann dies zu einem vertrauensverlust führen. \cite{wang_is_2018}
-
-Behaviour information might have a negativ effect on satisfaction due to redundance with the system behaviour it self und kann sogar zu schlechterer Nutzer Performance führen. \cite{koo_why_2015}
-
-Recommender Systems Repetetive Erklärungen \glqq langweilig\grqq{}
-
-Wenn der Nutzer durch eine Erklärung zu sehr davon Überzeugt ist, das System verstanden haben, kann dies einen negativen Impact auf die Effectivity haben, da er Fehler des Systems nicht erkennt. (Cognitive bias) \cite{kohl_explainability_2019}
-
-why information is good for transparency \cite{chazette2020explainability}
+\begin{itemize}
+    \item Das Präsentieren von Erklärungen hat einen negativen Einfluss auf den \textit{Trust} in ein System, \textit{wenn der Content dieser nicht dazu führt, dass das Mental Model der End User danach mit dem System Model übereinstimmt (Completeness)} \cite{schrills_color_2020, chazette_end-users_nodate}.
+    \item Das wiederholte Präsentieren von Erklärungen kann einen negativen Einfluss auf die \textit{Satisfaction} mit dem System haben \cite{???}.
+    \item Das Präsentieren von Erklärungen hat einen negativen Einfluss auf den \textit{Trust} in ein System, \textit{wenn diese zu unseriös sind} \cite{wang_is_2018}.
+    \item Das Präsentieren von Erklärungen, welche das aktuelle Systemverhalten beschreiben, kann einen negativen Effekt auf die \textit{Satisfaction} mit dem System haben \cite{koo_why_2015}.
+    \item Das Präsentieren von Erklärungen, welche das aktuelle Systemverhalten beschreiben, kann einen negativen Effekt auf die \textit{Effectivity}  haben \cite{koo_why_2015}.
+    \item Das Präsentieren von Erklärungen kann einen so großen positiven Effekt auf \textit{Trust} haben, dass es einen negativen Effekt auf die \textit{Scrutability} und somit auch einen negativen Effekt auf die \textit{Effectivity} der \textit{End User} hat \cite{kohl_explainability_2019}.
+\end{itemize}
 
 \subsubsection*{Neutral}
 
-Die Anzahl der Paper bestätigt das Ergebnis von \cite{chazette_end-users_nodate}, dass die Reihenfolge der Häufigkeiten mit der die Inhalte untersucht wurden so ist. (How ist unnötig.)
+\begin{itemize}
+    \item Kausale Erklärungen haben keinen Einfluss auf die \textit{Effectivity} von \textit{End Usern}, \textit{wenn diese subjektiv unbekannt mit der Aufgabe sind - unabhängig von der objektiven Kompetenz} \cite{schaffer_i_2019}.
+    \item Das Präsentieren von Erklärungen, die die Funktionsweise von Algorithmen im Allgemeinen erklären (\textit{Inner Logic}), haben einen geringen Einfluss auf weitere Qualitätsaspekte \cite{chazette_end-users_nodate}.
+    \item Die wirkliche \textit{Transparency} hat keinen Einfluss auf den \textit{Trust} der \textit{End User} in das System, \textit{wenn das Mental Model der End User mit dem System Model übereinstimmt} \cite{eiband_impact_2019, riveiro_thats_2021}.
+    \item \item Die wirkliche \textit{Transparency} von Erklärungen hat keinen Einfluss auf den \textit{Trust} der \textit{End User} in das System, \textit{wenn die End User mit der Erklärung zufrieden sind} \cite{eiband_impact_2019, riveiro_thats_2021}.
+    \item Die \textit{Explanation Goals}, mit dem Erklärungen durch Menschen formuliert werden, haben keinen Einfluss auf die vorgestellten externen Qualitätsaspekte \cite{balog_measuring_2020}.
+\end{itemize}
 
-Die Richtigkeit einer Erklärung hat keinen Einfluss auf das Vertrauen des Endnutzers in das System, wenn das Verhalten des Systems mit dem Mentalen Modells des Nutzers übereinstimmt. \cite{eiband_impact_2019, riveiro_thats_2021}
-
-Es gibt keinen Zusammen zwischen dem Ziel mit dem die Erklärung verfasst wurde und dem Effekt, der sich auf die verschiedenen Ziele messen lässt, bei einer Formulierung durch den Menschen. \cite{balog_measuring_2020}.
-
-Bei der Inhaltlichen Abfrage steht \cite{zahedi_towards_2019} gegen chazeete (Genaues paper suchen). Folglich scheint der Inhaltstyp keinen großen Einfluss auf die Erklärung zu haben. Wenn allerdings die 
-
-Transparency might not increase the Trust solely. The explanation has to fit it's goal \cite{wiegand2019drive}
+% Transparency might not increase the Trust solely. The explanation has to fit it's goal \cite{wiegand2019drive}
 
 User haben höhere Anfroderungen and why erklärungen, weswegen diese öfter als nicht hilfreich gekennzwichnet werden als How-Fragen. \cite{lim_2009_assessing}
 
