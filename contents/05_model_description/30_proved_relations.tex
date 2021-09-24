@@ -1,17 +1,15 @@
 \section{Abhängigkeiten}
 \label{sec:model_proved_relations}
 
-Zusätzlich zum Modell über die in der Literatur bereits betrachteten Aspekte von Erklärungen sind im Folgenden die Ergebnisse der Auswirkungen dieser Aspekte auf die externe Qualität von Erklärungen zusammengefasst. Enthalten sind dabei jene Resultate, die entweder bereits bewiesen sind oder die Autoren eine starke Vermutung für eine These haben, die allerdings noch einer Überprüfung bedarf. Diese sind dementsprechend gekennzeichnet. Auch sind nicht alle Ergebnisse vorangegangener Arbeiten Anwendungs-unabhängig gezeigt worden. Somit können einige Ergebnisse nur mit Vorsicht auf andere Kontexte übertragen werden. Daher sind einige Empfehlungen mit Einschränkungen verbunden. Außerdem werden ziehen die Ergebnisse in der Regel Vergleiche zu einem alternativen Erklärungstypen oder keiner Erklärung. Daher werden die hier aufgezeigten Einflüsse immer in der Regel als Vergleich zu einer Alternative dargestellt.
+Zusätzlich zum Modell über die in der Literatur bereits betrachteten Aspekte von Erklärungen sind im Folgenden die Ergebnisse der Auswirkungen dieser Aspekte auf die externe Qualität von Erklärungen zusammengefasst. Enthalten sind dabei jene Resultate, die entweder bereits bewiesen sind oder die Autoren eine starke Vermutung für eine These haben, die allerdings noch einer Überprüfung bedarf. Diese sind mit (*) gekennzeichnet. Auch sind nicht alle Ergebnisse vorangegangener Arbeiten \textit{Context}-unabhängig gezeigt worden. Somit können einige Ergebnisse nur mit Vorsicht auf andere Kontexte übertragen werden. Daher sind einige Empfehlungen mit Einschränkungen verbunden. Außerdem ziehen einige Ergebnisse Vergleiche zu einem alternativen Erklärungstypen oder keiner Erklärung. Daher werden die hier aufgezeigten Einflüsse zum Teil als Vergleich zu einer Alternative dargestellt.
 
-Generell ist einerseits das Ziel dieser Zusammenfassung von Abhängigkeiten, den Anwendern dieses Leitfadens eine Unterstützung bei der Ableitung von konkreten Anforderungen an Erklärungen aus den \textit{Explanation Purposes} zu geben. Darüber hinaus soll dieser Überblick über zuvor geleistete Ergebnisse aber auch bei der Umsetzung der Anforderungen im System unterstützen. Folglich dient dieser Teil des Leitfadens der Beantwortung der Forschungsfragen \textbf{RQ4.1} und \textbf{RQ4.2}, welche explizit die Zusammenhänge zwischen verschiedenen Aspekten des Modells abdecken und gibt damit zusätzliche Informationen zu den Einflüssen, die einzelne Eigenschaften von Erklärungen unter bestimmten Rahmenbedingungen auf externe Qualitätsaspekte haben. Je nach \textit{Context} können dabei auch Konflikte zwischen den externen Qualitätsaspekten entstehen, auf die Erklärbarkeit Auswirkungen hat. Die Erkennung dieser soll durch den Katalog der Zusammenhänge auch unterstützt werden.
+Generell ist einerseits das Ziel dieser Zusammenfassung von Abhängigkeiten, den Anwendern dieses Leitfadens eine Unterstützung bei der Ableitung von konkreten Anforderungen an Erklärungen aus den \textit{Explanation Purposes} zu geben. Darüber hinaus soll dieser Überblick über zuvor geleistete Ergebnisse aber auch bei der Umsetzung der Anforderungen im System unterstützen. Folglich dient dieser Teil des Leitfadens der Beantwortung der Forschungsfragen \textbf{RQ4.1} und \textbf{RQ4.2}, welche explizit die Zusammenhänge zwischen verschiedenen Aspekten des Modells abdecken und gibt damit zusätzliche Informationen zu den Einflüssen, die einzelne Eigenschaften von Erklärungen unter bestimmten Rahmenbedingungen auf externe Qualitätsaspekte haben. Je nach \textit{Context} können dabei auch Konflikte zwischen den externen Qualitätsaspekten, auf die Erklärbarkeit Auswirkungen hat, entstehen. Die Erkennung dieser soll durch den Katalog der Zusammenhänge auch unterstützt werden.
 
-Wie auch schon das Modell der Aspekte von Erklärungen hat auch dieser Katalog mit Abhängigkeiten keinen Anspruch auf Vollständigkeit, sondern soll einen guten Überblick über bestehende Ergebnisse schaffen, die sich auf viele Anwendungsfälle übertragen lassen.
+Wie auch schon das Modell der Aspekte von Erklärungen hat auch dieser Katalog mit den Abhängigkeiten keinen Anspruch auf Vollständigkeit, sondern soll einen guten Überblick über bestehende Ergebnisse schaffen, die sich auf viele Anwendungsfälle übertragen lassen.
 
-Die Formulierung der Abhängigkeiten orientiert sich an einer in \citetitle*{international2011iso} definierten Formulierungsvorlage \cite{international2011iso}. Genutzt wird diese beispielsweise auch von \citeauthor{carvalho2020developers} bei der generellen Untersuchung verschiedener NFRs \cite{carvalho2020developers}. Das Konzept beschreibt, dass einzelne Eigenschaften von Softwaresystemen einen positiven, negativen oder neutralen Effekt auf Qualitätsaspekte haben können. Bedarf ein Zusammenhang einer Bedingung, so wird diese nachgestellt.
+Die Formulierung der Abhängigkeiten orientiert sich an der Formulierungsweise von \citeauthor{carvalho2020developers} bei der generellen Untersuchung verschiedener NFRs \cite{carvalho2020developers}. Das Konzept beschreibt, dass einzelne Eigenschaften von Softwaresystemen einen positiven, negativen oder neutralen Effekt auf Qualitätsaspekte haben können. Bedarf ein Zusammenhang einer Bedingung, so wird diese nachgestellt.
 
 Gegliedert ist der Katalog der Abhängigkeiten in zwei Abschnitte. Ersterer behandelt die Auswirkungen, die die Rahmenbedingungen auf den \textit{Demand} für Erklärungen haben. Im zweiten Teil werden die Einflüsse der Rahmenbedingungen eines Systems auf die Granularität von Erklärungen, also den \textit{Content} und die \textit{Presentation} vorgestellt. Außerdem sind die verschiedenen Einflüsse in positive, negative und neutrale Einflüsse gegliedert.
-
-\newpage
 
 \subsection*{Demand}
 
@@ -20,21 +18,21 @@ Im Folgenden sind die Einflüsse aufgeführt, die sich darauf beziehen, ob und w
 \subsubsection*{Positive Zusammenhänge}
 
 \begin{itemize}
-    \item Erklärungen erhöhen im Allgemeinen die \textit{Perceived Transparency}, \textit{wenn End User geringes Vertrauen in Technologie haben} \cite{tsai_effects_2020}. 
-    \item Erklärungen erhöhen im Allgemeinen die \textit{Perceived Transparency}, \textit{wenn End User Datenschutzbedenken haben} \cite{tsai_effects_2020}.
-    \item Das Anzeigen von Erklärungen in \textit{End Usern} unbekannten Situationen hat einen positiven Einfluss auf \textit{Trust} \cite{haspiel_explanations_2018}.
+    \item Das Präsentieren von Erklärungen hat einen positiven Einfluss auf die \textit{Perceived Transparency}, \textit{wenn End User geringes Vertrauen in Technologie haben} \cite{tsai_effects_2020}. 
+    \item Das Präsentieren von Erklärungen hat einen positiven Einfluss auf die \textit{Perceived Transparency}, \textit{wenn End User Datenschutzbedenken haben} \cite{tsai_effects_2020}.
+    \item Das Anzeigen von Erklärungen hat einen positiven Einfluss auf \textit{Trust}, \textit{wenn End User sich in unbekannten Situationen befinden} \cite{haspiel_explanations_2018}.
     \item Das Präsentieren einer Erklärung vor einer unbekannten Situation (\textit{before}) hat einen positiveren Einfluss auf \textit{Trust}, als Präsentation danach \cite{haspiel_explanations_2018}.
-    \item Das proaktive präsentieren von Erklärungen (\textit{System-Initiative}) in unbekannten Situationen hat einen positiven Einfluss auf \textit{Trust} \cite{zhu_effects_2020}.
+    \item Das proaktive Präsentieren von Erklärungen (\textit{System-Initiative}) in unbekannten Situationen hat einen positiven Einfluss auf \textit{Trust} \cite{zhu_effects_2020}.
     \item Das Präsentieren von Erklärungen für sicherheitsrelevante Systemfunktionen hat einen positiven Einfluss auf \textit{Trust}  \cite{wiegand2019drive}.
     \item Das Präsentieren von Erklärungen für sicherheitsrelevante Systemfunktionen hat einen positiven Einfluss auf \textit{Satisfaction}  \cite{wiegand2019drive}.
-    \item Die Möglichkeit der Anforderung von Erklärungen im Allgemeinen \textit{User-initiative} hat einen positiven Einfluss auf \textit{Satisfaction} \cite{chazette_end-users_nodate}.
+    \item Die Möglichkeit Erklärungen anzufordern \textit{User-initiative} hat einen positiven Einfluss auf \textit{Satisfaction} \cite{chazette_end-users_nodate}.
 \end{itemize}
 
 \subsubsection*{Negative Zusammenhänge}
 
 \begin{itemize}
-    \item Das Präsentieren von Erklärungen kann einen negativen Einfluss auf die \textit{Effectivity} von \textit{End Usern} haben, \textit{wenn diese sehr selbstbewusst sind} \cite{schaffer_i_2019}.
-    \item Das Präsentieren von Erklärungen kann einen negativen Einfluss auf die \textit{Satisfaction} haben, \textit{wenn End User hohen Trust in das System haben} \cite{rosenfeld_explainability_2019, doshi2017towards}.
+    \item Das Präsentieren von Erklärungen kann einen negativen Einfluss auf die \textit{Effectivity} von \textit{End Usern} haben, \textit{wenn diese sehr selbstbewusst sind}* \cite{schaffer_i_2019}.
+    \item Das Präsentieren von Erklärungen kann einen negativen Einfluss auf die \textit{Satisfaction} haben, \textit{wenn End User hohen Trust in das System haben}* \cite{rosenfeld_explainability_2019, doshi2017towards}.
 \end{itemize}
 
 \subsubsection*{Weitere Zusammenhänge}
@@ -43,62 +41,56 @@ Im Folgenden sind die Einflüsse aufgeführt, die sich darauf beziehen, ob und w
     \item Der Zusammenhang zwischen dem Grad der Systembeeinflussung durch \textit{End User} und dem Erklärungsbedarf ist antiproportional. Umso mehr Beeinflussungsmöglichkeiten \textit{End User} in einem System haben, umso weniger Erklärungsbedarf haben diese \cite{rosenfeld_explainability_2019}.
 \end{itemize}
 
-\newpage
-
 \subsection*{Granularität}
 
 Wie der \textit{Content} und die \textit{Presentation} durch Rahmenbedingungen wie dem \textit{Context} und den \textit{Objectives} für Erklärungen beeinflusst werden, ist im Folgenden dargestellt.
 
-\subsubsection*{Positiv}
+\subsubsection*{Positive Zusammenhänge}
 
 \begin{itemize}
-    \item Erklärungen, welche mehrere Medien kombinieren, haben einen größeren positiven Einfluss auf die \textit{Persuasiveness} eines Systems, als das geben der einzelnen Erklärungen  \cite{sato_action-triggering_2019, kunkel_let_2019, sato_action-triggering_2019, schrills_color_2020, lim_2009_assessing}.
-    \item Das Präsentieren von Erklärungen, welche die zugrunde liegenden Daten für ein Systemverhalten darlegen (\textit{Context}), haben einen positiven Einfluss auf die \textit{Persuasiveness} eines Systems \cite{sato_action-triggering_2019, abdulrahman_belief-based_2019}. Gezeigt ist dies nur für \textit{Recommender Systems}.
-    \item Das Präsentieren von Erklärungen, welche die zugrunde liegenden Daten für ein Systemverhalten darlegen (\textit{Context}), haben einen positiven Einfluss auf die \textit{Usefulness} einer Erklärung \cite{sato_action-triggering_2019, abdulrahman_belief-based_2019}. Gezeigt ist dies nur für \textit{Recommender Systems}.
-    \item Kausale Erklärungen, die den Grund angeben, warum eine Alternative nicht genommen hat einen positiveren Einfluss auf die \textit{Perceived Transparency} als, solche, die den Grund angeben, warum eine Entscheidung getroffen wurde \cite{martin_evaluating_2021, schrills_color_2020, neerincx_using_2018}.
-    \item Das Präsentieren von Erklärungen durch Agenten (\textit{Human}) hat einen positiven Einfluss auf den \textit{Trust} in Systemen \cite{weitz_you_2019}. Gezeigt ist dies nur für \textit{XAI-Systems}.
+    \item Erklärungen, welche mehrere Medien kombinieren, haben einen größeren positiven Einfluss auf die \textit{Persuasiveness} eines Systems, als das Geben der einzelnen Erklärungen  \cite{sato_action-triggering_2019, kunkel_let_2019, sato_action-triggering_2019, schrills_color_2020, lim_2009_assessing}.
+    \item Das Präsentieren von Erklärungen, welche die zugrunde liegenden Daten für ein Systemverhalten darlegen (\textit{Context}), haben einen positiven Einfluss auf die \textit{Persuasiveness} eines Systems* \cite{sato_action-triggering_2019, abdulrahman_belief-based_2019}. Gezeigt ist dies nur für \textit{Recommender Systems}.
+    \item Das Präsentieren von Erklärungen, welche die zugrunde liegenden Daten für ein Systemverhalten darlegen (\textit{Context}), haben einen positiven Einfluss auf die \textit{Usefulness} einer Erklärung* \cite{sato_action-triggering_2019, abdulrahman_belief-based_2019}. Gezeigt ist dies nur für \textit{Recommender Systems}.
+    \item Das Präsentieren von kausalen Erklärungen, die den Grund angeben, warum eine Alternative nicht genommen wird, hat einen positiveren Einfluss auf die \textit{Perceived Transparency} als das Präsentieren solcher, die den Grund angeben, warum eine Entscheidung getroffen wurde \cite{martin_evaluating_2021, schrills_color_2020, neerincx_using_2018}.
+    \item Das Präsentieren von Erklärungen durch Agenten (\textit{Human}) hat einen positiven Einfluss auf den \textit{Trust} in Systemen* \cite{weitz_you_2019}. Gezeigt ist dies nur für \textit{XAI-Systems}.
     \item Das Präsentieren von Erklärungen, welche die zugrunde liegenden Daten für ein Systemverhalten darlegen (\textit{Context}), hat einen positiveren Einfluss auf die \textit{Satisfaction} mit einem System, als das Präsentieren solcher, die die Gründe für eine Entscheidung erläutern, \textit{wenn die End User wenig Domänenwissen auf dem Einsatzgebiet des Systems haben} \cite{kaptein_personalised_2017, martin_evaluating_2021}
     \item Einfache Erklärungen (\textit{Amount / Abstraction Level}) haben einen positiven Einfluss auf die \textit{System Acceptance} \cite{hleg2019policy, sovrano_modelling_2020}.
     \item Einfache Erklärungen (\textit{Amount / Abstraction Level}) haben einen positiven Einfluss auf die \textit{Satisfaction} mit dem System \cite{hleg2019policy, sovrano_modelling_2020}.
     \item Interaktive Erklärungen haben einen positiven Einfluss auf die \textit{Perceived Transparency} eines Systems \cite{cheng2019explaining}.
-    \item Kausale Erklärungen haben einen positiven Einfluss auf die \textit{Perceived Transparency} eines Systems \cite{chazette2020explainability}.
 \end{itemize}
 
 % Das Geben von Kontextinformationen beeinflusst Usefullness und Persuasivness am positivsten im Vergleich zu keinen oder Inhaltsbasierten erklärungen \cite{sato_action-triggering_2019}
 
 % Context und Causality sind die am meisten angefragten Informationen \cite{chazette_end-users_nodate} -> Satisfaction
 
-\subsubsection*{Negativ}
+\subsubsection*{Negative Zusammenhänge}
 
 \begin{itemize}
     \item Das Präsentieren von Erklärungen hat einen negativen Einfluss auf den \textit{Trust} in ein System, \textit{wenn der Content dieser nicht dazu führt, dass das Mental Model der End User danach mit dem System Model übereinstimmt (Completeness)} \cite{schrills_color_2020, chazette_end-users_nodate}.
-    \item Das wiederholte Präsentieren von Erklärungen kann einen negativen Einfluss auf die \textit{Satisfaction} mit dem System haben \cite{???}.
-    \item Das Präsentieren von Erklärungen hat einen negativen Einfluss auf den \textit{Trust} in ein System, \textit{wenn diese zu unseriös sind} \cite{wang_is_2018}.
-    \item Das Präsentieren von Erklärungen, welche das aktuelle Systemverhalten beschreiben, kann einen negativen Effekt auf die \textit{Satisfaction} mit dem System haben \cite{koo_why_2015}.
-    \item Das Präsentieren von Erklärungen, welche das aktuelle Systemverhalten beschreiben, kann einen negativen Effekt auf die \textit{Effectivity}  haben \cite{koo_why_2015}.
-    \item Das Präsentieren von Erklärungen kann einen so großen positiven Effekt auf \textit{Trust} haben, dass es einen negativen Effekt auf die \textit{Scrutability} und somit auch einen negativen Effekt auf die \textit{Effectivity} der \textit{End User} hat \cite{kohl_explainability_2019}.
+    \item Das wiederholte Präsentieren von Erklärungen kann einen negativen Einfluss auf die \textit{Satisfaction} mit dem System haben* \cite{???}.
+    \item Das Präsentieren von Erklärungen hat einen negativen Einfluss auf den \textit{Trust} in ein System, \textit{wenn die Erklärungen zu unseriös sind} \cite{wang_is_2018}.
+    \item Das Präsentieren von Erklärungen, welche das aktuelle Systemverhalten beschreiben, kann einen negativen Effekt auf die \textit{Satisfaction} mit dem System haben* \cite{koo_why_2015}.
+    \item Das Präsentieren von Erklärungen, welche das aktuelle Systemverhalten beschreiben, kann einen negativen Effekt auf die \textit{Effectivity} haben* \cite{koo_why_2015}.
+    \item Das Präsentieren von Erklärungen kann einen so großen positiven Effekt auf \textit{Trust} haben, dass es einen negativen Effekt auf die \textit{Scrutability} und somit auch einen negativen Effekt auf die \textit{Effectivity} der \textit{End User} hat* \cite{kohl_explainability_2019, gunning2019darpa}.
 \end{itemize}
 
-\subsubsection*{Neutral}
+\subsubsection*{Neutrale Zusammenhänge}
 
 \begin{itemize}
-    \item Kausale Erklärungen haben keinen Einfluss auf die \textit{Effectivity} von \textit{End Usern}, \textit{wenn diese subjektiv unbekannt mit der Aufgabe sind - unabhängig von der objektiven Kompetenz} \cite{schaffer_i_2019}.
+    \item Das Präsentieren von kausalen Erklärungen hat keinen Einfluss auf die \textit{Effectivity} von \textit{End Usern}, \textit{wenn diese subjektiv unbekannt mit der Aufgabe sind - unabhängig von der objektiven Kompetenz} \cite{schaffer_i_2019}.
     \item Das Präsentieren von Erklärungen, die die Funktionsweise von Algorithmen im Allgemeinen erklären (\textit{Inner Logic}), haben einen geringen Einfluss auf weitere Qualitätsaspekte \cite{chazette_end-users_nodate}.
     \item Die wirkliche \textit{Transparency} hat keinen Einfluss auf den \textit{Trust} der \textit{End User} in das System, \textit{wenn das Mental Model der End User mit dem System Model übereinstimmt} \cite{eiband_impact_2019, riveiro_thats_2021}.
     \item \item Die wirkliche \textit{Transparency} von Erklärungen hat keinen Einfluss auf den \textit{Trust} der \textit{End User} in das System, \textit{wenn die End User mit der Erklärung zufrieden sind} \cite{eiband_impact_2019, riveiro_thats_2021}.
-    \item Die \textit{Explanation Goals}, mit dem Erklärungen durch Menschen formuliert werden, haben keinen Einfluss auf die vorgestellten externen Qualitätsaspekte \cite{balog_measuring_2020}.
+    \item Die \textit{Explanation Goals}, mit denen Erklärungen durch Menschen formuliert werden, haben keinen Einfluss auf die vorgestellten externen Qualitätsaspekte \cite{balog_measuring_2020}.
 \end{itemize}
 
 % Transparency might not increase the Trust solely. The explanation has to fit it's goal \cite{wiegand2019drive}
 
-User haben höhere Anfroderungen and why erklärungen, weswegen diese öfter als nicht hilfreich gekennzwichnet werden als How-Fragen. \cite{lim_2009_assessing}
+% User haben höhere Anfroderungen and why erklärungen, weswegen diese öfter als nicht hilfreich gekennzwichnet werden als How-Fragen. \cite{lim_2009_assessing}
 
-There ist no prove up to now that interactions increase trust \cite{cheng2019explaining}
--------------------------------------------------------------------
+% There ist no prove up to now that interactions increase trust \cite{cheng2019explaining}
 
-Scrutability and Trust are related: Zu viel Trust -> Der User erkennt nicht mehr, wenn das System falsch ist. \cite{gunning2019darpa}
-
-Für die verschiedenen Systemkontexte gibt es weitere Zusammenhänge, die eine Rolle spielen. Als Beispiele wäre hier zum Beispiel zu nennen, dass User Erklärungen im AI-Kontext... Im Recommender System Kontext wäre das...
+Für spezifische \textit{Contexts} gibt es weitere Zusammenhänge, die eine Rolle spielen. Als Beispiele wäre hier zum Beispiel zu nennen, dass User Erklärungen im AI-Kontext... Im Recommender System Kontext wäre das...
 
 Da das Ziel dieser Arbeit allerdings ein allgemeiner Überblick über Erklärbarkeit mit seinen Zusammenhängen und Eigenschaften von Erklärungen geben soll, werden diese an dieser Stelle ausgeklammert.
 
