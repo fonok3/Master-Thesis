@@ -3,41 +3,17 @@
 
 Dieser Abschnitt des Leitfadens zur Integration von Erklärungen in ein System enthält konkrete Empfehlungen für die Wahl der Eigenschaften von Erklärungen. Design meint dabei nicht unbedingt ein visuelles Design, sondern die generelle Umsetzung.
 
+\subsection{10 Heuristiken für Erklärungsdesign}
+
 \begin{enumerate}
-    \item \textbf{Accessibility} Nutzer sollten immer die Möglichkeit haben auf eine Erklärung zuzugreifen, wenn sie einer bedürfen \cite{wiegand2019drive, chazette_end-users_nodate, wiegand_id_2020, weitz_you_2019}.
+    \item \textbf{Accessibility} Ein erklärbares System sollte \textit{End Usern} zu jeder Zeit die Möglichkeit geben, auf Erklärungen zugreifen zu können. \cite{wiegand2019drive, chazette_end-users_nodate, wiegand_id_2020, weitz_you_2019}. Dies umfasst auch, dass optional noch tiefere Informationen angeboten werden sollten für \textit{End User} mit einem größeren Bedürfnis für Informationen. \cite{martin_evaluating_2021}
     \item \textbf{Context Sensitivity} Erklärungen sollten notwendigerweise den Kontext betrachten \cite{sato_context_nodate, rjoob_towards_2021,chazette_end-users_nodate}. %Beim Design einer Erklärung muss genau darauf geachtet werden, welche Kontextinformationen den Nutzer wirklich interessieren. (Beispielsweise im Kontext von AI welche Features) \cite{rjoob_towards_2021}
-    
-    \item Es sollten wowohl die wahrgenommene als auch die tatsächtlichen Verbesserungen betrachtet werden. \cite{riveiro_thats_2021}
-    \item Indication of system confidence \cite{wiegand_id_2020, golledge1999wayfinding}
-    \item Umso einfacher und kürzer eine Erklärung ist, umso früher kann sie präsentiert werden. \cite{hleg2019policy, sovrano_modelling_2020}
-    \item Lernprozess beachten \cite{wang_integration_2020}
-    \item \cite{wiegand_id_2020, wiegand2019drive} zeitkritische Aufgabe / Entscheidungen dürfen keine langen Erklärungen enthalten.
-    \item (3) There is a danger in showing explanations to self-confident users in that situation awareness might be negatively impacted – this can be mitigated by requiring interaction with an agent. \cite{schaffer_i_2019}
-    \item Show some explanations improves transparency (Not everything has to be explained in order to gain trust) \cite{abdulrahman_belief-based_2019}
+    \item \textbf{Key Information Delivery} \cite{martin_evaluating_2021} Key but complete \cite{riveiro_thats_2021}
+    \item \textbf{Visibility of the System Confidence} Indication of system confidence \cite{wiegand_id_2020, golledge1999wayfinding}
+    \item \textbf{Minimum viable Explanation} \cite{wiegand_id_2020, wiegand2019drive} zeitkritische Aufgabe / Entscheidungen dürfen keine langen Erklärungen enthalten. (3) There is a danger in showing explanations to self-confident users in that situation awareness might be negatively impacted – this can be mitigated by requiring interaction with an agent. \cite{schaffer_i_2019}
+    \item \textbf{User Perception} Es sollten wowohl die wahrgenommene als auch die tatsächtlichen Verbesserungen betrachtet werden. \cite{riveiro_thats_2021}
+    \item \textbf{User Performance} \cite{riveiro_thats_2021}
+    \item \textbf{Earliest viable Time} Umso einfacher und kürzer eine Erklärung ist, umso früher kann sie präsentiert werden. \cite{hleg2019policy, sovrano_modelling_2020}
+    \item \textbf{Education} Lernprozess beachten \cite{wang_integration_2020}
+    \item \textbf{Explanation Combination} \cite{sato_action-triggering_2019, kunkel_let_2019, sato_action-triggering_2019, schrills_color_2020, lim_2009_assessing}
 \end{enumerate}
-
-
-
-Display context informaiton \cite{wiegand_id_2020}
-
-– Low-level explanations methods allow the user to visualise key information that provide insight to system decision-making and support interpretation. \cite{martin_evaluating_2021}
-
-– High-level explanation methods augment one or more low-level explanations with contextual information to enable more comprehensive explanation. \cite{martin_evaluating_2021}
-
-
-
-
-
-\cite{rosenfeld_explainability_2019}:
-
-\begin{enumerate}
-    \item To justify its decisions so the human participant can decide to accept them (provide control)
-    \item To explain the agent’s choices to guarantee safety concerns are met
-    \item To build trust in the agent’s choices, especially if a mistake is suspected or the human operator does not have experience with the system
-    \item To explain the agent’s choices to ensure fair, ethical, and/or legal decisions are made
-    \item Knowledge/scientific discovery
-    \item To explain the agent’s choices to better evaluate or debug the system in previously unconsidered situations
-\end{enumerate}
-
-completeness of explanations was more important than soundness in forming mental models \cite{riveiro_thats_2021}
-
