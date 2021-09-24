@@ -20,7 +20,7 @@ Im Folgenden sind die Einflüsse aufgeführt, die sich darauf beziehen, ob und w
 \begin{itemize}
     \item Das Präsentieren von Erklärungen hat einen positiven Einfluss auf die \textit{Perceived Transparency}, \textit{wenn End User geringes Vertrauen in Technologie haben} \cite{tsai_effects_2020}. 
     \item Das Präsentieren von Erklärungen hat einen positiven Einfluss auf die \textit{Perceived Transparency}, \textit{wenn End User Datenschutzbedenken haben} \cite{tsai_effects_2020}.
-    \item Das Anzeigen von Erklärungen hat einen positiven Einfluss auf \textit{Trust}, \textit{wenn End User sich in unbekannten Situationen befinden} \cite{haspiel_explanations_2018}.
+    \item Das Präsentieren von Erklärungen hat einen positiven Einfluss auf \textit{Trust}, \textit{wenn End User sich in unbekannten Situationen befinden} \cite{haspiel_explanations_2018}.
     \item Das Präsentieren einer Erklärung vor einer unbekannten Situation (\textit{before}) hat einen positiveren Einfluss auf \textit{Trust}, als Präsentation danach \cite{haspiel_explanations_2018}.
     \item Das proaktive Präsentieren von Erklärungen (\textit{System-Initiative}) in unbekannten Situationen hat einen positiven Einfluss auf \textit{Trust} \cite{zhu_effects_2020}.
     \item Das Präsentieren von Erklärungen für sicherheitsrelevante Systemfunktionen hat einen positiven Einfluss auf \textit{Trust}  \cite{wiegand2019drive}.
@@ -40,6 +40,20 @@ Im Folgenden sind die Einflüsse aufgeführt, die sich darauf beziehen, ob und w
 \begin{itemize}
     \item Der Zusammenhang zwischen dem Grad der Systembeeinflussung durch \textit{End User} und dem Erklärungsbedarf ist antiproportional. Umso mehr Beeinflussungsmöglichkeiten \textit{End User} in einem System haben, umso weniger Erklärungsbedarf haben diese \cite{rosenfeld_explainability_2019}.
 \end{itemize}
+
+\smallskip
+
+\noindent\fbox{
+    \parbox{0.964\textwidth}{
+        \smallskip
+        \textbf{RQ4.1} Welchen Einfluss hat der Bedarf von Erklärungen auf die externe Qualität eines erklärbaren Systems unter bestimmten Rahmenbedingungen?
+        \smallskip
+    }
+}
+
+\smallskip
+
+Der erste Teil des hier gezeigten Kataloges von Zusammenhängen der Apsekte des Modells für Erklärungen beantwortet die Forschungsfrage \textbf{RQ4.1}. Er stellt dar, unter welchen Bedinungen das Präsentieren von Erklärungen, welche Einflüsse auf ausgewählte externe Softwarequalitätsaspekte hat. Die Frage wird dabei insofern beantwortet, dass die Antwort aus der Literaturrecherche entstandenen verallgemeinerbaren Einflüsse zusammenfasst. 
 
 \subsection*{Granularität}
 
@@ -67,11 +81,11 @@ Wie der \textit{Content} und die \textit{Presentation} durch Rahmenbedingungen w
 
 \begin{itemize}
     \item Das Präsentieren von Erklärungen hat einen negativen Einfluss auf den \textit{Trust} in ein System, \textit{wenn der Content dieser nicht dazu führt, dass das Mental Model der End User danach mit dem System Model übereinstimmt (Completeness)} \cite{schrills_color_2020, chazette_end-users_nodate}.
-    \item Das wiederholte Präsentieren von Erklärungen kann einen negativen Einfluss auf die \textit{Satisfaction} mit dem System haben* \cite{???}.
     \item Das Präsentieren von Erklärungen hat einen negativen Einfluss auf den \textit{Trust} in ein System, \textit{wenn die Erklärungen zu unseriös sind} \cite{wang_is_2018}.
     \item Das Präsentieren von Erklärungen, welche das aktuelle Systemverhalten beschreiben, kann einen negativen Effekt auf die \textit{Satisfaction} mit dem System haben* \cite{koo_why_2015}.
     \item Das Präsentieren von Erklärungen, welche das aktuelle Systemverhalten beschreiben, kann einen negativen Effekt auf die \textit{Effectivity} haben* \cite{koo_why_2015}.
     \item Das Präsentieren von Erklärungen kann einen so großen positiven Effekt auf \textit{Trust} haben, dass es einen negativen Effekt auf die \textit{Scrutability} und somit auch einen negativen Effekt auf die \textit{Effectivity} der \textit{End User} hat* \cite{kohl_explainability_2019, gunning2019darpa}.
+    \item Das wiederholte Präsentieren von Erklärungen kann einen negativen Einfluss auf die \textit{Satisfaction} mit dem System haben* \autoref{sec:study_results_qualitativ}.
 \end{itemize}
 
 \subsubsection*{Neutrale Zusammenhänge}
@@ -80,9 +94,26 @@ Wie der \textit{Content} und die \textit{Presentation} durch Rahmenbedingungen w
     \item Das Präsentieren von kausalen Erklärungen hat keinen Einfluss auf die \textit{Effectivity} von \textit{End Usern}, \textit{wenn diese subjektiv unbekannt mit der Aufgabe sind - unabhängig von der objektiven Kompetenz} \cite{schaffer_i_2019}.
     \item Das Präsentieren von Erklärungen, die die Funktionsweise von Algorithmen im Allgemeinen erklären (\textit{Inner Logic}), haben einen geringen Einfluss auf weitere Qualitätsaspekte \cite{chazette_end-users_nodate}.
     \item Die wirkliche \textit{Transparency} hat keinen Einfluss auf den \textit{Trust} der \textit{End User} in das System, \textit{wenn das Mental Model der End User mit dem System Model übereinstimmt} \cite{eiband_impact_2019, riveiro_thats_2021}.
-    \item \item Die wirkliche \textit{Transparency} von Erklärungen hat keinen Einfluss auf den \textit{Trust} der \textit{End User} in das System, \textit{wenn die End User mit der Erklärung zufrieden sind} \cite{eiband_impact_2019, riveiro_thats_2021}.
-    \item Die \textit{Explanation Goals}, mit denen Erklärungen durch Menschen formuliert werden, haben keinen Einfluss auf die vorgestellten externen Qualitätsaspekte \cite{balog_measuring_2020}.
+    \item Die wirkliche \textit{Transparency} von Erklärungen hat keinen Einfluss auf den \textit{Trust} der \textit{End User} in das System, \textit{wenn die End User mit der Erklärung zufrieden sind} \cite{eiband_impact_2019, riveiro_thats_2021}.
 \end{itemize}
+
+\smallskip
+
+\noindent\fbox{
+    \parbox{0.964\textwidth}{
+        \smallskip 
+        \textbf{RQ4.2} Welchen Einfluss hat die Granularität von Erklärungen auf die externe Qualität eines erklärbaren Systems unter bestimmten Rahmenbedingungen?
+        \smallskip
+    }
+}
+
+\smallskip
+
+Die Einflüsse, die Eigenschaften der Granularität von Erklärungen auf einige externe Qualitätsaspekte hat, wurden im zweiten Teil des Katalogs der Zusammenhänge der Aspekte von Erklärungen, zusammengestellt. Dies beinhaltet auch die Antwort auf die letzte Forschungsfrage, sowie erfüllt die Anforderung GR4, welche fordert, dass der Leitfaden eine Unterstützung bei der Auswahl von Eigenschaften bei der Umsetzung von Erklärungen geben soll.
+
+\smallskip
+
+Zusammenfassend sind mit dem Katalog der Zusammenhänge sowie dem zuvor vorgestellten Modell die Forschungsfragen beantwortet worden. Um die Anwendung des Leitfadens weiter zu vereinfachen, die Anforderungen an diesen und damit das Ziel dieser Arbeit besser zu erfüllen werden im Folgenden konkrete Design-Empfehlungen für Erklärungen vorgestellt.
 
 % Transparency might not increase the Trust solely. The explanation has to fit it's goal \cite{wiegand2019drive}
 
@@ -90,12 +121,10 @@ Wie der \textit{Content} und die \textit{Presentation} durch Rahmenbedingungen w
 
 % There ist no prove up to now that interactions increase trust \cite{cheng2019explaining}
 
-Für spezifische \textit{Contexts} gibt es weitere Zusammenhänge, die eine Rolle spielen. Als Beispiele wäre hier zum Beispiel zu nennen, dass User Erklärungen im AI-Kontext... Im Recommender System Kontext wäre das...
+% Für spezifische \textit{Contexts} gibt es weitere Zusammenhänge, die eine Rolle spielen. Als Beispiele wäre hier zum Beispiel zu nennen, dass User Erklärungen im AI-Kontext... Im Recommender System Kontext wäre das...
 
-Da das Ziel dieser Arbeit allerdings ein allgemeiner Überblick über Erklärbarkeit mit seinen Zusammenhängen und Eigenschaften von Erklärungen geben soll, werden diese an dieser Stelle ausgeklammert.
+% Da das Ziel dieser Arbeit allerdings ein allgemeiner Überblick über Erklärbarkeit mit seinen Zusammenhängen und Eigenschaften von Erklärungen geben soll, werden diese an dieser Stelle ausgeklammert.
 
-\cite{martin_evaluating_2021}: For engineers, it is about whether the explanation follows their reasoning, while desk-based agents are more concerned with whether it supports their work.
+% \cite{martin_evaluating_2021}: For engineers, it is about whether the explanation follows their reasoning, while desk-based agents are more concerned with whether it supports their work.
 
-Eine Übersicht mit Arbeiten vor 2015, die im Kontext von Empfehlungssystemen einen Effekte auf eines der in \autoref{tab:quality_aspects_of_explanation} aufgelisteten Ziele hat, kann in der Arbeit von \citeauthor{nunes_systematic_2017} gefunden werden \cite{nunes_systematic_2017}.
-
-Usability beschreibt die Qualität einer Erklärung im Bezug auf die Interaktion und die Darstellung der Inhalte \cite{chazette_end-users_nodate}. Informativeness ist dierekt bezogen auf den Inhalt der Erklärung \cite{chazette_end-users_nodate}. Direkt messbar an der Erklärung selbst.
+% Eine Übersicht mit Arbeiten vor 2015, die im Kontext von Empfehlungssystemen einen Effekte auf eines der in \autoref{tab:quality_aspects_of_explanation} aufgelisteten Ziele hat, kann in der Arbeit von \citeauthor{nunes_systematic_2017} gefunden werden \cite{nunes_systematic_2017}.
