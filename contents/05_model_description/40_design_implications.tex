@@ -1,19 +1,25 @@
 \section{Design Auswirkungen}
 \label{sec:model_design_implications}
 
-Dieser Abschnitt des Leitfadens zur Integration von Erklärungen in ein System enthält konkrete Empfehlungen für die Wahl der Eigenschaften von Erklärungen. Design meint dabei nicht unbedingt ein visuelles Design, sondern die generelle Umsetzung.
+Dieser Abschnitt des Leitfadens zur Integration von Erklärungen in ein System enthält konkrete Empfehlungen für das Design von Erklärungen. Design meint dabei nicht unbedingt ein visuelles Design, sondern die generelle Umsetzung.
 
-\subsection{10 Heuristiken für Erklärungsdesign}
+Aus den zuvor vorgestellten Zusammenhängen werden im Folgenden Heuristiken abgeleitet, welche für die Integration von Erklärungen beachtet werden sollten. Dabei wurden die am häufigsten festgestellten und ohne Einschränkungen anwendbaren Zusammenhänge in Bedingungen für ein erklärbares System umformuliert und zusammengefasst. Die Heuristiken wurden dabei jeweils mit einem Titel versehen, ähnlich wie die \citetitle{nielsen10usability} von \citeauthor{nielsen10usability} \cite{nielsen10usability}.
+
+\subsection*{10 Heuristiken für Erklärungsdesign}
 
 \begin{enumerate}
     \item \textbf{Accessibility} Ein erklärbares System sollte \textit{End Usern} zu jeder Zeit die Möglichkeit geben, auf Erklärungen zugreifen zu können. \cite{wiegand2019drive, chazette_end-users_nodate, wiegand_id_2020, weitz_you_2019}. Dies umfasst auch, dass optional noch tiefere Informationen angeboten werden sollten für \textit{End User} mit einem größeren Bedürfnis für Informationen. \cite{martin_evaluating_2021}
-    \item \textbf{Context Sensitivity} Erklärungen sollten notwendigerweise den Kontext betrachten \cite{sato_context_nodate, rjoob_towards_2021,chazette_end-users_nodate}. %Beim Design einer Erklärung muss genau darauf geachtet werden, welche Kontextinformationen den Nutzer wirklich interessieren. (Beispielsweise im Kontext von AI welche Features) \cite{rjoob_towards_2021}
-    \item \textbf{Key Information Delivery} \cite{martin_evaluating_2021} Key but complete \cite{riveiro_thats_2021}
-    \item \textbf{Visibility of the System Confidence} Indication of system confidence \cite{wiegand_id_2020, golledge1999wayfinding}
-    \item \textbf{Minimum viable Explanation} \cite{wiegand_id_2020, wiegand2019drive} zeitkritische Aufgabe / Entscheidungen dürfen keine langen Erklärungen enthalten. (3) There is a danger in showing explanations to self-confident users in that situation awareness might be negatively impacted – this can be mitigated by requiring interaction with an agent. \cite{schaffer_i_2019}
-    \item \textbf{User Perception} Es sollten wowohl die wahrgenommene als auch die tatsächtlichen Verbesserungen betrachtet werden. \cite{riveiro_thats_2021}
-    \item \textbf{User Performance} \cite{riveiro_thats_2021}
-    \item \textbf{Earliest viable Time} Umso einfacher und kürzer eine Erklärung ist, umso früher kann sie präsentiert werden. \cite{hleg2019policy, sovrano_modelling_2020}
-    \item \textbf{Education} Lernprozess beachten \cite{wang_integration_2020}
-    \item \textbf{Explanation Combination} \cite{sato_action-triggering_2019, kunkel_let_2019, sato_action-triggering_2019, schrills_color_2020, lim_2009_assessing}
+    \item \textbf{Context Sensitivity} Erklärungen sollten sich sehr stark am \textit{Context} des erklärbaren Systems ausrichten. Nur so kann gewährleistet werden, dass diese \textit{End Usern} auch helfen. \cite{sato_context_nodate, rjoob_towards_2021,chazette_end-users_nodate}.
+    \item \textbf{Key Information Delivery} Jede Erklärung sollte mindestens die Hauptinformation enthalten (Daten oder Begründung), die zu einem bestimmten Systemverhalten geführt hat \cite{martin_evaluating_2021} Diese sollte grundsätzlich vollständig sein (\textit{Completeness}) \cite{riveiro_thats_2021}.
+    \item \textbf{Hybrid Style} Das System sollte den \textit{End Usern} wenn möglich, den \textit{Content} als Kombination verschiedener Erkläörungsstile präsentieren \cite{sato_action-triggering_2019, kunkel_let_2019, sato_action-triggering_2019, schrills_color_2020, lim_2009_assessing}.
+    \item \textbf{Minimum viable Explanation} Erklärungen sollten so kurz und Präzise wie möglich, aber vollständig sein \cite{wiegand_id_2020, wiegand2019drive}. Dies gilt insbesondere bei zeitkritischmen Aufgaben.
+    \item \textbf{Earliest viable Time} Erklärungen sollten den \textit{End Usern} so früh wie möglich präsentiert werden. Dabei gilt der Grundsatz: Umso einfacher und kürzer eine Erklärung ist, umso früher kann sie präsentiert werden \cite{hleg2019policy, sovrano_modelling_2020}.
+    \item \textbf{User Perception} Die Wahrnehmung der \textit{End User} sollte im Zentrum von Erklärungen stehen \cite{riveiro_thats_2021}.
+    \item \textbf{User Performance} Die Performanz der \textit{End User} muss als Faktor bei der Integration von Erklärungen in ein System betrachtet werden \cite{riveiro_thats_2021}.
+    \item \textbf{Education} Die den \textit{Ed Usern} gegebenen Erklärungen sollten den Lernprozess dieser beachten, um z.B. die Inhalte und Notwendigkeit von Erklärungen zu adaptieren \cite{wang_integration_2020}.
+    \item \textbf{Visibility of the System Confidence} Bei Entscheidungen von System sollte, wenn möglich sichtbar sein, wie sicher sich das System mit einer Entscheidung ist. \cite{wiegand_id_2020, golledge1999wayfinding}
 \end{enumerate}
+
+\bigskip
+
+Neben den vorgestellten Heuristiken können für verschiedene Erklärungstypen weitere Empfehlungen gegeben werden.
