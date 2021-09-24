@@ -2,13 +2,17 @@
 
 Als Methode für die Literaturrecherche ist die Suchstring-Methode zur Anwendung gekommen. Dabei werden am Anfang die Datenbanken und Suchbegriffe definiert, um ein initiale Menge von Arbeiten zu ermitteln, welche dann auf ihre Tauglichkeit für die Beantwortung der gewählten Forschungsfragen untersucht werden.
 
-Als Datenbanken wurden für die Suche \textit{ACM Digital Libraray}\footnote{https://dl.acm.org}, \textit{IEEE Xplore}\footnote{https://ieeexplore.ieee.org}, \textit{Science Direct}\footnote{https://www.sciencedirect.com} sowie \textit{Springer Link}\footnote{https://link.springer.com} verwendet. Die Suchen bei \textit{Science Direct} und \textit{Springer Link} wurden dabei auf den Bereich \textit{Computer Science} beschränkt. Die genannten Datenbanken wurden gewählt, da sie bekannte Datenbanken für wissenschaftliche Recherchen auf dem Gebiet der Informatik sind \cite{carvalho2017quality} und bereits für Literaturrecherchen im Bereich von Erklärbarkeit eingesetzt wurden \cite{nunes_systematic_2017}. Außerdem kann mit den entsprechenden Filtern so gewährleistet werden, dass die Suchergebnisse keinen \textit{Preprints} enthalten.
+Als Datenbanken wurden für die Suche \textit{ACM Digital Libraray}\footnote{https://dl.acm.org}, \textit{IEEE Xplore}\footnote{https://ieeexplore.ieee.org}, \textit{Science Direct}\footnote{https://www.sciencedirect.com} sowie \textit{Springer Link}\footnote{https://link.springer.com} verwendet. Die Suchen bei \textit{Science Direct} und \textit{Springer Link} wurden dabei auf den Bereich \textit{Computer Science} beschränkt. Die genannten Datenbanken wurden gewählt, da sie bekannte Datenbanken für wissenschaftliche Recherchen auf dem Gebiet der Informatik sind \cite{carvalho2017quality} und bereits für Literaturrecherchen im Bereich von Erklärbarkeit eingesetzt wurden \cite{nunes_systematic_2017}. Außerdem kann mit den entsprechenden Filtern so gewährleistet werden, dass die Suchergebnisse keinen \textit{Preprints} enthalten. Die genauen Filtereinstellungen für jede Datenbank sind in \autoref{sec:appendix_search_filter} zu finden.
 
 Als Zeitraum für die Veröffentlichungen wurde das Jahr 2015 bis zur Durchführung der Suche (08.06.21) gewählt. 2015 wurde dabei als Startjahr gewählt, da zu diesem Zeitpunkt die Zahl der Veröffentlichungen zum Thema Erklärbarkeit mit Fokus auf die Wahrnehmung von Nutzern deutlich ansteigt und eine zusätzliche Betrachtung der ersten Phase von Veröffentlichungen zu Erklärbarkeit mit Blick auf Psychologie um 1990 den Rahmen dieser Arbeit überschreiten würde.
 
 \subsection{Definition der Suchbegriffe}
 
-Bei der Definition der Suchbegriffen wurden zunächst Schlüsselbegriffe definiert. Eine vollständige Übersicht ist in \autoref{tab:search_terms} zu sehen. Dabei wurden drei Blöcke von Begriffen identifieziert. Zur Themenabgrenzung muss jedes Suchergebnis eine Synonym für\glqq Erklärung\grqq{} oder \glqq Erklärbarkeit\grqq{} aufweisen. Da diese Arbeite unter anderem Einflüsse bzw. Evaluationen untersucht, besteht der zweite Begriffsblock aus solchen der Wortfamilie \glqq Evaluation\grqq{}. Aus der Betrachtung von externer Qualität wurden als letzter Block Begriffe, welche mit dem Gebiet der Mensch-Maschine Kommunikation in Verbindung stehen gewählt. Der Suchstring wie im folgenden dargestellt ist dabei so aufgebaut, dass zusätzlich zur ersten Bedingung entweder ein Begriff aus dem zweiten oder Dritten Block von Begriffen auf ein Suchergnis zutreffen muss.
+Bei der Definition der Suchbegriffe wurden zunächst Schlüsselbegriffe definiert. Eine vollständige Übersicht ist in \autoref{tab:search_terms} zu sehen. Dabei wurden drei Blöcke von Begriffen identifiziert. Zur Themenabgrenzung muss jedes Suchergebnis ein Synonym für\glqq Erklärung\grqq{} oder \glqq Erklärbarkeit\grqq{} aufweisen. Da diese Arbeite unter anderem Einflüsse bzw. Evaluationen untersucht, besteht der zweite Begriffsblock aus solchen der Wortfamilie \glqq Evaluation\grqq{}. Aus der Betrachtung von externer Qualität wurden als letzter Block Begriffe, welche mit dem Gebiet der Mensch-Maschine Kommunikation in Verbindung stehen gewählt. Der Suchstring wie im Folgenden dargestellt ist dabei so aufgebaut, dass zusätzlich zur ersten Bedingung entweder ein Begriff aus dem zweiten oder dritten Block von Begriffen auf ein Suchergebnis zutreffen muss.
+
+\smallskip
+
+\noindent Suchstring: \textbf{((explainability OR explanation OR explanations OR explainable) AND (evaluation OR assessment OR analysis OR impact OR HCI OR \glqq human-computer interaction\grqq{} OR \glqq human-computer interfaces \grqq{} OR interaction OR \glqq user interface\grqq{} OR usability))}
 
 \begin{table}[htb!]
     \begin{tabular}{p{.24\textwidth}p{.24\textwidth}p{.43\textwidth}}
@@ -23,11 +27,11 @@ Bei der Definition der Suchbegriffen wurden zunächst Schlüsselbegriffe definie
                                 &               & usability                     \\              
         \toprule
     \end{tabular}
-\caption{Schlüsselbegriffe}
+\caption{Schlüsselbegriffe für die Konstruktion des Suchstrings}
 \label{tab:search_terms}
 \end{table}
 
-((explainability OR explanation OR explanations OR explainable) AND (evaluation OR assessment OR analysis OR impact OR HCI OR \glqq human-computer interaction\grqq{} OR \glqq human-computer interfaces \grqq{} OR interaction OR \glqq user interface\grqq{} OR usability))
+
 
 
 % control papers that should appear: \cite{chazette_end-users_nodate} \cite{chazette2020explainability} \cite{kohl_explainability_2019} \cite{sokol_explainability_2020}
