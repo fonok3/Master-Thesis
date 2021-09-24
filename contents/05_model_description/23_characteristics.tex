@@ -12,12 +12,20 @@ Der \textit{Demand}  für Erklärungen kann aus verschiedenen Perspektiven betra
             \hline
             Aspekt    & Ausprägung   & Quellen \\
             \toprule
-            Initiative              &  Manual        & \cite{chazette_end-users_nodate} \cite{tintarev_designing_nodate} \cite{wiegand_id_2020} \\
-                                    &  Automatic   & \cite{chazette_end-users_nodate} \cite{eiband_impact_2019} \cite{wiegand_id_2020} \cite{schaffer_i_2019} \cite{yamada_evaluating_2016} \\
+            initiative  &  Manual       & \cite{chazette_end-users_nodate} \cite{tintarev_designing_nodate}
+                                            \cite{wiegand_id_2020} \\
+                        &  Automatic    & \cite{chazette_end-users_nodate} \cite{eiband_impact_2019}
+                                            \cite{wiegand_id_2020} \cite{schaffer_i_2019}
+                                            \cite{yamada_evaluating_2016} \\
             \tablerowspacing
-            Time                    &  Before               & \cite{rosenfeld_explainability_2019} \cite{wiegand_id_2020} \cite{kunkel_let_2019} \cite{koo_why_2015} \cite{haspiel_explanations_2018} \\
-                                    &  While                & \cite{rosenfeld_explainability_2019} \cite{wiegand_id_2020} \cite{kunkel_let_2019} \\
-                                    &  After                & \cite{rosenfeld_explainability_2019} \cite{wiegand_id_2020} \cite{kunkel_let_2019} \cite{koo_why_2015} \cite{haspiel_explanations_2018} \cite{wiegand2019drive} \\
+            Time        &  Before       & \cite{rosenfeld_explainability_2019} \cite{wiegand_id_2020}
+                                            \cite{kunkel_let_2019} \cite{koo_why_2015} \cite{haspiel_explanations_2018} 
+                                            \cite{haspiel_explanations_2018} \\
+                        &  while        & \cite{rosenfeld_explainability_2019} \cite{wiegand_id_2020}
+                                            \cite{kunkel_let_2019} \\
+                        &  After        & \cite{rosenfeld_explainability_2019} \cite{wiegand_id_2020}
+                                            \cite{kunkel_let_2019} \cite{koo_why_2015} \cite{haspiel_explanations_2018}
+                                            \cite{wiegand2019drive} \cite{haspiel_explanations_2018} \\
             \toprule
         \end{tabular}
     \end{center}
@@ -27,7 +35,7 @@ Der \textit{Demand}  für Erklärungen kann aus verschiedenen Perspektiven betra
 
 \paragraph{Initiative} Die \textit{Initiative} einer Erklärung ist der Auslöser für das Geben von Erklärungen in einem System. Eine Möglichkeit ist eine automatische Auslieferung der Erklärung an den \textit{End User}. Das System trifft dann allein die Entscheidung, wann und ob \textit{End User} eine Erklärung bekommt (\textit{Automatic}). Alternativ können Erklärungen vom \textit{End User} manuell angefordert werden (\textit{Manual}). Auch Mischformen, bei der \textit{End User} beispielsweise festlegen können, welche Art von Erklärungen sie erhalten möchten, sind denkbar.
 
-\paragraph{Time} Die \textit{Time} ist der Zeitpunkt im Verhältnis zu einem Ereignis, zu dem das System eine Erklärung bereitstellt. \citeauthor{rosenfeld_explainability_2019} sowie \citeauthor{wiegand_id_2020} haben explizit untersucht, wann Erklärungen angezeigt werden sollten, wenn ein Ereignis im System auftritt oder das System eine Aktion durchführt. Dies umfasst die Möglichkeiten vor dem Ereignis (\textit{Before}), während (\textit{While}) oder nach dem Ereignis (\textit{After}) eine Erklärung zu diesem zu liefern \cite{rosenfeld_explainability_2019, wiegand_id_2020}.
+\paragraph{Time} Die \textit{Time} ist der Zeitpunkt im Verhältnis zu einem Ereignis, zu dem das System eine Erklärung bereitstellt. \citeauthor{rosenfeld_explainability_2019} sowie \citeauthor{wiegand_id_2020} haben explizit untersucht, wann Erklärungen angezeigt werden sollten, wenn ein Ereignis im System auftritt oder das System eine Aktion durchführt. Dies umfasst die Möglichkeiten vor dem Ereignis (\textit{Before}), während (\textit{While}) oder nach dem Ereignis (\textit{After}) eine Erklärung zu diesem zu liefern \cite{rosenfeld_explainability_2019, wiegand_id_2020}. Letzteres wird in der Literatur zum Teil auch als \textit{Posthoc-Explanation} referenziert \cite{sokol_explainability_2020}.
 
 \smallskip
 
@@ -84,7 +92,7 @@ Kontextinformationen in einer Erklärung geben Auskunft über die zugrundeliegen
 
 Eine weitere Möglichkeit ist das Erklären der Funktionsweise von Algorithmen eines Systems (\textit{Inner Logic}). Dies enthält die Informationen, wie genau ein System die ihm zur Verfügung stehenden Informationen verarbeitet und interpretiert.
 
-Ein dritter Weg ist die Erklärung von Zusammenhängen zwischen den Eingaben und Ausgaben des Systems (\textit{Causality}). In einer solchen Erklärung wird den \textit{End Usern} der Grund für ein bestimmtes Systemverhalten oder eine Entscheidung erläutert. Dieser Punkt lässt sich in weitere Möglichkeiten gliedern, Gründe zu erläutern. Eine Erklärung dieser Art kann die Information enthalten, warum ein bestimmtes Systemverhalten in einer Situation erfolgt ist. Auch kann eine Erklärung klarstellen, warum ein alternatives Verhalten oder eine alternative Ausgabe des Systems nicht erfolgt ist \cite{martin_evaluating_2021}.
+Ein dritter Weg ist die Erklärung von Zusammenhängen zwischen den Eingaben und Ausgaben des Systems (\textit{Causality}). In einer solchen Erklärung wird den \textit{End Usern} der Grund für ein bestimmtes Systemverhalten oder eine Entscheidung erläutert. Dieser Punkt lässt sich in weitere Möglichkeiten gliedern, Gründe zu erläutern. Eine Erklärung dieser Art kann die Information enthalten, warum ein bestimmtes Systemverhalten in einer Situation erfolgt ist. Auch kann eine Erklärung klarstellen, warum ein alternatives Verhalten oder eine alternative Ausgabe des Systems nicht erfolgt ist \cite{martin_evaluating_2021}. % \cite{lim_2009_assessing} sagt, dass counterfactual nicht trivial ist.
 
 % the different types of content answer the gulfs of execution and evaluation of \cite{norman1988psychology} as described by \cite{ribera2019can}
 
