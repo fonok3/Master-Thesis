@@ -1,56 +1,29 @@
-\section{Design Empfehlungen}
+\section{Design Auswirkungen}
 \label{sec:model_design_implications}
 
-Dieser Abschnitt des Leitfadens zur Integration von Erklärungen in ein System enthält konkrete Empfehlungen für die Wahl der Eigenschaften von Erklärungen. Design meint dabei nicht unbedignt ein visuelles Design, sondern die generelle Umsetzung.
+Dieser Abschnitt des Leitfadens zur Integration von Erklärungen in ein System enthält konkrete Empfehlungen für das Design von Erklärungen. Design meint dabei nicht unbedingt ein visuelles Design, sondern die generelle Umsetzung.
+
+Aus den zuvor vorgestellten Zusammenhängen werden im Folgenden Heuristiken abgeleitet, welche für die Integration von Erklärungen beachtet werden sollten. Dabei wurden die am häufigsten festgestellten und ohne Einschränkungen anwendbaren Zusammenhänge in Bedingungen für ein erklärbares System umformuliert und zusammengefasst. Die Heuristiken wurden dabei jeweils mit einem Titel versehen, ähnlich wie die \citetitle{nielsen10usability} von \citeauthor{nielsen10usability} \cite{nielsen10usability}.
+
+\subsection*{10 Heuristiken für Erklärungsdesign}
 
 \begin{enumerate}
-    \item Nutzer sollten immer die Möglichkeit haben auf eine Erklärung zuzugreifen, wenn sie einer bedürfen \cite{wiegand2019drive, chazette_end-users_nodate}
-    \item Erklärungen sollten notwendigerweise den Kontext betrachten.
+    \item \textbf{Accessibility} Ein erklärbares System sollte \textit{End Usern} zu jeder Zeit die Möglichkeit geben, auf Erklärungen zugreifen zu können. \cite{wiegand2019drive, chazette_end-users_nodate, wiegand_id_2020, weitz_you_2019}. Dies umfasst auch, dass optional noch tiefere Informationen angeboten werden sollten für \textit{End User} mit einem größeren Bedürfnis für Informationen. \cite{martin_evaluating_2021}
+    \item \textbf{Context Sensitivity} Erklärungen sollten sich sehr stark am \textit{Context} des erklärbaren Systems ausrichten. Nur so kann gewährleistet werden, dass diese \textit{End Usern} auch helfen. \cite{sato_context_nodate, rjoob_towards_2021,chazette_end-users_nodate}.
+    \item \textbf{Key Information Delivery} Jede Erklärung sollte mindestens die Hauptinformation enthalten (Daten oder Begründung), die zu einem bestimmten Systemverhalten geführt hat \cite{martin_evaluating_2021}. Diese sollte grundsätzlich vollständig sein (\textit{Completeness}) \cite{riveiro_thats_2021}.
+    \item \textbf{Hybrid Style} Das System sollte den \textit{End Usern} wenn möglich, den \textit{Content} als Kombination verschiedener Erklärungsstile präsentieren \cite{sato_action-triggering_2019, kunkel_let_2019, sato_action-triggering_2019, schrills_color_2020, lim_2009_assessing}.
+    \item \textbf{Minimum viable Explanation} Erklärungen sollten so kurz und Präzise wie möglich, aber vollständig sein \cite{wiegand_id_2020, wiegand2019drive}. Dies gilt insbesondere bei zeitkritischen Aufgaben.
+    \item \textbf{Earliest viable Time} Erklärungen sollten den \textit{End Usern} so früh wie möglich präsentiert werden. Dabei gilt der Grundsatz: Umso einfacher und kürzer eine Erklärung ist, umso früher kann sie präsentiert werden \cite{hleg2019policy, sovrano_modelling_2020}.
+    \item \textbf{User Perception} Die Wahrnehmung der \textit{End User} sollte im Zentrum von Erklärungen stehen \cite{riveiro_thats_2021}.
+    \item \textbf{User Performance} Die Performanz der \textit{End User} muss als Faktor bei der Integration von Erklärungen in ein System betrachtet werden \cite{riveiro_thats_2021}.
+    \item \textbf{Education} Die den \textit{End Usern} gegebenen Erklärungen sollten den Lernprozess dieser beachten, um z.B. die Inhalte und Notwendigkeit von Erklärungen zu adaptieren \cite{wang_integration_2020}.
+    \item \textbf{Visibility of the System Confidence} Bei Entscheidungen von System sollte, wenn möglich sichtbar sein, wie sicher sich das System mit einer Entscheidung ist. \cite{wiegand_id_2020, golledge1999wayfinding}
 \end{enumerate}
 
+Neben den vorgestellten Heuristiken können für bestimmte Erklärungstypen außerdem weitere bestehende Heuristiken oder Empfehlungen angewendet werden. In der Regel sind Erklärungen in einem \textit{User Interface} verortet oder können zumindest von dort aus aktiviert werden. Folglich sollten bei der Integration von Erklärungen im \textit{User Interface} unter anderem die bereits erwähnten \citetitle{nielsen10usability} von \citeauthor{nielsen10usability} Anwendung finden \cite{nielsen10usability}. Auch sollte bei der Entwicklung von Erklärungen auf \textit{Shneiderman’s Eight Golden Rules of Interface Design} geachtet werden \cite{shneiderman2016designing}.
 
-\cite{carvalho2020developers} Nutzt einen Katalog, der die Genauen Zusammenhänge darstellt.
+Abschließend bieten die vorgestellten \textbf{10 Heuristiken für Erklärungsdesign} eine Liste von wichtigen Aspekten, die während der Entwicklung von Erklärungen berücksichtigt werden sollten. So kann auf Ergebnisse der Wissenschaft zur Auswirkung von Erklärungen auf ausgewählte externe Qualitätsaspekte aufgebaut werden und die insgesamt von \textit{End Usern} wahrgenommene Softwarequalität erhöht werden.
 
-kontext ist sehr wichtig! \cite{sato_context_nodate}
+\bigskip
 
-Es sollte darauf geachtet werden, dass vor allem die wahrgenommene Performanz des Systems erhöht wird \cite{riveiro_thats_2021}
-
-should get explanation if possible \cite{wiegand_id_2020}
-
-Indication of system confidence \cite{wiegand_id_2020, golledge1999wayfinding}
-
-Display context informaiton \cite{wiegand_id_2020}
-
-\cite{weitz_you_2019} proposes to use user triggered explanations
-
-– Low-level explanations methods allow the user to visualise key information that provide insight to system decision-making and support interpretation. \cite{martin_evaluating_2021}
-
-– High-level explanation methods augment one or more low-level explanations with contextual information to enable more comprehensive explanation. \cite{martin_evaluating_2021}
-
-- Beim Design einer Erklärung muss genau darauf geachtet werden, welche Kontextinformationen den Nutzer wirklich interessieren. (Beispielsweise im Kontext von AI welche Features) \cite{rjoob_towards_2021}
-
-Umso einfacher und kürzer eine Erklärung ist, umso früher kann sie präsentiert werden. \cite{hleg2019policy, sovrano_modelling_2020}
-
-\glqq Not only should the developers consider the quality, form, and granularity of the explanations, but also the dynamic learning process of the users \grqq{} \cite{wang_integration_2020}
-
-\cite{wiegand_id_2020, wiegand2019drive} zeitkritische Aufgabe / Entscheidungen dürfen keine langen Erklärungen enthalten.
-
-(3) There is a danger in showing explanations to self-confident users in that situation awareness might be negatively impacted – this can be mitigated by requiring interaction with an agent. \cite{schaffer_i_2019}
-
-
-\cite{rosenfeld_explainability_2019}:
-
-\begin{enumerate}
-    \item To justify its decisions so the human participant can decide to accept them (provide control)
-    \item To explain the agent’s choices to guarantee safety concerns are met
-    \item To build trust in the agent’s choices, especially if a mistake is suspected or the human operator does not have experience with the system
-    \item To explain the agent’s choices to ensure fair, ethical, and/or legal decisions are made
-    \item Knowledge/scientific discovery
-    \item To explain the agent’s choices to better evaluate or debug the system in previously unconsidered situations
-\end{enumerate}
-
-Das proaktive präsentieren von Erklärungen (\textit{System-Initiative}) wirkt sich positiv auf die \textit{Usability} eines Systems aus, \textit{wenn der Inhalt der Erklärung gering ist} \cite{wiegand2019drive}.
-
-completeness of explanations was more important than soundness in forming mental models \cite{riveiro_thats_2021}
-
-Show some explanations improves transparency (Not everything has to be explained in order to gain trust) \cite{abdulrahman_belief-based_2019}
+Dieser Abschnitt stellt den letzten Teil des Leitfadens zur Integration von Erklärungen dar. Damit komplettieren die Heuristiken für Erklärungsdesign die Unterstützung zur Gestaltung von Erklärungen. Der Leitfaden ist bis auf wenige Ergänzungen und Anpassungen durch den zweiten Teil dieser Arbeit aus bestehenden Ergebnissen von vorhergehenden Arbeiten entstanden. Die Überprüfung, ob es mithilfe dieses Leitfadens möglich ist, Erklärungen erfolgreich in ein System zu integrieren erfolgt im zweiten Teil dieser Arbeit.
