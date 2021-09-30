@@ -22,22 +22,29 @@ Da der Fokus dieser Arbeit auf externen Qualitätsaspekten liegt, ist die \texti
 Um Erklärungen zu definieren, gibt es verschiedene Ansätze. Einig sind sich viele Autoren, dass Erklärungen beim Verständnis von Systemen helfen können. Das heißt Erklärungen sind ein Lösungsansatz um das \textit{Mental Model} der \textit{Nutzer} mit dem \textit{System Model} in Einklang zu bringen. Das \textit{Mental Model} repräsentiert die Annahmen, die Nutzer über die Funktionsweise eines Systems haben und das \textit{System Model} die wirkliche Funktionsweise \cite{chi_three_nodate}. \citeauthor{norman1988psychology} beschreibt den Unterschied zwischen den beiden Modellen als \glqq The Gulf of Evaluation\grqq \cite{norman1988psychology}. Genauer beschreibt er, dass Nutzer in einer solchen Situation die Ausgaben des Systems nicht richtig wahrnehmen oder gewünschte Aktionen nicht finden können.
 
 Ein Ansatz Erklärungen für die Schließung von Verständnislücken zu definieren, ist Erklärungen als Sequenz von Informationen aufzufassen \cite[vgl.][]{wang_integration_2020}. \citeauthor{sovrano_modelling_2020} beschreiben bei diesem Ansatz, dass ein Informationskorpus zum Erhöhen von Verständnis für erklärbare Daten oder Prozesse zur Zufriedenheit der Nutzer eingesetzt wird \cite[übersetzt vgl.][]{sovrano_modelling_2020}. Außerdem fügen sie hinzu, dass die Adressaten der Erklärung mit dem erklärten Systemteil (\textit{explanadum}) zur Erfüllung bestimmter Ziele in einem bestimmten Kontext interagieren. Unterstützt wird dies durch \citeauthor{zahedi_towards_2019}, die Erklärungen als \glqq Aktualisierung des menschlichen \textit{Mental Model}\grqq{} definieren \cite[übersetzt vgl.][]{zahedi_towards_2019}. Zusätzlich formulieren sie die folgenden drei Bedingungen an Erklärungen:
-\begin{itemize}
+\begin{enumerate}
     \item Das aktualisierte \textit{Mental Model} nach dem Geben einer Erklärung soll in der Lage sein, dass die Nutzer ihre Aufgabe bestmöglich durchführen können.
     \item Die Nutzer sollen in der Lage sein, den System Status, die Ziele des Systems und die Bedingungen und Effekte von Aktionen des Systems zu kennen.
     \item Eine Erklärung soll der minimalen Aktualisierung des \textit{Mental Model} entsprechen, welche 1. und 2. erfüllt.
-\end{itemize}
+\end{enumerate}
 
-Auf Basis von vorherigen Definitionen und Anforderungen für Erklärungen wurde \textit{Explainability} als Nicht-Funktionale Anforderung aufgefasst, um Abhängigkeiten mit anderen NFRs besser untersuchen zu können.
+Die benötigten Informationen, welche die obigen Bedingungen erfüllt wurde in vorangegangenen Arbeiten bereits untersucht. Dabei wurde verschiedene Inhaltstypen in der Regel durch Antworten auf Fragen mit verschiedenen Fragewörtern angenähert (\textit{why}, \textit{what}, \textit{how}) \cite{rosenfeld_explainability_2019}. Am häufigsten tritt dabei die Frage auf, \textbf{warum} ein System sich auf bestimmte Weise verhält \cite{chazette2020explainability}. Folglich interessieren sich Nutzer vor allem für kausale Zusammenhänge. Problematisch ist die Einordnung mittels Fragewörtern, da es möglich ist mit verschiedenen Fragewörtern den gleichen Inhalt zu erfragen. Daher schlägt \citeauthor{wang_integration_2020} vor, dass ein anderes Schema zur Einordnung nötig ist.
+
+Eine große Herausforderung von Erklärungen ist allerdings, dass Nutzer einen verschiedenen Bedarf für Erklärungen und folglich die gegebenen Informationen haben \cite{chazette2020explainability}. Folglich können nur schwer die Bedingungen 1. und 2. erfüllt werden. Als Lösungsansatz dafür wird unter anderem das interaktive Anfordern von Erklärungen durch die Nutzer genannt \cite{chazette_end-users_nodate}.
+
+Da die transportierten Informationen eine Kerneigenschaft von Erklärungen darstellen, werden in dieser Arbeit Erklärungen als Information zum Schließen des \textit{Gulf of Evaluation} \cite{norman1988psychology}.
+
+% TODO: Glue umschreiben
+Auf Basis der Ansätze, Erklärungen zu definieren wurde \textit{Explainability} als neue Nicht-Funktionale Anforderung eingeführt \cite{kohl_explainability_2019}, um den Einsatz von Erklärungen und die Abhängigkeiten mit anderen NFRs besser untersuchen zu können.
 
 \subsection{Erklärbarkeit als Nicht-Funktionale Anforderung}
 \label{02_basics:explainability}
 
-Nicht-Funktionale Anforderungen sind Anforderungen an ein oder mehrere Qualitätsaspekte \cite{chung2009non,schneider2012abenteuer}. Dabei ist Softwarequalität laut \citetitle{international1992ieee} als \glqq [...] the degree to which software possesses a desired combination of attributes\grqq{}\cite{international1992ieee} definiert. Folglich müssen für Erklärbarkeit Attribute bestimmt werden, welche für bei Erfüllung dieser NFR gelten.
+Nicht-Funktionale Anforderungen sind Anforderungen an ein oder mehrere Qualitätsaspekte \cite{chung2009non,schneider2012abenteuer}. Dabei ist Softwarequalität laut \citetitle{international1992ieee} als \glqq [...] the degree to which software possesses a desired combination of attributes\grqq{}\cite{international1992ieee} definiert. Folglich müssen für Erklärbarkeit Attribute bestimmt werden, welche für die Erfüllung dieser NFR bestimmten Anforderungen genügen müssen.
 
-Eine der ersten Interpretationen von \textit{Explainability} als NFR liefern \citeauthor{kohl_explainability_2019}. Dabei gilt ein System als erklärbar, wenn es ein Mittel gibt, welche eine Erklärung generiert, die die obigen Bedingungen erfüllt \cite{kohl_explainability_2019}. Konkrete Anforderungen an Erklärbarkeit für ein System müssen laut \citeauthor{kohl_explainability_2019} außerdem eine konkrete Nutzergruppe, einen Kontext sowie den zu erklärenden Aspekt des Systems enthalten.
+Eine der ersten Interpretationen von \textit{Explainability} als NFR liefern \citeauthor{kohl_explainability_2019}. Dabei gilt ein System als erklärbar, wenn es ein Mittel gibt, welche eine Erklärung generiert, die die beschriebenen Bedingungen erfüllt \cite{kohl_explainability_2019}. Konkrete Anforderungen an Erklärbarkeit für ein System müssen laut \citeauthor{kohl_explainability_2019} außerdem eine bestimmte Nutzergruppe, einen Kontext sowie den zu erklärenden Aspekt des Systems enthalten.
 
-Auf Basis der Bereits erfolgten Definitionen für Erklärbarkeit als Nicht-Funktionale Anforderung sowie einen Systematischen Literaturrecherche haben \citeauthor{chazette_knowledge_nodate} die neue NFR im Kontext von \textit{Requirements Engineering} definiert:
+Auf Basis der bereits erfolgten Definitionen für Erklärbarkeit als Nicht-Funktionale Anforderung sowie einer Systematischen Literaturrecherche haben \citeauthor{chazette_knowledge_nodate} die neue NFR im Kontext von \textit{Requirements Engineering} folgendermaßen definiert:
 
 \smallskip
 
@@ -54,21 +61,24 @@ Auf Basis der Bereits erfolgten Definitionen für Erklärbarkeit als Nicht-Funkt
 Der \textit{Addressee (A)} ist dabei der Stakeholder, welcher eine Erklärung erhalten soll. Der \textit{Context (C)} wird durch die Situation gegeben, welche durch die Interaktion eines Nutzers, seiner Aufgabe, dem System und der Umgebung entsteht. Was \citeauthor{kohl_explainability_2019} in der oberen Definition als \textit{Mittel} bezeichnet hat, beschreiben \citeauthor{chazette_end-users_nodate} als \textit{Explainer}, welcher ebenfalls in Bezug auf ein 
 System oder Systemteile Informationen an die \textit{Addressees} gibt.
 
+Mit dieser Definition stellen \citeauthor{chazette_knowledge_nodate} das Verständnis der \textit{Addressees} in den Mittelpunkt ihrer Definition. Das heißt sie betonen, dass die Nutzer eines erklärbaren Systems die Informationen verstehen müssen, um die Lücke zwischen \textit{Mental Model} und \textit{System Model} zu schließen.
 
+Folglich wird mit dieser Definition erneut die Brücke zu bereits bestehenden Qualitätsaspekten geschlagen \cite{chazette_end-users_nodate}. Durch diese bereits bekannten Qualitätsaspekte - hier \textit{Understandability} - kann Erklärbarkeit messbar gemacht werden. Durch die Verknüpfung mit existierenden Qualitätsaspekten wird es vor allem möglich auf bestehende Kataloge zur Messung dieser zurückzugreifen.
 
-Woraus Erklärungen bestehen können wird in dieser Arbeit u.~a. beschrieben
-
-
-\citeauthor{chazette_end-users_nodate} $\rightarrow$ zweischneidiges schwert
+% Woraus Erklärungen bestehen können wird in dieser Arbeit u.~a. beschrieben
 
 \subsection{Externe Qualitätsziele für Erklärbarkeit}
 \label{02_basics:quality_quaracteristic}
 
 Verschiedene SIGs z.B. \cite{do2010software}
 
+\citeauthor{chazette_end-users_nodate} $\rightarrow$ zweischneidiges schwert
+
 \citeauthor{chazette_knowledge_nodate} $\rightarrow$ Auswirkungen auf Qualitätsaspekte
 
 “Evaluating the quality of explanations is traditionally difficult due to their inherent subjectivity. The needs of different user groups can be very different, which is reflected in their expectations of what an explanation should offer.” \cite{martin_developing_2019, martin_evaluating_2021}
+
+
 
 \section{Qualitätsmodelle}
 \label{sec:basics_quality_models}
