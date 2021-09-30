@@ -65,25 +65,20 @@ Mit dieser Definition stellen \citeauthor{chazette_knowledge_nodate} das Verstä
 
 Folglich wird mit dieser Definition erneut die Brücke zu bereits bestehenden Qualitätsaspekten geschlagen \cite{chazette_end-users_nodate}. Durch diese bereits bekannten Qualitätsaspekte - hier \textit{Understandability} - kann Erklärbarkeit messbar gemacht werden. Durch die Verknüpfung mit existierenden Qualitätsaspekten wird es vor allem möglich auf bestehende Kataloge zur Messung dieser zurückzugreifen.
 
-% Woraus Erklärungen bestehen können wird in dieser Arbeit u.~a. beschrieben
+Neben \textit{Understandability} wurden in vorangegangenen Arbeiten auch Abhängigkeiten zu weiteren Qualitätsaspekten untersucht wie z.~B. \textit{Transparency} untersucht \cite{wang_integration_2020}. Eine Übersicht, mit welchen Qualitätsaspekten \textit{Explainability} Wechselwirkungen haben \citeauthor{chazette_knowledge_nodate} in ihrer Arbeit vorgestellt \cite{chazette_knowledge_nodate}. Ein Resultat ist, dass \textit{Explainability} mit sehr vielen Aspekten in Verbindung steht. Grundsätzlich können dabei Qualitätsaspekte, auf die \textit{Explainability} einen positiven Einfluss aufweist, als Qualitätsziele beim Integrieren von Erklärungen gesetzt werden \cite{wang_integration_2020}.
 
-\subsection{Externe Qualitätsziele für Erklärbarkeit}
-\label{02_basics:quality_quaracteristic}
+Durch den komplexen Zusammenhang von Softwarequalität mit \textit{Explainability} ergeben sich allerdings auch konkurrierende Ziele \cite{chazette_end-users_nodate}. So können Erklärungen zum Beispiel einen positiven Einfluss auf die \textit{Transparency} eines Systems haben und gleichzeitig die Performanz der Systemnutzer verschlechtern. Dieses zwei-schneidges Schwert muss für die Verbesserung der Softwarequalität durch die Integration von Erklärungen in ein System beachtet werden \cite[vgl.][]{wang_integration_2020}.
 
-Verschiedene SIGs z.B. \cite{do2010software}
-
-\citeauthor{chazette_end-users_nodate} $\rightarrow$ zweischneidiges schwert
-
-\citeauthor{chazette_knowledge_nodate} $\rightarrow$ Auswirkungen auf Qualitätsaspekte
-
-“Evaluating the quality of explanations is traditionally difficult due to their inherent subjectivity. The needs of different user groups can be very different, which is reflected in their expectations of what an explanation should offer.” \cite{martin_developing_2019, martin_evaluating_2021}
-
-
+Folglich müssen die Einflüsse von \textit{Explainability} auf andere Qualitätsaspekte genauer untersucht werden. Außerdem müssen für die Überprüfung des Erfolges der Integration von Erklärung die Anforderungen an diese zuvor klar dargestellt werden.
 
 \section{Qualitätsmodelle}
 \label{sec:basics_quality_models}
 
-Diese Arbeit entwickelt zwar kein Qualitätsmodell für Erklärungen, gibt allerdings Basis für einige Aspekte und benutzt es später auch.
+Eine gängige Möglichkeit konkrete Anforderungen zu formulieren bieten Qualitätsmodelle \cite{schneider2012abenteuer}. Die Idee dieser Modelle ist von allgemein formulierten Zielen, iterativ überprüfbare, konkrete Anforderungen zu entwickeln (Siehe \autoref{fig:basics_quality_models}). In der Regel werden dabei definierte Qualitätsaspekte aus Normen als allgemeine Ziele formuliert \cite[vgl.][]{schneider2012abenteuer}.
+
+Daraufhin werden diese für einen bestimmten Kontext konkretisiert, um ein besseres Verständnis dafür zu erlangen, worauf sich das Qualitätsziel in dem Anwendungsfall bezieht.
+
+Aus den konkreten Zielen können dann Metriken abgeleitet werden, anhand derer festgelegt werden kann, ob das Ziel erfüllt ist. Dazu wird eine Anforderung formuliert, welche im Regelfall Sollwerte für die festgelegten Metriken enthält.
 
 \begin{figure}[htb!]
     \centering
@@ -92,4 +87,9 @@ Diese Arbeit entwickelt zwar kein Qualitätsmodell für Erklärungen, gibt aller
     \label{fig:basics_quality_models}
 \end{figure}
 
-\cite{schneider2012abenteuer}
+Diese Arbeit entwickelt zwar kein Qualitätsmodell für \textit{Explainability}, gibt allerdings Basis für die abstrakte Ebene des Modells. Im letzten Teil wendet wird diese Basis verwendet, um Anforderungen für die Integration von Erklärungen in einem spezifischen Softwaresystem aufzustellen. Welches Ziel diese Arbeit dabei verfolgt wird im nächsten Kapitel vorgestellt.
+
+
+% “Evaluating the quality of explanations is traditionally difficult due to their inherent subjectivity. The needs of different user groups can be very different, which is reflected in their expectations of what an explanation should offer.” \cite{martin_developing_2019, martin_evaluating_2021}
+
+% Verschiedene SIGs z.B. \cite{do2010software}
