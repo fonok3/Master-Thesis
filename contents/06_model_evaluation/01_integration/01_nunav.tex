@@ -4,6 +4,8 @@ Der NUNAV-Routingalgorithmus ist bei Graphmasters in verschiedene Produkte integ
 
 \subsubsection{Technischer Überblick}
 
+Im Allgemeinen setzt die Graphmasters GmbH auf eine \textit{Micro-Service}-Infrastruktur. Das heißt die einzelnen Teilsysteme der NUNAV-Technologie sind stark gekapselt und werden unabhängig voneinander bei mehreren Cloud-Infrastruktur-Anbietern betrieben. So ist nicht nur eine unabhängige Entwicklung möglich, sondern auch die Skalierung einzelner Systeme ist einfach und kostengünstig umsetzbar. Clients für die Services sind entweder Mobile Anwendungen für Smartphones oder Webanwendungen.
+
 \begin{figure}[htb!]
     \centering
     \includegraphics{contents/06_model_evaluation/01_integration/res/nunav_architecture.pdf}
@@ -11,7 +13,9 @@ Der NUNAV-Routingalgorithmus ist bei Graphmasters in verschiedene Produkte integ
     \label{fig:nunav_software_architecture}
 \end{figure}
 
-\paragraph{Nugraph}
+\autoref{fig:nunav_software_architecture} stellt abstrakt alle für diese Arbeit relevanten Services der Infrastruktur dar. Dabei sind alle Systeme, welche bei der Integration von Erklärungen nicht verändert wurden in grau dargestellt. Wichtig ist dabei zum einen der Routingalgorithmus an sich (\textit{Nugraph}), welcher die Daten für die Navigation bereitstellt. Zum anderen ist die Mobile Anwendung von \textit{NUNAV Navigation} relevant, da dort Erklärungen integriert werden sollen. Außerdem gibt es für jede Client-Anwendung einen sogenannten BFF (\textit{Backend for Frontend}). Dieser stellt die einzige Kommunikationsschnittstelle der Clients mit allen anderen Services der Infrastruktur dar. In der Regel wird die Kommunikation zwischen den Services bzw. Clients und dem BFF über REST\footnote{\textit{Representational State Transfer} ist ein Paradigma zum Austausch von Daten über das HTTP-Protokoll.}-Schnittstellen mit JSON\footnote{\textit{JavaScript Object Notation} ist ein Datenformat, welches vor allem für Maschine-zu-Maschine-Kommunikation eingesetzt wird und Programmiersprachen unabhängig ist.} als Übertragungsformat abgewickelt. 
+
+\paragraph{Nugraph} \textit{Nugraph} ist der Gesamtbegriff in der Architektur für den Routingalgorithmus. Dieser berechnet auf der Basis eines Prädiktiven-Verkehrmodells die individuell schnellste Route zwischen zwei Punkten. Dabei wird anhand von ca. 1,5 Millionen Vekehrsmessungen (\textit{FCD}\footnote{\textit{Floating Car Data} ist ein standardisiertes Format für die Übermittlung von Positionen und dazugehörigen Meta-Daten}) in der Minute der Vekehr auf der Route zum Zeitpunkt, zu dem die Nutzer durch den Verkehr an einer Stelle beeinflusst werden, mithilfe von Künstlicher Intelligenz vorausgesagt. Alle Daten die zur Navigation (z.b. Verlauf und Geschwindigeit auf der Route) benötigt werden kommen von diesem Teilsystem.
 
 \paragraph{Backend for Frontend}
 
