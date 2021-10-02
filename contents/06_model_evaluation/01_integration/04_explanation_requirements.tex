@@ -1,5 +1,14 @@
 \subsection{Anforderungen der Erklärungen}
 
+Mithilfe der Rohanforderungen und Ziele aus dem Workshop sowie den erstellten Personas sowohl funktionale als auch nicht-funktionale Anforderungen für Erklärungen in NUNAV entwickelt werden
+
+\subsubsection{Nicht-Funktionale Anforderungen}
+
+% \cite{kohl_explainability_2019} gives a good overview to the requirement analysis for Explainability as an NFR
+
+Als Methode zum Erstellen der konkreten NFRs wurde das Aufstellen eines Qualitätsmodells gewählt \cite{schneider2012abenteuer}. Das Modell ist in \autoref{fig:nunav_explanation_quality_model} abgebildet. Die allgemeinen Qualitätsziele sind in der Abbildung fett gedruckt und die Metriken kursiv dargestellt. Bei der Erstellung wurde immer iterativ Rücksprache mit den verschiedenen Teilnehmern des Workshops gehalten. Die Basis für die Qualitätsziele waren die in dem Modell für Erklärungen unter \textit{Objectives} aufgeführten Ziele. Die Endfassung der Anforderungen wurde schlussendlich vom Teamleiter des \glqq Mobile Application\grqq{}-Teams abgesegenet.
+
+Es hat sich allerdings herausgestellt, dass das Aufstellen solch konkreter Anforderungen nicht der Arbeitsweise von Graphmasters entspricht. In den Rücksprachen wurde klar, dass die Ziele normalerweise deutlich abstrakter gehalten werden. Für eine Evaluation der Integration von Erklärungen im Rahmen dieser Arbeit werden die konkreten Anforderungen zur Prüfung allerdings benötigt.
 
 \begin{figure}[htb!]
     \centering
@@ -8,10 +17,17 @@
     \label{fig:nunav_explanation_quality_model}
 \end{figure}
 
+In \autoref{fig:nunav_explanation_quality_model} ist zu erkennen, dass für Graphmasters im Allgemeinen die Erhöhung der Nutzung und die Akzeptanz des Systems im Fordergrund stehen. Für die Nutzung ist eigentlich die für Graphmasters interessanteste Metrik die Anzahl der aktiven Nutzer. Da für eine Messung von Veränderungen dieser durch die Integration von Erklärungen allerdings nicht über einen kurzen Zeitraum messen lässt, wurde  als Metrik die Anzahl der Routen pro Nutzer und Woche vorgeschlagen und schließlich auch durch Graphmasters bestätigt. Für die Akzeptanz des Systems ist ein Ziel, dass sich die \textit{End User} möglichst viel an die vorgeschlagene Route halten. Als Metrik wurde hierfür die Anzahl der Abweichungen von der Route pro Kilometer vorgeschlagen und ebenfalls letztendlich verwendet.
 
+Ein weiteres wichtiges Ziel von Graphmasters ist die Nutzerzufriedenheit mit den Routen. Hierfür bestand bereits vor dem Beginn dieser Arbeit eine Metrik. \textit{End User} können bei Erreichen des Ziels einer Navigation auf einer Skala mit fünf Sternen angeben, wie zufrieden sie insgesamt mit der Route waren.
 
-which explanandum X must be explained \cite{kohl_explainability_2019}
+Für alle Metriken fällt auf, dass in \autoref{fig:nunav_explanation_quality_model} keine Sollwerte definiert sind. Aus den Gesprächen hat sich ergeben, dass für Graphmasters erstens nicht wichtig ist, um wie viel die verschiedenen Metriken sich verbessern, solange dies besser ist. Außerdem ist sind keine Basiswerte vorhanden, auf die man sich beziehen kann. Aus diesem Grund wurden die konkreten Anforderungen in Bezug auf signifikante Unterschiede formuliert. Die Formulierungen orientieren sich dabei an gängigen Vorlagen, enthalten allerdings nicht die, in den Vorlagen formulierten Sollwerte \cite{rajnish2010quality, wiegers1999writing, alexander2002writing}:
 
+\begin{enumerate}
+    \item [NFR1] Die Anzahl der gefahrenen Routen mit NUNAV pro Nutzer und Woche soll signifikant messbar erhöht werden.
+    \item [NFR2] Die durchschnittliche Anzahl der Abweichungen der Nutzer pro Kilometer von der durch NUNAV vorgeschlagenen Route soll signifikant messbar verkleinert werden.
+    \item [NFR3] Die durchschnittliche Bewertung der Route am Ende der Navigation in NUNAV soll signifikant erhöht werden.
+\end{enumerate}
 
 \cite{golledge1999wayfinding}
 
