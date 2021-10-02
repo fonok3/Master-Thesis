@@ -1,16 +1,17 @@
 \subsection{Design der Erklärungen}
 
-Auch wenn besser \cite{riveiro_thats_2021}, haben wir uns gegen Interaktionen entschieden, da es während der Navigation nicht gut ist
+Das Gestalten der Erklärungen ist mit mehreren Design-Mockups umgesetzt worden. Grundsätzlich ist für die funktionalen Anforderungen 1-4 jeweils ein Erklärungstyp entstanden. Wie aus Protokoll des durchgeführten Workshops zu entnehmen ist, wurden bereits in diesem einige Ideen für Erklärungen auf Basis der Vorschläge zur Umsetzung von Erklärungen aus dem Modell für Erklärungen entwickelt.
 
-Wie in \cite{chazette_end-users_nodate} und \cite{wang_integration_2020} vorgeschlagen, wollten wir wenn Interaktion (außershalb der Navigation) möglich, dafür sorgen, dass auf Erklärungen zugegriffen werden kann.
+Außerdem wurden bei der Umsetzung die Zusammenhänge zwischen den Eigenschaften von Erklärungen auf Qualitätsaspekte sowie die Heuristiken für das Design von Erklärungen beachetet. Insbesondere wurde darauf geachtet, dass die Erklärungen dezent sind, sodass sie möglichst keinen negativen Einfluss auf die \textit{Usability} haben. Längere Erklärungen wurden nur optional eingesetzt. Auch wurde wie aus dem Leitfaden hervorgeht, versucht für eine Information möglichst hybride Stile zu nutzen, sodass die \textit{End User} diese auf mehrere Weisen erfassen können.
 
-which explanandum X must be explained \cite{kohl_explainability_2019}
+Da eine weitere wichtige Empfehlung die \textit{Context Sensitivity} von Erklärungen betrifft, wird hier kurz auf den \textit{Context} eingegangen. Die \textit{End User} wurden bereits zurvor beschrieben (siehe \autoref{sec:06_model_evaluation:personas}). Grundsätzlich kann im \text{Context} von Navigationsanwendungen zwischen zwei verschiedenen Situationen unterschieden werden. Die erste ist die Nutzung von \textit{NUNAV Navigation} vor der aktiven Navigation. Dies beinhaltet das Auswählen des Ziels, eine Routenübersicht, sowie dann die Möglichkeit des startens der Navigation. Hier haben die \textit{End User} keinen Zeitdruck und können sich auf die Interkation mit der Applikation konzentrieren. Trotz dessen wurden die Erklärungen so entwickelt, dass diese von den \textit{End Usern} wie von \citeauthor{chazette_end-users_nodate} sowie \citeauthor{wang_integration_2020} vorgeschlagen, optional angefordert werden müssen \cite{chazette_end-users_nodate,wang_integration_2020}. Folglich wurden für die Anfroderungen FR1 und FR2 in diesem \textit{Context} umgesetzt. Grund dafür ist, dass die Informationsmenge zur Erklärung des Routingalgorithmus und der dazugehörigen Daten so groß ist, dass eine Integration in die zweite mögliche Situation nicht ohne Beeinflussung der Nutzerperformanz möglich wäre.
 
-Grafiken von eingehendem Datenstrom und ausgehenden Datenstrom.
+Die zweite Situation ist die aktive Navigation. Während dieser sollten die \textit{End User} zu wenig wie möglich abgelenkt werden, da sie der vollen Konzentration auf die Straße bedürfen. Daher sind alle Erklärungen, die während der Navigation den \textit{End Usern} zur Verfügung gestellt werden entgegen der Empfehlung für Interaktionen mit Erklärungen ohne eine Manipulationsmöglichkeit durch die \textit{End User} gestaltet.
 
-idea: Frage am Ende der Route verändern: Es hat sich herausgestellt, dass die User diese nicht lesen.
+Die vier entwickelten Erklärungstypen werden im Folgenden im Detail vorgestellt.
 
-explain \textit{Affordance}
+% Grafiken von eingehendem Datenstrom und ausgehenden Datenstrom.
+% explain \textit{Affordance}
 
 \input{contents/06_model_evaluation/01_integration/11_collaborative_routing}
 
