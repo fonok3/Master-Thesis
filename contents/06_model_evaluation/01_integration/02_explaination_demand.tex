@@ -8,7 +8,7 @@ Um diese Analyse anzureichern wurde darauf aufbauend ein Workshop mit mehreren M
 
 Für die Initiale Analyse, welche Verständnisprobleme in \textit{NUNAV Navigation} bestehen, wurde zunächst manuell das Feedback, welches im Google Play Store und Apple App Store von Nutzern in Form von App-Reviews gegeben wurde, analysiert (ab Oktober 2020). Daraus sind Themengebiete abgeleitet worden, und die Anzahl der Reviews, die ein Themengebiet ansprechen, wurden gezählt. Insgesamt konnten aus 46 Reviews klare Themen abgeleitet werden wovon 33 Reviews Verständnisprobleme erwähnen. Die Themen, die häufig vorkamen und für Erklärbarkeit relevant sind, sind in \autoref{tab:06_model_evaluation_integration_app_store_reviews_overview} aufgelistet. Dabei wurde als Hauptproblem ein zu geringes Verständnis für den kollaborativen Routingalgorithmus identifiziert. Allein fünf der 16 Reviews, aus denen sich dies ableiten lässt, bemängeln, dass NUNAV keine Alternativrouten vorschlägt. Dies weist darauf hin, dass nicht klar ist, dass das System des Verteilens der Nutzer auf die vorhandene Verkehrsinfrastruktur nur möglich ist, wenn die Nutzer den vorgeschlagenen Routen folgen und keine Alternativen nehmen.
 
-\begin{table}[bht!]
+\begin{table}[htb!]
     \begin{tabular}{p{.25\textwidth}p{.56\textwidth}p{.1\textwidth}}
         \hline
         Thema & Beschreibung        & Anzahl \\
@@ -36,7 +36,7 @@ Außerdem gibt es Hilfe-Artikel, die über einen \textit{Hilfe-Center} der Graph
 
 Aus den Reviews und Hilfe-Center-Artikeln wurden dann erste Themen beziehungsweise Nutzerfragen abgeleitet und mit dem Team \glqq Solution Experts\grqq{} von Graphmasters diskutiert. Das Team ist für die Betreuung von Kunden und die Bearbeitung von Feedback zuständig. Die Ergebnisse sind in \autoref{tab:06_model_evaluation_explicit_questions} zu sehen.
 
-\begin{table}[bht!]
+\begin{table}[htb!]
     \begin{tabular}{p{.3\textwidth}p{.66\textwidth}}
         \hline
         Thema         & Fragen \\
@@ -72,10 +72,8 @@ Auf Basis dieser ersten Ergebnisse wurde im Anschluss ein Workshop mit mehreren 
 
 % Display context informaiton (Einfach zu integrieren) \cite{wiegand_id_2020}
 
-Zur konkreten Anwendung des Leitfadens für Erklärungen und dabei insbesondere das Klären der externen Abhängigkeiten für zu integrierende Erklärungen und erste Ideen wurde ein interdisziplinärer Workshop mit Frontend-Entwicklern, \glqq Solution Experts\grqq{} und einem Produktmanager bei Graphmasters durchgeführt.
+Zum Festlegen der Ziele und Anforderungen an die Erklärungen sowie zum Sammeln erster Umsetzungsideen, wurde ein interdisziplinärer Workshop mit Frontend-Entwicklern, \glqq Solution Experts\grqq{} und einem Produktmanager bei Graphmasters durchgeführt. Außerdem sollten Metriken gefunden werden, welche zur Überprüfung der Ziele verwendet werden können. Durch die direkte Anwendung des entwickelten Leitfadens im Workshop konnten außerdem Beobachtungen darüber, wie dieser eingesetzt wird, gesammelt werden. Dies war allerdings nicht Kern des Workshops. 
 
-Ziel des Workshops war es Rohanforderungen bzw. Ziele sowie Ideen für die Umsetzung von Erklärungen zusammen zu entwickeln. Auch sollten Metriken gefunden werden, welche zur Überprüfung der Ziele verwendet werden können.
+Nach der initialen Vorstellung von Erklärbarkeit, dem Leitfaden für die Integration von Erklärungen sowie den Ergebnissen aus der User-Feedback-Analyse hat sich der Workshop an dem Aufbau des Modells für Erklärungen orientiert. Folglich wurden zuerst Informationen zu möglichen Nutzern (\textit{Context}), dann Ziele (\textit{Objectives}) und deren Umsetzungsmöglichkeiten (\textit{Characteristics}) und schließlich die Evaluationsmöglichkeiten besprochen (\textit{Evaluation}). Auch wenn der Workshop so geplant war, dass die einzelnen Aspekte nacheinander abgearbeitet werden, hat sich ergeben, dass die Ziele und deren Umsetzung gleichzeitig behandelt wurden. Grund dafür war, dass beim Aufstellen der Ziele bzw. Rohanforderungen bereits die Umsetzbarkeit im Rahmen dieser Arbeit diskutiert wurde. Einige Fragen der Machbarkeit sind allerdings offen geblieben, da hierfür Wissen von den Entwicklern des Routingalgorithmus benötigt wurde. Explizit ging es um die Frage, welche Daten für bestimmte Erklärungen überhaupt zur Verfügung gestellt werden können. Ein detailliertes Ergebnisprotokoll des Workshops ist in \autoref{sec:appendix_workshop_protocol} zu finden.
 
-Nach der initialen Vorstellung des Leitfadens für die Integration von Erklärungen sowie den Ergebnissen aus der Uesr-Feedback-Analyse hat sich der Workshop an dem Aufbau des Modells für Erklärungen orientiert. Folglich wurden zuerst Informationen zu möglichen Nutzern, dann Ziele und deren Umsetzungsmöglichkeiten und schließlich die möglichen Metriken besprochen. Dass Umsetzungsmöglichkeiten und Ziele statt nacheinander gleichzeitig bearbeitet wurden, hat sich während des Workshops ergeben, da für die verschiednen Ziele und Erklärungen auch die Machbarkeit für diese Arbeit diskutiert wurde. Einige Fragen der Machbarkeit sind offen geblieben, da hierfür Wissen von den Entwicklern des Routingalgorithmus benötigt wurde. Explizit ging es um die Frage, welche Daten für bestimmte Erklärungen überhaupt zur Verfügung gestellt werden können. Ein detailliertes Ergebnisprotokoll des Workshops ist in \autoref{sec:appendix_workshop_protocol} zu finden.
-
-Aus den Ergebnissen des Workshops wurden dann iterativ und in Rücksprache mit verschiedenen Teilnehmern des Workshops Personas, die konkreten Anforderungen sowie die Erklärungen, die in \textit{NUNAV Navigation} integriert werden sollten, entwickelt. Diese werden im Folgenden vorgestellt.
+Aus den Ergebnissen des Workshops wurden dann iterativ und in Rücksprache mit verschiedenen Teilnehmern des Workshops Personas, die konkreten Anforderungen sowie die finalen Erklärungen, die in \textit{NUNAV Navigation} integriert werden sollten, entwickelt.
