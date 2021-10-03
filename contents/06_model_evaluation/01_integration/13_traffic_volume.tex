@@ -7,28 +7,28 @@ Wee aus der Persona von Michael hervorgeht, wundert er sich zum Teil, warum \tex
 
 Dies ist allerdings nicht trivial, da die Daten, ob es zu einem Zeitpunkt ein geringes oder hohes Vekehr gibt, bzw. wie \textit{End User} viel oder wenig Verkehr subjektiv einschätzen. Ein weiteres Problem ist, dass es nicht möglich ist, zu berechnen, welche Route für die Nutzer auf der gleichen Strecke subjektuv \glqq normal\grqq{} ist. Nachdem mehrere Lösungsansätze für dieses Problem in kleinen Runden bei Graphmasters diskutiert wurden, wird als Lösung die Berechnung des Verhältnisses von durchschnittlicher Dauer der Route zu aktueller Dauer als Basiswert genommen. Die Daten werden dabei durch \textit{Nugraph} zur Verfügung gestellt und im Rahmen dieser Arbeit auf dem \textit{BFF} auf die Stufen \glqq wenig Verkehr\grqq{}, \glqq mäßiger Verkehr\grqq{} und \glqq viel Verkehr\grqq{} abgebildet. Außerdem gibt es eine \glqq normale\grqq{} Verkehrssituation, in der den \textit{End Usern} keine Erklärung angezeigt wird. Die Abbildungsfunktion ist in den Zusatzmaterialien zu finden.
 
-Die Informationen können die \textit{End User} auf drei Wegen erhalten. Zunächst werden die Informationen in der Routenvorschau angezeigt. Dabei wird die Gesamtfahrzeit für die Route ne nach Verkehrsaufkommen grün (wenig Verkehr), standardtextfarbe (normaler Verkehr), orange (mäßiger Verkehr) und rot (viel Verkehr) dargestellt. Da im ersten Prototypen aufgefallen ist, dass die Farben alleine nicht aussagekräftig sind (siehe \autoref{fig:prototype_traffic_volume_route_overview}, (a)), wurde zusätzlich ein kurzer Erklärungstext eingefügt (siehe \autoref{fig:prototype_traffic_volume_route_overview}, (a)). Dieser ist bei \glqq normalem\grqq{} nicht zu sehen. So lernen die \textit{End User} mit der Zeit die Bedeutung der Farben. Eine Übersicht mit allen Prototypen ist in \autoref{sec:appendix_traffic_volume} zu finden.
+Die Informationen können die \textit{End User} auf drei Wegen erhalten. Zunächst werden die Informationen in der Routenvorschau angezeigt. Dabei wird die Gesamtfahrzeit für die Route ne nach Verkehrsaufkommen grün (wenig Verkehr), standardtextfarbe (normaler Verkehr), orange (mäßiger Verkehr) und rot (viel Verkehr) dargestellt. Da im ersten Prototypen aufgefallen ist, dass die Farben alleine nicht aussagekräftig sind (siehe \autoref{fig:prototype_traffic_volume_route}, (a)), wurde zusätzlich ein kurzer Erklärungstext eingefügt (siehe \autoref{fig:prototype_traffic_volume_route}, (b)). Dieser ist bei \glqq normalem\grqq{} nicht zu sehen. So lernen die \textit{End User} mit der Zeit die Bedeutung der Farben. Eine Übersicht mit allen Prototypen ist in \autoref{sec:appendix_traffic_volume} zu finden.
 
 Außerdem werden während der gesamten Navigation die Ankunftszeit und die Fahrzeit in der entsprechenden Farbe angezeigt und bei sich ändernder Verkehrssituation auch aktualisiert.
 
 \begin{figure}[htb!]
     \centering
-    \subfloat[1. Prototyp zur Darstellung der ]
+    \subfloat{Prototyp zur Darstellung des aktuellen Verkehrsaufkommens in der Routenvorschau]
     {
         \includegraphics[width=.27\linewidth]{contents/06_model_evaluation/01_integration/res/03_traffic_volume/prototype_11.pdf}
     }
     \hspace{.055\linewidth}
-    \subfloat[Finales Design der kurzen Erklärung]
+    \subfloat[Finales Design zur Darstellung des aktuellen Verkehrsaufkommens in der Routenvorschau]
     {
         \includegraphics[width=.27\linewidth]{contents/06_model_evaluation/01_integration/res/03_traffic_volume/final_10.png}
     }
     \hspace{.055\linewidth}
-    \subfloat[Finales Design der kurzen Erklärung]
+    \subfloat[Finales Design zur Darstellung des aktuellen Verkehrsaufkommens während der Navigation]
     {
         \includegraphics[width=.27\linewidth]{contents/06_model_evaluation/01_integration/res/03_traffic_volume/final_20.pdf}
     }
     \caption{Prototyp und finale Designs für die Erklärung zum kollaborativem Routing}
-    \label{fig:prototype_traffic_volume_route_overview}
+    \label{fig:prototype_traffic_volume_route}
 \end{figure}
 
 Des Weiteren ist das Sprachkommando, welches bei Start der Navigaiton gegeben wird, je nach Verkehrssituation unterschiedlich (siehe \autoref{tab:voice_commands_traffic_volume}).
