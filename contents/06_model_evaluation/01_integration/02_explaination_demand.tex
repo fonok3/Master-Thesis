@@ -1,10 +1,12 @@
 \subsection{Ermittlung des Erklärungsbedarfs}
 
-Die Anwendung des Leitfadens zur Integration von Erklärungen ist in mehrere Teile gegliedert. Die Graphmasters GmbH hat mehrere Datenquellen, in denen Nutzer-Feedback gesammelt wird. Daher war es in einem ersten Schritt möglich über die verschiedenen Support-Kanäle eine Zusammenfassung der möglichen Verständnisprobleme in \textit{NUNAV Navigation} zu erstellen. Um diese Analyse anzureichern wurde darauf aufbauend ein Workshop mit mehreren Mitarbeitern der Graphmasters GmbH durchgeführt. Ergebnis diesen Workshops waren dann eine Aufstellung der Probleme, Ziele für Erklärungen und Ideen zur Umsetzung. Auf Basis dieser Ergebnisse wurden dann im Rahmen dieser Arbeit die Anforderungen konkretisiert und in Designs für Erklärungen umgesetzt.
+Die Anwendung des Leitfadens zur Integration von Erklärungen ist in mehrere Teile gegliedert. In einem ersten Schritt wurden die existierenden Verständnisprobleme in NUNAV analysiert. Diese wurden aus verschiedenen Datenquellen der Graphmasters GmbH zusammengefasst. Dazu zählen unter anderem mehrere Support-Kanäle.
+
+Um diese Analyse anzureichern wurde darauf aufbauend ein Workshop mit mehreren Mitarbeitern der Graphmasters GmbH durchgeführt. Ergebnis diesen Workshops waren dann eine Aufstellung der Probleme, Ziele und Rohanforderungen für Erklärungen und Ideen zur Umsetzung. Auf Basis dieser Ergebnisse wurden dann im Rahmen dieser Arbeit die Anforderungen konkretisiert und in Designs für Erklärungen umgesetzt. Abschließen ist die technische Realisierung in \textit{NUNAV Navigation} erfolgt.
 
 \subsubsection{User-Feedback-Analyse}
 
-Für die Initiale Analyse, welche Verständnisprobleme in \textit{NUNAV Navigation} bestehen, wurde zunächst manuell das Feedback, welches im Google Play Store und Apple App Store von Nutzern in Form von App-Reviews gegeben wurde, analysiert (Ab Oktober 2020). Daraus wurden Themengebiete abgeleitet, und die Anzahl der Reviews, die ein Themengebiet ansprechen, gezählt. Insgesamt konnten aus 46 Reviews klare Themen abgeleitet werden. In 33 Reviews werden Verständnisprobleme erwähnt. Welche Themen häufig vorkamen und für Erklärbarkeit relevant sind, ist in \autoref{tab:06_model_evaluation_integration_app_store_reviews_overview} zu sehen. Dabei sieht man, dass ein zu geringes Verständnis für den kollaborativen Routingalgorithmus vorhanden ist. Allein fünf der 16 Reviews, aus denen sich dies ableiten lässt, bemängeln, dass NUNAV keine Alternativrouten vorschlägt. Dies weist darauf hin, dass nicht klar ist, dass das System des Verteilens der Nutzer auf die vorhandene Verkehrsinfrastruktur nur möglich ist, wenn die Nutzer den vorgeschlagenen Routen folgen und keine Alternativen nehmen.
+Für die Initiale Analyse, welche Verständnisprobleme in \textit{NUNAV Navigation} bestehen, wurde zunächst manuell das Feedback, welches im Google Play Store und Apple App Store von Nutzern in Form von App-Reviews gegeben wurde, analysiert (ab Oktober 2020). Daraus sind Themengebiete abgeleitet worden, und die Anzahl der Reviews, die ein Themengebiet ansprechen, wurden gezählt. Insgesamt konnten aus 46 Reviews klare Themen abgeleitet werden wovon 33 Reviews Verständnisprobleme erwähnen. Die Themen, die häufig vorkamen und für Erklärbarkeit relevant sind, sind in \autoref{tab:06_model_evaluation_integration_app_store_reviews_overview} aufgelistet. Dabei wurde als Hauptproblem ein zu geringes Verständnis für den kollaborativen Routingalgorithmus identifiziert. Allein fünf der 16 Reviews, aus denen sich dies ableiten lässt, bemängeln, dass NUNAV keine Alternativrouten vorschlägt. Dies weist darauf hin, dass nicht klar ist, dass das System des Verteilens der Nutzer auf die vorhandene Verkehrsinfrastruktur nur möglich ist, wenn die Nutzer den vorgeschlagenen Routen folgen und keine Alternativen nehmen.
 
 \begin{table}[bht!]
     \begin{tabular}{p{.25\textwidth}p{.56\textwidth}p{.1\textwidth}}
@@ -24,7 +26,7 @@ Für die Initiale Analyse, welche Verständnisprobleme in \textit{NUNAV Navigati
         Verständnis Routenfarbe     & Im Review werden Nachfragen zur Einfärbung der Route gestellt. & 2 \\
         \toprule
     \end{tabular}
-\caption{Anzahl der Reviews im Google Play Store und Apple App Store mit mehrfach vorkommenden Themen}
+\caption{Anzahl der Reviews im Google Play Store und Apple App Store für \textit{NUNAV Navigation} mit mehrfach vorkommenden Themen}
 \label{tab:06_model_evaluation_integration_app_store_reviews_overview}
 \end{table}
 
@@ -32,7 +34,7 @@ Außerdem gibt es Hilfe-Artikel, die über einen \textit{Hilfe-Center} der Graph
 
 % \cite{golledge1999wayfinding} \cite{bovy2012route} schreiben, welche Verständnisprobleme es bei Navigationsanwendungen im Allgemeinen gibt.
 
-Aus den Reviews und Hilfe-Center-Artikeln wurden dann erste Themen beziehungsweise Nutzerfragen abgeleitet und mit dem Team \glqq Solution Experts\grqq{} von Graphmasters diskutiert. Das Team ist für die Betreuung von Kunden und die Bearbeitung von Feedback zuständig. Die Ergebnisse sind in \autoref{tab:06_model_evaluation_explicit_questions} zu sehen:
+Aus den Reviews und Hilfe-Center-Artikeln wurden dann erste Themen beziehungsweise Nutzerfragen abgeleitet und mit dem Team \glqq Solution Experts\grqq{} von Graphmasters diskutiert. Das Team ist für die Betreuung von Kunden und die Bearbeitung von Feedback zuständig. Die Ergebnisse sind in \autoref{tab:06_model_evaluation_explicit_questions} zu sehen.
 
 \begin{table}[bht!]
     \begin{tabular}{p{.3\textwidth}p{.66\textwidth}}
@@ -61,37 +63,6 @@ Aus den Reviews und Hilfe-Center-Artikeln wurden dann erste Themen beziehungswei
 \caption{Anzahl der Reviews im Google Play Store und Apple App Store mit mehrfach vorkommenden Themen}
 \label{tab:06_model_evaluation_explicit_questions}
 \end{table}
-
-% \begin{itemize}
-%     \item Kollaboratives Routing
-%         \begin{itemize}
-%             \item Was ist / wie funktioniert kollaboratives Routing?
-%             \item Warum brauche ich eine ständige Internetverbindung?
-%             \item Wieso werden in NUNAV keine Standardrouten angezeigt?
-%         \end{itemize}
-%     \item Navigation
-%         \begin{itemize}
-%             \item Warum wird diese Route / der Umweg genommen?
-%             \item Warum sind die Routen bei NUNAV länger?
-%             \item Warum ist die Position ungenau?
-%         \end{itemize}
-%     \item Vertrauen in das System
-%         \begin{itemize}
-%             \item Woher kommen die Verkehrs-/ Sperungs-Daten?
-%             \item Was passiert mit meinen Daten?
-%             \item Wofür benötige ich Ortungsdienste beim App-Start?
-%             \item Kann die Güte der Route nicht bewerten?
-%         \end{itemize}
-%     \item Funktionen
-%         \begin{itemize}
-%             \item Was zeigt die Rainbow-Route an?
-%             \item Wie kann ich eine Sperrung melden?
-%             \item Wie kann ich mein Ziel in NUNAV eingeben?
-%             \item Wie kann ich Favoriten anlegen?
-%         \end{itemize}
-% \end{itemize}
-
-Außerdem gab es an die \glqq Solution Experts\grqq{} weitere weniger häufig auftretende Fragen bzw. Verständnisprobleme von \textit{NUNAV Navigation}, die in dieser Arbeit aufgrund der Einzelfälle nicht aufgeführt sind.
 
 \bigskip
 
