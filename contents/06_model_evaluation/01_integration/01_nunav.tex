@@ -10,7 +10,7 @@ Im Allgemeinen setzt die Graphmasters GmbH auf eine \textit{Micro-Service}-Infra
 
 \begin{figure}[htb!]
     \centering
-    \includegraphics[width=0.8\textwidth]{contents/06_model_evaluation/01_integration/res/nunav_architecture.pdf}
+    \includegraphics[width=\textwidth]{contents/06_model_evaluation/01_integration/res/nunav_architecture.pdf}
     \caption{Ausschnitt aus der NUNAV Software Architektur (UML-Komponenten-Diagramm)}
     \label{fig:nunav_software_architecture}
 \end{figure}
@@ -22,7 +22,7 @@ Im Allgemeinen setzt die Graphmasters GmbH auf eine \textit{Micro-Service}-Infra
 als Übertragungsformat abgewickelt. 
 
 \paragraph{Nugraph} \textit{Nugraph} ist der Gesamtbegriff in der Architektur für die Services, welche zum Routingalgorithmus gehören. Dieser berechnet auf der Basis eines prädiktiven Verkehrsmodells die individuell schnellste Route zwischen zwei Punkten. Dabei wird anhand von ca. 1,5 Millionen Verkehrsmessungen
-%  (\textit{FCD}\footnote{\textit{Floating Car Data} ist ein standardisiertes Format für die Übermittlung von Positionen und dazugehörigen Meta-Daten})
+ (z.B. \textit{Floating Car Data}\footnote{\textit{Floating Car Data} (FCD) sind mit Zeitstempeln versehene Geolokalisierungs- und Geschwindigkeitsdaten, die direkt von fahrenden Fahrzeugen erfasst werden})
  in der Minute der Verkehr auf der Route zum Zeitpunkt, zu dem Nutzer durch den Verkehr an einer Stelle beeinflusst werden, mithilfe von Künstlicher Intelligenz vorausgesagt. Alle Daten die zur Navigation (z.b. Verlauf und Geschwindigkeit auf der Route) benötigt werden kommen von diesem Teilsystem.
 
 \paragraph{Backend for Frontend} Der in \autoref{fig:nunav_software_architecture} gezeigte \textit{Mobile-BFF} ist zum einen für die korrekte Weiterleitung von Anfragen an den richtigen Service zuständig. Darüber hinaus bereitet dieser auch Daten anderer Services für die Mobilen Apps auf oder konvertiert die verschiedenen Formate. Dabei werden zum Teil Daten mehrerer Services gebündelt oder neue Daten berechnet. 
