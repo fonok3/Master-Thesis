@@ -36,5 +36,6 @@ jobs:
           automatic_release_tag: "latest"
           prerelease: false
           title: "Review Version"
+          automatic_release_tag: "${GITHUB_REF#refs/*/}"
           files: |
             thesis.pdf
