@@ -20,18 +20,17 @@ Um bei der Analyse der Daten, Nutzer auszuschließen, die eine Navigation nur ge
 Für Nutzer der Gruppen 3 und 4 kann es passieren, dass sie keine Erklärung während der Navigation erhalten, wenn die aktuelle Route keiner Erklärung bedarf. Dies ist der Fall, wenn das Verkehrsaufkommen \glqq normal\grqq{} ist und der Nutzer während der gesamten Fahrt guten GPS-Empfang hat (Definitionen siehe \autoref{sec:gps_accuracy_definition}). Bei der Betrachtung von einzelnen Routen werden die Teilnehmer folglich in die Gruppen 1 oder 2 umsortiert, falls sie während der Navigation keine Erklärung gesehen haben. Wird eine Metrik analysiert, die sich pro Nutzer über mehrere Routen erstreckt, werden die Teilnehmer den Gruppen zugeordnet, wenn NUNAV ihnen mindestens einmal eine Erklärung aus der Studiengruppe angezeigt hat. Über Übersicht findet sich in \autoref{tab:study_user_group_overview}
 
 \begin{table}
-    \begin{center}
-        \begin{tabular}{|l|c|c|c|}
-            \hline
-            \multirow{2}{*}{\textbf{Gruppe}} & \multirow{2}{*}{\textbf{Anzahl der Nutzer}} & \multicolumn{2}{|c|}{\textbf{Anzahl der Routen}} \\ \cline{3-4}
-            & & Insgesamt & Mit Nutzerbewertung \\ \hline \hline
-            Gruppe 1            & 1 778  & 4 807  & 133 \\ \hline
-            Gruppe 2            & 1 397  & 3 413  & 135 \\ \hline
-            Gruppe 3            & 468   & 4 571  & 184 \\ \hline
-            Gruppe 4            & 369   & 3 740  & 173 \\ \hline \hline
-            \textbf{Insgesamt}  & 4 012  & 16 531 & 625 \\ \hline
-        \end{tabular}
-    \end{center}
+    \centering
+    \begin{tabular}{|l|c|c|c|}
+        \hline
+        \multirow{2}{*}{\textbf{Gruppe}} & \multirow{2}{*}{\textbf{Anzahl der Nutzer}} & \multicolumn{2}{|c|}{\textbf{Anzahl der Routen}} \\ \cline{3-4}
+        & & Insgesamt & Mit Nutzerbewertung \\ \hline \hline
+        Gruppe 1            & 1 778  & 4 807  & 133 \\ \hline
+        Gruppe 2            & 1 397  & 3 413  & 135 \\ \hline
+        Gruppe 3            & 468   & 4 571  & 184 \\ \hline
+        Gruppe 4            & 369   & 3 740  & 173 \\ \hline \hline
+        \textbf{Insgesamt}  & 4 012  & 16 531 & 625 \\ \hline
+    \end{tabular}
     \caption{Übersicht über die Daten der Studiengruppen}
     \label{tab:study_user_group_overview}
 \end{table}
@@ -86,21 +85,21 @@ Für die Überprüfung, ob eine schlechte Positionierung einen Effekt auf die Nu
 Bei der Betrachtung von Abweichungen von der Route werden wie oben beschrieben Navigationen, bei denen es häufig zu einer ungenauen Positionierung kommt aus den Daten gefiltert. Außerdem wurde sie normalisiert, sodass schlussendlich 16 314 einzelne Navigationen zur Analyse der Routen-Abweichungen im Datensatz verblieben sind.
 
 \begin{figure}
+    \centering
     \includegraphics[width=0.8\textwidth]{contents/06_model_evaluation/res/OffRoute_Result_Overview.png}
     \caption{Anzahl der Offroutes pro Kilometer für jede Studiengruppe}
 \end{figure}
 
 \begin{table}
-    \begin{center}
-        \begin{tabular}{|l|c|c|}
-            \hline
-            \textbf{Studiengruppe}  & \textbf{Mittelwert} [N/km] & \textbf{Standardabweichung} [N/km]\\ \hline
-            Gruppe 1                & 0.0753 & 0.1293 \\ \hline
-            Gruppe 2                & 0.0786 & 0.1272 \\ \hline
-            Gruppe 3                & 0.0803 & 0.1410 \\ \hline
-            Gruppe 4                & 0.0732 &  0.1328 \\ \hline
-        \end{tabular}
-    \end{center}
+    \centering
+    \begin{tabular}{|l|c|c|}
+        \hline
+        \textbf{Studiengruppe}  & \textbf{Mittelwert} [N/km] & \textbf{Standardabweichung} [N/km]\\ \hline
+        Gruppe 1                & 0.0753 & 0.1293 \\ \hline
+        Gruppe 2                & 0.0786 & 0.1272 \\ \hline
+        Gruppe 3                & 0.0803 & 0.1410 \\ \hline
+        Gruppe 4                & 0.0732 &  0.1328 \\ \hline
+    \end{tabular}
     \caption{Übersicht der Ergebnisse der Routen-Abweichungen pro Kilometer}
     \label{tab:study_offroute_results}
 \end{table}
@@ -109,15 +108,16 @@ Um zu prüfen, ob die Unterschiede der Mittelwerte signifikant sind, muss dies m
 
 Für die Prüfung zwischen welchen Studiengruppen ein signifikanter Unterschied vorliegt, wird der Dunn-Test \cite{dunn1964multiple} verwendet. (P wird mit der \glqq bonferoni\grqq{}-Methode korrigiert.)
 
-Auch hier wird wieder von einem Signifikanzniveau $ p < 0.05 $ ausgegangen (Siehe \autoref{sec:appendix_study_results}). Folglich weichen die Nutzer der Gruppe 4 signifikant weniger von der vorgeschlagenen Route ab als die Teilnehmer aller anderen Gruppen ($ p_{11} = 0.0288 $, $ p_{12} = 0.0000 $, $ p_{13} = 0.0030 $). Weitere signifikante Unterschiede gibt es nicht.
+Auch hier wird wieder von einem Signifikanzniveau $ p < 0.05 $ ausgegangen (siehe \nameref{ch:appendix_1}). Folglich weichen die Nutzer der Gruppe 4 signifikant weniger von der vorgeschlagenen Route ab als die Teilnehmer aller anderen Gruppen ($ p_{11} = 0.0288 $, $ p_{12} = 0.0000 $, $ p_{13} = 0.0030 $). Weitere signifikante Unterschiede gibt es nicht.
 
 Hypothese 2.1 trifft zwar für das Geben aller Erklärungstypen (Gruppe 4) zu, nicht aber für die Gruppen 2 und 3. Folglich wird diese abgelehnt. Hypothese 2.2 kann angenommen werden, da die Nutzer der Gruppe 4 sowohl signifikant weniger von der vorgeschlagenen Route abgewichen sind als die Nutzer der Gruppe 2 sind als auch die Nutzer der Gruppe 3.
 
 \subsubsection{Nutzerzufriedenheit mit der aktuellen Route}
 
-Um die Zufriedenheit der Nutzer mit der abgeschlossenen Navigation zu evaluieren, setzt NUNAV auf eine Bewertung mithilfe von 5 Sternen bei Erreichen des Zieles. Dies ist verknüpft mit der Frage \glqq Wie hat dir die Fahrt gefallen\grqq (Siehe \autoref{fig:screenshot_destination_reached}). Außerdem sind die Fahrtdauer und zurückgelegte Kilometer angegeben.
+Um die Zufriedenheit der Nutzer mit der abgeschlossenen Navigation zu evaluieren, setzt NUNAV auf eine Bewertung mithilfe von 5 Sternen bei Erreichen des Zieles. Dies ist verknüpft mit der Frage \glqq Wie hat dir die Fahrt gefallen\grqq (siehe \autoref{fig:screenshot_destination_reached}). Außerdem sind die Fahrtdauer und zurückgelegte Kilometer angegeben.
 
 \begin{figure}
+    \centering
     \includegraphics[width=0.27\linewidth]{contents/res/missing_image.pdf}
     \caption{Bildschirmfoto der Bewertungsdialogs}
     \label{fig:screenshot_destination_reached}
@@ -131,6 +131,7 @@ Um die Zufriedenheit der Nutzer mit der abgeschlossenen Navigation zu evaluieren
 \end{enumerate}
 
 \begin{figure}
+    \centering
     \includegraphics[width=\linewidth]{contents/06_model_evaluation/res/Rating_Result_Overview.pdf}
     \caption{Verteilung der Teilnehmer-Bewertung der Navigation für jede Studiengruppe bezogen auf die insgesamt abgegebenen Bewertungen}
     \label{fig:Rating_Result_Overview}
@@ -155,21 +156,21 @@ Bei der Analyse der Nutzungshäufigkeit von NUNAV wird über den zweiwöchigen S
 Bei der Betrachtung der Anzahl der gefahrenen Routen werden die Daten zunächst normalisiert. Folglich sind 3 951 Nutzer im Datensatz für die Prüfung der Hypothesen verblieben.
 
 \begin{figure}
+    \centering
     \includegraphics{contents/06_model_evaluation/res/Usage_Result_Overview.png}
     \caption{Anzahl der gefahrenen Routen für jede Studiengruppe}
 \end{figure}
 
 \begin{table}
-    \begin{center}
-        \begin{tabular}{|c|c|c|c|}
-            \hline
-            \textbf{Studiengruppe}  & \textbf{Mittelwert} [N] & \textbf{Standardabweichung} [N] \\ \hline
-            Gruppe 1                & 3.2672 & 3.2958 \\ \hline
-            Gruppe 2                & 3.2256 & 3.1961 \\ \hline
-            Gruppe 3                & 4.6630 & 4.7043 \\ \hline
-            Gruppe 4                & 4.5391 & 4.1509 \\ \hline
-        \end{tabular}
-    \end{center}
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{Studiengruppe}  & \textbf{Mittelwert} [N] & \textbf{Standardabweichung} [N] \\ \hline
+        Gruppe 1                & 3.2672 & 3.2958 \\ \hline
+        Gruppe 2                & 3.2256 & 3.1961 \\ \hline
+        Gruppe 3                & 4.6630 & 4.7043 \\ \hline
+        Gruppe 4                & 4.5391 & 4.1509 \\ \hline
+    \end{tabular}
     \caption{Übersicht der Ergebnisse der gefahrenen Routen der Nutzer}
     \label{tab:study_offroute_results_2}
 \end{table}
@@ -191,12 +192,14 @@ Im Folgenden wird die Erklärung zum Routing-Algorithmus \textit{Erklärung 1}, 
 Als gelesen bzw. zumindest entschieden, ob die Erklärung benötigt wird gilt diese, wenn ein Nutzer länger als 1,5 Sekunden in dem Dialog verbracht hat \cite{BAHR2011776}. \autoref{fig:explanation_results_clicked} zeigt wie häufig die Nutzer eine Erklärung angefordert haben und diese auch zumindest zum Teil gelesen haben. \autoref{tab:explanation_results_clicked} zeigt die Bewertung als \glqq Hilfreich\grqq{} oder \glqq Nicht hilfreich\grqq{} durch die Nutzer. Allerdings sind die Hilfe-Artikel auch über andere Wege erreichbar, wodurch Bewertungen nicht nur von Nutzern kommen, die über die NUNAV-App dort hingeleitet wurden.
 
 \begin{figure}
+    \centering
     \includegraphics[width=\linewidth]{contents/06_model_evaluation/res/explanation_results_clicked.pdf}
     \caption{Anzahl der Klicks bzw. gelesenen Erklärungen}
     \label{fig:explanation_results_clicked}
 \end{figure}
 
 \begin{figure}
+    \centering
     \includegraphics[width=\linewidth]{contents/06_model_evaluation/res/explanation_results_clicked_support.png}
     \caption{Bewertung der langen Erklärungen (Support-Artikel)}
     \label{tab:explanation_results_clicked}
