@@ -157,13 +157,15 @@ Bei der Betrachtung der Anzahl der gefahrenen Routen werden die Daten zunächst 
 
 \begin{table}
     \centering
-    \begin{tabular}{|c|c|c|c|}
+    \begin{tabular}{p{.27\textwidth}p{.27\textwidth}p{.35\textwidth}}
         \hline
-        \textbf{Studiengruppe}  & \textbf{Mittelwert} [N] & \textbf{Standardabweichung} [N] \\ \hline
-        Gruppe 1                & 3.2672 & 3.2958 \\ \hline
-        Gruppe 2                & 3.2256 & 3.1961 \\ \hline
-        Gruppe 3                & 4.6630 & 4.7043 \\ \hline
-        Gruppe 4                & 4.5391 & 4.1509 \\ \hline
+        Studiengruppe  & Mittelwert [N] & Standardabweichung [N] \\
+        \toprule
+        Gruppe 1                & 3.2672 & 3.2958 \\
+        Gruppe 2                & 3.2256 & 3.1961 \\
+        Gruppe 3                & 4.6630 & 4.7043 \\
+        Gruppe 4                & 4.5391 & 4.1509 \\
+        \bottomrule
     \end{tabular}
     \caption{Übersicht der Ergebnisse der gefahrenen Routen der Nutzer}
     \label{tab:study_offroute_results_2}
@@ -192,12 +194,19 @@ Als gelesen bzw. zumindest entschieden, ob die Erklärung benötigt wird gilt di
     \label{fig:explanation_results_clicked}
 \end{figure}
 
-\begin{figure}
+\begin{table}
     \centering
-    \includegraphics[width=\linewidth]{contents/06_model_evaluation/res/explanation_results_clicked_support.png}
-    \caption{Bewertung der langen Erklärungen (Support-Artikel)}
-    \label{tab:explanation_results_clicked}
-\end{figure}
+    \begin{tabular}{p{.3\textwidth}p{.3\textwidth}p{.3\textwidth}}
+        \hline
+        Artikel & Hilfreich & Nicht Hilfreich \\
+        \toprule
+        Kollaboratives Routing & 76 & 9 \\
+        Einflüsse auf die Routenberechnung & 209 & 32 \\
+        \bottomrule
+    \end{tabular}
+    \caption{\textit{Usefulness} der Hilfe-Center-Artikel}
+    \label{}
+\end{table}
 
 \subsubsection{Zusammenfassung}
 
