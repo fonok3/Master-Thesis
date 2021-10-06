@@ -3,16 +3,23 @@
 
 \subsubsection{Übersicht}
 
-\begin{longtable}{|l|l|c|}
-    \hline
-                        &           & \textbf{Anzahl} \\ \hline
-    Teilnehmer          & insgesamt & 9 745 \\
-                        & gefiltert & 4 012 \\ \hline
-    Gefahrene Routen    & insgesamt & 41 540 \\
-                        & gefiltert & 16 531 \\ \hline
-\caption{}
-\label{tab:study_user_overview}
-\end{longtable}
+% \begin{table}[htb!]
+%     \begin{center}
+%         \begin{tabular}{p{.3\textwidth} p{.3\textwidth} p{.3\textwidth}}
+%             \hline
+%             Daten & Datentyp & Anzahl \\
+%             \toprule
+%             Teilnehmer          & insgesamt & 9 745 \\
+%                                 & gefiltert & 4 012 \\
+%             \tablerowspacing
+%             Gefahrene Routen    & insgesamt & 41 540 \\
+%                                 & gefiltert & 16 531 \\
+%             \toprule
+%         \end{tabular}
+%     \end{center}
+%     \caption{Evaluation}
+%     \label{tab:study_user_overview}
+% \end{table}
 
 Um bei der Analyse der Daten, Nutzer auszuschließen, die eine Navigation nur gestartet haben, um sich diese anzusehen, aber NUNAV nicht aktiv während einer Autofahrt genutzt haben werden Routen, die kürzer als 5 Kilometer sind herausgefiltert. 
 %Dies verhindert außerdem, dass das Gelangen zur ersten Route, sowie das Suchen von Parkplätzen einen zu großen Einfluss auf die Daten haben
@@ -21,15 +28,18 @@ Für Nutzer der Gruppen 3 und 4 kann es passieren, dass sie keine Erklärung wä
 
 \begin{table}
     \centering
-    \begin{tabular}{|l|c|c|c|}
+    \begin{tabular}{p{.26\textwidth} c c c}
         \hline
-        \multirow{2}{*}{\textbf{Gruppe}} & \multirow{2}{*}{\textbf{Anzahl der Nutzer}} & \multicolumn{2}{|c|}{\textbf{Anzahl der Routen}} \\ \cline{3-4}
-        & & Insgesamt & Mit Nutzerbewertung \\ \hline \hline
-        Gruppe 1            & 1 778  & 4 807  & 133 \\ \hline
-        Gruppe 2            & 1 397  & 3 413  & 135 \\ \hline
-        Gruppe 3            & 468   & 4 571  & 184 \\ \hline
-        Gruppe 4            & 369   & 3 740  & 173 \\ \hline \hline
-        \textbf{Insgesamt}  & 4 012  & 16 531 & 625 \\ \hline
+        \multirow{2}{*}{Studiengruppe} & \multirow{2}{*}{Anzahl der Nutzer} & \multicolumn{2}{c}{Anzahl der Routen} \\
+        & & Insgesamt & Mit Nutzerbewertung \\
+        \toprule
+        Gruppe 1            & 1 778  & 4 807  & 133 \\
+        Gruppe 2            & 1 397  & 3 413  & 135 \\
+        Gruppe 3            & 468   & 4 571  & 184 \\
+        Gruppe 4            & 369   & 3 740  & 173 \\
+        \midrule
+        \textbf{Insgesamt}  & 4 012  & 16 531 & 625 \\ 
+        \toprule
     \end{tabular}
     \caption{Übersicht über die Daten der Studiengruppen}
     \label{tab:study_user_group_overview}
