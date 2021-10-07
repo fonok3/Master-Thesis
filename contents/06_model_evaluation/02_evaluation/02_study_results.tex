@@ -1,31 +1,27 @@
 \subsection{Studienergebnisse}
 \label{sec:study_results_quantitativ}
 
-
-\cite{wohlin2012experimentation} hat definitionen für Hypothesentests (S. 132)
-
-\cite{wohlin2012experimentation} Formulierungshilfen für Hypothesen (S. 163)
+Im Folgenden werden die Ergebnisse der beschriebenen Case-Study vorgestellt. Nach einem Überblick über die Studienteilnehmer werden die Einflusshypothesen außerhalb durch Störgrößen außerhalb von Erklärungen analysiert. Darauf folgend werden die abstrakten Hypothesen (siehe \autoref{sec:evaluation_hypothesis}) jeweils auf die in \autoref{sec:explanation_requirements} vorgestellten Anforderungen übertragen und im Anschluss geprüft. Grundsätzlich wird ein Signifikanzniveau von 
 
 \subsubsection{Übersicht}
 
-Um bei der Analyse der Daten, Nutzer auszuschließen, die eine Navigation nur gestartet haben, um sich diese anzusehen, aber NUNAV nicht aktiv während einer Autofahrt genutzt haben werden Routen, die kürzer als 5 Kilometer sind herausgefiltert. 
-%Dies verhindert außerdem, dass das Gelangen zur ersten Route, sowie das Suchen von Parkplätzen einen zu großen Einfluss auf die Daten haben
+Insgesamt haben im Zeitraum der Studie 9~745 Nutzer Daten, welche die benötigten Metriken enthalten zurückgeliefert. Insgesamt sind sie 41~540 Routen gefahren. Dies enthält allerdings alle im Log-System bei Graphmasters eingegangenen Daten. Um bei der Analyse der Daten, Nutzer auszuschließen, die eine Navigation nur gestartet haben, um sich diese anzusehen, aber NUNAV nicht aktiv während einer Autofahrt genutzt haben oder die Route sehr kurz war, werden Routen, die kürzer als 5 Kilometer sind herausgefiltert. Schlussendlich sind im zur Analyse verwendeten Datensatz folglich 4~012 Nutzer mit 16~531 gefahrenen Routen enthalten. Für 625 der Routen liegt darüber hinaus eine Bewertung vor (siehe \autoref{tab:study_user_group_overview}).
 
-Für Nutzer der Gruppen 3 und 4 kann es passieren, dass sie keine Erklärung während der Navigation erhalten, wenn die aktuelle Route keiner Erklärung bedarf. Dies ist der Fall, wenn das Verkehrsaufkommen \glqq normal\grqq{} ist und der Nutzer während der gesamten Fahrt guten GPS-Empfang hat (Definitionen siehe \autoref{sec:gps_accuracy_definition}). Bei der Betrachtung von einzelnen Routen werden die Teilnehmer folglich in die Gruppen 1 oder 2 umsortiert, falls sie während der Navigation keine Erklärung gesehen haben. Wird eine Metrik analysiert, die sich pro Nutzer über mehrere Routen erstreckt, werden die Teilnehmer den Gruppen zugeordnet, wenn NUNAV ihnen mindestens einmal eine Erklärung aus der Studiengruppe angezeigt hat. Über Übersicht findet sich in \autoref{tab:study_user_group_overview}
+Für Nutzer der Gruppen 3 und 4 kann es passieren, dass sie keine Erklärung während der Navigation erhalten, wenn die aktuelle Route keiner Erklärung bedarf. Dies ist der Fall, wenn das Verkehrsaufkommen \glqq normal\grqq{} ist und der Nutzer während der gesamten Fahrt guten GPS-Empfang hat (siehe \autoref{sec:traffic_volume_definition} und \autoref{sec:gps_accuracy_definition}). Bei der Betrachtung von einzelnen Routen werden die Teilnehmer folglich in die Gruppen 1 oder 2 umsortiert, falls sie während der Navigation keine Erklärung gesehen haben. Wird eine Metrik analysiert, die sich pro Nutzer über mehrere Routen erstreckt, werden die Teilnehmer den Gruppen zugeordnet, wenn NUNAV ihnen mindestens einmal eine Erklärung aus der Studiengruppe angezeigt hat. Eine Übersicht findet sich in \autoref{tab:study_user_group_overview}.
 
-\begin{table}
+\begin{table}[htb!]
     \centering
     \begin{tabular}{p{.26\textwidth} c c c}
         \hline
         \multirow{2}{*}{Studiengruppe} & \multirow{2}{*}{Anzahl der Nutzer} & \multicolumn{2}{c}{Anzahl der Routen} \\
         & & Insgesamt & Mit Nutzerbewertung \\
         \toprule
-        Gruppe 1            & 1 778  & 4 807  & 133 \\
-        Gruppe 2            & 1 397  & 3 413  & 135 \\
+        Gruppe 1            & 1 778 & 4 807  & 133 \\
+        Gruppe 2            & 1 397 & 3 413  & 135 \\
         Gruppe 3            & 468   & 4 571  & 184 \\
         Gruppe 4            & 369   & 3 740  & 173 \\
         \midrule
-        Insgesamt  & 4 012  & 16 531 & 625 \\ 
+        Insgesamt           & 4 012 & 16 531 & 625 \\ 
         \toprule
     \end{tabular}
     \caption{Übersicht über die Daten der Studiengruppen}
@@ -35,18 +31,16 @@ Für Nutzer der Gruppen 3 und 4 kann es passieren, dass sie keine Erklärung wä
 \subsubsection{Einflüsse außerhalb von Erklärungen}
 \label{sec:evaluation_other_dependencies}
 
-Um auszuschließen, dass die untersuchten Variablen von weiteren Faktoren abhängen habe wurde zu Beginn geprüft, ob eine schlecht vorausgesagte Ankunftszeit oder mehrfach auftretendes schlechtes GPS einen Effekt auf die Anzahl der Abweichungen von der Route oder die Zufriedenheit mit der Route haben. Dies geschieht, da es Vermutungen eines negativen Zusammenhangs gab, der die Ergebnisse der Untersuchung der integrierten Erklärungen beeinflussen könnte. Dazu wurde die Kontrollgruppe (Gruppe 1: Ohne Erklärungen) untersucht.
-
-Die 4 Hypothesen lauten wie folgt:
+Um auszuschließen, dass die untersuchten Variablen von weiteren Faktoren abhängen, wurde zu Beginn geprüft, ob eine schlecht vorausgesagte Ankunftszeit (\textit{Estimated Time of Arrival, ETA}) im Vergleich zur wirklichen Ankunftszeit (\textit{Actual Time of Arrival, ATA}) einen negativen Effekt auf die Anzahl der Abweichungen von der Route oder die Zufriedenheit mit der Route haben. Gleiches wurde für ein häufiges Auftreten von Positionsungenauigkeiten bei der Navigation untersucht. Dies wird analysiert, da ein negativer Zusammenhang vermutet wird, der die Ergebnisse der Untersuchung der integrierten Erklärungen beeinflussen könnte. Daher wurden die folgenden Hypothesen innerhalb der Kontrollgruppe (Gruppe 1: Ohne Erklärungen) überprüft:
 
 \begin{enumerate}
-    \item[1.1] WENN die ATA mehr als 10 \% und mindestens 2 Minuten von der ETA abweicht, DANN hat dies einen signifikant messbaren negativen Einfluss auf die Nutzerzufriedenheit.
-    \item[1.2] WENN die ATA mehr als 10 \% und mindestens 2 Minuten von der ETA abweicht, DANN ist die Anzahl der Routenabweichungen signifikant messbar höher.
-    \item[1.3] WENN NUNAV auf der betrachteten Route pro 5 km durchschnittlich mindestens eine Positionsungenauigkeit aufwies, DANN hat dies einen signifikant messbaren negativen Einfluss auf die Nutzerzufriedenheit.
-    \item[1.4] WENN NUNAV auf der betrachteten Route pro 5 km durchschnittlich mindestens eine Positionsungenauigkeit aufwies, DANN ist die Anzahl der Routen-Abweichungen signifikant messbar höher.
+    \item[1.1] WENN die \textit{ATA} mehr als 10 \% und mindestens 2 Minuten von der \textit{ETA} abweicht, DANN hat dies einen signifikant messbaren negativen Einfluss auf die Nutzerzufriedenheit.
+    \item[1.2] WENN die \textit{ATA} mehr als 10 \% und mindestens 2 Minuten von der \textit{ETA} abweicht, DANN ist die Anzahl der Routenabweichungen signifikant messbar höher.
+    \item[1.3] WENN \textit{NUNAV Navigation} auf der betrachteten Route pro 5 km durchschnittlich mindestens eine Positionsungenauigkeit aufwies, DANN hat dies einen signifikant messbaren negativen Einfluss auf die Nutzerzufriedenheit.
+    \item[1.4] WENN \textit{NUNAV Navigation} auf der betrachteten Route pro 5 km durchschnittlich mindestens eine Positionsungenauigkeit aufwies, DANN ist die Anzahl der Routen-Abweichungen signifikant messbar höher.
 \end{enumerate}
 
-Bei der statistischen Prüfung der Auswirkung von schlecht vorausgesagte Ankunftszeit auf die Anzahl der Routen-Abweichungen mittels eines Kruskal-Wallis-Tests lässt sich kein Haupteffekt feststellen ($ p = 0.197648 > 0.05 $). Gleiches gilt für die Überprüfung eines Effektes auf die Nutzerzufriedenheit ($ p = 0.564911 > 0.05 $). Folglich können die Hypothesen 1.1 und 1.2 abgelehnt werden.
+Bei der statistischen Prüfung der Auswirkung von schlecht vorausgesagter Ankunftszeit auf die Anzahl der Routen-Abweichungen mittels eines Kruskal-Wallis-Tests lässt sich kein Haupteffekt feststellen ($ p = 0.197648 > 0.05 $). Gleiches gilt für die Überprüfung eines Effektes auf die Nutzerzufriedenheit ($ p = 0.564911 > 0.05 $). Folglich können die Hypothesen 1.1 und 1.2 abgelehnt werden.
 
 Für die Überprüfung, ob eine schlechte Positionierung einen Effekt auf die Nutzerzufriedenheit hat, hat ein Kruskal-Wallis-Test ergeben, dass kein signifikanter Effekt vorliegt ($ p = 0.269231 > 0.05 $). Folglich kann Hypothese 1.3 abgelehnt werden. Bei der Prüfung von Hypothese 1.4 hat sich herausgestellt, dass die Anzahl der Routen-Abweichungen signifikant höher ist, wenn es im Durchschnitt mehr als ein mal pro 5 km eine Positionsungenauigkeit gibt ($ p = 3.426601e-15 < 0.05 $  $ \mu_{good gps}=efse $ $ \mu_{bad gps}=efse $). Folglich kann Hypothese 1.4 angenommen werden. Da eine häufige ungenaue Positionierung also bereits einen Einfluss auf die Anzahl der Abweichungen von der Route hat, werden Daten mit ungenauer Positionierung bei der Auswertung vom Einfluss von Erklärungen auf die Anzahl der Routen-Abweichungen nicht mitbetrachtet.
 
