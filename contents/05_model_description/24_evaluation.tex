@@ -5,7 +5,7 @@ In diesem Abschnitt des Modells wird die Operationalisierung der externen Qualit
 
 Es wird von mehreren Autoren festgestellt, dass das Messen der Qualität von Erklärungen aufgrund der stark unterschiedlichen subjektiven Wahrnehmung von \textit{End Usern}  eine Herausforderung darstellt \cite{nunes_systematic_2017, eiband_impact_2019, kouki_user_2017}. Daher werden in vorhandener Literatur zur Evaluation von Erklärungen vor allem subjektive Fragebögen verwendet. Diese orientieren sich in der Regel an den zuvor ausgewählten Zielen für zu integrierende Erklärungen (siehe \autoref{sec:model_external_dependencies}).
 
-Grundsätzlich wird bei der Evaluation zwischen subjektiven Metriken (\textit{qualitative} \cite{wohlin2012experimentation}) und Verhaltensmetriken (\textit{quantitative} \cite{wohlin2012experimentation}) unterschieden. Entsprechend sind die verschiedenen Evaluationsmethoden im Modell in \textit{Qualitative Research} und \textit{Quantitative Research} gegliedert. \citeauthor{waa_evaluating_2021} betonen, dass zur Beurteilung der Qualität von Erklärungen beide Methoden zusammen eingesetzt werden sollten. Sie schreiben, dass es so möglich ist, die \glqq komplette Perspektive\grqq{} auf eine Erklärung zu erhalten \cite[übersetzt vgl.][]{waa_evaluating_2021}.
+Grundsätzlich wird bei der Evaluation zwischen subjektiven Metriken (\textit{qualitative} \cite{wohlin2012experimentation}) und Verhaltensmetriken (\textit{quantitative} \cite{wohlin2012experimentation}) unterschieden. Entsprechend sind die verschiedenen Evaluationsmethoden im Modell in \textit{Qualitative Research} und \textit{Quantitative Research} gegliedert. \citeauthor{waa_evaluating_2021} betonen, dass zur Beurteilung der Qualität von Erklärungen beide Methoden zusammen eingesetzt werden sollten. Sie schreiben, dass es so möglich ist, die \glqq komplette Perspektive\grqq{} auf eine Erklärung zu erhalten \cite[übersetzt vgl.][]{waa_evaluating_2021}. Eine Übersicht der verschiedenen Möglichkeiten ist in \autoref{fig:model_evaluation_overview} abgebildet.
 
 Auch werden in der Literatur sowohl Studien durchgeführt, bei denen die Teilnehmer jeweils mehrere Bedingungen, wie z.B. verschiedene Erklärungstypen nacheinander evaluieren (\textit{with-in subject}) als auch solche, bei denen pro Teilnehmer nur eine Bedingung evaluiert und diese dann verglichen werden (\textit{between subject}).
 
@@ -133,7 +133,9 @@ Die quantitative Messung der Qualität von Erklärungen kommt in der Literatur s
 
 Bei direkter Messung von quantitativen Aspekten von Erklärungen wurden in der Literatur neben domänen- oder erklärungs-spezifischen Metriken, solche eingesetzt, die unmittelbar den Bedarf und die Granularität messen. In \autoref{tab:evaluation_quantitative_explanation_measures} sind die Metriken aufgeführt, welche Kontext- und erklärungsunabhängig verallgemeinerbar sind.
 
-\begin{table}[htb!]
+Wenn eine Erklärung optional angefordert werden kann, ist eine mögliche Metrik zu messen, wie häufig \textit{End User} die Erklärung anfordern (\textit{Number of explanation requests}). Daraus kann abgeleitet werden, wie groß der Bedarf für eine Erklärung in der spezifischen Situation wirklich ist \cite{wiegand_id_2020}.
+
+\begin{table}[bht!]
     \centering
     \begin{tabular}{p{.2\textwidth}p{.41\textwidth}p{.3\textwidth}}
         \hline
@@ -150,15 +152,11 @@ Bei direkter Messung von quantitativen Aspekten von Erklärungen wurden in der L
     \label{tab:evaluation_quantitative_explanation_measures}
 \end{table}
 
-Wenn eine Erklärung optional angefordert werden kann, ist eine mögliche Metrik zu messen, wie häufig \textit{End User} die Erklärung anfordern (\textit{Number of explanation requests}). Daraus kann abgeleitet werden, wie groß der Bedarf für eine Erklärung in der spezifischen Situation wirklich ist \cite{wiegand_id_2020}.
-
 % Dies lässt sich auch bereits als Gedankenexperiment zuvor bestimmen \cite[vgl.][]{chazette_end-users_nodate}.
 
 Auch kann nach der Anforderung einer Erklärung durch einen \textit{End User} gemessen werden, wie lange dieser sich auf diese fokussiert (\textit{User Focus Duration}) \cite{balog_measuring_2020}. Daraus kann abgeleitet werden, ob die Granularität der Erklärung für den \textit{End User} passend war. Eine weitere Möglichkeit, die Granularität zu messen ist außerdem das \textit{Explanation Exposure Delta} \cite{nunes_systematic_2017}. Hierfür wird eine Metrik zum Verständnis des Systems benötigt, welche auf eine Intervallskala abbildet. Die verwendeten Metriken sind dabei sehr Domänen- und Aufgaben-spezifisch. Diese Metrik wird im Anschluss einmal vor und einmal nach der Anzeige einer Erklärung gemessen. Die Differenz dieser Werte ist das \textit{Explanation Exposure Delta}. Umso größer dies ist, umso mehr Wissen haben \textit{End User} durch eine Erklärung erlangt.
 
 Neben der direkten Evaluation der Eigenschaften von Erklärungen haben deutlich mehr Autoren die Auswirkungen von Erklärungen auf bestimmte Qualitätsaspekte von Systemen untersucht. Im Folgenden werden dabei Metriken vorgestellt, welche in der Literatur verwendet wurden. Auch bei der quantitativen Messung der unter \autoref{sec:model_external_dependencies} vorgestellten externen Qualitätsaspekte, auf die der Einfluss von Erklärungen in der Literatur evaluiert wurde, gibt es über die hier erwähnten hinaus weitere Metriken, welche sich eigenen können. \citeauthor{carvalho2017quality} stellen in ihrer Veröffentlichung eine Übersicht über verschiedene Metriken vor, um u.~a. die in dieser Arbeit erwähnten Qualitätsaspekte zu messen \cite{carvalho2017quality}.
-
-\autoref{tab:evaluation_quantitative_explanation_measures_indirect} fasst die in der Literatur im Bezug auf Erlkärbarkeit genutzten Metriken zusammen. Dabei ist für den Qualitätsaspekt \textit{Trust} die Anzahl der Nutzungen (\textit{Number of Usages}) aufgeführt. Diese kann sowohl absolut als auch relativ zu einem Zeitraum betrachtet werden. Die \textit{Task Performance} ist hier als abstrakte Metrik aufgeführt. Unter diesem Begriff haben mehrere Autoren jeweils die Qualität der Aufgabenausführung von \textit{End Usern} zusammengefasst. Konkrete Metriken werden hier allerdings nicht aufgeführt, da diese laut mehrerer Autoren sehr \textit{Context}-abhängig sind \cite{tintarev2007survey, gunning2019darpa}. Die \textit{Task Performance} wird dabei sowohl für die Bewertung der \textit{Persuasiveness} des Systems als auch die \textit{Efficiency} herangezogen. Für letztere haben \citeauthor{tintarev_designing_nodate} sowie \citeauthor{gunning2019darpa} außerdem die \textit{Learning Rate} als Evaluationsfaktor herangezogen. Sie vergleichen dabei unter verschiedenen Bedingungen, wie schnell sich die \textit{Task Performance} von \textit{End Usern} erhöht.
 
 \begin{table}[htb!]
     \begin{center}
@@ -185,6 +183,10 @@ Neben der direkten Evaluation der Eigenschaften von Erklärungen haben deutlich 
     \caption{Evaluation}
     \label{tab:evaluation_quantitative_explanation_measures_indirect}
 \end{table}
+
+\autoref{tab:evaluation_quantitative_explanation_measures_indirect} fasst die in der Literatur in Bezug auf Erkärbarkeit genutzten Metriken zusammen. Für den Qualitätsaspekt \textit{Trust} ist die Anzahl der Nutzungen (\textit{Number of Usages}) aufgeführt. Diese kann sowohl absolut als auch relativ zu einem Zeitraum betrachtet werden. Die \textit{Task Performance} ist hier als abstrakte Metrik aufgeführt. Unter diesem Begriff haben mehrere Autoren die Qualität der Aufgabenausführung von \textit{End Usern} zusammengefasst. Konkrete Metriken werden hier allerdings nicht aufgeführt, da diese laut mehrerer Autoren sehr \textit{Context}-abhängig sind \cite{tintarev2007survey, gunning2019darpa}. Die \textit{Task Performance} wird dabei sowohl für die Bewertung der \textit{Persuasiveness} des Systems als auch die \textit{Efficiency} herangezogen. Für letztere haben \citeauthor{tintarev_designing_nodate} sowie \citeauthor{gunning2019darpa} außerdem die \textit{Learning Rate} als Evaluationsfaktor herangezogen. Sie vergleichen dabei unter verschiedenen Bedingungen, wie schnell sich die \textit{Task Performance} von \textit{End Usern} erhöht.
+
+\smallskip
 
 \noindent\fbox{
     \parbox{0.964\textwidth}{
