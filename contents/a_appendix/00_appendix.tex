@@ -66,8 +66,14 @@
 \section{Studienergebnisse}
 \label{sec:appendix_study_results}
 
-\begin{table}
-    \begin{center}
+\begin{figure}
+    \begin{floatrow}
+    \ffigbox{
+      \includegraphics[width=\textwidth]{contents/06_model_evaluation/02_evaluation/res/usage_result_significance.pdf}
+    }{
+      \caption{A figure}
+    }
+    \capbtabbox{
         \begin{tabular}{|c|c|c|c|c|}
             \hline
             & \textbf{Gruppe 1} & \textbf{Gruppe 2} & \textbf{Gruppe 3} & \textbf{Gruppe 4} \\ \hline
@@ -76,11 +82,12 @@
             \textbf{Gruppe 3}   & 0.219884 & 0.860586 & 1.000000 & 0.000005 \\ \hline
             \textbf{Gruppe 4}   & 0.008222 & 0.000912 & 0.000005 & 1.000000 \\ \hline
         \end{tabular}
-    \end{center}
-    
-    \caption{Signifikanzniveau $ p $ im paarweisen Vergleich der Anzahl der Routenabweichungen pro Kilometer zwischen den Studiengruppen }
-    \label{tab:study_offroute_significance_results}
-\end{table}
+        \label{tab:study_offroute_significance_results}
+    }{
+      \caption{A table}%
+    }
+    \end{floatrow}
+\end{figure}
 
 \section{Helcenter Collaborative Routing}
 \label{sec:help_center_collaboratrive_routing}

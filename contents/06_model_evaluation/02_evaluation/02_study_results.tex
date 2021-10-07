@@ -5,7 +5,7 @@ Im Folgenden werden die Ergebnisse der beschriebenen Case-Study vorgestellt. Nac
 
 \subsubsection{Übersicht}
 
-Insgesamt haben im Zeitraum der Studie 9~745 \textit{End User} Daten, welche die benötigten Metriken enthalten, zurückgeliefert. Dabei wurden 41~540 Routen zurückgelegt. Dies enthält allerdings alle im Log-System bei Graphmasters eingegangenen Daten. Um bei der Analyse der Daten, \textit{End User} auszuschließen, die eine Navigation nur gestartet haben, um sich diese anzusehen, aber NUNAV nicht aktiv während einer Autofahrt genutzt haben oder die Route sehr kurz war, werden Routen, die kürzer als 5 Kilometer sind herausgefiltert. Schlussendlich sind im zur Analyse verwendeten Datensatz folglich 4~012 \textit{End User} mit 16~531 gefahrenen Routen enthalten. Für 625 der Routen liegt darüber hinaus eine Bewertung vor (siehe \autoref{tab:study_user_group_overview}).
+Insgesamt haben im Zeitraum der Studie 9~745 \textit{End User} Daten, welche die benötigten Metriken enthalten, zurückgeliefert. Dabei wurden 41~540 Routen zurückgelegt. Dies enthält allerdings alle im Log-System bei Graphmasters eingegangenen Daten. Um bei der Analyse der Daten, \textit{End User} auszuschließen, die eine Navigation nur gestartet haben, um sich diese anzusehen, aber NUNAV nicht aktiv während einer Autofahrt genutzt haben oder die Route sehr kurz war, werden Nutzungen, bei denen die Nutzen weniger als 5 Minuten oder weniger 5 Kilometer gefahren sind, herausgefiltert. Schlussendlich sind im zur Analyse verwendeten Datensatz folglich 4~012 \textit{End User} mit 16~531 gefahrenen Routen enthalten. Für 625 der Routen liegt darüber hinaus eine Bewertung vor (siehe \autoref{tab:study_user_group_overview}).
 
 Für Studienteilnehmer der Gruppen 3 und 4 kann es passieren, dass sie keine Erklärung während der Navigation erhalten, wenn die aktuelle Route keiner Erklärung bedarf. Dies ist der Fall, wenn das Verkehrsaufkommen \glqq normal\grqq{} ist und die \textit{End User} während der gesamten Fahrt guten GPS-Empfang haben (siehe \autoref{sec:traffic_volume_definition} und \autoref{sec:gps_accuracy_definition}). Bei der Betrachtung von einzelnen Routen werden die Teilnehmer folglich in die Gruppen 1 oder 2 umsortiert, falls sie während der Navigation keine Erklärung gesehen haben. Wird eine Metrik analysiert, die sich pro Nutzer über mehrere Routen erstreckt, werden die Teilnehmer den entsprechenden Gruppen zugeordnet, wenn NUNAV ihnen mindestens einmal eine Erklärung aus der Studiengruppe angezeigt hat. Eine Übersicht findet sich in \autoref{tab:study_user_group_overview}.
 
@@ -34,9 +34,9 @@ Für Studienteilnehmer der Gruppen 3 und 4 kann es passieren, dass sie keine Erk
 Um auszuschließen, dass die untersuchten Variablen von weiteren Faktoren abhängen, wurde zu Beginn geprüft, ob eine schlecht vorausgesagte Ankunftszeit (\textit{Estimated Time of Arrival, ETA}) im Vergleich zur wirklichen Ankunftszeit (\textit{Actual Time of Arrival, ATA}) einen negativen Effekt auf die Anzahl der Abweichungen von der Route oder die Zufriedenheit mit der Route haben. Gleiches wurde für ein häufiges Auftreten von Positionsungenauigkeiten bei der Navigation untersucht. Dies wird analysiert, da ein negativer Zusammenhang vermutet wird, der die Ergebnisse der Untersuchung der integrierten Erklärungen beeinflussen könnte. Daher wurden die folgenden Hypothesen innerhalb der Kontrollgruppe (Gruppe 1: Ohne Erklärungen) überprüft:
 
 \begin{enumerate}
-    \item[1.1] WENN die \textit{ATA} mehr als 10 \% und mindestens 2 Minuten von der \textit{ETA} abweicht, DANN hat dies einen signifikant messbaren negativen Einfluss auf die Nutzerzufriedenheit.
+    \item[1.1] WENN die \textit{ATA} mehr als 10 \% und mindestens 2 Minuten von der \textit{ETA} abweicht, DANN hat dies einen signifikant messbaren negativen Einfluss auf die Zufriedenheit der Nutzer mit der Route.
     \item[1.2] WENN die \textit{ATA} mehr als 10 \% und mindestens 2 Minuten von der \textit{ETA} abweicht, DANN ist die Anzahl der Routenabweichungen signifikant messbar höher.
-    \item[1.3] WENN \textit{NUNAV Navigation} auf der betrachteten Route pro 5 km durchschnittlich mindestens eine Positionsungenauigkeit aufwies, DANN hat dies einen signifikant messbaren negativen Einfluss auf die Nutzerzufriedenheit.
+    \item[1.3] WENN \textit{NUNAV Navigation} auf der betrachteten Route pro 5 km durchschnittlich mindestens eine Positionsungenauigkeit aufwies, DANN hat dies einen signifikant messbaren negativen Einfluss auf die Zufriedenheit der Nutzer mit der Route.
     \item[1.4] WENN \textit{NUNAV Navigation} auf der betrachteten Route pro 5 km durchschnittlich mindestens eine Positionsungenauigkeit aufwies, DANN ist die Anzahl der Routen-Abweichungen signifikant messbar höher.
 \end{enumerate}
 
@@ -101,7 +101,7 @@ Im Folgenden wird die Anforderung NFR2 geprüft, welche fordert, dass die Nutzer
     \label{fig:evaluation_off_route_result_overview}
 \end{figure}
 
-Als Messwert wird die Anzahl der Abweichungen relativ zu Gesamtlänge der Route verwendet. Die Einheit ist Abweichungen pro Kilometer. Bei der Betrachtung von Abweichungen von der Route werden, wie zuvor beschrieben, Navigationen, bei denen es häufig zu einer ungenauen Positionierung kommt aus den Daten herausgefiltert. Außerdem wurde auch hier Ausreißer in den Daten mit der gleichen Bedingung wie zuvor herausgefiltert, sodass schlussendlich 16~314 einzelne Navigationen zur Analyse der Routen-Abweichungen im Datensatz verblieben sind. Die Daten für jede Studiengruppe sind in \autoref{fig:evaluation_off_route_result_overview} dargestellt. Die berechneten Ergebnisse sind in \autoref{tab:study_offroute_results} zusammengefasst.
+Als Messwert wird die Anzahl der Abweichungen relativ zu Gesamtlänge der Route verwendet. Die Einheit ist Abweichungen pro Kilometer. Zu diesem Messwert, muss erwähnt werden, dass die Erkennung, wann Nutzer von der Route abweichen nicht trivial ist. Bei einer wirklichen Abweichung, wird dies in der Regel mehrfach gezählt und es kann generell schnell zu falsch positiven Messungen kommen. Aufgrund großen Datenmenge wird allerdings davon ausgegangen, dass diese Effekte einen vernachlässigbaren Effekt haben. Bei der Betrachtung von Abweichungen von der Route werden außerdem, wie zuvor beschrieben, Navigationen, bei denen es häufig zu einer ungenauen Positionierung kommt aus den Daten herausgefiltert. Außerdem wurden auch hier Ausreißer in den Daten mit der gleichen Bedingung wie zuvor herausgefiltert, sodass schlussendlich 16~314 einzelne Navigationen zur Analyse der Routen-Abweichungen im Datensatz verblieben sind. Die Daten für jede Studiengruppe sind in \autoref{fig:evaluation_off_route_result_overview} dargestellt. Die berechneten Ergebnisse sind in \autoref{tab:study_offroute_results} zusammengefasst.
 
 \begin{table}[htb!]
     \centering
@@ -146,25 +146,29 @@ Um die Zufriedenheit der Nutzer mit der abgeschlossenen Navigation zu evaluieren
 
 Für die Prüfung zwischen welchen Studiengruppen ein signifikanter Unterschied vorliegt, wird wieder der Dunn-Test \cite{dunn1964multiple} verwendet, nachdem ein Kruskal-Wallis-Test einen Haupteffekt zeigt ($ p = 0.00335 $). Daraus resultiert, dass es zwischen den Gruppen 1 und 3 ($ p = 0.005723$) sowie 3 und 4 ($ p = 0.024375 $) einen signifikanten Unterschied bei der Zufriedenheit mit der aktuellen Route gibt.
 
-\begin{figure}[b!]
+Mithilfe von \autoref{fig:Rating_Result_Overview} wird abgeleitet, dass es insbesondere mehr 5-Stern-Bewertungen in Gruppe 3 gegenüber den Gruppen 1 und 4 gibt. Die Anteile der ein und zwei Stern Bewertungen unterscheiden sich kaum. Folglich kann man sagen, dass die Teilnehmer signifikant zufriedener mit der Navigation waren, wenn sie Erklärungen wie in Gruppe 3 bekommen im Vergleich zu keinen Erklärungen (Gruppe 1) oder allen vorgestellten Erklärungstypen (Gruppe 4).
+
+Da beim Geben von Erklärungen dies die Nutzerzufriedenheit nicht in jedem Fall erhöht, muss Hypothese 4.1 abgelehnt werden. Hypothese 4.2 muss ebenfalls abgelehnt werden, unter anderem da es einen gegenteiligen Effekt zwischen den Gruppen 3 und 4 gibt.
+
+\begin{figure}[t!]
     \centering
     \includegraphics[width=\textwidth]{contents/06_model_evaluation/02_evaluation/res/rating_result_overview.pdf}
     \caption{Verteilung der Teilnehmer-Bewertung der Navigation für jede Studiengruppe bezogen auf die insgesamt abgegebenen Bewertungen}
     \label{fig:Rating_Result_Overview}
 \end{figure}
 
-
-Mithilfe von \autoref{fig:Rating_Result_Overview} wird abgeleitet, dass es insbesondere mehr 5-Stern-Bewertungen in Gruppe 3 gegenüber den Gruppen 1 und 4 gibt. Die Anteile der ein und zwei Stern Bewertungen unterscheiden sich kaum. Folglich kann man sagen, dass die Teilnehmer signifikant zufriedener mit der Navigation waren, wenn sie Erklärungen wie in Gruppe 3 bekommen im Vergleich zu keinen Erklärungen (Gruppe 1) oder allen vorgestellten Erklärungstypen (Gruppe 4).
-
-Da beim Geben von Erklärungen dies die Nutzerzufriedenheit nicht in jedem Fall erhöht, muss Hypothese 4.1 abgelehnt werden. Hypothese 4.2 muss ebenfalls abgelehnt werden, unter anderem da es einen gegenteiligen Effekt zwischen den Gruppen 3 und 4 gibt.
-
 \subsubsection{Zusammenfassung des Einflusses auf die externe Qualität}
 
-Bei der Analyse der Einflüsse der Erklärungen, auf die externe Qualität von \textit{NUNAV Navigation}, dass die meisten Hypothesen abgelehnt werden müssen. Folglich fällt der Effekt der integrierten Erklärungen deutlich geringer aus, als zunächst erwartet. Positiv kann erler
+Bei der Analyse der Einflüsse der Erklärungen, auf die externe Qualität von \textit{NUNAV Navigation}, dass die meisten Hypothesen abgelehnt werden müssen. Folglich fällt der Effekt der integrierten Erklärungen deutlich geringer aus, als zunächst erwartet. Positiv kann allerdings zusammengefasst werden, dass für keine Erklärung ein signifikant negativer Einfluss auf eine der Metriken gemessenen konnte.
 
+Darüber hinaus gibt es einen positiven Effekt durch Erklärungen auf die Nutzung pro Woche und Nutzer, wenn die \textit{End User} \textit{Context}-abhängige Erklärungen erhalten. Sie nutzen NUNAV dann durchschnittlich 4,66 (\textit{Context}-abhängig + statisch) bzw. 4,54 (\textit{Context}-abhängig + statisch) mal pro Woche gegenüber 3,23 (statisch) bzw. 3,27 (keine Erklärung) mal pro Woche.
 
+Die Anzahl der Routenabweichungen wird signifikant positiv (weniger) beeinflusst, wenn die \textit{End User} alle Erklärungen angezeigt bekommen (0,073 Abweichungen/km) gegenüber keinen Erklärungen (0,075 Abweichungen/km). 
 
+Außerdem geben die \textit{End User} einen signifikant positivere Bewertung für die Route ab, wenn sie \textit{Context}-abhängige Erklärungen erhalten (durchschnittlich 4,73 Sterne vs. 4,55 Sterne). Hier gibt es allerdings scheinbar einen negativen Einfluss, wenn die \textit{End User} zusätzlich die statischen Erklärungen erhalten, da diese die Routen dann signifikant schlechter bewerten (durchschnittlich 4,6 Sterne).
 
-Keinen Zusammenhang zwischen den Erklärungen und einer schlechteren / späteren ATA
+Folglich erfüllen die \textit{Context}-abhängigen Erklärungen die Qualitätsanforderungen NFR1 und NFR3 und tragen somit zu einer signifikant häufigeren Nutzung von \textit{NUNAV Navigation} sowie mehr Zufriedenheit der \textit{End user} mit der Navigation bei. Folglich kann empfohlen werden, diese weiterhin in der Anwendung zu integrieren.
+
+Für die statischen Erklärungen alleine kann kein signifikant positiver Effekt gemessen werden. Ein zusätzlich signifikant positiver Effekt im Rahmen von NFR2 (weniger Routenabweichungen) kann erreicht werden, wenn beide Erklärungstypen angezeigt werden. Allerdings hat dies zu einen negativen Effekt auf die Routen-Zufriedenheit der \textit{End User}, verglichen zum Einsatz von \textit{Context}-abhängigen Erklärungen. Für statische Erklärungen kann folglich keine klare Empfehlung zum Einsatz dieser abgeleitet werden.
 
 \newpage
