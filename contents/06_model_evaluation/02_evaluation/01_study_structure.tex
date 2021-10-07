@@ -16,15 +16,26 @@ Das Ziel der Evaluation ist wie auch das Ziel der gesamten Arbeit (siehe \autore
 
 Grundsätzlich sollte folglich im Rahmen der Analyse überprüft werden, ob die zuvor definierten Qualitätsanforderungen, welch aus den Zielen von Graphmasters abgeleitet wurden durch die entwickelten Erklärungen erfüllt werden können.
 
+\subsubsection{Hypothesen}
+
+Die Überprüfung der Erfüllung der gestellten Qualitätsanforderungen erfolgt im Rahmen von Hypothesentests \cite{wohlin2012experimentation}. Grundsätzlich wurden zwei abstrakte Einflusshypothesen für die Integration der Erklärungen aufgestellt:
+
+\begin{itemize}
+    \item WENN die Studienteilnehmer Erklärungen erhalten, DANN ist ein positiver Einfluss auf die externe Softwarequalität messbar im Vergleich zu Teilnehmern, welche keine Erklärungen erhalten.
+    \item WENN die Studienteilnehmer mehrere Erklärungen erhalten, DANN ist ein positiver Einfluss auf die externe Softwarequalität messbar im Vergleich zu Teilnehmern, welche nur eine Erklärung erhalten.
+\end{itemize}
+
 \subsubsection{Studienaufbau}
 
 Ein Ergebnis des durchgeführten Workshops war, dass die Erklärungen nach Möglichkeit unter Realbedingungen evaluiert werden. Daraus ist die Anforderung abgeleitet worden, dass eine Studie die \textit{End User} von \textit{NUNAV Navigation} so wenig wie möglich bemerken sollten. Daher kommen lediglich Verhaltensmetriken oder bereits in der Anwendung integrierte Metriken zum Einsatz.
 
 Dabei kommen die Metriken zum Einsatz, welche in \autoref{sec:explanation_requirements} zur Definition der Anforderungen definiert wurden. Diese sind bereits vor dieser Arbeit in \textit{NUNAV Navigation} integriert gewesen.
 
-Neben diesen Metriken wurden allerdings aufgrund von Einfluss-Hypothesen durch Störgrößen neben den Erklärungen zusätzliche Metriken in die Anwendung integriert. Ziel dessen war es, auf der Basis möglicher Einflüsse Datensätze herausfiltern zu können, welche die Ergebnisse der Analyse der Einflüsse durch integrierte Erklärungen zu verzerren.
+Neben diesen Metriken wurden allerdings aufgrund von Einflusshypothesen durch Störgrößen neben den Erklärungen zusätzliche Metriken in die Anwendung integriert. Ziel dessen war es, auf der Basis möglicher Einflüsse Datensätze herausfiltern zu können, welche die Ergebnisse der Analyse der Einflüsse durch integrierte Erklärungen zu verzerren (siehe \autoref{sec:evaluation_other_dependencies}).
 
-Insgesamt wurde folglich eine zwei-wöchige Case Study als empirische Strategie gewählt. Um eine die Unterschiede im Bezug auf die externe Qualität messen zu können, wurden nicht allen Teilnehmern die Erklärungen angezeigt. Außerdem sollte nicht nur eine Veränderung durch die Erklärungen insgesamt messbar gemacht werden, sondern auch zwischen den einzelnen entwickelten Erklärungen unterschieden werden. Trotz dessen sollte auch die Kombination der verschiedenen Erklärungen überprüft werden. Um jedoch für jede Bedingung genug Nutzer in als Datengrundlage zu haben, wurden nicht alle verschiedenen Kombinationsmöglichkeiten der Erklärungen überprüft.
+\subsection{Studiendurchführung}
+
+Insgesamt wurde folglich eine zwei-wöchige Case Study als empirische Strategie gewählt. Um eine die Unterschiede in Bezug auf die externe Qualität messen zu können, wurden nicht allen Teilnehmern die Erklärungen angezeigt. Außerdem sollte nicht nur eine Veränderung durch die Erklärungen insgesamt messbar gemacht werden, sondern auch zwischen den einzelnen entwickelten Erklärungen unterschieden werden. Trotz dessen sollte auch die Kombination der verschiedenen Erklärungen überprüft werden. Um jedoch für jede Bedingung genug Nutzer in als Datengrundlage zu haben, wurden nicht alle verschiedenen Kombinationsmöglichkeiten der Erklärungen überprüft.
 
 Grundsätzlich wurden die Erklärungen in die zwei Gruppen \textit{statische} und \textit{Context}-Abhängige Erklärungen gegliedert. Unter den statischen Erklärungen sind die beiden Erklärungen, welche den Routingalgorithmus und die Einflüsse auf die Routenberechnung erklären, zusammengefasst (siehe \autoref{sec:user_count_definition} und \autoref{sec:route_explanation_definition}).
 
@@ -38,5 +49,3 @@ Insgesamt sind folglich vier verschiedene Studiengruppen entstanden:
     \item \textbf{Gruppe 3}: Nutzer, die \textit{Context}-abhängige Erklärungen erhalten
     \item \textbf{Gruppe 4}: Nutzer, die statische als auch \textit{Context}-abhängige Erklärungen erhalten
 \end{itemize}
-
-\subsection{Studiendurchführung}
