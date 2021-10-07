@@ -1,18 +1,7 @@
-\subsection{Ergebnisse}
+\subsection{Studienergebnisse}
 \label{sec:study_results_quantitativ}
 
 \subsubsection{Übersicht}
-
-\begin{longtable}{|l|l|c|}
-    \hline
-                        &           & \textbf{Anzahl} \\ \hline
-    Teilnehmer          & insgesamt & 9 745 \\
-                        & gefiltert & 4 012 \\ \hline
-    Gefahrene Routen    & insgesamt & 41 540 \\
-                        & gefiltert & 16 531 \\ \hline
-\caption{}
-\label{tab:study_user_overview}
-\end{longtable}
 
 Um bei der Analyse der Daten, Nutzer auszuschließen, die eine Navigation nur gestartet haben, um sich diese anzusehen, aber NUNAV nicht aktiv während einer Autofahrt genutzt haben werden Routen, die kürzer als 5 Kilometer sind herausgefiltert. 
 %Dies verhindert außerdem, dass das Gelangen zur ersten Route, sowie das Suchen von Parkplätzen einen zu großen Einfluss auf die Daten haben
@@ -21,15 +10,18 @@ Für Nutzer der Gruppen 3 und 4 kann es passieren, dass sie keine Erklärung wä
 
 \begin{table}
     \centering
-    \begin{tabular}{|l|c|c|c|}
+    \begin{tabular}{p{.26\textwidth} c c c}
         \hline
-        \multirow{2}{*}{\textbf{Gruppe}} & \multirow{2}{*}{\textbf{Anzahl der Nutzer}} & \multicolumn{2}{|c|}{\textbf{Anzahl der Routen}} \\ \cline{3-4}
-        & & Insgesamt & Mit Nutzerbewertung \\ \hline \hline
-        Gruppe 1            & 1 778  & 4 807  & 133 \\ \hline
-        Gruppe 2            & 1 397  & 3 413  & 135 \\ \hline
-        Gruppe 3            & 468   & 4 571  & 184 \\ \hline
-        Gruppe 4            & 369   & 3 740  & 173 \\ \hline \hline
-        \textbf{Insgesamt}  & 4 012  & 16 531 & 625 \\ \hline
+        \multirow{2}{*}{Studiengruppe} & \multirow{2}{*}{Anzahl der Nutzer} & \multicolumn{2}{c}{Anzahl der Routen} \\
+        & & Insgesamt & Mit Nutzerbewertung \\
+        \toprule
+        Gruppe 1            & 1 778  & 4 807  & 133 \\
+        Gruppe 2            & 1 397  & 3 413  & 135 \\
+        Gruppe 3            & 468   & 4 571  & 184 \\
+        Gruppe 4            & 369   & 3 740  & 173 \\
+        \midrule
+        Insgesamt  & 4 012  & 16 531 & 625 \\ 
+        \toprule
     \end{tabular}
     \caption{Übersicht über die Daten der Studiengruppen}
     \label{tab:study_user_group_overview}
@@ -86,19 +78,21 @@ Bei der Betrachtung von Abweichungen von der Route werden wie oben beschrieben N
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.8\textwidth]{contents/06_model_evaluation/res/OffRoute_Result_Overview.png}
+    \includegraphics[width=\textwidth]{contents/06_model_evaluation/02_evaluation/res/off_route_result_overview.pdf}
     \caption{Anzahl der Offroutes pro Kilometer für jede Studiengruppe}
 \end{figure}
 
 \begin{table}
     \centering
-    \begin{tabular}{|l|c|c|}
+    \begin{tabular}{p{.27\textwidth}p{.27\textwidth}p{.35\textwidth}}
         \hline
-        \textbf{Studiengruppe}  & \textbf{Mittelwert} [N/km] & \textbf{Standardabweichung} [N/km]\\ \hline
-        Gruppe 1                & 0.0753 & 0.1293 \\ \hline
-        Gruppe 2                & 0.0786 & 0.1272 \\ \hline
-        Gruppe 3                & 0.0803 & 0.1410 \\ \hline
-        Gruppe 4                & 0.0732 &  0.1328 \\ \hline
+        Studiengruppe  & Mittelwert [N/km] & Standardabweichung [N/km]\\
+        \toprule
+        Gruppe 1                & 0.0753 & 0.1293 \\
+        Gruppe 2                & 0.0786 & 0.1272 \\
+        Gruppe 3                & 0.0803 & 0.1410 \\
+        Gruppe 4                & 0.0732 &  0.1328 \\
+        \bottomrule
     \end{tabular}
     \caption{Übersicht der Ergebnisse der Routen-Abweichungen pro Kilometer}
     \label{tab:study_offroute_results}
@@ -118,7 +112,7 @@ Um die Zufriedenheit der Nutzer mit der abgeschlossenen Navigation zu evaluieren
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.27\linewidth]{contents/res/missing_image.pdf}
+    \includegraphics[width=0.27\linewidth]{contents/06_model_evaluation/02_evaluation/res/rating_screenshot.jpg}
     \caption{Bildschirmfoto des Bewertungsdialogs}
     \label{fig:screenshot_destination_reached}
 \end{figure}
@@ -157,19 +151,21 @@ Bei der Betrachtung der Anzahl der gefahrenen Routen werden die Daten zunächst 
 
 \begin{figure}
     \centering
-    \includegraphics{contents/06_model_evaluation/res/Usage_Result_Overview.png}
+    \includegraphics[width=\textwidth]{contents/06_model_evaluation/02_evaluation/res/usage_result_overview.pdf}
     \caption{Anzahl der gefahrenen Routen für jede Studiengruppe}
 \end{figure}
 
 \begin{table}
     \centering
-    \begin{tabular}{|c|c|c|c|}
+    \begin{tabular}{p{.27\textwidth}p{.27\textwidth}p{.35\textwidth}}
         \hline
-        \textbf{Studiengruppe}  & \textbf{Mittelwert} [N] & \textbf{Standardabweichung} [N] \\ \hline
-        Gruppe 1                & 3.2672 & 3.2958 \\ \hline
-        Gruppe 2                & 3.2256 & 3.1961 \\ \hline
-        Gruppe 3                & 4.6630 & 4.7043 \\ \hline
-        Gruppe 4                & 4.5391 & 4.1509 \\ \hline
+        Studiengruppe  & Mittelwert [N] & Standardabweichung [N] \\
+        \toprule
+        Gruppe 1                & 3.2672 & 3.2958 \\
+        Gruppe 2                & 3.2256 & 3.1961 \\
+        Gruppe 3                & 4.6630 & 4.7043 \\
+        Gruppe 4                & 4.5391 & 4.1509 \\
+        \bottomrule
     \end{tabular}
     \caption{Übersicht der Ergebnisse der gefahrenen Routen der Nutzer}
     \label{tab:study_offroute_results_2}
@@ -193,40 +189,26 @@ Als gelesen bzw. zumindest entschieden, ob die Erklärung benötigt wird gilt di
 
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth]{contents/06_model_evaluation/res/explanation_results_clicked.pdf}
-    \caption{Anzahl der Klicks bzw. gelesenen Erklärungen}
+    \includegraphics[width=\linewidth]{contents/06_model_evaluation/02_evaluation/res/explanation_results_clicked.pdf}
+    \caption{Häufigkeit des Anforderns der Erklärungen pro Nutzer}
     \label{fig:explanation_results_clicked}
 \end{figure}
 
-\begin{figure}
+\begin{table}
     \centering
-    \includegraphics[width=\linewidth]{contents/06_model_evaluation/res/explanation_results_clicked_support.png}
-    \caption{Bewertung der langen Erklärungen (Support-Artikel)}
+    \begin{tabular}{p{.3\textwidth}p{.3\textwidth}p{.3\textwidth}}
+        \hline
+        Artikel & Hilfreich & Nicht Hilfreich \\
+        \toprule
+        Kollaboratives Routing & 76 & 9 \\
+        Einflüsse auf die Routenberechnung & 209 & 32 \\
+        \bottomrule
+    \end{tabular}
+    \caption{\textit{Usefulness} der Hilfe-Center-Artikel}
     \label{tab:explanation_results_clicked}
-\end{figure}
+\end{table}
 
 \subsubsection{Zusammenfassung}
 
-% \begin{figure}
-%     \text{Evaluation des Erklärungsbedarfs} \\
-%     \subfloat[Anzahl der Teilnehmer, die Erklärung 1 angefordert haben]
-%     {\includegraphics[width=.3\linewidth]{contents/06_model_evaluation/res/evaluation_explanation_1_clicks.pdf}}
-%     \hspace{5mm}
-%     \subfloat[Anzahl der Teilnehmer, die Erklärung 2 angefordert haben]
-%     {\includegraphics[width=.3\linewidth]{contents/06_model_evaluation/res/evaluation_explanation_1_clicks.pdf}}
-%     \hspace{5mm}
-%     \subfloat[Anzahl der Teilnehmer, die Erklärung 2 angefordert haben]
-%     {\includegraphics[width=.3\linewidth]{contents/06_model_evaluation/res/evaluation_explanation_1_clicks.pdf}} \\
-%     \subfloat[Berechnete und reale Koordinaten]
-%     {\includegraphics[width=.47\linewidth]{gfx/MagnetEvaluation/alg1-n48/grafic3.pdf}}
-%     \hspace{5mm}
-%     \subfloat[Relativer Rechenfehler]
-%     {\includegraphics[width=.47\linewidth]{gfx/MagnetEvaluation/alg1-n48/grafic4.pdf}}
-%     \caption[Evaluation der Positionsbestimmung mithilfe des Coulombschen Gesetzes]{Evaluation der Positionsbestimmung mithilfe des Coulombschen Gesetzes bei Verwendung eines Magneten mit Magnetisierungsgrad N48, 8 mm Durchmesser und 20 mm Länge}
-%     \label{fig:evaluation_explanations_clicks}
-% \end{figure}
 
 Keinen Zusammenhang zwischen den Erklärungen und einer schlechteren / späteren ATA
-
-\subsubsection{Qualitativ}
-\label{sec:study_results_qualitativ}

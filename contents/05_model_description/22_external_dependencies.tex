@@ -5,7 +5,15 @@ Unter \textit{External Dependencies} sind die Aspekte zusammengefasst, die eine 
 
 \subsubsection{Context}
 
-Der \textit{Context} einer Erklärung beschreibt die äußeren Einflüsse, die unmittelbar auf das erklärbare System wirken und somit Anforderungen an die Eigenschaften von Erklärungen stellen.
+Der \textit{Context} einer Erklärung beschreibt die äußeren Einflüsse, die unmittelbar auf das erklärbare System wirken und somit Anforderungen an die Eigenschaften von Erklärungen stellen. Einen Überblick bietet \autoref{fig:model_context_overview}.
+
+\begin{figure}[htb!]
+    \begin{center}
+        \includegraphics{contents/05_model_description/res/model_context_overview.pdf}
+    \end{center}
+    \caption{Übersicht über den \textit{Context} eines erklärbaren Systems}
+    \label{fig:model_context_overview}
+\end{figure}
 
 Dies beinhaltet die Aktivität, die der Endbenutzer in einer bestimmten Umgebung durchführt. Aus den Eigenschaften der drei Aspekte (Aktivität, Endbenutzer und Umgebung) leiten sich dabei direkte Einflüsse auf den Bedarf, den Inhalt und die Darstellung einer Erklärung ab. \autoref{tab:impact_of_context_on_explanation} stellt wie bereits zuvor die verwendeten Synonyme für die verschiedenen Facetten des \textit{Context} eines Systems dar. Insbesondere der Begriff Stakeholder wurde in der Literatur verschieden eingesetzt. \citeauthor{cirqueira_scenario-based_2020} nutzen den Begriff für den Nutzer einer Software \cite{cirqueira_scenario-based_2020} während \citeauthor{nunes_systematic_2017} diesen als Oberbegriff für Personengruppen, die ein Interesse an einem System haben, verwenden, den Nutzer allerdings ausschließen \cite{nunes_systematic_2017}. Diese Arbeit verwendet den Begriff, um alle Personengruppen mit Interesse am System inklusive aller Nutzer zu beschreiben (\cite[vgl.][]{schneider2012abenteuer,chazette_knowledge_nodate}). Folgend werden nun die drei Aspekte sowie typische Ausprägungen oder Charakteristiken näher erläutert.
 
@@ -27,7 +35,7 @@ Dies beinhaltet die Aktivität, die der Endbenutzer in einer bestimmten Umgebung
                         & Application Area & \cite{sokol_explainability_2020} \cite{wiegand2019drive} \cite{wiegand_id_2020} \\
         \toprule
     \end{tabular}
-    \caption{Relevante Aspekte des \textit{Context} eines erklärbaren Systems zu Integration von Erklärungen}
+    \caption{Relevante Aspekte des \textit{Context} eines erklärbaren Systems zur Integration von Erklärungen}
     \label{tab:impact_of_context_on_explanation}
 \end{table}
 
@@ -50,9 +58,7 @@ Als Zwischenergebnis für \textbf{RQ1} kann hier festgehalten werden, dass der \
 \subsubsection{Zielsetzung}
 \label{subsec:model_objective}
 
-Als zweiter Aspekt neben dem \textit{Context} werden in der Literatur die \textit{Objectives} für die Integration von Erklärungen mit einem Einfluss auf die Anforderungen an Erklärungen genannt \cite{rosenfeld_explainability_2019, nunes_systematic_2017}.
-
-\citeauthor{chazette_knowledge_nodate} haben in ihrem Modell für Erklärbarkeit die Qualitätsaspekte zusammengefasst, die mit Erklärbarkeit in einem Zusammenhang stehen und somit auch als \textit{Objectives} für die Integration von Erklärungen gesehen werden können. Zusammen mit weiteren Ergebnissen der Literaturrecherche haben sich acht externe Qualitätsaspekte herausgestellt, welche in der Regel auf die Auswirkungen durch Erklärungen untersucht wurden \cite{nunes_systematic_2017, tintarev2007survey}. Die Qualitätsaspekte sind in den meisten Fällen dafür genutzt worden, über das Messen dieser Aspekte die Qualität der integrierten Erklärungen indirekt zu bestimmten. \autoref{tab:quality_aspects_of_explanation} enthält eine Liste dieser externen Qualitätsaspekte zusammen mit deren Definitionen. Diese enthält alle Arbeiten, welche den jeweiligen Aspekt explizit untersuchen oder Ergebnisse von Untersuchungen dazu zusammenfassen.
+Als zweiter Aspekt neben dem \textit{Context} werden in der Literatur die \textit{Objectives} für die Integration von Erklärungen mit einem Einfluss auf die Anforderungen an Erklärungen genannt \cite{rosenfeld_explainability_2019, nunes_systematic_2017}. 
 
 \begin{table}[b!]
     \begin{center}
@@ -90,9 +96,19 @@ Als zweiter Aspekt neben dem \textit{Context} werden in der Literatur die \texti
     \label{tab:quality_aspects_of_explanation}
 \end{table}
 
-In ihrer Definition von Erklärbarkeit sehen \citeauthor{chazette_knowledge_nodate} vor allem \textit{Transparency} und \textit{Understandability} als zentrale Ziele von Erklärbarkeit \cite{chazette_end-users_nodate}. Sie schreiben, dass diese unmittelbar durch die Integration von Erklärungen erreicht werden können. \textit{Understandability} ist dabei als \glqq Das Verständnis von Nutzern über das System erhöhen\grqq{} definiert \cite[vgl.][]{chazette_end-users_nodate}. In den meisten Fällen werden die beiden Aspekte in der Literatur allerdings als Synonyme verwendet \cite{nunes_systematic_2017, carvalho2017quality,tintarev_designing_nodate} oder zusammen evaluiert. Darüber hinaus ist \textit{Understandability} als \textit{Softgoal} für \textit{Transparency} aufgeführt \cite{do2010software}. Daher fasst dieses Modell beide Aspekte unter \textit{Transparency} zusammen. Allerdings wird im Rahmen von Erklärbarkeit wie in \autoref{02_basics:explainability} beschrieben zusätzlich zwischen \textit{Transparency} und \textit{Perceived Transparency} unterschieden \cite{nunes_systematic_2017}. Letzteres ist dabei die wahrgenommene \textit{Transparency} des \textit{End Users}. Dies ist wichtig, da es möglich ist, dass nur die \textit{Perceived Transparency} das Ziel der Integration von Erklärungen ist. Notwendig ist dies, da Unternehmen ggf. nicht bereit sind, die Funktionalität ihrer Software offen zu legen oder ein System, dessen Erklärungen eine hohe \textit{Transparency} bieten durch ihre Komplexität \textit{End User} überfordern können \cite{chazette_knowledge_nodate}.
+\citeauthor{chazette_knowledge_nodate} haben in ihrem Modell für Erklärbarkeit die Qualitätsaspekte zusammengefasst, die mit Erklärbarkeit in einem Zusammenhang stehen und somit auch als \textit{Objectives} für die Integration von Erklärungen gesehen werden können. Zusammen mit weiteren Ergebnissen der Literaturrecherche haben sich acht externe Qualitätsaspekte herausgestellt, welche in der Regel auf die Auswirkungen durch Erklärungen untersucht wurden \cite{nunes_systematic_2017, tintarev2007survey}. Die Qualitätsaspekte sind in den meisten Fällen dafür genutzt worden, über das Messen dieser Aspekte die Qualität der integrierten Erklärungen indirekt zu bestimmten. \autoref{tab:quality_aspects_of_explanation} enthält eine Liste dieser externen Qualitätsaspekte zusammen mit deren Definitionen. Diese enthält alle Arbeiten, welche den jeweiligen Aspekt explizit untersuchen oder Ergebnisse von Untersuchungen dazu zusammenfassen.
 
-Wie in \autoref{tab:quality_aspects_of_explanation} zu sehen ist, werden die Qualitätsziele verschieden häufig untersucht.  Dies ist ein Indiz dafür, dass die Aspekte einer Struktur bedürfen. Daher schlagen einige Autoren eine hierarchische Anordnung der Qualitätsziele vor \cite{nunes_systematic_2017,tintarev2007survey,waa_evaluating_2021}. Folglich werden die \textit{Objectives} in drei Abstraktionsebenen gegliedert: \textit{Business Goals}, \textit{Users' Perception} und \textit{Explanation Purpose}. Diese Ebenen, die von \citeauthor{nunes_systematic_2017} sowie \citeauthor{tintarev2007survey} vorgeschlagen werden, sind in diesem Modell als konkrete Abstraktionslevel für Qualitätsmodelle (\cite[vgl.][]{schneider2012abenteuer}) zu interpretieren. Die Zuordnung der Qualitätsaspekte zu den Kategorien ist in der Gesamtübersicht des Modells abgebildet (\autoref{fig:model_overview_complete}). \autoref{tab:impact_of_objective_on_explanation} fasst die Erwähnungen der drei Zielebenen mit den jeweiligen Synonymen aus der Literatur zusammen.
+In ihrer Definition von Erklärbarkeit sehen \citeauthor{chazette_knowledge_nodate} vor allem \textit{Transparency} und \textit{Understandability} als zentrale Ziele von Erklärbarkeit \cite{chazette_end-users_nodate}. Sie schreiben, dass diese unmittelbar durch die Integration von Erklärungen erreicht werden können. \textit{Understandability} ist dabei als \glqq Das Verständnis von Nutzern über das System erhöhen\grqq{} definiert \cite[vgl.][]{chazette_end-users_nodate}. In den meisten Fällen werden die beiden Aspekte in der Literatur allerdings als Synonyme verwendet \cite{nunes_systematic_2017, carvalho2017quality,tintarev_designing_nodate} oder zusammen evaluiert. Darüber hinaus ist \textit{Understandability} als \textit{Softgoal} für \textit{Transparency} aufgeführt \cite{do2010software}. Daher fasst dieses Modell beide Aspekte unter \textit{Transparency} zusammen. Allerdings wird im Rahmen von Erklärbarkeit wie in \autoref{02_basics:explainability} beschrieben zusätzlich zwischen \textit{Transparency} und \textit{Perceived Transparency} unterschieden \cite{nunes_systematic_2017}. Letzteres ist dabei die wahrgenommene \textit{Transparency} des \textit{End Users}. Dies ist wichtig, da es möglich ist, dass nur die \textit{Perceived Transparency} das Ziel der Integration von Erklärungen ist. Notwendig ist dies, da Unternehmen ggf. nicht bereit sind, die Funktionalität ihrer Software offenzulegen oder ein System, dessen Erklärungen eine hohe \textit{Transparency} bieten durch ihre Komplexität \textit{End User} überfordern können \cite{chazette_knowledge_nodate}.
+
+\begin{figure}[b!]
+    \begin{center}
+        \includegraphics{contents/05_model_description/res/model_objectives_overview.pdf}
+    \end{center}
+    \caption{Übersicht über die \textit{Objectives} eines erklärbaren Systems}
+    \label{fig:model_objectives_overview}
+\end{figure}
+
+Wie in \autoref{tab:quality_aspects_of_explanation} zu sehen ist, werden die Qualitätsziele verschieden häufig untersucht. Dies ist ein Indiz dafür, dass die Aspekte einer Struktur bedürfen. Daher schlagen einige Autoren eine hierarchische Anordnung der Qualitätsziele vor \cite{nunes_systematic_2017,tintarev2007survey,waa_evaluating_2021}. Folglich werden die \textit{Objectives} in drei Abstraktionsebenen gegliedert: \textit{Business Goals}, \textit{Users' Perception} und \textit{Explanation Purpose}. Diese Ebenen, die von \citeauthor{nunes_systematic_2017} sowie \citeauthor{tintarev2007survey} vorgeschlagen werden, sind in diesem Modell als konkrete Abstraktionslevel für Qualitätsmodelle (\cite[vgl.][]{schneider2012abenteuer}) zu interpretieren. Die Zuordnung der Qualitätsaspekte zu den Kategorien ist in der \autoref{fig:model_objectives_overview} abgebildet. \autoref{tab:impact_of_objective_on_explanation} fasst die Erwähnungen der drei Zielebenen mit den jeweiligen Synonymen aus der Literatur zusammen.
 
 \begin{table}[htb!]
     \begin{center}
@@ -132,6 +148,8 @@ Unter den \textit{Business Goals} werden in der Literatur über die schon genann
 \bigskip
 
 Die hier vorgestellten Ziele bei der Integration von Erklärungen stellen keine abgeschlossene oder vollständige Liste dar, sondern dienen im Rahmen des Leitfadens als Überblick über in der Literatur häufig betrachtete Ziele, für deren Erreichung Erklärungen erfolgreich eingesetzt wurden.
+
+\newpage
 
 \smallskip
 

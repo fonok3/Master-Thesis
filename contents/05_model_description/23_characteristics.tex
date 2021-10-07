@@ -2,9 +2,17 @@
 
 Die \textit{Characteristics} umfassen jene Eigenschaften von Erklärungen, die einen Einfluss auf die externe Qualität eben dieser haben. Unter dem Aspekt sind die Möglichkeiten zusammengefasst, die bei der Ausgestaltung von Erklärungen bestehen. Gegliedert sind die Eigenschaften in den Bedarf der Erklärung (\textit{Demand}), die ausgelieferten Informationen (\textit{Content}) und die Bereitstellung (\textit{Presentation}). Diese drei Unterkategorien werden in den folgenden Abschnitten vorgestellt. Die vorangegangenen Arbeiten, in denen einzelne Eigenschaften untersucht wurden, werden in diesem Abschnitt jeweils in eigenen Tabellen mit aufgeführt, um als Beispiele für diese zu dienen. Wichtig zu beachten ist, dass sich die vorgestellten Möglichkeiten nicht unbedingt ausschließen. Das heißt vor allem, dass nicht jede Erklärung genau eine Ausprägung eines Aspektes erfüllen muss, sondern auch neue oder zwischen zwei Möglichkeiten liegende Eigenschaften aufweisen kann. Darüber hinaus muss auch nicht zwangsweise für jede Eigenschaftskategorie eine Eigenschaft ausgewählt werden, da nicht alle Kategorien auf jeden Kontext zutreffen.
 
+\begin{figure}[htb!]
+    \begin{center}
+        \includegraphics{contents/05_model_description/res/model_demand_overview.pdf}
+    \end{center}
+    \caption{Übersicht über den \textit{Demand} für Erklärungen}
+    \label{fig:model_demand_overview}
+\end{figure}
+
 \subsubsection{Bedarf}
 
-Der \textit{Demand}  für Erklärungen kann aus verschiedenen Perspektiven betrachtet werden. Bei welcher Aufgabe und bei welchen Ereignissen Erklärungen überhaupt benötigt werden, muss in den Anforderungen für Erklärungen festgehalten werden. Diese entstehen auf Basis der \textit{External Dependencies}. Unter der Kategorie \textit{Demand} in diesem Modell ist zusätzlich festgehalten, mit welcher Initiative (\textit{Initiative}) und wann genau in Bezug auf ein Ereignis im System dem \textit{End User} Erklärungen vom System zur Verfügung gestellt werden sollen. Einen Überblick über die Verwendung verschiedener Ausprägungen der Aspekte ist in \autoref{tab:explanation_demands} dargestellt.
+Der \textit{Demand}  für Erklärungen kann aus verschiedenen Perspektiven betrachtet werden. Bei welcher Aufgabe und bei welchen Ereignissen Erklärungen überhaupt benötigt werden, muss in den Anforderungen für Erklärungen festgehalten werden. Diese entstehen auf Basis der \textit{External Dependencies}. Unter der Kategorie \textit{Demand} in diesem Modell ist zusätzlich festgehalten, mit welcher Initiative (\textit{Initiative}) und wann genau in Bezug auf ein Ereignis im System dem \textit{End User} Erklärungen vom System zur Verfügung gestellt werden sollen. Einen Überblick über die Verwendung verschiedener Ausprägungen der Aspekte ist in \autoref{fig:model_demand_overview} und \autoref{tab:explanation_demands} dargestellt.
 
 \begin{table}[bht!]
     \begin{center}
@@ -41,9 +49,17 @@ Der \textit{Demand}  für Erklärungen kann aus verschiedenen Perspektiven betra
 
 Im Rahmen von \textbf{RQ2} kann an dieser Stelle folglich abgeleitet werden, dass der \textit{Demand} mit den verschiedenen Möglichkeiten für \textit{End User} eine Erklärung zu bestimmten Zeitpunkten zu erhalten eine Eigenschaft mit einem Einfluss auf die externe Erklärungsqualität ist.
 
+\begin{figure}[htb!]
+    \begin{center}
+        \includegraphics{contents/05_model_description/res/model_content_overview.pdf}
+    \end{center}
+    \caption{Übersicht über den \textit{Content} von Erklärungen}
+    \label{fig:model_content_overview}
+\end{figure}
+
 \subsubsection{Inhalt}
 
-Unter dem Punkt \textit{Content} wird definiert, mit welchen Inhalten die \textit{End User} durch Erklärungen versorgt werden \cite{nunes_systematic_2017}. Dieser ist einer von zwei Teilen des Modells, welcher sich auf die Granularität von Erklärungen bezieht. Der \textit{Content} beinhaltet nicht nur den Informationstyp (\textit{Information Type}) den das System vermittelt, sondern auch wie viel Inhalt (\textit{Information Density}). Ein weiterer Aspekt ist Anpassungsfähigkeit der Inhalte (\textit{Adaptivity}). \autoref{tab:content_of_explanations} enthält die verschiedenen Ausprägungen dieser Aspekte zusammen mit deren Anwendungen in der Literatur, welche einen Einfluss auf die externe Qualität von Erklärungen haben.
+Unter dem Punkt \textit{Content} wird definiert, mit welchen Inhalten die \textit{End User} durch Erklärungen versorgt werden \cite{nunes_systematic_2017}. Dieser ist einer von zwei Teilen des Modells, welcher sich auf die Granularität von Erklärungen bezieht. Der \textit{Content} beinhaltet nicht nur den Informationstyp (\textit{Information Type}) den das System vermittelt, sondern auch wie viel Inhalt (\textit{Information Density}). Ein weiterer Aspekt ist Anpassungsfähigkeit der Inhalte (\textit{Adaptivity}). \autoref{tab:content_of_explanations} und \autoref{fig:model_content_overview} enthalten die verschiedenen Ausprägungen dieser Aspekte zusammen mit deren Anwendungen in der Literatur, welche einen Einfluss auf die externe Qualität von Erklärungen haben.
 
 \begin{table}[bht!]
     \begin{center}
@@ -106,9 +122,29 @@ Als weiteres Ergebnis für \textbf{RQ2} kann hier hinzugefügt werden, dass auch
 
 \subsubsection{Presentation}
 
-Nachdem nun sowohl der \textit{Demand} als auch der an den \textit{End User} übermittelte Inhalt als zentrale \textit{Characteristics} von Erklärungen vorgestellt wurden, fehlt im Modell die Art der Präsentation der Erklärung an den \textit{End User}. Diese ist mit ihren zugehörigen Ausprägungen unter \textit{Presentation} zusammengefasst. Sie stellt den zweiten Teil der Granularität von Erklärungen dar. Zu dem Aspekt gehören in diesem Modell für Erklärungen das Medium (\textit{Medium}), über das die Erklärung \textit{End Usern} bereitgestellt wird, der verwendete Ton (\textit{Tone}) des \textit{Explainers} (siehe \autoref{02_basics:explainability}) \cite[vgl.][]{chazette_knowledge_nodate} und die Gruppierung von Erklärungen bzw. Erklärungstypen (\textit{Grouping}). \autoref{tab:presentation_of_explanations} stellt die Ausprägungen zusammen mit der Literatur, die den entsprechenden Aspekt in Bezug auf die externe Qualität von Erklärungen untersucht, dar.
+Nachdem nun sowohl der \textit{Demand} als auch der an den \textit{End User} übermittelte Inhalt als zentrale \textit{Characteristics} von Erklärungen vorgestellt wurden, fehlt im Modell die Art der Präsentation der Erklärung an den \textit{End User}. Diese ist mit ihren zugehörigen Ausprägungen unter \textit{Presentation} zusammengefasst (siehe \autoref{fig:model_presentation_overview}). Sie stellt den zweiten Teil der Granularität von Erklärungen dar. Zu dem Aspekt gehören in diesem Modell für Erklärungen das Medium (\textit{Medium}), über das die Erklärung \textit{End Usern} bereitgestellt wird, der verwendete Ton (\textit{Tone}) des \textit{Explainers} (siehe \autoref{02_basics:explainability}) \cite[vgl.][]{chazette_knowledge_nodate} und die Gruppierung von Erklärungen bzw. Erklärungstypen (\textit{Grouping}). \autoref{tab:presentation_of_explanations} stellt die Ausprägungen zusammen mit der Literatur, die den entsprechenden Aspekt in Bezug auf die externe Qualität von Erklärungen untersucht, dar.
 
-\begin{table}
+\begin{figure}[t!]
+    \begin{center}
+        \includegraphics{contents/05_model_description/res/model_presentation_overview.pdf}
+    \end{center}
+    \caption{Übersicht über die \textit{Presentation} von Erklärungen}
+    \label{fig:model_presentation_overview}
+\end{figure}
+
+\paragraph{Medium} Das \textit{Medium} einer Erklärung ist der Informationsträger für die \textit{Presentation} der Inhalte. Dabei können verschiedene Möglichkeiten aus dem Multimedia-Bereich verwendet werden. In der Literatur untersucht wurden Texterklärungen (\textit{Textual}), visuelle Darstellungen wie z.B. Diagramme (\textit{Visual}) sowie auditive Erklärungen (\textit{Auditory}). Insbesondere dieser Aspekt bietet Möglichkeiten für Mischformen und Kombinationen \cite{kouki_user_2017}.
+
+\paragraph{Tone} Der \textit{Tone} einer Erklärung bestimmt die Art, wie \textit{End Usern} der Inhalt einer Erklärung näher gebracht wird. Das Spektrum der Möglichkeiten erstreckt sich dabei vor allem zwischen sehr faktisch gehaltenen Erklärungen (\textit{Factual}) und persönlichen bzw. menschlichen Erklärungen (\textit{Human}).
+
+\paragraph{Grouping} Mit dem \textit{Grouping} von Erklärungen wird bestimmt, wie viele Erklärungen \textit{End Usern} gleichzeitig beziehungsweise kombiniert präsentiert werden. Grundsätzlich gibt es dabei die Möglichkeiten eine Erklärung zur Zeit anzuzeigen (\textit{Single}) oder mehrere Erklärungen bzw. Erklärungstypen zu gruppieren (\textit{Grouped}). Bei letzterem können entweder Erklärungen mit verschiedener \textit{Presentation} aber dem gleichen \textit{Content} kombiniert werden \cite{kouki_user_2017} oder mehrere einzelne Erklärungen zusammen dargestellt werden \cite{balog_measuring_2020}.
+
+\bigskip
+
+Als letzter Teil der Antwort auf \textbf{RQ2} kann resultierend die \textit{Presentation} mit den dazugehörigen Aspekten als Eigenschaft von Erklärungen mit einem Einfluss auf die externe Qualität von Erklärungen ergänzt werden.
+
+\newpage
+
+\begin{table}[htb!]
     \begin{center}
         \begin{tabular}{p{.25\textwidth}p{.25\textwidth}p{.41\textwidth}}
             \hline
@@ -142,18 +178,6 @@ Nachdem nun sowohl der \textit{Demand} als auch der an den \textit{End User} üb
     \caption{Verschiedene Übermittlungsmöglichkeiten für Erklärungen an den \textit{End User}, die in der Literatur einen Effekt auf die externe Qualität von Erklärungen gezeigt haben}
     \label{tab:presentation_of_explanations}
 \end{table}
-
-\paragraph{Medium} Das \textit{Medium} einer Erklärung ist der Inforamtionsträger für die \textit{Presentation} der Inhalte. Dabei können verschiedene Möglichkeiten aus dem Multimedia-Bereich verwendet werden. In der Literatur untersucht wurden Texterklärungen (\textit{Textual}), visuelle Darstellungen wie z.B. Diagramme (\textit{Visual}) sowie auditive Erklärungen (\textit{Auditory}). Insbesondere dieser Aspekt bietet Möglichkeiten für Mischformen und Kombinationen \cite{kouki_user_2017}.
-
-\paragraph{Tone} Der \textit{Tone} einer Erklärung bestimmt die Art, wie \textit{End Usern} der Inhalt einer Erklärung näher gebracht wird. Das Spektrum der Möglichkeiten erstreckt sich dabei vor allem zwischen sehr faktisch gehaltenen Erklärungen (\textit{Factual}) und persönlichen bzw. menschlichen Erklärungen (\textit{Human}).
-
-\paragraph{Grouping} Mit dem \textit{Grouping} von Erklärungen wird bestimmt, wie viele Erklärungen \textit{End Usern} gleichzeitig beziehungsweise kombiniert präsentiert werden. Grundsätzlich gibt es dabei die Möglichkeiten eine Erklärung zur Zeit anzuzeigen (\textit{Single}) oder mehrere Erklärungen bzw. Erklärungstypen zu gruppieren (\textit{Grouped}). Bei letzterem können entweder Erklärungen mit verschiedener \textit{Presentation} aber dem gleichen \textit{Content} kombiniert werden \cite{kouki_user_2017} oder mehrere einzelne Erklärungen zusammen dargestellt werden \cite{balog_measuring_2020}.
-
-\bigskip
-
-Als letzter Teil der Antwort auf \textbf{RQ2} kann resultierend die \textit{Presentation} mit den dazugehörigen Aspekten als Eigenschaft von Erklärungen mit einem Einfluss auf die externe Qualität von Erklärungen ergänzt werden.
-
-\smallskip
 
 \noindent\fbox{
     \parbox{0.964\textwidth}{
