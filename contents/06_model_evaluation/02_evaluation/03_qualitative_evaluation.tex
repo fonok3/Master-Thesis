@@ -21,51 +21,64 @@ Außerdem wurden die Teilnehmer gebeten, alle Gedanken beim Interagieren oder Le
 
 \subsubsection{Bedarf für die gegebenen Erklärungen}
 
-Die statischen Erklärungen (siehe \autoref{sec:user_count_definition} und \autoref{sec:route_explanation_definition}), welche die Einflüsse auf den Routing-Algorithmus von NUNAV sowie das kollaborative Routing erklären, sind interaktiv. Somit kann evaluiert werden, wie viele Studienteilnehmer diese wie häufig diese angefordert haben. Außerdem kann gemessen werden, wie lange sie die Erklärungen betrachtet haben.
+Die statischen Erklärungen (siehe \autoref{sec:user_count_definition} und \autoref{sec:route_explanation_definition}), welche die Einflüsse auf den Routing-Algorithmus von NUNAV sowie das kollaborative Routing erklären, sind interaktiv. Somit kann evaluiert werden, wie viele Studienteilnehmer diese wie häufig diese angefordert haben. Außerdem kann gemessen werden, wie lange sie die Erklärungen betrachtet haben. Die Studiengruppen (Gruppe 2 und 4), denen diese angezeigt wurden, enthalten insgesamt 1~766 Teilnehmer.
 
-Die drei verschiedenen Erklärungen, die die Nutzer aufrufen können, sind in \autoref{sec:user_count_definition} und \autoref{sec:route_explanation_definition} beschrieben. Die Studiengruppen (Gruppe 2 und 4), denen diese angezeigt wurden, enthalten insgesamt 1~766 Teilnehmer.
-
-Im Folgenden wird die Erklärung zu Einflüssen auf die Routenberechnung \textit{Erklärung 1}, die kurze Erklärung zum kollaborativen Routing als \textit{Erklärung 2.1} und die dazugehörige weitere Erklärung als \textit{Erklärung 2.2} genannt.
-
-Als erfasst und nicht direkt wieder verlassen werden die Erklärungen gewertet, wenn die \textit{End User} länger als 1,5 Sekunden in dem Dialog verbracht haben \cite{BAHR2011776}. \autoref{fig:explanation_results_clicked} zeigt wie häufig die \textit{End User} die Erklärungen erfasst haben. 
+Als erfasst und nicht direkt wieder verlassen werden die Erklärungen gewertet, wenn die \textit{End User} länger als 1,5 Sekunden in dem Dialog verbracht haben \cite{BAHR2011776}. So können die Daten herausgefiltert werden, bei denen \textit{End User} versehentlich den Dialog aufgerufen haben. \autoref{fig:explanation_results_clicked} zeigt die Häufigkeit der Aufrufe für die beiden Erklärungstypen.
 
 \begin{figure}[htb!]
     \centering
     \includegraphics[width=0.9\textwidth]{contents/06_model_evaluation/02_evaluation/res/explanation_results_clicked.pdf}
-    \caption{Anzahl der Nutzer, die Erklärungen erfasst haben}
+    \caption{Häufigkeit der Aufrufe der Erklärungen zum Routing-Algorithmus sowie dessen Einflüssen}
     \label{fig:explanation_results_clicked}
 \end{figure}
 
-
-\autoref{fig:evaluation_explanation_demand_qualitative} zeigt die Bewertung der Studienteilnehmer des Quasi-Experiments in Bezug auf deren Bedarf für die Erklärungen.
-
-In \autoref{fig:explanation_results_clicked} kann man erkennen, dass etwa 5\% der Nutzer auf die Erklärung zum kollaborativen Routing geklickt haben. Allerdings sagen wie in \autoref{fig:evaluation_explanation_demand_qualitative} zu erkennen ist drei von vier Teilnehmern des Quasi-Experiments, dass die die Erklärung benötigt haben. Folglich herrscht eine Diskrepanz zwichen dem wirklichen Bedarf und den \textit{End Usern} des Feld Tests, die die Erklärung angefordert haben. Insbesondere haben im Quasi-Experiment zwei der Teilnehmer angegeben, die Erklärung sich auch mehrfach anzusehen.
+In \autoref{fig:explanation_results_clicked} kann man erkennen, dass etwa 5~\% der Nutzer auf die Erklärung zum kollaborativen Routing geklickt haben. Allerdings sagen wie in \autoref{fig:01_collaborative_routing_demand} zu erkennen ist, drei von vier Teilnehmern des Quasi-Experiments, dass sie die Erklärung benötigt haben. Folglich herrscht eine Diskrepanz zwischen dem wirklichen Bedarf und den \textit{End Usern} des Feldtests, die die Erklärung angefordert haben. Insbesondere haben im Quasi-Experiment zwei der Teilnehmer angegeben, die Erklärung sich auch mehrfach anzusehen.
 
 % TODO: Ich möchte Ausblenden können und empfand als störend mit in die Grafik einfügen. Ggf. doch Grafiken teilen
 
 \begin{figure}[htb!]
     \centering
-    \includegraphics[width=\textwidth]{contents/06_model_evaluation/02_evaluation/res/qualitativeFeedback-evaluation_explanation_demand_qualitative.pdf}
-    \caption{Subjektive Einschätzung des Bedarfs der Erklärungen}
-    \label{fig:evaluation_explanation_demand_qualitative}
+    \includegraphics[width=\textwidth]{contents/06_model_evaluation/02_evaluation/res/qualitativeFeedback-01_collaborative_routing_demand.pdf}
+    \caption{Subjektive Einschätzung des Bedarfs für die Erklärung zum kollaborativen Routing}
+    \label{fig:01_collaborative_routing_demand}
 \end{figure}
 
-Betrachtet man im Gegensatz dazu die gleichen Daten für die Erklärung zu den Einflüssen auf die Routenberechnung fällt auf, dass etwa 20\% der Teilnehmer des Feldtests sich die Erklärung angesehen haben, wie in \autoref{fig:evaluation_explanation_demand_qualitative} zu sehen aber, sowohl weniger Teilnehmer angegeben haben, dass sie die Erklärung benötigt haben als auch sich mehrfach ansehen würden als bei der Erklärung zum kollaborativen Routing. Ein Erklärungsversuch kann durch die Aussage eines Teilnehmers am Quasi-Experiment getätigt werden. Dieser sagte, dass die Zahl, auf die für die kollaborative Routing Erklärung geklickt werden müsse, zum Teil klar ist und nicht direkt offensichtlich ist, dass sich dort hinter die ALgorithmuserklärung befinde. Außerdem hat eine Teilnehmerin hinzugeügt, dass die Frage \glqq Wie ist meine Route entstanden?\grqq{}, über welche die Erklärung zu den Routing-Einflüssen erreichbar ist neugieriger macht.
+\autoref{fig:01_collaborative_routing_demand} und \autoref{fig:02_collaborative_algorithm_demand} zeigen die Bewertung der Studienteilnehmer des Quasi-Experiments in Bezug auf deren Bedarf für die Erklärungen.
+
+Betrachtet man im Gegensatz dazu die gleichen Daten für die Erklärung zu den Einflüssen auf die Routenberechnung fällt auf, dass etwa 20~\% der Teilnehmer des Feldtests sich die Erklärung angesehen haben, wie in \autoref{fig:02_collaborative_algorithm_demand} zu sehen aber, sowohl weniger Teilnehmer angegeben haben, dass sie die Erklärung benötigt haben, als auch sich mehrfach ansehen würden als bei der Erklärung zum kollaborativen Routing. Ein Erklärungsversuch kann durch die Aussage eines Teilnehmers am Quasi-Experiment getätigt werden. Dieser sagte, dass die Zahl, auf die für die kollaborative Routing Erklärung geklickt werden müsse, zum Teil klar ist und nicht direkt offensichtlich ist, dass sich dort hinter die Algorithmuserklärung befinde. Außerdem hat eine Teilnehmerin hinzugefügt, dass die Frage \glqq Wie ist meine Route entstanden?\grqq{}, über welche die Erklärung zu den Routing-Einflüssen erreichbar ist, neugieriger macht, als die angezeigte Zahl der aktiven Nutzer in der Nähe.
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=\textwidth]{contents/06_model_evaluation/02_evaluation/res/qualitativeFeedback-02_collaborative_algorithm_demand.pdf}
+    \caption{Subjektive Einschätzung des Bedarfs für die Erklärung zu Einflüssen auf den Routingalgorithmus}
+    \label{fig:02_collaborative_algorithm_demand}
+\end{figure}
 
 Aus diesen freien Aussagen und dem Gegensatz zwischen den benötigten Erklärungen und den wirklich angeforderten, kann folglich abgeleitet werden, die Erklärung zum kollaborativen Routing offensichtlicher zu erreichen sein sollte. Die Idee eines weiteren Teilnehmers war, dass es Möglich sein sollte, diese Erklärung über den Dialog \glqq Trete Schwarm bei...\grqq{} erreichen zu können. Dies ist der Dialog, der zu sehen ist, während \textit{NUNAV Navigation} die erste Route während der Nutzung lädt.
 
-Außerdem kann es dadurch, dass nur bis zu 20\% der \textit{End User} in der Feldstudie die Erklärungen gelesen haben, sein, dass die Auswirkungen auf andere Qualitätsmerkmale in der Studie nicht im signifikanten Bereich lagen. Zumindest für die Erklärung zum kollaborativen Routing ließe sich dies anhand der Aussagen der Teilnehmer des Quasi-Experiments durch einen verbesserten Weg, um zur Erklärung zu gelangen, ggf. steigern und sollte in einer zweiten Iteration getestet werden. Des Weiteren gab es in einem Fall beim Quasi-Experiment Kritik daran, dass die Hilfe-Center-Artikel im Browser des Smartphones geöffnet würden. Eine Integration in die App würde der Aussage nach eher dazu bewegen, sich eine Erklärung auch durchzulesen.
+Außerdem kann es dadurch, dass nur bis zu 20~\% der \textit{End User} in der Feldstudie die Erklärungen gelesen haben, sein, dass die Auswirkungen auf andere Qualitätsmerkmale in der Studie nicht im signifikanten Bereich lagen. Zumindest für die Erklärung zum kollaborativen Routing ließe sich dies anhand der Aussagen der Teilnehmer des Quasi-Experiments durch einen verbesserten Weg, um zur Erklärung zu gelangen, ggf. steigern und sollte in einer zweiten Iteration getestet werden. Des Weiteren gab es in einem Fall beim Quasi-Experiment Kritik daran, dass die Hilfe-Center-Artikel im Browser des Smartphones geöffnet würden. Eine Integration in die App würde der Aussage nach eher dazu bewegen, sich eine Erklärung auch durchzulesen.
 
-Für die beiden \textit{Context-Abhängigen} Erklärungen gab es keine Metriken, welchen den Bedarf innerhalb der Feld-Studie widerspiegeln können. Auch gab es im Rahmen des Quasi-Experiments lediglich positive Rückmeldungen zum Bedarf der Erklärungen. Des Weiteren wurden beide Erklärungen weder als störend empfunden, noch gab es Studienteilnehmer, die den Wunsch geäußert haben, die Erklärungen ausblenden zu wollen (siehe \nameref{ch:appendix_1}). % TODO: ggf. hier direkt die Grafiken einfügen.
+Für die beiden \textit{Context-Abhängigen} Erklärungen gab es keine Metriken, welchen den Bedarf innerhalb der Feldstudie widerspiegeln können. Auch gab es im Rahmen des Quasi-Experiments lediglich positive Rückmeldungen zum Bedarf der Erklärungen. Des Weiteren wurden beide Erklärungen weder als störend empfunden, noch gab es Studienteilnehmer, die den Wunsch geäußert haben, die Erklärungen ausblenden zu wollen (siehe \nameref{ch:appendix_1}). Außerdem gab es auch keine weiteren Äußerungen der Teilnehmer des Quasi-Experiments zu den beiden Erklärungen. Daher können aus den Daten zum Bedarf für diese Erklärungen keine Verbesserungsmöglichkeiten abgeleitet werden. Dies deckt sich auch mit den positiven Ergebnissen aus der Feldstudie.% TODO: ggf. hier direkt die Grafiken einfügen.
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=\textwidth]{contents/06_model_evaluation/02_evaluation/res/qualitativeFeedback-03_traffic_volume_demand.pdf}
+    \caption{Subjektive Einschätzung des Bedarfs für die Erklärung zum aktuellen Verkehrsgeschehen}
+    \label{fig:03_traffic_volume_demand}
+\end{figure}
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=\textwidth]{contents/06_model_evaluation/02_evaluation/res/qualitativeFeedback-04_position_accuracy_demand.pdf}
+    \caption{Subjektive Einschätzung des Bedarfs für die Erklärung zu Positionsungenauigkeiten}
+    \label{fig:04_position_accuracy_demand}
+\end{figure}
 
 \subsubsection{Inhalt der gegebenen Erklärungen}
 
 Um den Inhalt der entwickelten Erklärungen zu bewerten, kann vor allem die \textit{Usefulness}, die \textit{Perceived Transparency} und die \textit{Completeness} der Erklärungen analysiert werden.
 
-Für die beiden statischen Erklärungen kann indirekt die \textit{Usefulness} der Erklärungen im Rahmen der Feld-Studie bestimmt werden. Der Hilfe-Center, welche zur Anzeige der Erklärungen genutzt wurde, enthält am Ende jedes Artikel die Möglichkeit, diesen als \glqq Hilfreich\grqq{} oder \glqq Nicht hilfreich\grqq{} zu bewerten. Auf den Hilfe-Center können \textit{End User} zwar auch über andere Wege, als die in der Feld-Studie bereitgestellten gelangen. Da es hier allerdings um die Bewertung der Erklärung an sich geht, können die Daten hier nichtsdestotrotz verwendet werden. \autoref{tab:explanation_results_clicked} zeigt die Bewertungen als \glqq Hilfreich\grqq{} oder \glqq Nicht hilfreich\grqq{} für die beiden statischen Erklärungen an.
-
-An den Bewertungen, welche aus dem Hilfe-Center stammen, kann man erkennen, dass ein Großteil (90\% kollaboratives Routing, 87\% Routing-Einflüsse) der \textit{End User}, welche die Artikel bewertet haben, diese als \glqq hilfreich\grqq{} bewertet haben. Dies spiegelt sich auch in der subjektiven Bewertung der Erklärungen im Quasi-Experiment wider. Mit einer Ausnahme stehen die Studienteilnehmer den Aussagen, dass die Erklärungen nützlich sind und diese verstanden haben positiv oder neutral gegenüber (siehe % TODO
-). Lediglich ein Teilnehmer hat die Aussage, dass die Erklärung zum kollaborativen Routing nützlich für die Navigation ist mit \glqq Trifft eher nicht zu\grqq{} bewertet. Auf Nachfrage, liegt dies daran, dass der Teilnehmer sich wünschen würde zu sehen, wann das kollaborative Routing ihn direkt während der Navigation beeinflusst. Folglich wird eine weitere \textit{Context}-abhängige Erklärung zusätzlich zur Anzahl der \textit{End User} in der Umgebung benötigt, welche diesen Umstand stärker herausstellt. Es stellt allerdings vermutlich als schwierig heraus dies umzusetzen.
+Für die beiden statischen Erklärungen kann indirekt die \textit{Usefulness} der Erklärungen im Rahmen der Feld-Studie bestimmt werden. Der Hilfe-Center, welche zur Anzeige der Erklärungen genutzt wurde, enthält am Ende jedes Artikel die Möglichkeit, diesen als \glqq Hilfreich\grqq{} oder \glqq Nicht hilfreich\grqq{} zu bewerten. Auf den Hilfe-Center können \textit{End User} zwar auch über andere Wege, als die in der Feldstudie bereitgestellten gelangen. Da es hier allerdings um die Bewertung der Erklärung an sich geht, können die Daten hier nichtsdestotrotz verwendet werden. \autoref{tab:explanation_results_clicked} zeigt die Bewertungen als \glqq Hilfreich\grqq{} oder \glqq Nicht hilfreich\grqq{} für die beiden statischen Erklärungen an.
 
 \begin{table}[htb!]
     \centering
@@ -81,45 +94,50 @@ An den Bewertungen, welche aus dem Hilfe-Center stammen, kann man erkennen, dass
     \label{tab:explanation_results_clicked}
 \end{table}
 
-Auch bei der Betrachtung von \textit{Perceived Transparency} und \textit{Completeness} sind die Bewertungen im Quasi-Experiment überwiegend positiv oder neutral (siehe %TODO
+An den Bewertungen, welche aus dem Hilfe-Center stammen, kann man erkennen, dass ein Großteil (90~\% kollaboratives Routing, 87~\% Routing-Einflüsse) der \textit{End User}, welche die Artikel bewertet haben, diese als \glqq hilfreich\grqq{} bewertet haben. Dies spiegelt sich auch in der subjektiven Bewertung der Erklärungen im Quasi-Experiment wider. Mit einer Ausnahme stehen die Studienteilnehmer den Aussagen, dass die Erklärungen nützlich sind und diese verstanden haben positiv oder neutral gegenüber (siehe \autoref{fig:01_collaborative_routing_content} und \autoref{fig:02_collaborative_algorithm_content}). Lediglich ein Teilnehmer hat die Aussage, dass die Erklärung zum kollaborativen Routing nützlich für die Navigation ist mit \glqq Trifft eher nicht zu\grqq{} bewertet. Auf Nachfrage, liegt dies daran, dass der Teilnehmer sich wünschen würde zu sehen, wann das kollaborative Routing ihn direkt während der Navigation beeinflusst. Folglich wird eine weitere \textit{Context}-abhängige Erklärung zusätzlich zur Anzahl der \textit{End User} in der Umgebung benötigt, welche diesen Umstand stärker herausstellt. Es stellt allerdings vermutlich als schwierig heraus dies umzusetzen.
 
-). Eine Aussage zur kollaborativen Routing Erklärung, die wiederum negativ beantwortet wurde, stammt von selbigem Nutzer wie zuvor und ist auch ähnlich begründet. Außerdem wurde die Aussage zur Länge der Erklärung zu den Einflüssen auf die Routenberechnung einmal als zu lang bewertet. Die Teilnehmerin hätte sich Formulierungen gewünscht, die etwas schneller das Kernthema erfassen, gewünscht.
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=\textwidth]{contents/06_model_evaluation/02_evaluation/res/qualitativeFeedback-01_collaborative_routing_content.pdf}
+    \caption{Subjektive Einschätzung des Inhalts für die Erklärung zum kollaborativen Routing}
+    \label{fig:01_collaborative_routing_content}
+\end{figure}
 
-Was sich zwar in den Bewertungen der Aussagen nicht widerspigelt, allerdigns im offenen Teil des Quasi-Experiments in einem Fall erwähnt wurde, ist, dass sich der Teilnehmer zu den einzelnen Einflüssen auf die Routenberechnung gewünscht hätte, zu sehen, aus welchen Quellen die Daten stammen, um deren Güte zu bewerten.
+Auch bei der Betrachtung von \textit{Perceived Transparency} und \textit{Completeness} sind die Bewertungen im Quasi-Experiment überwiegend positiv oder neutral (siehe \autoref{fig:01_collaborative_routing_content}). Eine Aussage zur Erklärung zum kollaborativen Routing, die wiederum negativ beantwortet wurde, stammt von selbigem Nutzer wie zuvor und ist auch ähnlich begründet. Außerdem wurde die Aussage zur Länge der Erklärung zu den Einflüssen auf die Routenberechnung einmal als zu lang bewertet. Die Teilnehmerin hätte sich Formulierungen gewünscht, die etwas schneller das Kernthema erfassen, gewünscht.
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=\textwidth]{contents/06_model_evaluation/02_evaluation/res/qualitativeFeedback-02_collaborative_algorithm_content.pdf}
+    \caption{Subjektive Einschätzung des Inhalts für die Erklärung zu Einflüssen auf den Routingalgorithmus}
+    \label{fig:02_collaborative_algorithm_content}
+\end{figure}
+
+Was sich zwar in den Bewertungen der Aussagen nicht wiederspigelt, allerdings im offenen Teil des Quasi-Experiments in einem Fall erwähnt wurde, ist, dass sich der Teilnehmer zu den einzelnen Einflüssen auf die Routenberechnung gewünscht hätte, zu sehen, aus welchen Quellen die Daten stammen, um deren Güte zu bewerten.
 
 Zusammenfassend kann für den Inhalt der statischen Erklärungen gesagt werden, dass dieser im Allgemeinen wenig Kritikpunkte im Quasi-Experiment erfahren hat und lediglich an einzelnen Stellen verbesserungswürdig (z.B. in den Formulierungen) ist. Die Forderung nach der Preisgabe der Datenquellen ist aufgrund von Verträgen nicht möglich. 
 
 \bigskip
 
-Da die Bewertungen der Aussagen zu den beiden \textit{Context}-abhängigen Erklärungen deutlich unterschiedlich ausfallen, werden diese getrennt behandelt. Für die Erklärung zum aktuellen Verkehrsgeschehen kann gesagt werden, dass der Inhalt ausschließlich positiv bewertet wurde (siehe %TODO
-). Darüber hinaus sind zusätzlich zu den Bewertungen der vorgegebenen Aussagen weitere positive Kommentare gemacht worden. Dies betrifft beispielsweise Konkurrenzprodukte, welche bereits ähnliche Erklärungen liefern und das Verkehrsgeschehen, daher aufgrund der Bekanntheit und guten Erfahrung mit der Funktion als positiv gesehen wird. Folglich muss an der Erklärung an sich aufbauend auf der vorliegenden Analyse nicht verändert werden.
+Da die Bewertungen der Aussagen zu den beiden \textit{Context}-abhängigen Erklärungen deutlich unterschiedlich ausfallen, werden diese getrennt behandelt. Für die Erklärung zum aktuellen Verkehrsgeschehen kann gesagt werden, dass der Inhalt ausschließlich positiv bewertet wurde (siehe \autoref{fig:03_traffic_volume_content}). Darüber hinaus sind zusätzlich zu den Bewertungen der vorgegebenen Aussagen weitere positive Kommentare gemacht worden. Dies betrifft beispielsweise Konkurrenzprodukte, welche bereits ähnliche Erklärungen liefern und das Verkehrsgeschehen, daher aufgrund der Bekanntheit und guten Erfahrung mit der Funktion als positiv gesehen wird. Folglich muss an der Erklärung an sich aufbauend auf der vorliegenden Analyse nicht verändert werden.
 
 \begin{figure}[htb!]
     \centering
-    \includegraphics[width=\textwidth]{contents/06_model_evaluation/02_evaluation/res/qualitativeFeedback-evaluation_usefulness_qualitative.pdf}
-    \caption{Subjektive Einschätzung des Bedarfs der Erklärungen (Anzahl der jeweiligen Bewertung pro Aussage)}
-    \label{fig:evaluation_usefulness_qualitative}
+    \includegraphics[width=\textwidth]{contents/06_model_evaluation/02_evaluation/res/qualitativeFeedback-03_traffic_volume_content.pdf}
+    \caption{Subjektive Einschätzung des Inhalts für die Erklärung zum aktuellen Verkehrsgeschehen}
+    \label{fig:03_traffic_volume_content}
 \end{figure}
 
 Betrachtet man allerdings die \textit{Context}-Daten, auf welche die Erklärung aufbaut, so hat der Berechnungsalgorithmus aus den intern  bei Graphmasters gemacht Erfahrungen heraus Verbesserungspotential. Beispielsweise müsste eine Evaluation erfolgen, wie \textit{End User} Verkehr einschätzen und wie oft und wie lange Verkehr auf einer Route beispielsweise subjektiv anders als \glqq normal\grqq{} wahrgenommen werden muss, damit sich dies auf die Wahrnehmung für die ganze Route auswirkt.
 
 \bigskip
 
-Die Erklärung zur ungenauen Positionierung hat, wie in %autoref TODO
-zu erkennen ist, einzelne negative Bewertungen bezüglich der \textit{Satisfaction} und \textit{Perceived Transparency}. Dies lässt darauf zurückführen, dass zwei Teilnehmerinnen bzw. Teilnehmer versucht hatten, über den \textit{Growl}, der zur Erklärung gehört eine genaue Erklärung der Funktion anzufordern und diese nicht erhalten konnten. Dies wurde mit der Frage danach verbunden, was \glqq Position ungenau\grqq{} genau bedeutet. Ein Vorschlag zur Lösung war, dass jedes \glqq Growl\grqq{} wie bei der Erklärung zum kollaborativen Routing eine kurze sowie eine lange Erklärung erhält. Dies ist laut einem Kommentar des Quasi-Experiments die Erwartung dadurch, dass dies an einer Stelle möglich ist. Folglich sollte in einer weiteren Iteration aufgrund der Konsistenz dieser Vorschlag umgesetzt werden.
+Die Erklärung zur ungenauen Positionierung hat, wie in \autoref{fig:04_position_accuracy_content} zu erkennen ist, einzelne negative Bewertungen bezüglich der \textit{Satisfaction} und \textit{Perceived Transparency}. Dies lässt darauf zurückführen, dass zwei Teilnehmerinnen bzw. Teilnehmer versucht hatten, über den \textit{Growl}, der zur Erklärung gehört eine genaue Erklärung der Funktion anzufordern und diese nicht erhalten konnten. Dies wurde mit der Frage danach verbunden, was \glqq Position ungenau\grqq{} genau bedeutet. Ein Vorschlag zur Lösung war, dass jedes \glqq Growl\grqq{} wie bei der Erklärung zum kollaborativen Routing eine kurze sowie eine lange Erklärung erhält. Dies ist laut einem Kommentar des Quasi-Experiments die Erwartung dadurch, dass dies an einer Stelle möglich ist. Folglich sollte in einer weiteren Iteration aufgrund der Konsistenz dieser Vorschlag umgesetzt werden.
 
-\begin{figure}[htb!]
+\begin{figure}[b!]
     \centering
-    \includegraphics[width=\textwidth]{contents/06_model_evaluation/02_evaluation/res/qualitativeFeedback-01_collaborative_routing_short.pdf}
-    \caption{Anzahl der jeweiligen Bewertung pro Aussage für die Erklärung zu kollaborativem Routing}
-    \label{fig:01_collaborative_routing_short}
-\end{figure}
-
-\begin{figure}[htb!]
-    \centering
-    \includegraphics[width=\textwidth]{contents/06_model_evaluation/02_evaluation/res/qualitativeFeedback-02_collaborative_algorithm_short.pdf}
-    \caption{Anzahl der jeweiligen Bewertung pro Aussage für die Erklärung zu Einflüssen auf die Routenberechnung}
-    \label{fig:02_collaborative_algorithm_short}
+    \includegraphics[width=\textwidth]{contents/06_model_evaluation/02_evaluation/res/qualitativeFeedback-04_position_accuracy_content.pdf}
+    \caption{Subjektive Einschätzung des Inhalts für die Erklärung zu Positionsungenauigkeiten}
+    \label{fig:04_position_accuracy_content}
 \end{figure}
 
 \subsubsection{Presentation der Erklärungen}
