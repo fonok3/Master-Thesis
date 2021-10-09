@@ -1,11 +1,11 @@
 \subsection{Studienergebnisse}
 \label{sec:study_results_quantitativ}
 
-Im Folgenden werden die Ergebnisse der beschriebenen Case-Study vorgestellt. Nach einem Überblick über die Studienteilnehmer werden die Einflusshypothesen außerhalb durch Störgrößen außerhalb von Erklärungen analysiert. Darauf folgend werden die abstrakten Hypothesen (siehe \autoref{sec:evaluation_hypothesis}) jeweils auf die in \autoref{sec:explanation_requirements} vorgestellten Anforderungen übertragen und im Anschluss geprüft. Für die Überprüfung der Hypothesen wird jeweils die Wahrscheinlichkeit $ p $ berechnet, dass ein Unterschied der Daten nur zufällig zustande gekommen ist. Für alle Wahrscheinlichkeiten wird für $ p < 0.05 $ angenommen, dass ein signifikanter Unterschied zwischen zwei Bedingungen vorliegt \cite[vgl.][]{wohlin2012experimentation}. Die vollständigen Studiendaten sind in \nameref{ch:appendix_1} zu finden.
+Im Folgenden werden die Ergebnisse der beschriebenen Case-Study vorgestellt. Nach einem Überblick über die Studienteilnehmer werden die Einflusshypothesen durch Störgrößen außerhalb von Erklärungen analysiert. Darauf folgend werden die abstrakten Hypothesen (siehe \autoref{sec:evaluation_hypothesis}) jeweils auf die in \autoref{sec:explanation_requirements} vorgestellten Anforderungen übertragen und im Anschluss geprüft. Für die Überprüfung der Hypothesen wird jeweils die Wahrscheinlichkeit $ p $ berechnet, dass ein Unterschied der Daten nur zufällig zustande gekommen ist. Für alle Wahrscheinlichkeiten wird für $ p < 0.05 $ angenommen, dass ein signifikanter Unterschied zwischen zwei Bedingungen vorliegt \cite[vgl.][]{wohlin2012experimentation}. Die vollständigen Studiendaten sind in \nameref{ch:appendix_1} zu finden.
 
 \subsubsection{Übersicht}
 
-Insgesamt haben im Zeitraum der Studie 9~745 \textit{End User} Daten, welche die benötigten Metriken enthalten, zurückgeliefert. Dabei wurden 41~540 Routen zurückgelegt. Dies enthält allerdings alle im Log-System bei Graphmasters eingegangenen Daten. Um bei der Analyse der Daten, \textit{End User} auszuschließen, die eine Navigation nur gestartet haben, um sich diese anzusehen, aber NUNAV nicht aktiv während einer Autofahrt genutzt haben oder die Route sehr kurz war, werden Nutzungen, bei denen die Nutzen weniger als 5 Minuten oder weniger 5 Kilometer gefahren sind, herausgefiltert. Schlussendlich sind im zur Analyse verwendeten Datensatz folglich 4~012 \textit{End User} mit 16~531 gefahrenen Routen enthalten. Für 625 der Routen liegt darüber hinaus eine Bewertung vor (siehe \autoref{tab:study_user_group_overview}).
+Insgesamt haben im Zeitraum der Studie 9~745 \textit{End User} Daten, welche die benötigten Metriken enthalten, zurückgeliefert. Dabei sind diese 41~540 Routen gefahren. Dies enthält allerdings alle im Log-System bei Graphmasters eingegangenen Daten. Um bei der Analyse der Daten, \textit{End User} auszuschließen, die eine Navigation nur gestartet haben, um sich diese anzusehen, aber NUNAV nicht aktiv während einer Autofahrt genutzt haben oder die Route sehr kurz war, werden Nutzungen, bei denen die Nutzen weniger als 5 Minuten oder weniger 5 Kilometer gefahren sind, herausgefiltert. Schlussendlich sind im zur Analyse verwendeten Datensatz folglich 4~012 \textit{End User} mit 16~531 gefahrenen Routen enthalten. Für 625 der Routen liegt darüber hinaus eine Bewertung durch \textit{End User} vor (siehe \autoref{tab:study_user_group_overview}).
 
 Für Studienteilnehmer der Gruppen 3 und 4 kann es passieren, dass sie keine Erklärung während der Navigation erhalten, wenn die aktuelle Route keiner Erklärung bedarf. Dies ist der Fall, wenn das Verkehrsaufkommen \glqq normal\grqq{} ist und die \textit{End User} während der gesamten Fahrt guten GPS-Empfang haben (siehe \autoref{sec:traffic_volume_definition} und \autoref{sec:gps_accuracy_definition}). Bei der Betrachtung von einzelnen Routen werden die Teilnehmer folglich in die Gruppen 1 oder 2 umsortiert, falls sie während der Navigation keine Erklärung gesehen haben. Wird eine Metrik analysiert, die sich pro Nutzer über mehrere Routen erstreckt, werden die Teilnehmer den entsprechenden Gruppen zugeordnet, wenn NUNAV ihnen mindestens einmal eine Erklärung aus der Studiengruppe angezeigt hat. Eine Übersicht findet sich in \autoref{tab:study_user_group_overview}.
 
@@ -40,9 +40,9 @@ Um auszuschließen, dass die untersuchten Variablen von weiteren Faktoren abhän
     \item[1.4] WENN \textit{NUNAV Navigation} auf der betrachteten Route pro 5 km durchschnittlich mindestens eine Positionsungenauigkeit aufwies, DANN ist die Anzahl der Routen-Abweichungen signifikant messbar höher.
 \end{enumerate}
 
-Bei der statistischen Prüfung der Auswirkung von schlecht vorausgesagter Ankunftszeit auf die Anzahl der Routen-Abweichungen mittels eines Kruskal-Wallis-Tests lässt sich kein Haupteffekt feststellen ($ p = 0.197648 $). Gleiches gilt für die Überprüfung eines Effektes auf die Nutzerzufriedenheit ($ p = 0.564911 $). Folglich können die Hypothesen 1.1 und 1.2 abgelehnt werden. Der Kruskal-Wallis-Tests wurde verwendet, da die beiden Datensätze für die beiden Gruppen verschieden lang und nicht normalverteilt (geprüft mit Shapiro-Wilk-Test) sind, sowie unabhängig voneinander sind.
+Bei der statistischen Prüfung der Auswirkung von schlecht vorausgesagter Ankunftszeit auf die Anzahl der Routen-Abweichungen mittels eines Kruskal-Wallis-Tests lässt sich kein Haupteffekt feststellen ($ p = 0.197648 $). Gleiches gilt für die Überprüfung eines Effektes auf die Nutzerzufriedenheit ($ p = 0.564911 $). Folglich können die Hypothesen 1.1 und 1.2 abgelehnt werden. Der Kruskal-Wallis-Tests wurde verwendet, da die beiden Datensätze für die beiden Gruppen verschieden lang und nicht normalverteilt (geprüft mit Shapiro-Wilk-Test), sowie unabhängig voneinander sind.
 
-Für die Überprüfung, ob eine schlechte Positionierung einen Effekt auf die Nutzerzufriedenheit hat, hat ein Kruskal-Wallis-Test ergeben, dass kein signifikanter Effekt vorliegt ($ p = 0.269231 $). Folglich muss Hypothese 1.3 abgelehnt werden. Als Ergebnis der Prüfung von Hypothese 1.4 kam heraus, dass die Anzahl der Routen-Abweichungen signifikant höher ist, wenn es im Durchschnitt mehr als ein mal pro 5 km eine Positionsungenauigkeit gibt ($ p = 3.426601e-15 $). Folglich kann Hypothese 1.4 angenommen werden. Da eine häufige ungenaue Positionierung also bereits einen Einfluss auf die Anzahl der Abweichungen von der Route hat, werden Daten mit ungenauer Positionierung bei der Auswertung vom Einfluss von Erklärungen auf die Anzahl der Routen-Abweichungen herausgefiltert.
+Für die Überprüfung, ob eine schlechte Positionierung einen Effekt auf die Nutzerzufriedenheit hat, hat wiederum ein Kruskal-Wallis-Test ergeben, dass kein signifikanter Effekt vorliegt ($ p = 0.269231 $). Folglich muss Hypothese 1.3 abgelehnt werden. Als Ergebnis der Prüfung von Hypothese 1.4 kam heraus, dass die Anzahl der Routen-Abweichungen signifikant höher ist, wenn es im Durchschnitt mehr als ein mal pro 5 km eine Positionsungenauigkeit während der Navigation gibt ($ p = 3.426601e-15 $). Folglich kann Hypothese 1.4 angenommen werden. Da eine häufige ungenaue Positionierung also bereits einen Einfluss auf die Anzahl der Abweichungen von der Route hat, werden Daten mit ungenauer Positionierung bei der Auswertung vom Einfluss von Erklärungen auf die Anzahl der Routen-Abweichungen herausgefiltert.
 
 \subsubsection{Häufigkeit der Nutzung}
 \label{sec:06_model_evaluation:usage_analysis}
@@ -61,9 +61,9 @@ Bei der Analyse der Nutzungshäufigkeit von NUNAV wurde über den zweiwöchigen 
     \label{fig:evaluation_usage_result_overview}
 \end{figure}
 
-\autoref{fig:evaluation_usage_result_overview} enthält eine Übersicht der Verteilung der Anzahl der gefahrenen Routen pro Nutzer für jede Studiengruppe. Für die weitere Analyse wurden zunächst Ausreißer herausgefiltert. Dabei wurden alle Datenpunkte, welche mehr als dreimal die Standardabweichung vom Mittelwert entfernt sind aus dem Datensatz genommen. Final sind 3~951 Nutzer im Datensatz für die Prüfung der Hypothesen verblieben. Daraus sind die in \autoref{tab:study_usage_results} aufgelisteten Ergebnisse berechnet worden.
+\autoref{fig:evaluation_usage_result_overview} enthält eine Übersicht der Verteilung der Anzahl der gefahrenen Routen pro Nutzer für jede Studiengruppe. Für die weitere Analyse wurden zunächst Ausreißer herausgefiltert. Dabei wurden alle Datenpunkte, welche mehr als dreimal die Standardabweichung vom Median entfernt sind aus dem Datensatz genommen \cite{leyes2013detecting}. Final sind 3~937 Nutzer im Datensatz für die Prüfung der Hypothesen verblieben. Daraus sind die in \autoref{tab:study_usage_results} aufgelisteten Ergebnisse berechnet worden.
 
-Zur Prüfung der Signifikanz wird wieder der Kruskal-Wallis-Test eingesetzt, da auch die Anzahl der gefahrenen Routen pro Studienteilnehmer nicht normalverteilt ist (Shapiro-Wilk: $ p = 0.0000 $). Mit $ p = 1.146748e-16 $ als Ergebnis der Kruskal-Wallis-Tests kann davon ausgegangen werden, dass ein Haupteffekt vorliegt.
+Zur Prüfung der Signifikanz wird wieder der Kruskal-Wallis-Test eingesetzt, da auch die Anzahl der gefahrenen Routen pro Studienteilnehmer nicht normalverteilt ist (Shapiro-Wilk: $ p = 0.0 $). Mit $ p = 1.311644e-15 $ als Ergebnis des Kruskal-Wallis-Tests kann davon ausgegangen werden, dass ein Haupteffekt vorliegt.
 
 \begin{table}[htb!]
     \centering
@@ -71,17 +71,17 @@ Zur Prüfung der Signifikanz wird wieder der Kruskal-Wallis-Test eingesetzt, da 
         \hline
         Studiengruppe  & Mittelwert [N] & Standardabweichung [N] \\
         \toprule
-        Gruppe 1                & 3.2672 & 3.2958 \\
-        Gruppe 2                & 3.2256 & 3.1961 \\
-        Gruppe 3                & 4.6630 & 4.7043 \\
-        Gruppe 4                & 4.5391 & 4.1509 \\
+        Gruppe 1                & 3.2234 & 3.1688 \\
+        Gruppe 2                & 3.1977 & 3.1130 \\
+        Gruppe 3                & 4.4225 & 4.2507 \\
+        Gruppe 4                & 4.4382 & 3.9367 \\
         \bottomrule
     \end{tabular}
     \caption{Übersicht der Ergebnisse der gefahrenen Routen der Nutzer}
     \label{tab:study_usage_results}
 \end{table}
 
-Für die Prüfung zwischen welchen Studiengruppen ein signifikanter Unterschied vorliegt, wird der Dunn-Test \cite{dunn1964multiple} verwendet, welcher die Signifikanz der Unterschiede zwischen den Studiengruppen berechnet. Die Prüfung ergibt, dass jeweils ein signifikanter Effekt zwischen den Gruppen 3 und 4 gegenüber den Gruppen 1 und 2 vorliegt ($ p_{13} = 6.242309e-10 $, $ p_{14} = 5.054949e-09 $, $ p_{23} = 2.491232e-09 $ $ p_{24} = 1.484581e-08 $). Folglich kann abgeleitet werden, dass die Nutzer NUNAV häufiger verwenden, wenn sie \textit{Context}-abhängige Erklärungen erhalten, unabhängig davon, ob diese kombiniert mit den statischen Erklärungen erfolgen. Folglich erfüllen nur die \textit{Context}-abhängigen Erklärungen die Anforderung NFR1.
+Für die Prüfung zwischen welchen Studiengruppen ein signifikanter Unterschied vorliegt, wird der Dunn-Test \cite{dunn1964multiple} verwendet, welcher die Signifikanz der Unterschiede zwischen den Studiengruppen berechnet. Die Prüfung ergibt, dass jeweils ein signifikanter Effekt zwischen den Gruppen 3 und 4 gegenüber den Gruppen 1 und 2 vorliegt ($ p_{13} = 4.746580e-09 $, $ p_{14} = 7.528428e-09 $, $ p_{23} = 1.977438e-08 $ $ p_{24} = 2.523727e-08 $). Folglich kann abgeleitet werden, dass die Nutzer NUNAV häufiger verwenden, wenn sie \textit{Context}-abhängige Erklärungen erhalten, unabhängig davon, ob diese kombiniert mit den statischen Erklärungen erfolgen. Folglich erfüllen nur die \textit{Context}-abhängigen Erklärungen die Anforderung NFR1.
 
 Die Hypothesen 2.1 und 2.2 müssen abgelehnt werden, da weder alle Erklärungstypen zu einer signifikant häufigeren Nutzung von NUNAV führen, noch das Geben von beiden vorgestellten Typen von Erklärungen zu einer erhöhten Nutzung pro Studienteilnehmer führt im Vergleich zur Präsentation von nur einem der integrierten Erklärungstypen. 
 
