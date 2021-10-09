@@ -1,7 +1,7 @@
 \subsection{Externe Abhängigkeiten}
 \label{sec:model_external_dependencies}
 
-Unter \textit{External Dependencies} sind die Aspekte zusammengefasst, die eine Auswirkung auf die Erklärungen in einem System haben. Außerdem können von den hier aufgeführten Punkten Anforderungen abgeleitet und später zusammen mit Metriken Hypothesen aufgestellt werden. Daraus kann dann auch abgeleitet werden, welche Funktionen des Systems einer Erklärung bedürfen \cite{kohl_explainability_2019}. Im Folgenden werden die beiden zusammenhängenden Unteraspekte \textit{Context} des Systems und \textit{Objectives} erläutert.
+Unter \textit{External Dependencies} sind die Aspekte zusammengefasst, die eine Auswirkung auf die Erklärungen in einem System haben. Aus den hier vorgestellten Aspekten können im Anschluss Anforderungen und Einflusshypothesen für Erklärungen aufgestellt werden. Daraus kann dann auch abgeleitet werden, welche Funktionen des Systems einer Erklärung bedürfen \cite{kohl_explainability_2019}. Im Folgenden werden die beiden zusammenhängenden Unteraspekte \textit{Context} des Systems und \textit{Objectives} erläutert.
 
 \subsubsection{Context}
 
@@ -15,7 +15,9 @@ Der \textit{Context} einer Erklärung beschreibt die äußeren Einflüsse, die u
     \label{fig:model_context_overview}
 \end{figure}
 
-Dies beinhaltet die Aktivität, die der Endbenutzer in einer bestimmten Umgebung durchführt. Aus den Eigenschaften der drei Aspekte (Aktivität, Endbenutzer und Umgebung) leiten sich dabei direkte Einflüsse auf den Bedarf, den Inhalt und die Darstellung einer Erklärung ab. \autoref{tab:impact_of_context_on_explanation} stellt wie bereits zuvor die verwendeten Synonyme für die verschiedenen Facetten des \textit{Context} eines Systems dar. Insbesondere der Begriff Stakeholder wurde in der Literatur verschieden eingesetzt. \citeauthor{cirqueira_scenario-based_2020} nutzen den Begriff für den Nutzer einer Software \cite{cirqueira_scenario-based_2020} während \citeauthor{nunes_systematic_2017} diesen als Oberbegriff für Personengruppen, die ein Interesse an einem System haben, verwenden, den Nutzer allerdings ausschließen \cite{nunes_systematic_2017}. Diese Arbeit verwendet den Begriff, um alle Personengruppen mit Interesse am System inklusive aller Nutzer zu beschreiben (\cite[vgl.][]{schneider2012abenteuer,chazette_knowledge_nodate}). Folgend werden nun die drei Aspekte sowie typische Ausprägungen oder Charakteristiken näher erläutert.
+Dies beinhaltet die Aktivität, die der Endbenutzer in einer bestimmten Umgebung durchführt. Aus den Eigenschaften der drei Aspekte (Aktivität, Endbenutzer und Umgebung) leiten sich dabei direkte Einflüsse auf den Bedarf, den Inhalt und die Darstellung einer Erklärung ab. \autoref{tab:impact_of_context_on_explanation} stellt wie bereits zuvor die verwendeten Synonyme für die verschiedenen Facetten des \textit{Context} eines Systems dar.
+% Insbesondere der Begriff Stakeholder wurde in der Literatur verschieden eingesetzt. \citeauthor{cirqueira_scenario-based_2020} nutzen den Begriff für den Nutzer einer Software \cite{cirqueira_scenario-based_2020} während \citeauthor{nunes_systematic_2017} diesen als Oberbegriff für Personengruppen, die ein Interesse an einem System haben, verwenden, den Nutzer allerdings ausschließen \cite{nunes_systematic_2017}. Diese Arbeit verwendet den Begriff, um alle Personengruppen mit Interesse am System inklusive aller Nutzer zu beschreiben (\cite[vgl.][]{schneider2012abenteuer,chazette_knowledge_nodate}).
+Folgend werden nun die drei Aspekte sowie typische Ausprägungen oder Charakteristiken näher erläutert.
 
 \begin{table}[bht!]
     \begin{tabular}{p{.2\textwidth}p{.4\textwidth}p{.31\textwidth}}
@@ -39,7 +41,7 @@ Dies beinhaltet die Aktivität, die der Endbenutzer in einer bestimmten Umgebung
     \label{tab:impact_of_context_on_explanation}
 \end{table}
 
-\paragraph{End User} Der \textit{End User} ist diejenige Person, die mit dem System interagiert und auf welchen somit die Erklärungen zugeschnitten sein müssen. Dieser entspricht in den Definitionen von Erklärbarkeit von \citeauthor{chazette_knowledge_nodate} sowie von \citeauthor{kohl_explainability_2019} dem \textit{Explainee} \cite{chazette_knowledge_nodate, kohl_explainability_2019}.
+\paragraph{End User} Der \textit{End User} ist diejenige Person, die mit dem System interagiert und auf welchen somit die Erklärungen zugeschnitten sein müssen. Dieser entspricht in den Definitionen von Erklärbarkeit von \citeauthor{chazette_knowledge_nodate} sowie von \citeauthor{kohl_explainability_2019} dem \textit{Explainee} \cite{chazette_knowledge_nodate, kohl_explainability_2019}. Allerdings muss der \textit{Explainee} nicht zwangsweise \textit{End User} des Systems sein, sondern einer anderen Stakeholdergruppe angehören.
 
 Generell kann ein System verschiedene Nutzer(-typen) haben, die sich auch in ihrem Bedarf für Erklärungen unterscheiden. Im Folgenden werden die am häufigsten erwähnten Eigenschaften vorgestellt (unter anderem in \cite{chazette_knowledge_nodate,tintarev_designing_nodate,yamada_evaluating_2016}).
 
@@ -64,7 +66,7 @@ Als zweiter Aspekt neben dem \textit{Context} werden in der Literatur die \texti
     \begin{center}
         \begin{tabular}{p{.2\textwidth}p{.4\textwidth}p{.31\textwidth}}
             \hline
-            Qualitätsziel    & Beschreibung & Quellen \\
+            Qualitätsaspekt    & Beschreibung & Quellen \\
             \toprule
             Trust                       & Das Vertrauen des Nutzers in das System erhöhen \cite[vgl.][]{balog_measuring_2020}
                                         & \cite{nunes_systematic_2017} \cite{chazette_knowledge_nodate} \cite{tintarev_designing_nodate} \cite{balog_measuring_2020} \cite{eiband_impact_2019} \cite{tintarev2015explaining} \cite{hernandez-bocanegra_effects_2020} \cite{stange_effects_2021} \cite{weitz_you_2019} \cite{yamada_evaluating_2016} \cite{haspiel_explanations_2018} \cite{martin_developing_2019} \cite{martin_evaluating_2021} \cite{tsai_effects_2020}  \cite{sokol_one_2020}  \cite{wang_is_2018} \cite{koo_understanding_2016} \cite{wiegand2019drive} \cite{gunning2019darpa} \cite{lim_2009_assessing} \cite{tintarev2007survey} \cite{kunkel_let_2019} \\
@@ -92,11 +94,11 @@ Als zweiter Aspekt neben dem \textit{Context} werden in der Literatur die \texti
             \toprule
         \end{tabular}
     \end{center}
-    \caption{Qualitätsziele für Erklärungen – sortiert nach der Anzahl der Veröffentlichungen in der Literaturrecherche, die den zugehörigen Qualitätsaspekt untersucht haben.}
+    \caption{Untersuchte Qualitätsaspekte in der Literatur für die Qualitätsbestimmung von Erklärungen mit Definition}
     \label{tab:quality_aspects_of_explanation}
 \end{table}
 
-\citeauthor{chazette_knowledge_nodate} haben in ihrem Modell für Erklärbarkeit die Qualitätsaspekte zusammengefasst, die mit Erklärbarkeit in einem Zusammenhang stehen und somit auch als \textit{Objectives} für die Integration von Erklärungen gesehen werden können. Zusammen mit weiteren Ergebnissen der Literaturrecherche haben sich acht externe Qualitätsaspekte herausgestellt, welche in der Regel auf die Auswirkungen durch Erklärungen untersucht wurden \cite{nunes_systematic_2017, tintarev2007survey}. Die Qualitätsaspekte sind in den meisten Fällen dafür genutzt worden, über das Messen dieser Aspekte die Qualität der integrierten Erklärungen indirekt zu bestimmten. \autoref{tab:quality_aspects_of_explanation} enthält eine Liste dieser externen Qualitätsaspekte zusammen mit deren Definitionen. Diese enthält alle Arbeiten, welche den jeweiligen Aspekt explizit untersuchen oder Ergebnisse von Untersuchungen dazu zusammenfassen.
+\citeauthor{chazette_knowledge_nodate} haben in ihrem Modell für Erklärbarkeit die Qualitätsaspekte zusammengefasst, die mit Erklärbarkeit in einem Zusammenhang stehen und somit auch als \textit{Objectives} für die Integration von Erklärungen gesehen werden können. Zusammen mit weiteren Ergebnissen der Literaturrecherche haben sich die acht in \autoref{tab:quality_aspects_of_explanation} aufgelisteten, externen Qualitätsaspekte herausgestellt, welche in der Regel auf die Auswirkungen durch Erklärungen untersucht wurden \cite{nunes_systematic_2017, tintarev2007survey}. Die Messergebnisse der Untersuchungen der Qualitätsaspekte wurden in den meisten Fällen genutzt, um darüber indirekt die Qualität der integrierten Erklärungen zu definieren. \autoref{tab:quality_aspects_of_explanation} enthält eine Liste dieser externen Qualitätsaspekte zusammen mit deren Definitionen. Diese enthält alle Arbeiten, welche den jeweiligen Aspekt explizit untersuchen oder Ergebnisse von Untersuchungen dazu zusammenfassen.
 
 In ihrer Definition von Erklärbarkeit sehen \citeauthor{chazette_knowledge_nodate} vor allem \textit{Transparency} und \textit{Understandability} als zentrale Ziele von Erklärbarkeit \cite{chazette_end-users_nodate}. Sie schreiben, dass diese unmittelbar durch die Integration von Erklärungen erreicht werden können. \textit{Understandability} ist dabei als \glqq Das Verständnis von Nutzern über das System erhöhen\grqq{} definiert \cite[vgl.][]{chazette_end-users_nodate}. In den meisten Fällen werden die beiden Aspekte in der Literatur allerdings als Synonyme verwendet \cite{nunes_systematic_2017, carvalho2017quality,tintarev_designing_nodate} oder zusammen evaluiert. Darüber hinaus ist \textit{Understandability} als \textit{Softgoal} für \textit{Transparency} aufgeführt \cite{do2010software}. Daher fasst dieses Modell beide Aspekte unter \textit{Transparency} zusammen. Allerdings wird im Rahmen von Erklärbarkeit wie in \autoref{02_basics:explainability} beschrieben zusätzlich zwischen \textit{Transparency} und \textit{Perceived Transparency} unterschieden \cite{nunes_systematic_2017}. Letzteres ist dabei die wahrgenommene \textit{Transparency} des \textit{End Users}. Dies ist wichtig, da es möglich ist, dass nur die \textit{Perceived Transparency} das Ziel der Integration von Erklärungen ist. Notwendig ist dies, da Unternehmen ggf. nicht bereit sind, die Funktionalität ihrer Software offenzulegen oder ein System, dessen Erklärungen eine hohe \textit{Transparency} bieten durch ihre Komplexität \textit{End User} überfordern können \cite{chazette_knowledge_nodate}.
 

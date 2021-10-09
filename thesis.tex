@@ -10,7 +10,7 @@
 % z.B. bei texlipse in Eclipse unter Windows->Preferences,
 % dann General->Workspace unten bei ``Text file e	ncoding''.
 
-\usepackage[german]{babel}
+\usepackage[ngerman]{babel}
 \usepackage{booktabs}
 \usepackage{xcolor}
 \definecolor{green}{RGB}{43, 153, 0}
@@ -36,6 +36,10 @@
 \usepackage{multirow}
 \usepackage[backend=bibtex,sorting=none]{biblatex}
 \usepackage{csquotes}
+\DefineBibliographyStrings{ngerman}{ 
+   andothers = {et\addabbrvspace al\adddot},
+   andmore   = {et\addabbrvspace al\adddot},
+}
 \addbibresource{bibliography.bib}
 
 %avoid overfull hbox problem
