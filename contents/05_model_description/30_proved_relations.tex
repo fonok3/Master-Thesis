@@ -1,9 +1,9 @@
 \section{Abhängigkeiten}
 \label{sec:model_proved_relations}
 
-Zusätzlich zum Modell über die in der Literatur bereits betrachteten Aspekte von Erklärungen sind im Folgenden die Ergebnisse der Auswirkungen dieser Aspekte auf die externe Qualität von Erklärungen zusammengefasst. Enthalten sind dabei jene Resultate, die entweder bereits bewiesen sind oder die Autoren eine starke Vermutung für eine These haben, die allerdings noch einer Überprüfung bedarf. Diese sind mit (*) gekennzeichnet. Auch sind nicht alle Ergebnisse vorangegangener Arbeiten \textit{Context}-unabhängig gezeigt worden. Somit können einige Ergebnisse nur mit Vorsicht auf andere Kontexte übertragen werden. Daher sind einige Empfehlungen mit Einschränkungen verbunden. Außerdem ziehen einige Ergebnisse Vergleiche zu einem alternativen Erklärungstypen oder keiner Erklärung. Daher werden die hier aufgezeigten Einflüsse zum Teil als Vergleich zu einer Alternative dargestellt.
+Zusätzlich zum Modell über die in der Literatur bereits betrachteten Aspekte von Erklärungen sind im Folgenden die Ergebnisse der Auswirkungen dieser Aspekte auf die externe Qualität von Erklärungen zusammengefasst. Enthalten sind dabei jene Resultate, die entweder bereits bewiesen sind oder die Autoren eine starke Vermutung für eine These haben, die allerdings noch einer Überprüfung bedarf. Noch nicht verifizierte Resultate sind mit (*) gekennzeichnet. Auch sind nicht alle Ergebnisse vorangegangener Arbeiten \textit{Context}-unabhängig gezeigt worden. Somit können die Ergebnisse zum Teil nur mit Einschränkungen auf andere Kontexte übertragen werden. Außerdem ziehen einige Ergebnisse Vergleiche zu einem alternativen Erklärungstypen oder keiner Erklärung. Daher werden die hier aufgezeigten Einflüsse zum Teil als Vergleich zu einer Alternative dargestellt. % TODO: Satz checken
 
-Generell ist einerseits das Ziel dieser Zusammenfassung von Abhängigkeiten, den Anwendern dieses Leitfadens eine Unterstützung bei der Ableitung von konkreten Anforderungen an Erklärungen aus den \textit{Explanation Purposes} zu geben. Darüber hinaus soll dieser Überblick über zuvor geleistete Ergebnisse aber auch bei der Umsetzung der Anforderungen im System unterstützen. Folglich dient dieser Teil des Leitfadens der Beantwortung der Forschungsfragen \textbf{RQ4.1} und \textbf{RQ4.2}, welche explizit die Zusammenhänge zwischen verschiedenen Aspekten des Modells abdecken und gibt damit zusätzliche Informationen zu den Einflüssen, die einzelne Eigenschaften von Erklärungen unter bestimmten Rahmenbedingungen auf externe Qualitätsaspekte haben. Je nach \textit{Context} können dabei auch Konflikte zwischen den externen Qualitätsaspekten, auf die Erklärbarkeit Auswirkungen hat, entstehen. Die Erkennung dieser soll durch den Katalog der Zusammenhänge auch unterstützt werden.
+Generell ist einerseits das Ziel dieser Zusammenfassung von Abhängigkeiten, den Anwendern dieses Leitfadens eine Unterstützung bei der Ableitung von konkreten Anforderungen an Erklärungen aus den \textit{Explanation Purposes} zu geben. Darüber hinaus soll dieser Überblick über zuvor geleistete Ergebnisse aber auch bei der Umsetzung der Anforderungen im System unterstützen. Folglich dient dieser Teil des Leitfadens der Beantwortung der Forschungsfragen \textbf{RQ4.1} und \textbf{RQ4.2}, welche explizit die Zusammenhänge zwischen verschiedenen Aspekten des Modells abdecken. Damit gibt der Leitfaden zusätzliche Informationen zu den Einflüssen, die einzelne Eigenschaften von Erklärungen unter bestimmten Rahmenbedingungen auf externe Qualitätsaspekte haben. Je nach \textit{Context} können dabei auch Konflikte zwischen den externen Qualitätsaspekten, auf die Erklärbarkeit Auswirkungen hat, entstehen. Die Erkennung dieser soll durch den folgenden Katalog der Zusammenhänge unterstützt werden.
 
 Wie auch schon das Modell der Aspekte von Erklärungen hat auch dieser Katalog mit den Abhängigkeiten keinen Anspruch auf Vollständigkeit, sondern soll einen guten Überblick über bestehende Ergebnisse schaffen, die sich auf viele Anwendungsfälle übertragen lassen.
 
@@ -57,12 +57,12 @@ Der erste Teil des hier gezeigten Kataloges von Zusammenhängen der Apsekte des 
 
 \subsection*{Granularität}
 
-Wie der \textit{Content} und die \textit{Presentation} durch Rahmenbedingungen wie dem \textit{Context} und den \textit{Objectives} für Erklärungen beeinflusst werden, ist im Folgenden dargestellt.
+Auf welche Weise der \textit{Content} und die \textit{Presentation} durch Rahmenbedingungen wie dem \textit{Context} und den \textit{Objectives} für Erklärungen beeinflusst werden, ist im Folgenden dargestellt.
 
 \subsubsection*{Positive Zusammenhänge}
 
 \begin{itemize}
-    \item Erklärungen, welche mehrere Medien kombinieren, haben einen größeren positiven Einfluss auf die \textit{Persuasiveness} eines Systems, als das Geben der einzelnen Erklärungen  \cite{sato_action-triggering_2019, kunkel_let_2019, sato_action-triggering_2019, schrills_color_2020, lim_2009_assessing}.
+    \item Erklärungen, welche mehrere Medien kombinieren, haben einen größeren positiven Einfluss auf die \textit{Persuasiveness} eines Systems, als das Präsentieren der einzelnen Erklärungen  \cite{sato_action-triggering_2019, kunkel_let_2019, sato_action-triggering_2019, schrills_color_2020, lim_2009_assessing}.
     \item Das Präsentieren von Erklärungen, welche die zugrunde liegenden Daten für ein Systemverhalten darlegen (\textit{Context}), haben einen positiven Einfluss auf die \textit{Persuasiveness} eines Systems* \cite{sato_action-triggering_2019, abdulrahman_belief-based_2019}. Gezeigt ist dies nur für \textit{Recommender Systems}.
     \item Das Präsentieren von Erklärungen, welche die zugrunde liegenden Daten für ein Systemverhalten darlegen (\textit{Context}), haben einen positiven Einfluss auf die \textit{Usefulness} einer Erklärung* \cite{sato_action-triggering_2019, abdulrahman_belief-based_2019}. Gezeigt ist dies nur für \textit{Recommender Systems}.
     \item Das Präsentieren von kausalen Erklärungen, die den Grund angeben, warum eine Alternative nicht genommen wird, hat einen positiveren Einfluss auf die \textit{Perceived Transparency} als das Präsentieren solcher, die den Grund angeben, warum eine Entscheidung getroffen wurde \cite{martin_evaluating_2021, schrills_color_2020, neerincx_using_2018}.
@@ -80,7 +80,7 @@ Wie der \textit{Content} und die \textit{Presentation} durch Rahmenbedingungen w
 \subsubsection*{Negative Zusammenhänge}
 
 \begin{itemize}
-    \item Das Präsentieren von Erklärungen hat einen negativen Einfluss auf den \textit{Trust} in ein System, \textit{wenn der Content dieser nicht dazu führt, dass das Mental Model der End User danach mit der wirklich Funktionsweise des Systems übereinstimmt (Completeness)} \cite{schrills_color_2020, chazette_end-users_nodate}.
+    \item Das Präsentieren von Erklärungen hat einen negativen Einfluss auf den \textit{Trust} in ein System, \textit{wenn der Content der Erklärung nicht dazu führt, dass das Mental Model der End User danach mit der wirklich Funktionsweise des Systems übereinstimmt (Completeness)} \cite{schrills_color_2020, chazette_end-users_nodate}.
     \item Das Präsentieren von Erklärungen hat einen negativen Einfluss auf den \textit{Trust} in ein System, \textit{wenn die Erklärungen zu unseriös sind} \cite{wang_is_2018}.
     \item Das Präsentieren von Erklärungen, welche das aktuelle Systemverhalten beschreiben, kann einen negativen Effekt auf die \textit{Satisfaction} mit dem System haben* \cite{koo_why_2015}.
     \item Das Präsentieren von Erklärungen, welche das aktuelle Systemverhalten beschreiben, kann einen negativen Effekt auf die \textit{Effectivity} haben* \cite{koo_why_2015}.
@@ -109,11 +109,11 @@ Wie der \textit{Content} und die \textit{Presentation} durch Rahmenbedingungen w
 
 \smallskip
 
-Die Einflüsse, die Eigenschaften der Granularität von Erklärungen auf einige externe Qualitätsaspekte haben, wurden im zweiten Teil des Katalogs der Zusammenhänge der Aspekte von Erklärungen, zusammengestellt. Dies beinhaltet auch die Antwort auf die letzte Forschungsfrage, sowie erfüllt die Anforderung GR4, welche fordert, dass der Leitfaden eine Unterstützung bei der Auswahl von Eigenschaften bei der Umsetzung von Erklärungen geben soll.
+Die Einflüsse, die Eigenschaften der Granularität von Erklärungen auf einige externe Qualitätsaspekte haben, werden im zweiten Teil des Katalogs der Zusammenhänge der Aspekte von Erklärungen, zusammengestellt. Ebenfalls wird somit eine Antwort auf die letzte Forschungsfrage gegeben und erfüllt die Anforderung GR4, welche fordert, dass der Leitfaden eine Unterstützung bei der Auswahl von Eigenschaften bei der Umsetzung von Erklärungen geben soll.
 
 \smallskip
 
-Zusammenfassend sind mit dem Katalog der Zusammenhänge sowie dem zuvor vorgestellten Modell die Forschungsfragen beantwortet worden. Um die Anwendung des Leitfadens weiter zu vereinfachen, die Anforderungen an diesen und damit das Ziel dieser Arbeit besser zu erfüllen werden im Folgenden konkrete Design-Auswirkungen für Erklärungen vorgestellt.
+Zusammenfassend sind mit dem Katalog der Zusammenhänge sowie dem zuvor vorgestellten Modell die Forschungsfragen beantwortet werden. Um die Anwendung des Leitfadens weiter zu vereinfachen, die Anforderungen an diesen und damit das Ziel dieser Arbeit besser zu erfüllen werden im Folgenden konkrete Design-Auswirkungen für Erklärungen vorgestellt.
 
 % (3) There is a danger in showing explanations to self-confident users in that situation awareness might be negatively impacted – this can be mitigated by requiring interaction with an agent. \cite{schaffer_i_2019}
 % Auch sollten Erklärung ein Maximum an Informationen nicht überschreiten, um selbstbewusste \textit{End User} nicht zu  \cite{schaffer_i_2019} -> Usablility
