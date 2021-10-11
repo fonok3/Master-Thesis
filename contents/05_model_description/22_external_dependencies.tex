@@ -5,7 +5,7 @@ Unter \textit{External Dependencies} sind die Aspekte zusammengefasst, die eine 
 
 \subsubsection{Context}
 
-Der \textit{Context} einer Erklärung beschreibt die äußeren Einflüsse, die unmittelbar auf das erklärbare System wirken und somit Anforderungen an die Eigenschaften von Erklärungen stellen. Einen Überblick bietet \autoref{fig:model_context_overview}.
+Der \textit{Context} einer Erklärung beschreibt die äußeren Einflüsse, die unmittelbar auf das erklärbare System wirken und aus denen somit Anforderungen an die Eigenschaften von Erklärungen abgeleitet werden können. Einen Überblick über den \textit{Context} bietet \autoref{fig:model_context_overview}.
 
 \begin{figure}[htb!]
     \begin{center}
@@ -15,7 +15,7 @@ Der \textit{Context} einer Erklärung beschreibt die äußeren Einflüsse, die u
     \label{fig:model_context_overview}
 \end{figure}
 
-Dies beinhaltet die Aktivität, die der Endbenutzer in einer bestimmten Umgebung durchführt. Aus den Eigenschaften der drei Aspekte (Aktivität, Endbenutzer und Umgebung) leiten sich dabei direkte Einflüsse auf den Bedarf, den Inhalt und die Darstellung einer Erklärung ab. \autoref{tab:impact_of_context_on_explanation} stellt wie bereits zuvor die verwendeten Synonyme für die verschiedenen Facetten des \textit{Context} eines Systems dar.
+Dies beinhaltet die Aktivität, die der Endbenutzer in einer bestimmten Umgebung durchführt. Aus den Eigenschaften der drei Aspekte (Aktivität, Endbenutzer und Umgebung) leiten sich dabei direkte Einflüsse auf den Bedarf, den Inhalt und die Darstellung einer Erklärung ab. \autoref{tab:impact_of_context_on_explanation} stellt die verwendeten Synonyme für die verschiedenen Facetten des \textit{Context} eines Systems dar.
 % Insbesondere der Begriff Stakeholder wurde in der Literatur verschieden eingesetzt. \citeauthor{cirqueira_scenario-based_2020} nutzen den Begriff für den Nutzer einer Software \cite{cirqueira_scenario-based_2020} während \citeauthor{nunes_systematic_2017} diesen als Oberbegriff für Personengruppen, die ein Interesse an einem System haben, verwenden, den Nutzer allerdings ausschließen \cite{nunes_systematic_2017}. Diese Arbeit verwendet den Begriff, um alle Personengruppen mit Interesse am System inklusive aller Nutzer zu beschreiben (\cite[vgl.][]{schneider2012abenteuer,chazette_knowledge_nodate}).
 Folgend werden nun die drei Aspekte sowie typische Ausprägungen oder Charakteristiken näher erläutert.
 
@@ -43,13 +43,13 @@ Folgend werden nun die drei Aspekte sowie typische Ausprägungen oder Charakteri
 
 \paragraph{End User} Der \textit{End User} ist diejenige Person, die mit dem System interagiert und auf welchen somit die Erklärungen zugeschnitten sein müssen. Dieser entspricht in den Definitionen von Erklärbarkeit von \citeauthor{chazette_knowledge_nodate} sowie von \citeauthor{kohl_explainability_2019} dem \textit{Explainee} \cite{chazette_knowledge_nodate, kohl_explainability_2019}. Allerdings muss der \textit{Explainee} nicht zwangsweise \textit{End User} des Systems sein, sondern einer anderen Stakeholdergruppe angehören.
 
-Generell kann ein System verschiedene Nutzer(-typen) haben, die sich auch in ihrem Bedarf für Erklärungen unterscheiden. Im Folgenden werden die am häufigsten erwähnten Eigenschaften vorgestellt (unter anderem in \cite{chazette_knowledge_nodate,tintarev_designing_nodate,yamada_evaluating_2016}).
+Generell kann ein System verschiedene Nutzer(-typen) haben, die sich in ihrem Bedarf für Erklärungen unterscheiden. Im Folgenden werden die am häufigsten erwähnten Eigenschaften vorgestellt (unter anderem in \cite{chazette_knowledge_nodate,tintarev_designing_nodate,yamada_evaluating_2016}).
 
 Sowohl beim generellen technischen Verständnis (\textit{Technical Background}) als auch beim Domänen-Wissen (\textit{Domain Expertise}) \cite{yamada_evaluating_2016} können \textit{End User} verschieden viel Hintergrundwissen vorweisen. Somit können sich in einem System mit unterschiedlichen Eigenschaften der  Nutzer auch verschiedene Anforderungen an Erklärungen ergeben.
 
 Der \textit{Cultural Background} fasst darüber hinaus die kulturellen Hintergründe von \textit{End Usern} zusammen, die sich zum Beispiel auf die Verwendung von Metaphern in Software bzw. Erklärungen auswirken können \cite{salgado_cultural_2015}.
 
-\paragraph{Task} Der \textit{Task} definiert die Aufgabe(n), welche durch die \textit{End User} mithilfe des Systems durchgeführt werden sollen. Auch hier spielen verschiedene Eigenschaften eine Rolle. Genannt werden in der Literatur beispielsweise die Zeitabhängigkeit (\textit{Time Dependency}), die Komplexität (\textit{Complexity}) und die Dauer der Aufgabe (\textit{Length}). Die drei genannten Ausprägungen werden als wichtige Betrachtungsgegenstände für die Eigenschaften von Erklärungen beschrieben. Folglich sind auch diese Aspekte für die Anforderungserhebung im Kontext der Erklärbarkeit relevant \cite{sokol_explainability_2020}.
+\paragraph{Task} Der \textit{Task} definiert die Aufgabe(n), welche durch die \textit{End User} mithilfe des Systems durchgeführt werden sollen. Auch hier spielen verschiedene Eigenschaften eine Rolle. Genannt werden in der Literatur beispielsweise die Zeitabhängigkeit (\textit{Time Dependency}), die Komplexität (\textit{Complexity}) und die Dauer der Aufgabe (\textit{Length}). Die drei genannten Ausprägungen werden als wichtige Betrachtungsgegenstände für die Eigenschaften von Erklärungen beschrieben. Daraus resultierend sind auch diese Aspekte für die Anforderungserhebung im Kontext der Erklärbarkeit relevant \cite{sokol_explainability_2020}.
 
 \paragraph{Environment} Sehr eng mit der zu erledigenden Aufgabe hängt auch dessen Umgebung zusammen. Das \textit{Environment} ist durch die äußeren Umstände des Systems definiert. Dies beinhaltet den generellen Anwendungsbereich des Systems (\textit{Area of Application}), welcher unter anderem die Kri­ti­ka­li­tät eines Systems definiert. Aber auch die Art der Interaktion zwischen \textit{End User} und System fällt in diesen Bereich (\textit{Interaction Type}) und hat eine Auswirkung auf die Anforderungen an Erklärungen \cite{wiegand_id_2020}. 
 
