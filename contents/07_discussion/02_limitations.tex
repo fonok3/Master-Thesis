@@ -1,27 +1,20 @@
 \section{Allgemeingültigkeit der Ergebnisse}
 % \section{Limitierungen} 
 
-Wohlin et al. s THreads to validity \cite{wohlin2012experimentation} used by \cite{ghazi2016exploratory} and \cite{carvalho2020developers}
+Mit dem in dieser Arbeit entwickelten Leitfaden für die Integration von Erklärungen in Softwaresysteme fasst diese Arbeit die Ergebnisse aus vorangegangenen Arbeiten zusammen, die in Bezug auf den Einfluss von Erklärungen in erklärbaren Systemen existieren. Folglich sind in dem entstandenen Modell für Erklärungen, dem Katalog über die Einflüsse von Erklärungen auf bestimmte Qualitätsaspekte und den daraus abgeleiteten Design Heuristiken keine neuen Ergebnisse entstanden, sondern nur bestehende Resultate in einen Zusammenhang gestellt worden.
 
-Alle Paper haben einen Strukturaspekt genauer untersucht und haben nur sporadisch die möglichen Kombination dieser untersucht. Vor allem wurde der Inhalt der gegebenen Darstellung untersucht (x Paper)
+Die Arbeit nutzt dabei lediglich Ergebnisse, welche bereits für allgemeingültig befunden wurden, schränkt diese auf bestimmte Kontexte ein oder weist auf noch ausstehende Beweise für einzelne Zusammenhänge hin. Daher kann davon ausgegangen werden, dass die Empfehlungen des Leitfadens gültig sind. Allerdings erhebt dieser Leitfaden weder einen Anspruch auf Vollständigkeit. Insbesondere geben andere Autoren bereits für spezifische Kontexte genauere Leitfäden, welche allerdings nicht verallgemeinerbar sind. Beispielsweise gebem \citeauthor{nunes_systematic_2017} einen tieferen Einblick in Gestaltungsmöglichkeiten für Erklärungen in Empfehlungssystemen \cite{nunes_systematic_2017}. Einen Ähnlichen Ansatz verfolgen \citeauthor{sokol_explainability_2020} im Kontext von \textit{Explainable AI} \cite{sokol_explainability_2020}. Der hier vorgestellte Leitfaden bietet über die Vorstellung von bereits in der Wissenschaft evaluierten Erklärungseigenschaften zusätzlich Empfehlungen für die Einsatzgebiete bestimmter Eigenschaften sowie deren Evaluationen und der zugrundeliegenden Ziele und ist nicht auf einen \textit{Çontext} beschränlt. Folglich ist der hier entstandene Leitfaden mit dem Modell für Erklärungen besser verallgemeinermar alös bestehende Modelle.
 
-Diese Arbeit gibt einen Überblick über bewiesene Zusammenhänge im Kontext von Erklärungen in Erklärbaren Systemen. Diese sind allgemein anwendbar und erzielen im Regelfall positive Effekte. In einzelnen Fällen kann es allerdigns auch vorkommen, dass negative Effekte erzielt werden, wenn spezielle Anwendungsfälle betroffen sind.
+Für die verallgemeinerbarkeit des Leitfadens spricht, dass bei der Anwendung verschiedene Ergebnisse und Empfehlungen aus vorangegangenen Arbeiten reproduziert werden konnten. Beispielsweise konnte die Notwendigkeit von qualitativer und quantitativer Evaluation gezeigt werden, um interpretierbare Ergebnisse zu erlangen \cite{}. Auch konnte gezeigt werden, dass die Performanz der \textit{End User} durch Erklärungen erhöht aber die \textit{Satisfaction} sinken kann \cite{}. 
 
-Es fehlt: A framework for integrating explanatory capabilities in the whole software development life-cycle, from requirements elicitation over design and implementation through to its use \cite{cassens_ambient_2019}
+\smallskip
 
-need studys for obtrusiveness \cite{lim_2009_assessing}
+In dieser Arbeit wurde versucht den Leitfaden ganzheitlich als Methode in der Wirtschaft anzuwenden. Dabei hat sich allerdings herausgestellt, dass nicht alle Teile des Leitfadens für jedes Team einsetzen lassen. Auch konnten sich daraus Abhängigkeiten innerhalb des Leitfadens ableiten lassen.
 
-Nach IEEE[Bearbeiten | Quelltext bearbeiten]
-Laut IEEE[1] kann das requirements engineering unterteilt werden in:
+Beispielsweise wurden die Ziele zur Integration von Erklärungen von Graphmasters sehr allgemein gehalten, da eine Konkretisierung der Ziele zum Beispiel mittels Qualitätsmodellen \cite{schneider2012abenteuer} in den Prozessen des Unternehmens nicht vorgesehen ist. Um allerdings den Katalog der Zusammenhänge des Leitfadens anzuwenden wurden die Anforderungen im Rahmen dieser Arbeit trotzdessen konkretisiert. Auch kommen wie bereits zuvor erläutert nicht immer alle Evaluationsmöglichkeiten des Modells in Frage, da es äußere Beschränkungen gibt (siehe \autoref{sec:02_evaluation_explanations}).
 
-Anforderungserhebung (requirements elicitation),
-Anforderungsanalyse (requirements analysis),
-Anforderungsspezifikation (requirements specification) und
-Anforderungsbewertung (requirements validation)
-Diese Tätigkeiten überlappen einander und werden oft auch mehrfach – iterativ – durchgeführt.
+Als Einschränkung für die Allgemeingültigkeit des Leitfadens muss auch erwähnt werden, dass der Einsatz mit dieser Arbeit nur in einem agil arbeitenten Unternehmen im \textit{Context} von mobilen Anwendungen untersucht wurde. Die Ergebnisse, in welchen Bereichen Teile des Leitfadens sinnvoll eingesetzt werden konnten, sind folgich keinenfalls verallgemeinerbar. Auch die Ergebnisse, inwiefern sich die entwickelten Erklärungen mit bestimmten Eigenschaften auf Qualitätsaspekte auswirken ist nur für den \textit{Context} einer Navigationsansicht gezeigt worden. Außerdem muss zur evaluation der Erklärung einschränkend hinzugefügt werden, dass die qualitative Analyse lediglich mit vier \textit{End Usern} im Rahmen eines \textit{Quasi-Experiments} durchgeführt wurde und daher keinenfalls statisch signifikante Ergebnisse liefert, sondern nur als Interpretationshilfe diente.
 
-Conclusion: Es fehlen noch Artefakte für... z.B. aus den im Modell gesammelten Möglichkeiten der Evaluation muss noch ein konkretes Framework gebaut werden, wie es von \citeauthor{sokol_explainability_2020} gefordert wird.
+Die letzte hier erwähnte Beschränkung der Verallgemeinerbarkeit der Anwendung des Leitfadens ist, dass keine direkte Evaluation des Leitfadens erfolgt ist, sondern dies nur indirekt zur dessen Anwendung erfolgt ist. Es können folgich Verständnisprobleme oder Herausforderungen bei der Nutzung in verschiedenen Prozessen bei der Entwicklung von Erklärungen auftreten.
 
-Die Ergebnisse decken sich mit den ergebnissen, die auch andere Autoren bereits vorher gemacht haben. (Finde Paper aus jedem Kontext)
-
-\newpage
+Final ist zusammenzufassen, dass die Ergebnisse, welche der Leitfaden enthält, möglichst allgemein gehalten sind oder mit entsprechenden Einschränkungen versehen sind. Somit ist es für Anwender des Leitfadens möglich anhand der Einschränkungen des eigenen \textit{Contexts} und äußeren Bedingungen die Teile des Leitfadens zu wählen, die ihnen bei der Integration von Erklärungen helfen können. Daher bietet der Leitfaden eine gewisse Flexibilität.
