@@ -20,7 +20,7 @@ Die MA umfasst die folgenden Aspekte:
 
 ## Organisatorisches
 
-- Betreuer: M.Sc. Larissa Chazette,
+- Betreuerin: M.Sc. Larissa Chazette,
 - larissa.chazette@inf.uni-hannover.de 
 - Prüfer: Prof. Dr. Kurt Schneider
 - Beginn: ab sofort
