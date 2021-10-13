@@ -83,7 +83,7 @@ Zur Prüfung der Signifikanz wird wieder der Kruskal-Wallis-Test eingesetzt, da 
 
 Für die Prüfung zwischen welchen Studiengruppen ein signifikanter Unterschied vorliegt, wird der Dunn-Test \cite{dunn1964multiple} verwendet, welcher die Signifikanz der Unterschiede zwischen den Studiengruppen berechnet. Die Prüfung ergibt, dass jeweils ein signifikanter Effekt zwischen den Gruppen 3 und 4 gegenüber den Gruppen 1 und 2 vorliegt ($ p_{13} = 4.746580e-09 $, $ p_{14} = 7.528428e-09 $, $ p_{23} = 1.977438e-08 $ $ p_{24} = 2.523727e-08 $). Folglich kann abgeleitet werden, dass die Nutzer \textit{NUNAV Navigation} häufiger verwenden, wenn sie \textit{Context}-abhängige Erklärungen erhalten, unabhängig davon, ob diese kombiniert mit den statischen Erklärungen erfolgen. Folglich erfüllen nur die \textit{Context}-abhängigen Erklärungen die Anforderung NFR1.
 
-Die Hypothesen 2.1 und 2.2 müssen allerdings abgelehnt werden, da weder alle Erklärungstypen zu einer signifikant häufigeren Nutzung von NUNAV führen, noch das Geben von beiden vorgestellten Typen von Erklärungen zu einer erhöhten Nutzung pro Studienteilnehmer führt im Vergleich zur Präsentation von nur einem der integrierten Erklärungstypen. 
+Die Hypothesen 2.1 und 2.2 müssen allerdings abgelehnt werden, da weder alle Erklärungstypen zu einer signifikant häufigeren Nutzung von NUNAV führen, noch das Bereitstellen beider vorgestellten Typen von Erklärungen zu einer erhöhten Nutzung pro Studienteilnehmer führt im Vergleich zur Präsentation von nur einem der integrierten Erklärungstypen. 
 
 \subsubsection{Nutzerabweichungen von der vorgeschlagenen Route}
 
@@ -101,7 +101,7 @@ Im Folgenden wird die Anforderung NFR2 geprüft, welche fordert, dass die Nutzer
     \label{fig:evaluation_off_route_result_overview}
 \end{figure}
 
-Als Messwert wird die Anzahl der Abweichungen relativ zu Gesamtlänge der Route verwendet. Die Einheit ist Abweichungen pro Kilometer. Zu diesem Messwert, muss erwähnt werden, dass die Erkennung, wann \textit{End User} von der Route abweichen nicht trivial ist. Bei einer wirklichen Abweichung wird dies zum Teil mehrfach gezählt und es kann generell schnell zu falsch positiven Messungen kommen. Aufgrund der großen Datenmenge wird allerdings davon ausgegangen, dass diese Fehler einen vernachlässigbaren Effekt haben. Bei der Betrachtung von Abweichungen von der Route werden außerdem, wie zuvor beschrieben, Navigationen, bei denen es häufig zu einer ungenauen Positionierung kommt aus den Daten herausgefiltert. Außerdem werden auch hier Ausreißer in den Daten mit der gleichen Bedingung herausgefiltert, sodass schlussendlich 16~314 einzelne Navigationen zur Analyse der Routen-Abweichungen im Datensatz verblieben sind. Die Daten für jede Studiengruppe sind in \autoref{fig:evaluation_off_route_result_overview} dargestellt. Die berechneten Ergebnisse sind in \autoref{tab:study_offroute_results} zusammengefasst.
+Als Messwert wird die Anzahl der Abweichungen relativ zu Gesamtlänge der Route verwendet. Die Einheit ist Abweichungen pro Kilometer. Zu diesem Messwert, muss erwähnt werden, dass die Erkennung, wann \textit{End User} von der Route abweichen nicht trivial ist. Bei einer wirklichen Abweichung wird dies zum Teil mehrfach gezählt und es kann generell schnell zu falsch positiven Messungen kommen. Aufgrund der großen Datenmenge wird allerdings davon ausgegangen, dass diese Fehler einen vernachlässigbaren Effekt haben. Bei der Betrachtung von Abweichungen von der Route werden außerdem, wie zuvor beschrieben, Navigationen, bei denen es häufig zu einer ungenauen Positionierung kommt aus dem Datensatz herausgefiltert. Außerdem werden auch hier Ausreißer in den Daten mit der gleichen Bedingung herausgefiltert, sodass schlussendlich 16~314 einzelne Navigationen zur Analyse der Routen-Abweichungen im Datensatz verblieben sind. Die Daten für jede Studiengruppe sind in \autoref{fig:evaluation_off_route_result_overview} dargestellt. Die berechneten Ergebnisse sind in \autoref{tab:study_offroute_results} zusammengefasst.
 
 \begin{table}[htb!]
     \centering
@@ -119,13 +119,13 @@ Als Messwert wird die Anzahl der Abweichungen relativ zu Gesamtlänge der Route 
     \label{tab:study_offroute_results}
 \end{table}
 
-Da auch die Daten der Routenabweichugen nicht normalverteilt sind (Shapiro-Wilk-Test: $ p = 0.0 $), wird zur Signifikanzprüfung der Kruskal-Wallis-Test verwendet \cite{wohlin2012experimentation}. Aufgrund des Ergebnisses von $ p = 0.0000 $, wird abgeleitet, dass ein Haupteffekt vorliegt. Es wird wieder mit dem Dunn-Test die Signifikanz zwischen den einzelnen Studiengruppen geprüft. 
+Da auch die Daten der Routenabweichugen nicht normalverteilt sind (Shapiro-Wilk-Test: $ p = 0.0 $), wird zur Signifikanzprüfung der Kruskal-Wallis-Test verwendet \cite{wohlin2012experimentation}. Aufgrund des Ergebnisses von $ p = 0.0000 $, wird abgeleitet, dass ein Haupteffekt vorliegt. Analog zur vorherigen Analyse wird mit dem Dunn-Test die Signifikanz zwischen den einzelnen Studiengruppen geprüft. 
 
 Auch hier wird wieder von einem Signifikanzniveau $ p < 0.05 $ ausgegangen. Folglich weichen die Nutzer der Gruppe 4 signifikant weniger von der vorgeschlagenen Route ab, als die Teilnehmer aller anderen Gruppen ($ p_{14} = 0.0217 $, $ p_{24} = 0.0000 $, $ p_{23} = 0.0029 $). Weitere signifikante Unterschiede gibt es nicht.
 
-Hypothese 3.1 trifft zwar für das Geben aller Erklärungstypen (Gruppe 4) zu, nicht aber für die Gruppen 2 und 3. Folglich wird diese abgelehnt. Hypothese 3.2 kann angenommen werden, da die Nutzer der Gruppe 4 sowohl signifikant weniger von der vorgeschlagenen Route abgewichen sind als die \textit{End User} der Gruppe 2 sind als auch die \textit{End User} der Gruppe 3.
+Hypothese 3.1 trifft beim Bereitstellen aller Erklärungstypen (Gruppe 4) zu, kann jedoch für die Gruppen 2 und 3 nicht bestätigt werden. Folglich wird diese abgelehnt. Hypothese 3.2 kann angenommen werden, da die Nutzer der Gruppe 4 signifikant weniger von der vorgeschlagenen Route abgewichen sind als die \textit{End User} der Gruppen 2 und 3.
 
-Zusammenfassend kann die Anforderung NFR2 durch das Geben von allen Erklärungen erfüllt werden. Einzelne Erklärungen weisen keinen signifikant positiven Effekt auf die Anzahl der Abweichungen von der Route auf. 
+Zusammenfassend kann die Anforderung NFR2 durch das Bereitstellen von allen Erklärungen erfüllt werden. Einzelne Erklärungen weisen keinen signifikant positiven Effekt auf die Anzahl der Abweichungen von der Route auf. 
 
 \subsubsection{Nutzerzufriedenheit mit der aktuellen Route}
 
@@ -144,11 +144,11 @@ Um die Zufriedenheit der Nutzer mit der abgeschlossenen Navigation zu evaluieren
 \end{figure}
 
 
-Für die Prüfung zwischen welchen Studiengruppen ein signifikanter Unterschied vorliegt, wird wieder der Dunn-Test \cite{dunn1964multiple} verwendet, nachdem ein Kruskal-Wallis-Test einen Haupteffekt zeigt ($ p = 0.00335 $). Daraus resultiert, dass es zwischen den Gruppen 1 und 3 ($ p = 0.005723$) sowie 3 und 4 ($ p = 0.024375 $) einen signifikanten Unterschied bei der Zufriedenheit mit der aktuellen Route gibt.
+Für die Prüfung zwischen welchen Studiengruppen ein signifikanter Unterschied vorliegt, wird ebenfalls der Dunn-Test \cite{dunn1964multiple} verwendet, nachdem ein Kruskal-Wallis-Test einen Haupteffekt zeigt ($ p = 0.00335 $). Daraus resultiert, dass es zwischen den Gruppen 1 und 3 ($ p = 0.005723$) sowie 3 und 4 ($ p = 0.024375 $) einen signifikanten Unterschied bei der Zufriedenheit mit der aktuellen Route gibt.
 
 Mithilfe von \autoref{fig:Rating_Result_Overview} wird abgeleitet, dass es insbesondere mehr 5-Stern-Bewertungen in Gruppe 3 gegenüber den Gruppen 1 und 4 gibt. Die Anteile der ein und zwei Stern Bewertungen unterscheiden sich kaum. Folglich kann gesagt werden, dass die Teilnehmer signifikant zufriedener mit der Navigation sind, wenn sie Erklärungen wie in Gruppe 3 bekommen im Vergleich zu keinen Erklärungen (Gruppe 1) oder allen vorgestellten Erklärungstypen (Gruppe 4).
 
-Da das Geben von Erklärungen die Nutzerzufriedenheit nicht in jedem Fall erhöht, muss Hypothese 4.1 abgelehnt werden. Hypothese 4.2 muss ebenfalls abgelehnt werden, da es unter anderem einen gegenteiligen Effekt zwischen den Gruppen 3 und 4 gibt.
+Da das Geben von Erklärungen die Nutzerzufriedenheit nicht in jedem Fall erhöht, muss Hypothese 4.1 abgelehnt werden. Hypothese 4.2 wird ebenfalls abgelehnt, da es unter anderem einen gegenteiligen Effekt zwischen den Gruppen 3 und 4 gibt.
 
 \begin{figure}[t!]
     \centering
@@ -165,11 +165,11 @@ Darüber hinaus gibt es einen positiven Effekt durch Erklärungen auf die Nutzun
 
 Die Anzahl der Routenabweichungen wird signifikant positiv beeinflusst (weniger Abweichungen), wenn die \textit{End User} alle Erklärungen angezeigt bekommen (0,073 Abweichungen/km) gegenüber keinen Erklärungen (0,075 Abweichungen/km). 
 
-Außerdem geben die \textit{End User} einen signifikant positivere Bewertung für die Route ab, wenn sie \textit{Context}-abhängige Erklärungen erhalten (durchschnittlich 4,73 Sterne vs. 4,55 Sterne). Hier gibt es allerdings einen negativen Einfluss, wenn die \textit{End User} zusätzlich die statischen Erklärungen erhalten, da diese die Routen dann signifikant schlechter bewerten (durchschnittlich 4,6 Sterne).
+Außerdem geben die \textit{End User} eine signifikant positivere Bewertung für die Route ab, wenn sie \textit{Context}-abhängige Erklärungen erhalten (durchschnittlich 4,73 Sterne vs. 4,55 Sterne). Hier gibt es allerdings einen negativen Einfluss, wenn die \textit{End User} zusätzlich die statischen Erklärungen erhalten, da diese die Routen dann signifikant schlechter bewerten (durchschnittlich 4,6 Sterne).
 
-Folglich erfüllen die \textit{Context}-abhängigen Erklärungen die Qualitätsanforderungen NFR1 und NFR3 und tragen somit zu einer signifikant häufigeren Nutzung von \textit{NUNAV Navigation} sowie mehr Zufriedenheit der \textit{End user} mit der Navigation bei. Folglich kann empfohlen werden, diese weiterhin in der Anwendung zu integrieren.
+Folglich erfüllen die \textit{Context}-abhängigen Erklärungen die Qualitätsanforderungen NFR1 sowie NFR3 und tragen somit zu einer signifikant häufigeren Nutzung von \textit{NUNAV Navigation}. Zudem wird die Zufriedenheit der \textit{End User} mit der Navigation signifikant gesteigert. Folglich kann empfohlen werden, diese weiterhin in der Anwendung zu integrieren.
 
-Für die statischen Erklärungen alleine kann kein signifikant positiver Effekt gemessen werden. Ein zusätzlich signifikant positiver Effekt im Rahmen von NFR2 (weniger Routenabweichungen) kann erreicht werden, wenn beide Erklärungstypen angezeigt werden. Allerdings hat diese Kombination der Erklärungen zugleich einen negativen Effekt auf die Routen-Zufriedenheit der \textit{End User}, verglichen mit dem alleinigen Einsatz von \textit{Context}-abhängigen Erklärungen.
+Für die statischen Erklärungen alleine kann kein signifikant positiver Effekt gemessen werden. Jedoch kann ein zusätzlicher, signifikant positiver Effekt im Rahmen von NFR2 gezeigt werden (weniger Routenabweichungen), wenn beide Erklärungstypen angezeigt werden. Allerdings hat diese Kombination der Erklärungen zugleich einen negativen Effekt auf die Routen-Zufriedenheit der \textit{End User}, verglichen mit dem alleinigen Einsatz von \textit{Context}-abhängigen Erklärungen.
 Für die statischen Erklärungen kann folglich keine klare Empfehlung zum Einsatz aus der Case Study abgeleitet werden.
 
 \newpage
