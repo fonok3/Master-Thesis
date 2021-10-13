@@ -74,8 +74,6 @@ Eine Übersicht über die Kontexte, in welchen die resultierenden Arbeiten Erkl�
 
 In diesem Anhang sind zusätzliche Informationen zur Integration von Erklärungen in \textit{NUNAV Navigation} enthalten.
 
-% \section*{User-Feedback-Analyse}
-
 \begin{table}[htb!]
     \begin{tabular}{p{.25\textwidth}p{.56\textwidth}p{.1\textwidth}}
         \hline
@@ -107,137 +105,119 @@ In diesem Anhang sind zusätzliche Informationen zur Integration von Erklärunge
     \caption{Anzahl der Reviews im Google Play Store und Apple App Store mit mehrfach vorkommenden Themen}
 \end{table}
 
-\section*{Workshop-Protokoll: Workshop: Erklärungen in NUNAV - Wie können Erklärungen das Nutzererlebnis verbessern?}
-\label{sec:appendix_workshop_protocol}
-
-\subsection*{Übersicht}
-
-\begin{table}[htb!]
-    \centering
-    \begin{tabular}{p{0.25\textwidth}p{0.69\textwidth}}
-        \toprule
-        Workshop Datum  & 06.07.21 \\
-        \tablerowspacing
-        Titel           & Erklärungen in NUNAV – Wie können Erklärungen das Nutzererlebnis verbessern? \\
-        \tablerowspacing
-        Ziele           & 1. Verstehen von Erklärbarkeit als Nicht-Funktionale Anforderung (NFR): Welche Probleme können durch Erklärbarkeit gelöst werden? \\
-                        & 2. Klarstellen von Verständnis-Problemen in NUNAV und herausarbeiten von Zielen, die erreicht werden sollen. \\
-                        & 3. Lösungsansätze du den Problemen sammeln, die durch Erklärungen gelöst werden können. \\
-                        & 4. Evaluationsmethoden zusammenstellen, durch welche die Ideen überprüft werden können. \\
-        \tablerowspacing
-        Moderator       & Florian Herzog \\
-        \tablerowspacing
-        Teilnehmer      & \censor{Alexander Schacher} – Lead Mobile Development \\
-                        & \censor{Domenik Weber} – Mobile Development Team \\
-                        & \censor{Marcin Konopelko} – Mobile Development Team \\
-                        & \censor{Matthias Pastunik} – Product Manager  \\
-                        & \censor{Leonardo De luliis} – Web Development Team \\
-                        & \censor{Jannik Vogel} – Web Development \\
-                        & \censor{Team Dennis Heim} – Solution Experts Team \\
-        \tablerowspacing
-        Dauer           & ca. 2,5 h\\
-        \bottomrule
-    \end{tabular}
-    \caption{Zusätzliche Filter bei der Literaturrecherche in den Datenbanken}
-    \label{tab:appendix_literature_research_filters}
-\end{table}
-
-\subsection*{Ablauf}
-
-\begin{table}[htb!]
-    \centering
-    \begin{tabular}{p{0.05\textwidth}p{0.2\textwidth}p{0.69\textwidth}}
-        \hline
-        Nr. & Titel                     & Beschreibung \\
-        \toprule
-        1   & Einführung Erklärbarkeit  &   \begin{itemize}
-                                                \item Einführung in Erklärbarkeit als NFR
-                                                \item Motivation, warum Erklärungen in mobilen Anwendungen nützlich sein können
-                                                \item Vorstellung des ausgearbeiteten Modells
-                                                \item Beispiele für Erklärungen geben
-                                            \end{itemize} \\
-        % \tablerowspacing
-        \bottomrule
-    \end{tabular}
-    \caption{Zusätzliche Filter bei der Literaturrecherche in den Datenbanken}
-    \label{tab:appendix_literature_research_filters}
-\end{table}
+\includepdf[pages=1, scale=0.85,frame, pagecommand=\section{Workshop zur Integration von Erklärungen}\label{sec:appendix_workshop_protocol}]{contents/a_appendix/res/workshop.pdf}
+\includepdf[pages=2-, scale=0.85,frame]{contents/a_appendix/res/workshop.pdf}
 
 \section*{Hife-Center-Artikel: Collaborative Routing}
 \label{sec:help_center_collaboratrive_routing}
 
+Wir geben jedem Nutzer eine individuelle Route, um an sein Ziel zu kommen. Diese Route steht immer in Abhängigkeit zu allen anderen Nutzern und sorgt dafür, dass alle Fahrzeuge bestmöglich auf die bestehende Infrastruktur verteilt werden. Durch diese Schwarmintelligenz sind Routingmodelle möglich, die weit über das herkömmliche \glqq Kürzester Weg\grqq{}-Modell hinausgehen und so Staus aktiv vermeiden. 
+
+\smallskip
+
+\noindent Man nennt diese Art des Routings "Collaborative Routing". 
 
 \section*{Hife-Center-Artikel: Routeneinflüsse}
 \label{sec:help_center_routing_data}
 
+\noindent Jede berechnete Route entstammt dem neuartigen Ansatz des Collaborative Routings. Dabei werden eine Vielzahl von Variablen berücksichtigt:
 
-\subsection*{prototypen der Erklärung zum aktuellen Verkehrsaufkommen}
+\begin{itemize}
+    \item Die Routen von NUNAV-Nutzern in Ihrer Nähe
+    \item Sperrungen
+    \item Baustellen
+    \item Aktuelle Verkehrsverzögerungen
+    \item und viele mehr....
+\end{itemize}
+
+\noindent Anders als bei herkömmlichen Navigationssystemen ist eine \textbf{NUNAV-Route} keinesfalls statisch. Aufgrund der dynamischen Veränderung des Verkehrs berechnen wir Ihnen mehrfach in der Minute Ihre aktuell schnellste individuelle Route unter Berücksichtigung der aktuellen Verkehrslage.
+
+\smallskip
+
+\noindent Das führt dazu, dass \textbf{NUNAV-Route} intelligent und stauvermeidend auf das vorhandene Straßennetz verteilt werden.
+
+\smallskip
+
+\noindent Bei alternativen Navigationssystemen wird meistens egoistisch gehandelt, es oft geht darum, deren Nutzer auf dem kürzesten Wege zu seinem Ziel zu bringen. Dieser Ansatz ist keineswegs stauvermeidend, sondern verursacht oft das Gegenteil.
+
+\smallskip
+
+\noindent Bei NUNAV hingegen, sind Sie Teil einer Gemeinschaft, welche alle Nutzer schnellstmöglich und stauvermeidend an Ihr Ziel bringt. Die wichtigsten Vorteile von \textbf{NUNAV-Route} lauten daher wie folgt:
+
+\begin{itemize}
+    \item Stauvermeidend durch den Ansatz des Collaborative Routings
+    \item CO2 Einsparung durch weniger Stau und Fahrtzeit
+    \item Gemeinschaftliches Handeln führt zu einer Verbesserung der generellen Verkehrslage
+\end{itemize}
+
+\noindent Je mehr Nutzer, sich mit \textbf{NUNAV-Route} zu Ihrem Ziel navigieren lassen, desto größer ist der Effekt, den wir gemeinsam erzielen können. Aus diesem Grund würden wir uns freuen, wenn Sie uns an Ihre Freunde und Familien weiterempfehlen.
+
+\smallskip
+
+\noindent Wir hoffen, dass wir Ihnen mit diesem Artikel die Entstehung Ihrer individuellen \textbf{NUNAV-Route} etwas näher bringen konnten.
+
+\section*{Prototypen der Erklärung zum aktuellen Verkehrsaufkommen}
 \label{sec:appendix_traffic_volume}
 
 \begin{figure}[htb!]
     \centering
-    \subfloat[1. Prototyp zur Positionierung der \textit{Affordance}]
+    \subfloat[1. Prototyp zur Darstellung des aktuellen Verkehrsaufkommens]
     {
         \includegraphics[width=.27\textwidth]{contents/06_model_evaluation/01_integration/res/03_traffic_volume/prototype_11.png}
     }
     \hspace{.055\textwidth}
-    \subfloat[Alternativer Prototyp zur Positionierung der \textit{Affordance}]
+    \subfloat[2. Prototyp zur Darstellung des aktuellen Verkehrsaufkommens]
     {
         \includegraphics[width=.27\textwidth]{contents/06_model_evaluation/01_integration/res/03_traffic_volume/prototype_12.png}
     }
     \hspace{.055\textwidth}
-    \subfloat[Finales Design der kurzen Erklärung]
+    \subfloat[Finales Design zur Darstellung des aktuellen Verkehrsaufkommens]
     {
         \includegraphics[width=.27\textwidth]{contents/06_model_evaluation/01_integration/res/03_traffic_volume/final_10.png}
     }
     \label{sec:appendix_traffic_volume_preview}
-    \caption{Prototyp und finale Designs für die Erklärung zum kollaborativem Routing}
+    \caption{Prototyp und finale Designs für die Erklärung zum aktuellen Verkehrsaufkommen in der Routenvorschau}
 \end{figure}
 
 \begin{figure}[htb!]
     \centering
-    \subfloat[1. Prototyp zur Positionierung der \textit{Affordance}]
+    \subfloat[1. Prototyp zur Darstellung des aktuellen Verkehrsaufkommens]
     {
         \includegraphics[width=.27\textwidth]{contents/06_model_evaluation/01_integration/res/03_traffic_volume/prototype_21.png}
     }
     \hspace{.055\textwidth}
-    \subfloat[Alternativer Prototyp zur Positionierung der \textit{Affordance}]
+    \subfloat[2. Prototyp zur Darstellung des aktuellen Verkehrsaufkommens]
     {
         \includegraphics[width=.27\textwidth]{contents/06_model_evaluation/01_integration/res/03_traffic_volume/prototype_22.png}
     }
     \hspace{.055\textwidth}
-    \subfloat[Finales Design der kurzen Erklärung]
+    \subfloat[Finales Design zur Darstellung des aktuellen Verkehrsaufkommens]
     {
         \includegraphics[width=.27\textwidth]{contents/06_model_evaluation/01_integration/res/03_traffic_volume/final_20.png}
     }
     \label{sec:appendix_traffic_volume_navigation}
-    \caption{Prototyp und finale Designs für die Erklärung zum kollaborativem Routing}
+    \caption{Prototyp und finale Designs für die Erklärung  zum aktuellen Verkehrsaufkommen während der Navigation}
 \end{figure}
 
-\section*{Vollständige Studienergebnisse}
+\chapter{Evaluation der Erklärungen}
 \label{sec:appendix_study_results}
 
 \begin{figure}
-    \begin{floatrow}
-    \ffigbox{
-      \includegraphics[width=\textwidth]{contents/06_model_evaluation/02_evaluation/res/usage_result_significance.pdf}
-    }{
-      \caption{A figure}
-    }
-    \capbtabbox{
-        \begin{tabular}{|c|c|c|c|c|}
-            \hline
-            & \textbf{Gruppe 1} & \textbf{Gruppe 2} & \textbf{Gruppe 3} & \textbf{Gruppe 4} \\ \hline
-            \textbf{Gruppe 1}   & 1.000000 & 1.000000 & 0.219884 & 0.008222 \\ \hline
-            \textbf{Gruppe 2}   & 1.000000 & 1.000000 & 0.860586 & 0.000912 \\ \hline
-            \textbf{Gruppe 3}   & 0.219884 & 0.860586 & 1.000000 & 0.000005 \\ \hline
-            \textbf{Gruppe 4}   & 0.008222 & 0.000912 & 0.000005 & 1.000000 \\ \hline
-        \end{tabular}
-        \label{tab:study_offroute_significance_results}
-    }{
-      \caption{A table}%
-    }
-    \end{floatrow}
+    \centering
+    \includegraphics[width=0.9\textwidth]{contents/06_model_evaluation/02_evaluation/res/usage_result_significance.pdf}
+    \caption{Signifikanzniveaus der NUNAV-Nutzungen pro \textit{End User} zwischen den Studiengruppen}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{contents/06_model_evaluation/02_evaluation/res/usage_result_significance.pdf}
+    \caption{Signifikanzniveaus der Anzahl der Abweichungen von der vorgeschlagenen Routen zwischen den Studiengruppen}
+\end{figure}
+
+\begin{figure}[t!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{contents/06_model_evaluation/02_evaluation/res/rating_result_significance.pdf}
+    \caption{Signifikanzniveaus der Routenbewertungen zwischen den Studiengruppen}
 \end{figure}
 
 
