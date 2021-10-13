@@ -1,30 +1,43 @@
 \appendix
 
-\chapter{Anhang I}
-\label{ch:appendix_1}
+% \chapter{}
 
-\section*{Literaturrecherche}
-\label{sec:appendix_search_filter}
+\chapter{Literaturrecherche}
+\label{sec:appendix_literature_research}
 
-\begin{table}
+Dieser Anhand enthält zusätzliche Materialien zur durchgeführten Literaturrecherche. \autoref{tab:appendix_literature_research_filters} enthält die genauen Konfiguration der Suchen für die einzelnen Datenbanken und \autoref{fig:appendix_literature_research_results} die Anzahl der Ergebnisse pro Datenbank.
+
+Eine Übersicht über die Kontexte, in welchen die resultierenden Arbeiten Erklärungen analyisert haben, ist in \autoref{fig:appendix_literature_research_results} zu finden.
+
+\begin{table}[htb!]
     \centering
-    \begin{tabular}{l}
+    \begin{tabular}{p{0.3\textwidth}p{0.64\textwidth}}
         \hline
-        test \\
+        Datenbank           & Aktivierte Filter \\
         \toprule
-        test 2 \\
+        ACM Digital Library & Content-Type: PDF \\
+        \tablerowspacing
+        IEEE Xplore         & Type: [Conferences, Journals] \\
+                            & Subscribed Content Only \\
+        \tablerowspacing
+        Science Direct      & Article Type: [Research Articles, Book chapters] \\
+                            & Subject Area: Computer Science \\
+        \tablerowspacing
+        Springer Link       & Discipline: Computer Science \\
         \toprule
     \end{tabular}
-    \caption{Filter}
+    \caption{Zusätzliche Filter bei der Literaturrecherche in den Datenbanken}
+    \label{tab:appendix_literature_research_filters}
 \end{table}
 
-\begin{figure}[htb]
+\begin{figure}[htb!]
     \centering
     \includegraphics[width=0.75\textwidth]{contents/04_literature_review/res/database_results.png}
-    \caption{Anzahl der Suchergebnisse pro Datenbank}
+    \caption{Anzahl der Suchergebnisse in der Literaturrecherche pro Datenbank}
+    \label{fig:appendix_literature_research_results}
 \end{figure}
 
-\begin{table}
+\begin{table}[htb!]
     \begin{center}
         \begin{tabular}{p{.3\textwidth}p{.64\textwidth}}
             \hline
@@ -54,12 +67,14 @@
             \toprule
         \end{tabular}
     \end{center}
-    \caption{Kontext innerhalb von Erklärbaren Systemen, der von den Arbeiten untersucht wurde}
+    \caption{Kontext innerhalb von erklärbaren Systemen, der von in der Literatur Recherche betrachteten Arbeiten untersucht wurde}
 \end{table}
 
+\chapter{Integration von Erklärungen}
 
-\section*{Themen der Reviews im Google Play Store und Apple App Store}
-\label{sec:appendix_review_subjects}
+In diesem Anhang sind zusätzliche Informationen zur Integration von Erklärungen in \textit{NUNAV Navigation} enthalten.
+
+% \section*{User-Feedback-Analyse}
 
 \begin{table}[htb!]
     \begin{tabular}{p{.25\textwidth}p{.56\textwidth}p{.1\textwidth}}
@@ -88,11 +103,27 @@
         Falsche Kartendaten         & Im Review werden falsche Kartendaten bemängelt. & 1 \\
         \toprule
     \end{tabular}
-\caption{Anzahl der Reviews im Google Play Store und Apple App Store mit mehrfach vorkommenden Themen}
+    \label{tab:appendix_review_subjects}
+    \caption{Anzahl der Reviews im Google Play Store und Apple App Store mit mehrfach vorkommenden Themen}
 \end{table}
 
-\section*{Workshop-Protokoll: Integration von Erklärungen in NUNAV}
+\section*{Workshop-Protokoll: Workshop: Erklärungen in NUNAV - Wie können Erklärungen das Nutzererlebnis verbessern?}
 \label{sec:appendix_workshop_protocol}
+
+\subsection*{Übersicht}
+
+\begin{table}[htb!]
+    \centering
+    \begin{tabular}{p{0.3\textwidth}p{0.64\textwidth}}
+        \toprule
+        Workshop Datum & Content-Type: PDF \\
+        \tablerowspacing
+        
+        \toprule
+    \end{tabular}
+    \caption{Zusätzliche Filter bei der Literaturrecherche in den Datenbanken}
+    \label{tab:appendix_literature_research_filters}
+\end{table}
 
 \section*{Hife-Center-Artikel: Collaborative Routing}
 \label{sec:help_center_collaboratrive_routing}
@@ -102,7 +133,7 @@
 \label{sec:help_center_routing_data}
 
 
-\section*{prototypen der Erklärung zum aktuellen Verkehrsaufkommen}
+\subsection*{prototypen der Erklärung zum aktuellen Verkehrsaufkommen}
 \label{sec:appendix_traffic_volume}
 
 \begin{figure}[htb!]
@@ -121,6 +152,7 @@
     {
         \includegraphics[width=.27\textwidth]{contents/06_model_evaluation/01_integration/res/03_traffic_volume/final_10.png}
     }
+    \label{sec:appendix_traffic_volume_preview}
     \caption{Prototyp und finale Designs für die Erklärung zum kollaborativem Routing}
 \end{figure}
 
@@ -140,6 +172,7 @@
     {
         \includegraphics[width=.27\textwidth]{contents/06_model_evaluation/01_integration/res/03_traffic_volume/final_20.png}
     }
+    \label{sec:appendix_traffic_volume_navigation}
     \caption{Prototyp und finale Designs für die Erklärung zum kollaborativem Routing}
 \end{figure}
 
@@ -168,3 +201,7 @@
     }
     \end{floatrow}
 \end{figure}
+
+
+\chapter{Anhang I}
+\label{ch:appendix_1}
