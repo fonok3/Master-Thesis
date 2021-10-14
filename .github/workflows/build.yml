@@ -12,7 +12,6 @@ jobs:
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v2
-        working-directory: ${{env.working-directory}}
       - name: pdflatex main
         uses: dante-ev/latex-action@latest
         working-directory: ${{env.working-directory}}
