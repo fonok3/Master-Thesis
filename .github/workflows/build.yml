@@ -7,24 +7,30 @@ on:
 jobs:
   build_latex:
     runs-on: ubuntu-latest
+    env:
+      working-directory: ./01_thesis
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v2
+        working-directory: ${{env.working-directory}}
       - name: pdflatex main
         uses: dante-ev/latex-action@latest
+        working-directory: ${{env.working-directory}}
         with:
-          root_file: 01_thesis/thesis.tex
+          root_file: thesis.tex
           compiler: pdflatex
           args: -interaction=nonstopmode -shell-escape
       - name: bibtex thesis
         uses: dante-ev/latex-action@latest
+        working-directory: ${{env.working-directory}}
         with:
-          root_file: 01_thesis/thesis.aux
+          root_file: thesis.aux
           compiler: bibtex
           args:
       - name: pdflatex thesis
         uses: dante-ev/latex-action@latest
+        working-directory: ${{env.working-directory}}
         with:
-          root_file: 01_thesis/thesis.tex
+          root_file: thesis.tex
           compiler: pdflatex
           args: -interaction=nonstopmode -shell-escape
