@@ -11,5 +11,5 @@
 .DS_Store
 *.toc
 *-blx.bib
-/output/**
+/01_thesis/output/**
 /.vscode
