@@ -13,18 +13,18 @@ jobs:
       - name: pdflatex main
         uses: dante-ev/latex-action@latest
         with:
-          root_file: thesis.tex
+          root_file: 01_thesis/thesis.tex
           compiler: pdflatex
           args: -interaction=nonstopmode -shell-escape
       - name: bibtex thesis
         uses: dante-ev/latex-action@latest
         with:
-          root_file: thesis.aux
+          root_file: 01_thesis/thesis.aux
           compiler: bibtex
           args:
       - name: pdflatex thesis
         uses: dante-ev/latex-action@latest
         with:
-          root_file: thesis.tex
+          root_file: 01_thesis/thesis.tex
           compiler: pdflatex
           args: -interaction=nonstopmode -shell-escape
