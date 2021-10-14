@@ -4,6 +4,10 @@ on:
   pull_request:
     branches: [ develop ]
 
+defaults:
+  run:
+    working-directory: ./01_thesis
+
 jobs:
   build_latex:
     runs-on: ubuntu-latest
@@ -13,18 +17,18 @@ jobs:
       - name: pdflatex main
         uses: dante-ev/latex-action@latest
         with:
-          root_file: 01_thesis/thesis.tex
+          root_file: thesis.tex
           compiler: pdflatex
           args: -interaction=nonstopmode -shell-escape
       - name: bibtex thesis
         uses: dante-ev/latex-action@latest
         with:
-          root_file: 01_thesis/thesis.aux
+          root_file: thesis.aux
           compiler: bibtex
           args:
       - name: pdflatex thesis
         uses: dante-ev/latex-action@latest
         with:
-          root_file: 01_thesis/thesis.tex
+          root_file: thesis.tex
           compiler: pdflatex
           args: -interaction=nonstopmode -shell-escape

@@ -1,10 +1,13 @@
 name: Build and deploy LaTeX document
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
   push:
     tags:
      - v*
+
+defaults:
+  run:
+    working-directory: ./01_thesis
 
 jobs:
   build_and_upload_latex:
@@ -17,23 +20,23 @@ jobs:
       - name: pdflatex main
         uses: dante-ev/latex-action@latest
         with:
-          root_file: 01_thesis/thesis.tex
+          root_file: thesis.tex
           compiler: pdflatex
           args: -interaction=nonstopmode -shell-escape
       - name: bibtex thesis
         uses: dante-ev/latex-action@latest
         with:
-          root_file: 01_thesis/thesis.aux
+          root_file: thesis.aux
           compiler: bibtex
           args:
       - name: pdflatex thesis
         uses: dante-ev/latex-action@latest
         with:
-          root_file: 01_thesis/thesis.tex
+          root_file: thesis.tex
           compiler: pdflatex
           args: -interaction=nonstopmode -shell-escape
       - name: rename pdf
-        run: mv 01_thesis/thesis.pdf "01_thesis/thesis-${{ env.RELEASE_VERSION }}.pdf"
+        run: mv thesis.pdf "thesis-${{ env.RELEASE_VERSION }}.pdf"
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
@@ -41,4 +44,4 @@ jobs:
           title: "Review Version"
           automatic_release_tag: "${{ env.RELEASE_VERSION }}"
           files: |
-            01_thesis/thesis-${{ env.RELEASE_VERSION }}.pdf
+            thesis-${{ env.RELEASE_VERSION }}.pdf
