@@ -1,0 +1,57 @@
+apply plugin: 'com.android.library'
+apply from: "${rootDir}/gradle/kotlin.gradle"
+
+android {
+    compileSdkVersion androidVersions.compileSdkVersion
+    buildToolsVersion androidVersions.buildToolsVersion
+
+    defaultConfig {
+        multiDexEnabled true
+        minSdkVersion androidVersions.minSdkVersion
+        targetSdkVersion androidVersions.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+
+
+    }
+
+    compileOptions {
+        sourceCompatibility = javaVersions.javaVersion
+        targetCompatibility = javaVersions.javaVersion
+        incremental true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(path: ':nunav.audio')
+    implementation project(path: ':nunav.location')
+    implementation project(path: ':nunav.mapbox')
+    implementation project(path: ':nunav.map.infrastructure')
+    androidTestImplementation dependenciesList.mockitoAndroid
+    androidTestImplementation dependenciesList.mockito
+    androidTestImplementation dependenciesList.jUnit
+    androidTestImplementation dependenciesList.testRunner
+
+    testImplementation project(':nunav.testing')
+    testImplementation dependenciesList.jUnit
+    testImplementation dependenciesList.mockito
+    testImplementation dependenciesList.mockk
+
+    implementation dependenciesList.daggerAndroidSupport
+    kapt dependenciesList.daggerAndroidProcessor
+    kapt dependenciesList.daggerCompiler
+
+    implementation project(':nunav.android.base')
+    implementation project(':nunav.android.utils')
+    implementation project(':nunav.persistence')
+}
