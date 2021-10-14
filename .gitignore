@@ -12,4 +12,5 @@
 *.toc
 *-blx.bib
 /01_thesis/output/**
+/output/**
 /.vscode
