@@ -5,15 +5,13 @@ In diesem Kapitel werden verwandte Arbeiten und die Grundlagen von Erklärbarkei
 \section{Erklärungen in erklärbaren Systemen}
 \label{02_basics:explainable_system}
 
-Erklärungen in erklärbaren Systemen werden unter dem Oberbegriff Erklärbarkeit (\textit{Explainability}) erforscht. Dabei wird das Integrieren dieser in Softwaresysteme und die daraus resultierenden Auswirkungen auf die Softwarequalität untersucht. \textit{Explainability} wird von unterschiedlichen Autoren durch verschiedene Synonyme beschrieben. \citeauthor{brennen_what_2020} hat einen Katalog zusammengestellt, welcher einige Synonyme zusammenfasst \cite{brennen_what_2020}. Dieser enthält unter anderem die Begriffe
-% \textit{Accountability}, \textit{Trust}, 
-\textit{Transparency}, \textit{Understandability} und \textit{Interpretability}. In der jüngeren Vergangenheit haben verschiedene Autoren diese Begriffe zum Teil mit unterschiedlichen Definitionen in einen Zusammenhang mit \textit{Explainability} gestellt \cite{chazette_end-users_nodate,chazette_knowledge_nodate,kohl_explainability_2019,wang_integration_2020}.
+Erklärungen in erklärbaren Systemen werden unter dem Oberbegriff Erklärbarkeit (\textit{Explainability}) erforscht. Dabei wird das Integrieren dieser in Softwaresysteme und die daraus resultierenden Auswirkungen auf die Softwarequalität untersucht. \textit{Explainability} wird von unterschiedlichen Autoren durch verschiedene Synonyme beschrieben. \citeauthor{brennen_what_2020} hat einen Katalog zusammengestellt, welcher einige Synonyme zusammenfasst \cite{brennen_what_2020}. Dieser enthält unter anderem die Begriffe \textit{Transparency}, \textit{Understandability} und \textit{Interpretability}. In der jüngeren Vergangenheit haben verschiedene Autoren diese Begriffe zum Teil mit unterschiedlichen Definitionen in einen Zusammenhang mit \textit{Explainability} gestellt \cite{chazette_end-users_nodate,chazette_knowledge_nodate,kohl_explainability_2019,wang_integration_2020}.
 
 \textit{Transparency} wird als der Grad, zu dem ein System Einblick in dessen Funktionsweise gewährt, beschrieben \cite{chazette_end-users_nodate}. Diese Offenlegung kann dabei verschiedene Aspekte von Systemen wie zugrundeliegende Algorithmen z.~B. in Empfehlungssystemen \cite{balog_measuring_2020} oder trainierte Modelle des Maschinellen Lernens \cite{sovrano_modelling_2020} betreffen.
 
 Das Verstehen von Erklärungen wird unter \textit{Understandability} zusammengefasst \cite{do2010software}. Das so erlangte Verständnis von Systemnutzern ist folglich als subjektiver Einflussfaktor für Erklärungen zu werten \cite{chazette_end-users_nodate}. Für diesen subjektiven Faktor nutzen \citeauthor{wang_integration_2020} sowie \citeauthor{balog_measuring_2020} den Begriff \textit{Perceived Transparency} als Synonym, um die subjektive Aufnahme von \textit{Transparency} bei verschiedenem Verständnis durch Nutzer zu verdeutlichen \cite{wang_integration_2020, balog_measuring_2020}.
 
-Während \textit{Interpretability} zum Teil mit \textit{Understandability} gleichgesetzt wird \cite{chazette_end-users_nodate}, nimmt die Verwendung des Begriffs für den Grad der möglichen Interpretation der Ausgaben von ML-Algorithmen zu \cite{doshi2017towards}. Als Abgrenzung zwischen \textit{Explainability} und \textit{Interpretability} wird ersteres dabei auch als \glqq Top-Down\grqq{}-Verständnis und letzteres als \glqq Bottom-up\grqq{}-Verständnis beschrieben \cite{thomson_knowledge--information_2020}.
+Während \textit{Interpretability} zum Teil mit \textit{Understandability} gleichgesetzt wird \cite{chazette_end-users_nodate}, nimmt die Verwendung des Begriffs für den Grad der möglichen Interpretation der Ausgaben von ML-Algorithmen zu \cite{doshi2017towards}. Als Abgrenzung zwischen \textit{Explainability} und \textit{Interpretability} wird ersteres dabei auch als \textit{Top-Down}-Verständnis und letzteres als \textit{Bottom-up}-Verständnis beschrieben \cite{thomson_knowledge--information_2020}. Die Benutzer folglich können ein System sowohl auf einer niedrigen Ebene interpretieren (\textit{Top-Down}) als auch auf einer hohen Ebene die Funktion eines Systems verstehen (\textit{Bottom-up}).
 
 Da der Fokus dieser Arbeit auf externen Qualitätsaspekten liegt, ist die \textit{Interpretability} von ML-Algorithmen kein Bestandteil dieser Arbeit. Um trotz dessen einer Irritation durch doppelt belegte Begriffe vorzubeugen, wird für den subjektiven Faktor des Verständnisses von Softwaresystem \textit{Perceived Transparency} verwendet. Der Begriff schließt im Kontext dieser Arbeite auch \textit{Understandability} ein.
 
@@ -32,7 +30,7 @@ Welche Informationen benötigt werden, um die obigen Bedingungen zu erfüllen, w
 
 Eine große Herausforderung von Erklärungen ist allerdings, dass Nutzer einen unterschiedlichen Bedarf für den Inhalt bzw. die transportierten Informationen von Erklärungen haben \cite{chazette2020explainability}. Folglich können die Bedingungen 1. und 2. nur schwer gleichzeitig erfüllt werden. Als Lösungsansatz dafür wird unter anderem das interaktive Anfordern von Erklärungen durch die Nutzer eines Systems genannt \cite{chazette_end-users_nodate}.
 
-Da die transportierten Informationen eine Kerneigenschaft von Erklärungen darstellen, werden in dieser Arbeit Erklärungen als Information zum Schließen des \textit{Gulf of Evaluation} \cite{norman1988psychology} gesehen.
+Da die transportierten Informationen eine Kerneigenschaft von Erklärungen darstellen, werden in dieser Arbeit Erklärungen als Information zum Schließen des \textit{Gulf of Evaluation} \cite{norman1988psychology} gesehen. Das bedeutet das \textit{Mental Model} wird mit der tatsächlichen Funktionsweise des Systems ein einklang gebracht.
 
 Auf Basis der Ansätze, Erklärungen zu definieren, wurde \textit{Explainability} als neue Nicht-Funktionale Anforderung eingeführt \cite{kohl_explainability_2019}, um den Einsatz von Erklärungen und die Abhängigkeiten mit anderen NFRs besser untersuchen zu können.
 
@@ -50,7 +48,7 @@ Auf Basis der bereits erfolgten Definitionen für Erklärbarkeit als Nicht-Funkt
 \noindent\fbox{
     \parbox{0.964\textwidth}{
         \smallskip
-        A system \textbf{S} is explainable with respect to an aspect \textbf{X} of \textbf{S} relative to an addressee \textbf{A} in context \textbf{C} if and only if there is an entity \textbf{E} (the explainer) who, by giving a corpus of information \textbf{I} (the explanation of \textbf{X}), enables \textbf{A} to understand \textbf{X} of \textbf{S} in \textbf{C}. - \textit{\citetitle{chazette_knowledge_nodate}, \citeauthor{chazette_knowledge_nodate}, \citeyear{chazette_knowledge_nodate}}
+        A system \textbf{S} is explainable with respect to an aspect \textbf{X} of \textbf{S} relative to an addressee \textbf{A} in context \textbf{C} if and only if there is an entity \textbf{E} (the explainer) who, by giving a corpus of information \textbf{I} (the explanation of \textbf{X}), enables \textbf{A} to understand \textbf{X} of \textbf{S} in \textbf{C} \cite{chazette_knowledge_nodate}.
         \smallskip
     }
 }
@@ -73,7 +71,7 @@ Folglich müssen die Einflüsse von \textit{Explainability} auf andere Qualität
 \section{Qualitätsmodelle}
 \label{sec:basics_quality_models}
 
-Eine gängige Möglichkeit konkrete Anforderungen zu formulieren bieten Qualitätsmodelle \cite{schneider2012abenteuer}. Die Idee dieser Modelle ist von allgemein formulierten Zielen, iterativ überprüfbare, konkrete Anforderungen zu entwickeln. \autoref{fig:basics_quality_models} definiert die drei Ebenen von Qualitätsmodellen: \textit{Abstrakt}, \textit{Konkret} und \textit{Messbar}. In der Regel werden dabei definierte Qualitätsaspekte aus Normen als allgemeine Ziele formuliert \cite[vgl.][]{schneider2012abenteuer}.
+Eine gängige Möglichkeit konkrete Anforderungen zu formulieren bieten Qualitätsmodelle \cite{schneider2012abenteuer}. Die Idee dieser Modelle ist von allgemein formulierten Zielen, iterativ überprüfbare, konkrete Anforderungen zu entwickeln. \autoref{fig:basics_quality_models} definiert die drei Ebenen von Qualitätsmodellen: \textit{Abstrakt}, \textit{Konkret} und \textit{Messbar}. In der Regel werden dabei definierte Qualitätsaspekte aus Normen als allgemeine Ziele formuliert.
 
 Daraufhin werden diese für einen bestimmten Kontext konkretisiert, um ein besseres Verständnis dafür zu erlangen, worauf sich ein Qualitätsziel in dem spezifischen Anwendungsfall bezieht.
 
@@ -81,7 +79,7 @@ Aus den konkreten Zielen können dann Metriken abgeleitet werden, anhand derer f
 
 \begin{figure}[htb!]
     \centering
-    \includegraphics{contents/02_basics/res/quality_models.pdf}
+    \includegraphics[width=0.65\textwidth]{contents/02_basics/res/quality_models.pdf}
     \caption{Aufbau eines Qualitätsmodells in drei Ebenen \cite[S. 34, ][]{schneider2012abenteuer}}
     \label{fig:basics_quality_models}
 \end{figure}
