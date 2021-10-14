@@ -34,15 +34,15 @@ Die Studienteilnehmer der Gruppen 3 und 4 erhalten während der Navigation so la
 Zunächst wird die Hypothese geprüft, dass eine schlecht vorausgesagte Ankunftszeit (\textit{Estimated Time of Arrival (ETA)}) im Vergleich zur wirklichen Ankunftszeit (\textit{Actual Time of Arrival (ATA)}) einen negativen Effekt auf die Anzahl der Abweichungen von der Route sowie die Zufriedenheit mit der Route hat. Die gleichen Auswirkungen werden für ein häufiges Auftreten von Positionsungenauigkeiten bei der Navigation untersucht. Dies wird analysiert, da ein negativer Zusammenhang vermutet wird, der die Ergebnisse der Untersuchung beeinflussen könnte. Überprüft werden die folgenden Hypothesen innerhalb der Kontrollgruppe (Gruppe 1: Ohne Erklärungen):
 
 \begin{enumerate}
-    \item[1.1] WENN die \textit{ATA} mehr als 10 \% und mindestens 2 Minuten von der \textit{ETA} abweicht, DANN hat dies einen signifikant messbaren negativen Einfluss auf die Zufriedenheit der Nutzer mit der Route.
-    \item[1.2] WENN die \textit{ATA} mehr als 10 \% und mindestens 2 Minuten von der \textit{ETA} abweicht, DANN ist die Anzahl der Routenabweichungen signifikant messbar höher.
-    \item[1.3] WENN \textit{NUNAV Navigation} auf der betrachteten Route pro 5 km durchschnittlich mindestens eine Positionsungenauigkeit aufwies, DANN hat dies einen signifikant messbaren negativen Einfluss auf die Zufriedenheit der Nutzer mit der Route.
-    \item[1.4] WENN \textit{NUNAV Navigation} auf der betrachteten Route pro 5 km durchschnittlich mindestens eine Positionsungenauigkeit aufwies, DANN ist die Anzahl der Routen-Abweichungen signifikant messbar höher.
+    \item[H1.1] WENN die \textit{ATA} mehr als 10 \% und mindestens 2 Minuten von der \textit{ETA} abweicht, DANN hat dies einen signifikant messbaren negativen Einfluss auf die Zufriedenheit der Nutzer mit der Route.
+    \item[H1.2] WENN die \textit{ATA} mehr als 10 \% und mindestens 2 Minuten von der \textit{ETA} abweicht, DANN ist die Anzahl der Routenabweichungen signifikant messbar höher.
+    \item[H1.3] WENN \textit{NUNAV Navigation} auf der betrachteten Route pro 5 km durchschnittlich mindestens eine Positionsungenauigkeit aufwies, DANN hat dies einen signifikant messbaren negativen Einfluss auf die Zufriedenheit der Nutzer mit der Route.
+    \item[H1.4] WENN \textit{NUNAV Navigation} auf der betrachteten Route pro 5 km durchschnittlich mindestens eine Positionsungenauigkeit aufwies, DANN ist die Anzahl der Routen-Abweichungen signifikant messbar höher.
 \end{enumerate}
 
-Die statistische Prüfung der Auswirkung von schlecht vorausgesagter Ankunftszeit auf die Anzahl der Routen-Abweichungen erfolgt mittels eines Kruskal-Wallis-Tests. Dieser wird verwendet, da die Datensätze für die beiden Gruppen verschieden lang und nicht normalverteilt (geprüft mit Shapiro-Wilk-Test) und zudem unabhängig voneinander sind. Das Ergebnis zeigt keinen Haupteffekt ($ p = 0.197648 $). Gleiches gilt für die Überprüfung eines Effektes auf die Nutzerzufriedenheit ($ p = 0.564911 $). Folglich können die Hypothesen 1.1 und 1.2 abgelehnt werden.
+Die statistische Prüfung der Auswirkung von schlecht vorausgesagter Ankunftszeit auf die Anzahl der Routen-Abweichungen erfolgt mittels eines Kruskal-Wallis-Tests. Dieser wird verwendet, da die Datensätze für die beiden Gruppen verschieden lang und nicht normalverteilt (geprüft mit Shapiro-Wilk-Test) und zudem unabhängig voneinander sind. Das Ergebnis zeigt keinen Haupteffekt ($ p = 0.197648 $). Gleiches gilt für die Überprüfung eines Effektes auf die Nutzerzufriedenheit ($ p = 0.564911 $). Folglich können die Hypothesen H1.1 und H1.2 abgelehnt werden.
 
-Für die Überprüfung, ob eine schlechte Positionierung einen Effekt auf die Nutzerzufriedenheit hat, ergibt sich anhand eines Kruskal-Wallis-Tests, dass kein signifikanter Effekt vorliegt ($ p = 0.269231 $). Folglich muss Hypothese 1.3 abgelehnt werden. Bei der Prüfung von Hypothese 1.4 kann festgestellt werden, dass die Anzahl der Routen-Abweichungen signifikant höher ist, wenn im Durchschnitt mehr als ein mal pro 5 km eine Positionsungenauigkeit während der Navigation auftritt ($ p = 3.426601e-15 $). Folglich kann Hypothese 1.4 angenommen werden. Da eine häufige ungenaue Positionierung also bereits einen Einfluss auf die Anzahl der Abweichungen von der Route hat, werden Daten mit ungenauer Positionierung bei der Auswertung vom Einfluss von Erklärungen auf die Anzahl der Routen-Abweichungen herausgefiltert.
+Für die Überprüfung, ob eine schlechte Positionierung einen Effekt auf die Nutzerzufriedenheit hat, ergibt sich anhand eines Kruskal-Wallis-Tests, dass kein signifikanter Effekt vorliegt ($ p = 0.269231 $). Folglich muss Hypothese H1.3 abgelehnt werden. Bei der Prüfung von Hypothese H1.4 kann festgestellt werden, dass die Anzahl der Routen-Abweichungen signifikant höher ist, wenn im Durchschnitt mehr als ein mal pro 5 km eine Positionsungenauigkeit während der Navigation auftritt ($ p = 3.426601e-15 $). Folglich kann Hypothese H1.4 angenommen werden. Da eine häufige ungenaue Positionierung also bereits einen Einfluss auf die Anzahl der Abweichungen von der Route hat, werden Daten mit ungenauer Positionierung bei der Auswertung vom Einfluss von Erklärungen auf die Anzahl der Routen-Abweichungen herausgefiltert.
 
 \subsubsection{Häufigkeit der Nutzung}
 \label{sec:06_model_evaluation:usage_analysis}
@@ -50,8 +50,8 @@ Für die Überprüfung, ob eine schlechte Positionierung einen Effekt auf die Nu
 Bei der Analyse der Nutzungshäufigkeit von NUNAV wurde über den zweiwöchigen Studienzeitraum gemessen, wie viele Routen pro Nutzer und Studiengruppe in diesem Zeitraum gefahren wurden. Für die Überprüfung, ob die Erklärungen die Qualitätsanforderung für eine Erhöhung der Nutzung (NFR1) erfüllen, werden folgende Hypothesen aufgestellt:
 
 \begin{enumerate}
-    \item[2.1] WENN Teilnehmer Erklärungen erhalten, DANN verwenden sie \textit{NUNAV Navigation} signifikant häufiger, als wenn sie keine erhalten.
-    \item[2.2] WENN Teilnehmer nur einen der beiden vorgestellten Erklärungstypen erhalten, DANN nutzen sie \textit{NUNAV Navigation} signifikant seltener, als wenn sie beide Erklärungstypen erhalten.
+    \item[H2.1] WENN Teilnehmer Erklärungen erhalten, DANN verwenden sie \textit{NUNAV Navigation} signifikant häufiger, als wenn sie keine erhalten.
+    \item[H2.2] WENN Teilnehmer nur einen der beiden vorgestellten Erklärungstypen erhalten, DANN nutzen sie \textit{NUNAV Navigation} signifikant seltener, als wenn sie beide Erklärungstypen erhalten.
 \end{enumerate}
 
 \begin{figure}[b!]
@@ -83,15 +83,15 @@ Zur Prüfung der Signifikanz wird wieder der Kruskal-Wallis-Test eingesetzt, da 
 
 Für die Prüfung zwischen welchen Studiengruppen ein signifikanter Unterschied vorliegt, wird der Dunn-Test \cite{dunn1964multiple} verwendet, welcher die Signifikanz der Unterschiede zwischen den Studiengruppen berechnet. Die Prüfung ergibt, dass jeweils ein signifikanter Effekt zwischen den Gruppen 3 und 4 gegenüber den Gruppen 1 und 2 vorliegt ($ p_{13} = 4.746580e-09 $, $ p_{14} = 7.528428e-09 $, $ p_{23} = 1.977438e-08 $ $ p_{24} = 2.523727e-08 $). Folglich kann abgeleitet werden, dass die Nutzer \textit{NUNAV Navigation} häufiger verwenden, wenn sie \textit{Context}-abhängige Erklärungen erhalten, unabhängig davon, ob diese kombiniert mit den statischen Erklärungen erfolgen. Folglich erfüllen nur die \textit{Context}-abhängigen Erklärungen die Anforderung NFR1.
 
-Die Hypothesen 2.1 und 2.2 müssen allerdings abgelehnt werden, da weder alle Erklärungstypen zu einer signifikant häufigeren Nutzung von NUNAV führen, noch das Bereitstellen beider vorgestellten Typen von Erklärungen zu einer erhöhten Nutzung pro Studienteilnehmer führt im Vergleich zur Präsentation von nur einem der integrierten Erklärungstypen. 
+Die Hypothesen H2.1 und H2.2 müssen allerdings abgelehnt werden, da weder alle Erklärungstypen zu einer signifikant häufigeren Nutzung von NUNAV führen, noch das Bereitstellen beider vorgestellten Typen von Erklärungen zu einer erhöhten Nutzung pro Studienteilnehmer führt im Vergleich zur Präsentation von nur einem der integrierten Erklärungstypen. 
 
 \subsubsection{Nutzerabweichungen von der vorgeschlagenen Route}
 
 Im Folgenden wird die Anforderung NFR2 geprüft, welche fordert, dass die Nutzer weniger häufig von der vorgeschlagenen Route abweichen sollen. Zur Prüfung werden ebenfalls zwei Hypothesen aufgestellt:
 
 \begin{enumerate}
-    \item[3.1] WENN der Teilnehmer Erklärungen erhält, DANN folgt er signifikant häufiger der vorgeschlagenen Route als wenn er keine erhält.
-    \item[3.2] WENN der Teilnehmer nur einen der beiden vorgestellten Erklärungstypen erhält, DANN folgt er signifikant weniger häufig der vorgeschlagenen Route als wenn ihm beide Arten von Erklärungen präsentiert werden.
+    \item[H3.1] WENN der Teilnehmer Erklärungen erhält, DANN folgt er signifikant häufiger der vorgeschlagenen Route als wenn er keine erhält.
+    \item[H3.2] WENN der Teilnehmer nur einen der beiden vorgestellten Erklärungstypen erhält, DANN folgt er signifikant weniger häufig der vorgeschlagenen Route als wenn ihm beide Arten von Erklärungen präsentiert werden.
 \end{enumerate}
 
 \begin{figure}[htb!]
@@ -123,7 +123,7 @@ Da auch die Daten der Routenabweichugen nicht normalverteilt sind (Shapiro-Wilk-
 
 Auch hier wird wieder von einem Signifikanzniveau $ p < 0.05 $ ausgegangen. Folglich weichen die Nutzer der Gruppe 4 signifikant weniger von der vorgeschlagenen Route ab, als die Teilnehmer aller anderen Gruppen ($ p_{14} = 0.0217 $, $ p_{24} = 0.0000 $, $ p_{23} = 0.0029 $). Weitere signifikante Unterschiede gibt es nicht.
 
-Hypothese 3.1 trifft beim Bereitstellen aller Erklärungstypen (Gruppe 4) zu, kann jedoch für die Gruppen 2 und 3 nicht bestätigt werden. Folglich wird diese abgelehnt. Hypothese 3.2 kann angenommen werden, da die Nutzer der Gruppe 4 signifikant weniger von der vorgeschlagenen Route abgewichen sind als die \textit{End User} der Gruppen 2 und 3.
+Hypothese H3.1 trifft beim Bereitstellen aller Erklärungstypen (Gruppe 4) zu, kann jedoch für die Gruppen 2 und 3 nicht bestätigt werden. Folglich wird diese abgelehnt. Hypothese H3.2 kann angenommen werden, da die Nutzer der Gruppe 4 signifikant weniger von der vorgeschlagenen Route abgewichen sind als die \textit{End User} der Gruppen 2 und 3.
 
 Zusammenfassend kann die Anforderung NFR2 durch das Bereitstellen von allen Erklärungen erfüllt werden. Einzelne Erklärungen weisen keinen signifikant positiven Effekt auf die Anzahl der Abweichungen von der Route auf. Möglich ist folglich, dass die Effekte, der beiden Erklärungstypen nicht reichen. Eine genaue Begründung kann an dieser Stelle allerdings noch nicht gegeben werden.
 
@@ -132,15 +132,15 @@ Zusammenfassend kann die Anforderung NFR2 durch das Bereitstellen von allen Erkl
 Um die Zufriedenheit der Nutzer mit der abgeschlossenen Navigation zu evaluieren, setzt NUNAV auf eine Bewertung mithilfe von 5 Sternen bei Erreichen des Zieles. Dies ist verknüpft mit der Frage \glqq Wie hat dir die Fahrt gefallen?\grqq{} (siehe \autoref{fig:screenshot_destination_reached}). Außerdem sind die Fahrtdauer und zurückgelegte Kilometer angegeben. Die folgenden konkreten Hypothesen werden für die Analyse abgeleitet:
 
 \begin{enumerate}
-    \item[4.1] WENN Teilnehmer Erklärungen erhalten, DANN geben sie im Vergleich eine signifikant höhere Bewertung für die Navigation ab, als wenn sie keine Erklärungen erhalten.
-    \item[4.2] WENN Teilnehmer nur einen der beiden vorgestellten Erklärungstypen erhalten, DANN geben sie im Vergleich eine signifikant niedrigere Bewertung für die Navigation ab, als wenn sie beide Erklärungstypen erhalten.
+    \item[H4.1] WENN Teilnehmer Erklärungen erhalten, DANN geben sie im Vergleich eine signifikant höhere Bewertung für die Navigation ab, als wenn sie keine Erklärungen erhalten.
+    \item[H4.2] WENN Teilnehmer nur einen der beiden vorgestellten Erklärungstypen erhalten, DANN geben sie im Vergleich eine signifikant niedrigere Bewertung für die Navigation ab, als wenn sie beide Erklärungstypen erhalten.
 \end{enumerate}
 
 Für die Prüfung zwischen welchen Studiengruppen ein signifikanter Unterschied vorliegt, wird ebenfalls der Dunn-Test \cite{dunn1964multiple} verwendet, nachdem ein Kruskal-Wallis-Test einen Haupteffekt zeigt ($ p = 0.00335 $). Daraus resultiert, dass es zwischen den Gruppen 1 und 3 ($ p = 0.005723$) sowie 3 und 4 ($ p = 0.024375 $) einen signifikanten Unterschied bei der Zufriedenheit mit der aktuellen Route gibt.
 
 Mithilfe von \autoref{fig:Rating_Result_Overview} wird abgeleitet, dass es insbesondere mehr 5-Stern-Bewertungen in Gruppe 3 gegenüber den Gruppen 1 und 4 gibt. Die Anteile der ein und zwei Stern Bewertungen unterscheiden sich kaum. Folglich kann gesagt werden, dass die Teilnehmer signifikant zufriedener mit der Navigation sind, wenn sie Erklärungen wie in Gruppe 3 bekommen im Vergleich zu keinen Erklärungen (Gruppe 1) oder allen vorgestellten Erklärungstypen (Gruppe 4).
 
-Da das Geben von Erklärungen die Nutzerzufriedenheit nicht in jedem Fall erhöht, muss Hypothese 4.1 abgelehnt werden. Hypothese 4.2 wird ebenfalls abgelehnt, da es unter anderem einen gegenteiligen Effekt zwischen den Gruppen 3 und 4 gibt.
+Da das Geben von Erklärungen die Nutzerzufriedenheit nicht in jedem Fall erhöht, muss Hypothese H4.1 abgelehnt werden. Hypothese H4.2 wird ebenfalls abgelehnt, da es unter anderem einen gegenteiligen Effekt zwischen den Gruppen 3 und 4 gibt.
 
 \begin{figure}[t!]
     \centering
