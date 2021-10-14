@@ -5,10 +5,6 @@ on:
     tags:
      - v*
 
-defaults:
-  run:
-    working-directory: ./01_thesis
-
 jobs:
   build_and_upload_latex:
     runs-on: ubuntu-latest
