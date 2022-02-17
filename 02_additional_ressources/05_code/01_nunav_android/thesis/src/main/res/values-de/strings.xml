@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="voice_alert_you_reach_destination_at_traffic_volume_little" formatted="false">Heute sind die Straßen frei. Du wirst dein Ziel %s um %s erreichen</string>
+    <string name="voice_alert_you_reach_destination_at_traffic_volume_elevated" formatted="false">Da heute etwas mehr los ist, wirst du dein Ziel %s um %s erreichen</string>
+    <string name="voice_alert_you_reach_destination_at_traffic_volume_high" formatted="false">Da heute sehr viel los ist, wirst du dein Ziel %s um %s erreichen</string>
+    <string name="traffic_volume_little">wenig Verkehr</string>
+    <string name="traffic_volume_elevated">mäßiger Verkehr</string>
+    <string name="traffic_volume_high">viel Verkehr</string>
+    <string name="position_inaccurate">Position ungenau</string>
+    <string name="users_in_system">Kollaboratives Routing</string>
+    <string name="users_in_system_explanation">In die Berechnung deiner Route fließen die Routen von %s Nutzern in deiner Nähe ein.</string>
+    <string name="users_in_system_explanation_fallback">nutzt anonyme Verkehrsdaten um individuelle Routen zu berechnen.</string>
+    <string name="learn_more">Mehr erfahren</string>
+    <string name="route_explanation_url">https://support.graphmasters.net/hc/de/articles/4404558277266-Wie-ist-meine-Route-entstanden-</string>
+    <string name="route_explanation_collaborative_url">https://support.graphmasters.net/hc/de/articles/360010648960</string>
+    <string name="route_explanation_cta">Wie wurde meine Route berechnet?</string>
+</resources>

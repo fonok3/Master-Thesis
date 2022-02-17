@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="traffic_volume_little_light">#27ae60</color>
+    <color name="traffic_volume_little_dark">#2ecc71</color>
+    <color name="traffic_volume_elevated_light">#e67e22</color>
+    <color name="traffic_volume_elevated_dark">#f39c12</color>
+    <color name="traffic_volume_high_light">#b71c1c</color>
+    <color name="traffic_volume_high_dark">#e74c3c</color>
+    <color name="gps_inaccurate">#818181</color>
+</resources>

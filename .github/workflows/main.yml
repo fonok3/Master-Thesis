@@ -1,0 +1,43 @@
+name: Build and deploy LaTeX document
+# Controls when the workflow will run
+on:
+  push:
+    tags:
+     - v*
+
+jobs:
+  build_and_upload_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+      - name: Set env
+        run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+      - name: pdflatex main
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: thesis.tex
+          compiler: pdflatex
+          args: -interaction=nonstopmode -shell-escape
+      - name: bibtex thesis
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: thesis.aux
+          compiler: bibtex
+          args:
+      - name: pdflatex thesis
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: thesis.tex
+          compiler: pdflatex
+          args: -interaction=nonstopmode -shell-escape
+      - name: rename pdf
+        run: mv thesis.pdf "thesis-${{ env.RELEASE_VERSION }}.pdf"
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          prerelease: false
+          title: "Review Version"
+          automatic_release_tag: "${{ env.RELEASE_VERSION }}"
+          files: |
+            thesis-${{ env.RELEASE_VERSION }}.pdf

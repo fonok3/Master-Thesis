@@ -1,0 +1,56 @@
+\subsection{Ziel der Evaluation}
+
+Das Ziel der Evaluation ist wie auch das Ziel der gesamten Arbeit (siehe \autoref{sec:goal_definition}) auf Basis der Vorlage von \citeauthor{wohlin2012experimentation} formuliert \cite{wohlin2012experimentation}.
+
+\smallskip
+
+\noindent\fbox{
+    \parbox{0.964\textwidth}{
+        \smallskip
+        Die Studie \textbf{analysiert} die integrierten Erklärungen \textbf{in Bezug auf} die externe Qualität des Systems \textbf{zur} Evaluation \textbf{aus der Sicht} von \textit{End Usern} \textbf{im Kontext} der Benutzung von \textit{NUNAV Navigation}.
+        \smallskip
+    }
+}
+
+\smallskip
+
+Dem zu Folge sollte im Rahmen der Evaluation überprüft werden, ob die zuvor aus den abgeleiteten Zielen von \textit{Graphmasters} definierten Qualitätsanforderungen durch die entwickelten Erklärungen erfüllt werden können.
+
+\subsubsection{Hypothesen}
+\label{sec:evaluation_hypothesis}
+
+Die Überprüfung der Erfüllung der gestellten Qualitätsanforderungen erfolgt im Rahmen von Hypothesentests \cite{wohlin2012experimentation}. Grundsätzlich wurden zwei abstrakte Einflusshypothesen für die Integration der Erklärungen aufgestellt:
+
+\begin{itemize}
+    \item WENN die Studienteilnehmer Erklärungen erhalten, DANN ist ein positiver Einfluss auf die externe Softwarequalität messbar im Vergleich zu Teilnehmern, welche keine Erklärungen erhalten.
+    \item WENN die Studienteilnehmer mehrere Erklärungen erhalten, DANN ist ein positiver Einfluss auf die externe Softwarequalität messbar im Vergleich zu Teilnehmern, welche nur eine Erklärung erhalten.
+\end{itemize}
+
+\subsection{Studienaufbau}
+
+Ein Ergebnis des durchgeführten Workshops war, dass die Erklärungen nach Möglichkeit unter Realbedingungen evaluiert werden sollen. Daraus ist die Anforderung abgeleitet worden, dass eine Studie die \textit{End User} von \textit{NUNAV Navigation} so wenig wie möglich bemerken sollten. Daher kommen lediglich Verhaltensmetriken oder bereits in der Anwendung integrierte Metriken zum Einsatz.
+
+Die genutzten Metriken wurden aus dem \autoref{sec:explanation_requirements} zur Definition der Anforderungen übernommen und sind bereits vor Beginn dieser Arbeit in \textit{NUNAV Navigation} integriert gewesen.
+
+Aufgrund von Einflusshypothesen durch Störgrößen wurden neben den Erklärungsmetriken zusätzliche Metriken in die Anwendung integriert. Das Ziel dabei war es, auf der Basis möglicher Einflüsse Datensätze herausfiltern zu können, welche die Ergebnisse der Analyse der Einflüsse durch integrierte Erklärungen zu verzerren (siehe \autoref{sec:evaluation_other_dependencies}).
+
+\subsection{Studiendurchführung}
+
+Insgesamt wurde folglich eine zweiwöchige Case Study als empirische Strategie gewählt. Um die Unterschiede in Bezug auf die externe Qualität messen zu können, wurden nicht allen Teilnehmern die Erklärungen angezeigt. Zusätzlich sollte nicht nur eine Veränderung durch die Erklärungen messbar gemacht werden, sondern auch zwischen den einzelnen entwickelten Erklärungen unterschieden werden. Trotz dessen sollte auch die Kombination der verschiedenen Erklärungen überprüft werden. Um jedoch für jede Bedingung genug Nutzer als Datengrundlage zu haben, wurden nicht alle verschiedenen Kombinationsmöglichkeiten der Erklärungen überprüft.
+
+Grundsätzlich wurden die Erklärungen in die zwei Gruppen \textit{statische} und \textit{Context}-abhängige Erklärungen gegliedert. Unter den statischen Erklärungen sind die beiden Erklärungen, welche den Routing-Algorithmus und die Einflüsse auf die Routenberechnung erklären, zusammengefasst (siehe \autoref{sec:explanation_design}).
+
+Analog dazu sind die \textit{Context}-Erklärungen zum aktuellen Verkehrsaufkommen und zu Positionsungenauigkeiten während der Navigation als eine Bedingung für die Studie zusammengefasst worden (siehe \autoref{sec:traffic_volume_definition} und \autoref{sec:gps_accuracy_definition}).
+
+Insgesamt sind folglich vier verschiedene Studiengruppen entstanden:
+
+\begin{itemize}
+    \item \textbf{Gruppe 1}: Nutzer, die keine Erklärungen erhalten
+    \item \textbf{Gruppe 2}: Nutzer, die statische Erklärungen erhalten
+    \item \textbf{Gruppe 3}: Nutzer, die \textit{Context}-abhängige Erklärungen erhalten
+    \item \textbf{Gruppe 4}: Nutzer, die statische als auch \textit{Context}-abhängige Erklärungen erhalten
+\end{itemize}
+
+Für die Zuordnung der einzelnen Studiengruppen wurde das im Rahmen dieser Arbeit entwickelte \textit{Feature-Flag}-System verwendet. Anhand von zufällig generierten Identifikatoren wurde zu diesem Zweck ein Hashwert berechnet und die Teilnehmer anhand der Teilbarkeit durch vier, den einzelnen Gruppen zugeordnet (siehe Zusatzmaterialien).
+
+\newpage

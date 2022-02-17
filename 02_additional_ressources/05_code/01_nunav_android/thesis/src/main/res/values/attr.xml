@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="traffic_volume_little" type="color" />
+    <attr name="traffic_volume_elevated" type="color" />
+    <attr name="traffic_volume_high" type="color" />
+</resources>

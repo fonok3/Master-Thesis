@@ -1,0 +1,41 @@
+name: Release thesis for print
+
+on:
+  push:
+    branches:
+     - 'master'
+
+jobs:
+  build_and_upload_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+      - name: pdflatex main
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: thesis.tex
+          compiler: pdflatex
+          args: -interaction=nonstopmode -shell-escape
+      - name: bibtex thesis
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: thesis.aux
+          compiler: bibtex
+          args:
+      - name: pdflatex thesis
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: thesis.tex
+          compiler: pdflatex
+          args: -interaction=nonstopmode -shell-escape
+      - name: rename pdf
+        run: mv thesis.pdf "MA-Herzog2021.pdf"
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          prerelease: false
+          title: "Finale Version"
+          automatic_release_tag: "Final Version"
+          files: |
+            MA-Herzog2021.pdf
